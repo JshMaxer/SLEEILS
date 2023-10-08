@@ -25,7 +25,6 @@ namespace SMARTLEARN.FrontEnd
 
             FrontEnd.Login.showlog = false;
             LoginAdmin.showlog = false;
-            //btnshowlog.Enabled = false;
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -37,6 +36,15 @@ namespace SMARTLEARN.FrontEnd
         {
             btnshowlog.Enabled = FrontEnd.Login.showlog;
             btnshowlog.Enabled = LoginAdmin.showlog;
+
+            btnenroll.Enabled = FrontEnd.Login.showlog;
+            btnenroll.Enabled = LoginAdmin.showlog;
+        }
+
+        private void btnenroll_Click(object sender, EventArgs e)
+        {
+            //FrontEnd.Login.showlog = false;
+           // LoginAdmin.showlog = false;
         }
     }
 }

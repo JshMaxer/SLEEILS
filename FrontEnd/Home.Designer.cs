@@ -132,6 +132,7 @@
             this.btnenroll.Size = new System.Drawing.Size(170, 57);
             this.btnenroll.TabIndex = 2;
             this.btnenroll.Text = "Enroll now";
+            this.btnenroll.Click += new System.EventHandler(this.btnenroll_Click);
             // 
             // guna2Panel1
             // 
