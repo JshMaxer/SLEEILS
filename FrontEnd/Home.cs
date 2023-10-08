@@ -37,14 +37,15 @@ namespace SMARTLEARN.FrontEnd
             btnshowlog.Enabled = FrontEnd.Login.showlog;
             btnshowlog.Enabled = LoginAdmin.showlog;
 
-            btnenroll.Enabled = FrontEnd.Login.showlog;
-            btnenroll.Enabled = LoginAdmin.showlog;
+            btnenrolll.Enabled = FrontEnd.Login.showlog;
+            btnenrolll.Enabled = LoginAdmin.showlog;
         }
 
         private void btnenroll_Click(object sender, EventArgs e)
         {
-            //FrontEnd.Login.showlog = false;
-           // LoginAdmin.showlog = false;
+            StudentEnroll enroll = new StudentEnroll();
+            enroll.Show();
+            this.Hide();
         }
     }
 }

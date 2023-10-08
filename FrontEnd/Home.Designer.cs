@@ -44,10 +44,15 @@
             this.btnshowlog = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
             this.timertoshow = new System.Windows.Forms.Timer(this.components);
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnenrolll = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Dragcontrol
@@ -246,12 +251,73 @@
             this.timertoshow.Enabled = true;
             this.timertoshow.Tick += new System.EventHandler(this.timertoshow_Tick);
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.Controls.Add(this.label2);
+            this.guna2Panel4.Controls.Add(this.label3);
+            this.guna2Panel4.Controls.Add(this.btnenrolll);
+            this.guna2Panel4.Location = new System.Drawing.Point(44, 244);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(419, 409);
+            this.guna2Panel4.TabIndex = 13;
+            this.guna2Panel4.UseTransparentBackground = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(15, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(246, 33);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Online Registration";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(395, 76);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "We warmly welcome high school graduates,\r\ntransferees, second courses, foreign ap" +
+    "plication, and\r\ngraduate program applications, and\r\ngraduate programs applicants" +
+    " to our campuses.";
+            // 
+            // btnenrolll
+            // 
+            this.btnenrolll.Animated = true;
+            this.btnenrolll.BackColor = System.Drawing.Color.Transparent;
+            this.btnenrolll.BorderRadius = 8;
+            this.btnenrolll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnenrolll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnenrolll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnenrolll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnenrolll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnenrolll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.btnenrolll.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnenrolll.ForeColor = System.Drawing.Color.White;
+            this.btnenrolll.Location = new System.Drawing.Point(42, 255);
+            this.btnenrolll.Name = "btnenrolll";
+            this.btnenrolll.ShadowDecoration.Depth = 8;
+            this.btnenrolll.ShadowDecoration.Enabled = true;
+            this.btnenrolll.Size = new System.Drawing.Size(170, 57);
+            this.btnenrolll.TabIndex = 2;
+            this.btnenrolll.Text = "Enroll now";
+            this.btnenrolll.Click += new System.EventHandler(this.btnenroll_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 775);
             this.Controls.Add(this.btnexit);
+            this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2PictureBox2);
@@ -265,6 +331,8 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -286,5 +354,9 @@
         public Guna.UI2.WinForms.Guna2Button btnregisterad;
         public Guna.UI2.WinForms.Guna2Button btnexit;
         private System.Windows.Forms.Timer timertoshow;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        public Guna.UI2.WinForms.Guna2Button btnenrolll;
     }
 }
