@@ -25,7 +25,10 @@ namespace SMARTLEARN.FrontEnd
             }
             else
             {
-                
+                cbadmittype.SelectedItem = null;
+                cbyearlevel.SelectedItem = null;
+                cbschoolyear.SelectedItem = null;
+                cbterm.SelectedItem = null;
                 requiredfields.Visible = false;
             }
         }
@@ -48,6 +51,18 @@ namespace SMARTLEARN.FrontEnd
             {
                 txtothers.Enabled = false;
             }
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Close();
+        }
+
+        private void rbexistingstudent_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
