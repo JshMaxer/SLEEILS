@@ -1,0 +1,289 @@
+﻿namespace SMARTLEARN.FrontEnd
+{
+    partial class Home
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.Dragcontrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnenroll = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnregisterad = new Guna.UI2.WinForms.Guna2Button();
+            this.btnshowlog = new Guna.UI2.WinForms.Guna2Button();
+            this.btnexit = new Guna.UI2.WinForms.Guna2Button();
+            this.timertoshow = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // Dragcontrol
+            // 
+            this.Dragcontrol.DockForm = true;
+            this.Dragcontrol.DockIndicatorTransparencyValue = 0.6D;
+            this.Dragcontrol.TargetControl = this.guna2PictureBox2;
+            this.Dragcontrol.UseTransparentDrag = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox2.Image = global::SMARTLEARN.Properties.Resources.sky2;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(1292, 775);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 9;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // RoundEdge
+            // 
+            this.RoundEdge.BorderRadius = 8;
+            this.RoundEdge.TargetControl = this;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.Controls.Add(this.label4);
+            this.guna2Panel2.Controls.Add(this.label5);
+            this.guna2Panel2.Controls.Add(this.btnenroll);
+            this.guna2Panel2.Location = new System.Drawing.Point(44, 244);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(419, 409);
+            this.guna2Panel2.TabIndex = 13;
+            this.guna2Panel2.UseTransparentBackground = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(15, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(246, 33);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Online Registration";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(3, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(395, 76);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "We warmly welcome high school graduates,\r\ntransferees, second courses, foreign ap" +
+    "plication, and\r\ngraduate program applications, and\r\ngraduate programs applicants" +
+    " to our campuses.";
+            // 
+            // btnenroll
+            // 
+            this.btnenroll.Animated = true;
+            this.btnenroll.BackColor = System.Drawing.Color.Transparent;
+            this.btnenroll.BorderRadius = 8;
+            this.btnenroll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnenroll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnenroll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnenroll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnenroll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnenroll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.btnenroll.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnenroll.ForeColor = System.Drawing.Color.White;
+            this.btnenroll.Location = new System.Drawing.Point(42, 255);
+            this.btnenroll.Name = "btnenroll";
+            this.btnenroll.ShadowDecoration.Depth = 8;
+            this.btnenroll.ShadowDecoration.Enabled = true;
+            this.btnenroll.Size = new System.Drawing.Size(170, 57);
+            this.btnenroll.TabIndex = 2;
+            this.btnenroll.Text = "Enroll now";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.guna2Panel3);
+            this.guna2Panel1.Controls.Add(this.btnregisterad);
+            this.guna2Panel1.Controls.Add(this.btnshowlog);
+            this.guna2Panel1.Location = new System.Drawing.Point(-20, -8);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1333, 86);
+            this.guna2Panel1.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(94, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "SMART LEARN";
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(20, 8);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1292, 10);
+            this.guna2Panel3.TabIndex = 14;
+            // 
+            // btnregisterad
+            // 
+            this.btnregisterad.Animated = true;
+            this.btnregisterad.AutoRoundedCorners = true;
+            this.btnregisterad.BackColor = System.Drawing.Color.Transparent;
+            this.btnregisterad.BorderRadius = 16;
+            this.btnregisterad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnregisterad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnregisterad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnregisterad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnregisterad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnregisterad.FillColor = System.Drawing.Color.Transparent;
+            this.btnregisterad.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregisterad.ForeColor = System.Drawing.Color.DimGray;
+            this.btnregisterad.Location = new System.Drawing.Point(1036, 33);
+            this.btnregisterad.Name = "btnregisterad";
+            this.btnregisterad.Size = new System.Drawing.Size(130, 34);
+            this.btnregisterad.TabIndex = 14;
+            this.btnregisterad.Text = "Register (Admin)";
+            // 
+            // btnshowlog
+            // 
+            this.btnshowlog.Animated = true;
+            this.btnshowlog.AutoRoundedCorners = true;
+            this.btnshowlog.BackColor = System.Drawing.Color.Transparent;
+            this.btnshowlog.BorderRadius = 16;
+            this.btnshowlog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnshowlog.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnshowlog.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnshowlog.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnshowlog.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnshowlog.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.btnshowlog.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnshowlog.ForeColor = System.Drawing.Color.White;
+            this.btnshowlog.Location = new System.Drawing.Point(1188, 33);
+            this.btnshowlog.Name = "btnshowlog";
+            this.btnshowlog.ShadowDecoration.Depth = 5;
+            this.btnshowlog.ShadowDecoration.Enabled = true;
+            this.btnshowlog.Size = new System.Drawing.Size(96, 34);
+            this.btnshowlog.TabIndex = 14;
+            this.btnshowlog.Text = "Log in";
+            this.btnshowlog.Click += new System.EventHandler(this.btnshowlog_Click);
+            // 
+            // btnexit
+            // 
+            this.btnexit.AutoRoundedCorners = true;
+            this.btnexit.BackColor = System.Drawing.Color.Transparent;
+            this.btnexit.BorderRadius = 14;
+            this.btnexit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnexit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnexit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnexit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnexit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.btnexit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnexit.ForeColor = System.Drawing.Color.White;
+            this.btnexit.Location = new System.Drawing.Point(12, 733);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.ShadowDecoration.Depth = 10;
+            this.btnexit.Size = new System.Drawing.Size(103, 30);
+            this.btnexit.TabIndex = 14;
+            this.btnexit.Text = "EXIT";
+            this.btnexit.UseTransparentBackground = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+            // 
+            // timertoshow
+            // 
+            this.timertoshow.Enabled = true;
+            this.timertoshow.Tick += new System.EventHandler(this.timertoshow_Tick);
+            // 
+            // Home
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1292, 775);
+            this.Controls.Add(this.btnexit);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2PictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Home";
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Guna.UI2.WinForms.Guna2DragControl Dragcontrol;
+        private Guna.UI2.WinForms.Guna2Elipse RoundEdge;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public Guna.UI2.WinForms.Guna2Button btnenroll;
+        public Guna.UI2.WinForms.Guna2Button btnshowlog;
+        public Guna.UI2.WinForms.Guna2Button btnregisterad;
+        public Guna.UI2.WinForms.Guna2Button btnexit;
+        private System.Windows.Forms.Timer timertoshow;
+    }
+}
