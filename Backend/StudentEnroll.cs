@@ -7,6 +7,9 @@ namespace SMARTLEARN.Backend
     //Backend
     public class StudentEnroll
     {
+        //Flag to know if the information is corrected or ready to next.
+        public static string confirm = "";
+
         //Student Type
         public static string listtype; 
 

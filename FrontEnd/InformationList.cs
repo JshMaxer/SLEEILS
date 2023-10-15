@@ -80,5 +80,11 @@ namespace SMARTLEARN.FrontEnd
         {
             this.Close();
         }
+
+        private void btnsubmit_Click(object sender, EventArgs e)
+        {
+            Backend.StudentEnroll.confirm = "Confirm";
+            this.Close();
+        }
     }
 }

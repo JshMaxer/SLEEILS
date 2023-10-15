@@ -106,6 +106,7 @@
     <Compile Include="Backend\LoginAdmin.cs" />
     <Compile Include="Backend\StudentEnroll.cs" />
     <Compile Include="Database\LoginAdmin.cs" />
+    <Compile Include="Database\StudentEnroll.cs" />
     <Compile Include="FrontEnd\Home.cs">
       <SubType>Form</SubType>
     </Compile>

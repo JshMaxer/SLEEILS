@@ -77,6 +77,7 @@
             this.btnsubmit.TabIndex = 21;
             this.btnsubmit.Text = "Submit";
             this.btnsubmit.UseTransparentBackground = true;
+            this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
             // 
             // pictureBox1
             // 
