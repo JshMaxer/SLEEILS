@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace SMARTLEARN
 {
+    //FrontEnd
     public partial class LoginAdmin : Form
     {
         public static bool showlog = true;
@@ -45,6 +46,12 @@ namespace SMARTLEARN
             FrontEnd.Login.showlog = true;
             showlog = true;
             this.Close();
+        }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            Backend.LoginAdmin Logadmin = new Backend.LoginAdmin();
+            Logadmin.Login(txtuserid, txtpassword);
         }
     }
 }
