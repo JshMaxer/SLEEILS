@@ -7,8 +7,11 @@ namespace SMARTLEARN.Backend
     //Backend
     public class StudentEnroll
     {
-        //Flag to know if the information is corrected or ready to next.
+        //Set a flag to know if the information is corrected or ready to next.
         public static string confirm = "";
+
+        //Set a flag for timer to close the form of StudenEnroll
+        public static bool closeform;
 
         //Student Type
         public static string listtype; 
@@ -58,22 +61,13 @@ namespace SMARTLEARN.Backend
 
         public void typeofstu(Guna2RadioButton newstu, Guna2RadioButton existstu)
         {
-            if (newstu.Checked)
+            if (newstu.Checked == true && existstu.Checked == false)
             {
-                listtype = ($"Type of Student\n: {newstu.Text}");
+                listtype = ($"Type of Student: {newstu.Text}");
             }
-            else if (newstu.Checked == false)
+            else if (newstu.Checked == false && existstu.Checked == true)
             {
-                listtype = ($"Type of Student\n: {existstu.Text}");
-            }
-            
-            else if (existstu.Checked == true)
-            {
-                listtype = ($"Type of Student\n: {existstu.Text}");
-            }
-            else
-            {
-                listtype = ($"Type of Student\n: {newstu.Text}");
+                listtype = ($"Type of Student: {existstu.Text}");
             }
 
         }

@@ -1,12 +1,4 @@
-﻿using Org.BouncyCastle.Asn1.Tsp;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
@@ -84,6 +76,8 @@ namespace SMARTLEARN.FrontEnd
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             Backend.StudentEnroll.confirm = "Confirm";
+            Backend.StudentEnroll.closeform = true;
+
             this.Close();
         }
     }

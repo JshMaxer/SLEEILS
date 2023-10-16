@@ -119,10 +119,10 @@
     <Compile Include="FrontEnd\InformationList.Designer.cs">
       <DependentUpon>InformationList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\LoadingForm.cs">
+    <Compile Include="FrontEnd\Message\LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\LoadingForm.Designer.cs">
+    <Compile Include="FrontEnd\Message\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Login.cs">
@@ -136,6 +136,18 @@
     </Compile>
     <Compile Include="FrontEnd\LoginAdmin.Designer.cs">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Message\ProcessDeclineMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Message\ProcessDeclineMessage.Designer.cs">
+      <DependentUpon>ProcessDeclineMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Message\ProcessMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Message\ProcessMessage.Designer.cs">
+      <DependentUpon>ProcessMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\StudentEnroll.cs">
       <SubType>Form</SubType>
@@ -153,7 +165,7 @@
     <EmbeddedResource Include="FrontEnd\InformationList.resx">
       <DependentUpon>InformationList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\LoadingForm.resx">
+    <EmbeddedResource Include="FrontEnd\Message\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Login.resx">
@@ -161,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\LoginAdmin.resx">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Message\ProcessDeclineMessage.resx">
+      <DependentUpon>ProcessDeclineMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Message\ProcessMessage.resx">
+      <DependentUpon>ProcessMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\StudentEnroll.resx">
       <DependentUpon>StudentEnroll.cs</DependentUpon>

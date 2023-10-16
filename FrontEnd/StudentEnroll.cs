@@ -25,8 +25,6 @@ namespace SMARTLEARN.FrontEnd
                 cbterm.SelectedItem = null;
                 requiredfields.Visible = false;
             }
-
-
         }
 
         private void dbschoolyear_DropDown(object sender, EventArgs e)
@@ -75,10 +73,10 @@ namespace SMARTLEARN.FrontEnd
             info.ShowDialog();
 
 
-            if(Backend.StudentEnroll.confirm == "Confirm" || Backend.StudentEnroll.confirm == "confirm")
+            if (Backend.StudentEnroll.confirm == "Confirm" || Backend.StudentEnroll.confirm == "confirm")
             {
                 Database.StudentEnroll stuquery = new Database.StudentEnroll();
-                stuquery.insertinfo(rbnewstudent, cbadmittype, cbyearlevel, cbschoolyear, cbterm, rbict, txtfname, txtmname, txtlname, txtsuffix, cbgender, cbstatus, txtcitizenship, dateofbirth, txtbirthplace, txtreligion, txtaddress, txtemail, txtmobilenum, txttelephone, txtgfname, txtgmiddlename, txtglastname, txtgsuffix, txtggender, txtgstatus, txtgcitizenship, txtgdateofbirth, txtgbirthplace, txtgreligion, txtgmobile, txtgemail, txtgmobile, txtgtelephone, txtgrelationship, txtgoccupation);
+                stuquery.insertinfo(cbadmittype, cbyearlevel, cbschoolyear, cbterm, rbict, txtfname, txtmname, txtlname, txtsuffix, cbgender, cbstatus, txtcitizenship, dateofbirth, txtbirthplace, txtreligion, txtaddress, txtemail, txtmobilenum, txttelephone, txtgfname, txtgmiddlename, txtglastname, txtgsuffix, txtggender, txtgstatus, txtgcitizenship, txtgdateofbirth, txtgbirthplace, txtgreligion, txtgmobile, txtgemail, txtgmobile, txtgtelephone, txtgrelationship, txtgoccupation);
             }
             else
             {
@@ -87,7 +85,7 @@ namespace SMARTLEARN.FrontEnd
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) // Real-time button enable/disable
         {
             bool enableButton = false; // Set a flag to disable the button by default
 
@@ -121,8 +119,7 @@ namespace SMARTLEARN.FrontEnd
                     !string.IsNullOrWhiteSpace(txtreligion.Text) &&
                     !string.IsNullOrWhiteSpace(txtaddress.Text) &&
                     !string.IsNullOrWhiteSpace(txtemail.Text) &&
-                    !string.IsNullOrWhiteSpace(txtmobilenum.Text) &&
-                    !string.IsNullOrWhiteSpace(txttelephone.Text))
+                    !string.IsNullOrWhiteSpace(txtmobilenum.Text))
                 {
                     // Check Guardian Information
                     if (!string.IsNullOrWhiteSpace(txtgfname.Text) &&
@@ -136,7 +133,6 @@ namespace SMARTLEARN.FrontEnd
                         !string.IsNullOrWhiteSpace(txtgaddress.Text) &&
                         !string.IsNullOrWhiteSpace(txtgemail.Text) &&
                         !string.IsNullOrWhiteSpace(txtgmobile.Text) &&
-                        !string.IsNullOrWhiteSpace(txtgtelephone.Text) &&
                         !string.IsNullOrWhiteSpace(txtgrelationship.Text) &&
                         !string.IsNullOrWhiteSpace(txtgoccupation.Text))
                     {
@@ -157,6 +153,13 @@ namespace SMARTLEARN.FrontEnd
             btnnext.Enabled = enableButton;
         }
 
+        private void timertoclose_Tick(object sender, EventArgs e)
+        {
+            if (Backend.StudentEnroll.closeform == true)
+            {
+                this.Close();
+            }
 
+        }
     }
 }

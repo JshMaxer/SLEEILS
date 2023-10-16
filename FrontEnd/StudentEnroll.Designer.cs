@@ -134,6 +134,7 @@
             this.rbexistingstudent = new Guna.UI2.WinForms.Guna2RadioButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timertoclose = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel4.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -1877,6 +1878,12 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timertoclose
+            // 
+            this.timertoclose.Enabled = true;
+            this.timertoclose.Interval = 1;
+            this.timertoclose.Tick += new System.EventHandler(this.timertoclose_Tick);
+            // 
             // StudentEnroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2016,5 +2023,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timertoclose;
     }
 }
