@@ -40,7 +40,10 @@
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnloginadmin = new Guna.UI2.WinForms.Guna2Button();
             this.lblforgot = new System.Windows.Forms.Label();
+            this.timertoclose = new System.Windows.Forms.Timer(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // RoundEdge
@@ -212,7 +215,16 @@
             this.lblforgot.Text = "Forgort password?";
             this.lblforgot.Click += new System.EventHandler(this.lblforgot_Click);
             // 
-            // LoginAdmin
+            // timertoclose
+            // 
+            this.timertoclose.Enabled = true;
+            this.timertoclose.Tick += new System.EventHandler(this.timertoclose_Tick);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // FELoginAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,12 +240,13 @@
             this.Controls.Add(this.btnloginadmin);
             this.Controls.Add(this.lblforgot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginAdmin";
+            this.Name = "FELoginAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModerrnLogin1";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +265,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private Guna.UI2.WinForms.Guna2Button btnloginadmin;
         private System.Windows.Forms.Label lblforgot;
+        private System.Windows.Forms.Timer timertoclose;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

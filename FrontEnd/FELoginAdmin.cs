@@ -10,6 +10,7 @@ namespace SMARTLEARN
     {
         //set a flag to the timer to know if the button is clicked
         public static bool showlog = true;
+        public static bool closethis = false;
         public FELoginAdmin()
         {
             InitializeComponent();
@@ -52,8 +53,16 @@ namespace SMARTLEARN
         private void btnlogin_Click(object sender, EventArgs e)
         {
             Database.DBLoginAdmin Logadmin = new Database.DBLoginAdmin();
-            Logadmin.logad(txtuserid, txtpassword);
-            this.Close();
+            Logadmin.logad(txtuserid, txtpassword, errorProvider1);
         }
+
+        private void timertoclose_Tick(object sender, EventArgs e)
+        {
+            if(closethis == true)
+            {
+                this.Close();
+            }
+        }
+
     }
 }

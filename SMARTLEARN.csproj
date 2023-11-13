@@ -226,7 +226,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\wer.gif" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wallpaperflare.com_wallpaper %281%29.jpg" />
   </ItemGroup>
@@ -238,6 +240,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sky2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\learning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wer1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
