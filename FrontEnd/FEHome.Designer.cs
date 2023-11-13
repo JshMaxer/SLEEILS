@@ -1,6 +1,6 @@
 ﻿namespace SMARTLEARN.FrontEnd
 {
-    partial class Home
+    partial class FEHome
     {
         /// <summary>
         /// Required designer variable.
@@ -48,6 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnenrolll = new Guna.UI2.WinForms.Guna2Button();
+            this.timerbeforeexit = new System.Windows.Forms.Timer(this.components);
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.timertoclose = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -201,6 +204,7 @@
             this.btnregisterad.Size = new System.Drawing.Size(130, 34);
             this.btnregisterad.TabIndex = 14;
             this.btnregisterad.Text = "Register (Admin)";
+            this.btnregisterad.Click += new System.EventHandler(this.btnregisterad_Click);
             // 
             // btnshowlog
             // 
@@ -234,6 +238,7 @@
             this.btnexit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnexit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnexit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnexit.Enabled = false;
             this.btnexit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.btnexit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnexit.ForeColor = System.Drawing.Color.White;
@@ -311,7 +316,22 @@
             this.btnenrolll.Text = "Enroll now";
             this.btnenrolll.Click += new System.EventHandler(this.btnenroll_Click);
             // 
-            // Home
+            // timerbeforeexit
+            // 
+            this.timerbeforeexit.Enabled = true;
+            this.timerbeforeexit.Interval = 7000;
+            this.timerbeforeexit.Tick += new System.EventHandler(this.timerbeforeexit_Tick);
+            // 
+            // guna2AnimateWindow1
+            // 
+            this.guna2AnimateWindow1.TargetForm = this;
+            // 
+            // timertoclose
+            // 
+            this.timertoclose.Enabled = true;
+            this.timertoclose.Tick += new System.EventHandler(this.timertoclose_Tick);
+            // 
+            // FEHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -322,7 +342,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2PictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Home";
+            this.Name = "FEHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
@@ -358,5 +378,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public Guna.UI2.WinForms.Guna2Button btnenrolll;
+        private System.Windows.Forms.Timer timerbeforeexit;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.Timer timertoclose;
     }
 }

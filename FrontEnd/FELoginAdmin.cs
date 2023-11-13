@@ -6,10 +6,11 @@ using System.Windows.Forms;
 namespace SMARTLEARN
 {
     //FrontEnd
-    public partial class LoginAdmin : Form
+    public partial class FELoginAdmin : Form
     {
+        //set a flag to the timer to know if the button is clicked
         public static bool showlog = true;
-        public LoginAdmin()
+        public FELoginAdmin()
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
@@ -27,7 +28,7 @@ namespace SMARTLEARN
 
         private void btnloginadmin_Click_1(object sender, EventArgs e)
         {
-            FrontEnd.Login logstu = new FrontEnd.Login();
+            FrontEnd.FELogin logstu = new FrontEnd.FELogin();
             logstu.Show();
             logstu.TopMost = true;
 
@@ -43,15 +44,16 @@ namespace SMARTLEARN
 
         private void btnclose_Click_1(object sender, EventArgs e)
         {
-            FrontEnd.Login.showlog = true;
+            FrontEnd.FELogin.showlog = true;
             showlog = true;
             this.Close();
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            Backend.LoginAdmin Logadmin = new Backend.LoginAdmin();
-            Logadmin.Login(txtuserid, txtpassword);
+            Database.DBLoginAdmin Logadmin = new Database.DBLoginAdmin();
+            Logadmin.logad(txtuserid, txtpassword);
+            this.Close();
         }
     }
 }

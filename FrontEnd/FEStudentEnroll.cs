@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
 {
-    public partial class StudentEnroll : Form
+    public partial class FEStudentEnroll : Form
     {
         //FRONT END
-        public StudentEnroll()
+        public FEStudentEnroll()
         {
             InitializeComponent();
         }
@@ -49,7 +49,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
+            FEHome home = new FEHome();
             home.Show();
             this.Close();
         }
@@ -61,7 +61,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnnext_Click(object sender, EventArgs e)
         {
-            Backend.StudentEnroll stuenroll = new Backend.StudentEnroll();
+            Backend.BEStudentEnroll stuenroll = new Backend.BEStudentEnroll();
 
             stuenroll.typeofstu(rbnewstudent, rbexistingstudent);
             stuenroll.requiredfields(cbadmittype, cbyearlevel, cbschoolyear, cbterm);
@@ -69,13 +69,14 @@ namespace SMARTLEARN.FrontEnd
             stuenroll.studentInfo(txtfname, txtmname, txtlname, txtsuffix, cbgender, cbstatus, txtcitizenship, dateofbirth, txtbirthplace, txtreligion, txtaddress, txtemail, txtmobilenum, txttelephone);
             stuenroll.guardianInfo(txtgfname, txtgmiddlename, txtglastname, txtgsuffix, txtggender, txtgstatus, txtgcitizenship, txtgdateofbirth, txtgbirthplace, txtgreligion, txtgmobile, txtgemail, txtgmobile, txtgtelephone, txtgrelationship, txtgoccupation);
 
-            FrontEnd.InformationList info = new InformationList();
+            FrontEnd.FEInformationList info = new FEInformationList();
+            FrontEnd.FEInformationList.whatforms = "Student";
             info.ShowDialog();
 
-
-            if (Backend.StudentEnroll.confirm == "Confirm" || Backend.StudentEnroll.confirm == "confirm")
+            //Database
+            if (Backend.BEStudentEnroll.confirm == true)
             {
-                Database.StudentEnroll stuquery = new Database.StudentEnroll();
+                Database.DBStudentEnroll stuquery = new Database.DBStudentEnroll();
                 stuquery.insertinfo(cbadmittype, cbyearlevel, cbschoolyear, cbterm, rbict, txtfname, txtmname, txtlname, txtsuffix, cbgender, cbstatus, txtcitizenship, dateofbirth, txtbirthplace, txtreligion, txtaddress, txtemail, txtmobilenum, txttelephone, txtgfname, txtgmiddlename, txtglastname, txtgsuffix, txtggender, txtgstatus, txtgcitizenship, txtgdateofbirth, txtgbirthplace, txtgreligion, txtgmobile, txtgemail, txtgmobile, txtgtelephone, txtgrelationship, txtgoccupation);
             }
             else
@@ -155,7 +156,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void timertoclose_Tick(object sender, EventArgs e)
         {
-            if (Backend.StudentEnroll.closeform == true)
+            if (Backend.BEStudentEnroll.closeform == true)
             {
                 this.Close();
             }

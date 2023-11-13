@@ -103,21 +103,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backend\LoginAdmin.cs" />
-    <Compile Include="Backend\StudentEnroll.cs" />
-    <Compile Include="Database\LoginAdmin.cs" />
-    <Compile Include="Database\StudentEnroll.cs" />
-    <Compile Include="FrontEnd\Home.cs">
+    <Compile Include="Backend\BEAdregister.cs" />
+    <Compile Include="Backend\BEStudentEnroll.cs" />
+    <Compile Include="Database\DBLoginAdmin.cs" />
+    <Compile Include="Database\DBRegisterAdmin.cs" />
+    <Compile Include="Database\DBStudentEnroll.cs" />
+    <Compile Include="FrontEnd\FEDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="FrontEnd\FEDashboard.Designer.cs">
+      <DependentUpon>FEDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\InformationList.cs">
+    <Compile Include="FrontEnd\FEHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\InformationList.Designer.cs">
-      <DependentUpon>InformationList.cs</DependentUpon>
+    <Compile Include="FrontEnd\FEHome.Designer.cs">
+      <DependentUpon>FEHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FEInformationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEInformationList.Designer.cs">
+      <DependentUpon>FEInformationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FERegisterAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FERegisterAdmin.Designer.cs">
+      <DependentUpon>FERegisterAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Message\LoadingForm.cs">
       <SubType>Form</SubType>
@@ -125,17 +138,17 @@
     <Compile Include="FrontEnd\Message\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\Login.cs">
+    <Compile Include="FrontEnd\FELogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="FrontEnd\FELogin.Designer.cs">
+      <DependentUpon>FELogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\LoginAdmin.cs">
+    <Compile Include="FrontEnd\FELoginAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\LoginAdmin.Designer.cs">
-      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    <Compile Include="FrontEnd\FELoginAdmin.Designer.cs">
+      <DependentUpon>FELoginAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Message\ProcessDeclineMessage.cs">
       <SubType>Form</SubType>
@@ -149,30 +162,36 @@
     <Compile Include="FrontEnd\Message\ProcessMessage.Designer.cs">
       <DependentUpon>ProcessMessage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\StudentEnroll.cs">
+    <Compile Include="FrontEnd\FEStudentEnroll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\StudentEnroll.Designer.cs">
-      <DependentUpon>StudentEnroll.cs</DependentUpon>
+    <Compile Include="FrontEnd\FEStudentEnroll.Designer.cs">
+      <DependentUpon>FEStudentEnroll.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ConsAcc.cs" />
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrontEnd\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FEDashboard.resx">
+      <DependentUpon>FEDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\InformationList.resx">
-      <DependentUpon>InformationList.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FEHome.resx">
+      <DependentUpon>FEHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FEInformationList.resx">
+      <DependentUpon>FEInformationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FERegisterAdmin.resx">
+      <DependentUpon>FERegisterAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Message\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FELogin.resx">
+      <DependentUpon>FELogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\LoginAdmin.resx">
-      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FELoginAdmin.resx">
+      <DependentUpon>FELoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Message\ProcessDeclineMessage.resx">
       <DependentUpon>ProcessDeclineMessage.cs</DependentUpon>
@@ -180,8 +199,8 @@
     <EmbeddedResource Include="FrontEnd\Message\ProcessMessage.resx">
       <DependentUpon>ProcessMessage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\StudentEnroll.resx">
-      <DependentUpon>StudentEnroll.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FEStudentEnroll.resx">
+      <DependentUpon>FEStudentEnroll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

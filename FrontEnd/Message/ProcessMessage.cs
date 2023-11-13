@@ -12,6 +12,7 @@ namespace SMARTLEARN.FrontEnd
 {
     public partial class ProcessMessage : Form
     {
+        public static string message;
         public ProcessMessage()
         {
             InitializeComponent();
@@ -19,14 +20,22 @@ namespace SMARTLEARN.FrontEnd
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //restore to default settings
+            Backend.BEStudentEnroll.confirm = false;
+            Backend.BEStudentEnroll.closeform = false;
+
+            Backend.BEAdregister.confirm = false;
+            Backend.BEAdregister.closeform = false;
+
             this.Close();
 
-            //restore to default settings
-            Backend.StudentEnroll.closeform = false;
-            Backend.StudentEnroll.confirm = "";
-
-            Home home = new Home();
+            FEHome home = new FEHome();
             home.Show();
+        }
+
+        private void ProcessMessage_Load(object sender, EventArgs e)
+        {
+            lblmessage.Text = message;
         }
     }
 }

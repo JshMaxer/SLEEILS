@@ -5,10 +5,10 @@ using System.Windows.Forms;
 namespace SMARTLEARN.Backend
 {
     //Backend
-    public class StudentEnroll
+    public class BEStudentEnroll
     {
-        //Set a flag to know if the information is corrected or ready to next.
-        public static string confirm = "";
+        //Set a flag to know if the information is corrected or ready to next. The database will automaticall insert this to table
+        public static bool confirm = false;
 
         //Set a flag for timer to close the form of StudenEnroll
         public static bool closeform;

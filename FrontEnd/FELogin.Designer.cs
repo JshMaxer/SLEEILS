@@ -1,6 +1,6 @@
 ﻿namespace SMARTLEARN.FrontEnd
 {
-    partial class Login
+    partial class FELogin
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,9 @@
             this.lblforgot = new System.Windows.Forms.Label();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2TextBox1
@@ -209,8 +211,13 @@
             this.btnlogin.Size = new System.Drawing.Size(180, 45);
             this.btnlogin.TabIndex = 12;
             this.btnlogin.Text = "Log in";
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // Login
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // FELogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,12 +233,13 @@
             this.Controls.Add(this.btnloginadmin);
             this.Controls.Add(this.lblforgot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "FELogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +258,6 @@
         private System.Windows.Forms.Label lblforgot;
         private Guna.UI2.WinForms.Guna2Elipse RoundEdge;
         private Guna.UI2.WinForms.Guna2Button btnlogin;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

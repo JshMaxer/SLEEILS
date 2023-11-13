@@ -1,6 +1,6 @@
 ﻿namespace SMARTLEARN.FrontEnd
 {
-    partial class InformationList
+    partial class FEInformationList
     {
         /// <summary>
         /// Required designer variable.

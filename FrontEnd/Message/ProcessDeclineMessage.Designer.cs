@@ -33,7 +33,7 @@
             this.loadingbar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblmessage = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -47,11 +47,12 @@
             this.loadingbar.Animated = true;
             this.loadingbar.AnimationSpeed = 5F;
             this.loadingbar.BackColor = System.Drawing.Color.Transparent;
+            this.loadingbar.Backwards = true;
             this.loadingbar.FillColor = System.Drawing.Color.Transparent;
             this.loadingbar.FillThickness = 1;
             this.loadingbar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.loadingbar.ForeColor = System.Drawing.Color.Transparent;
-            this.loadingbar.Location = new System.Drawing.Point(209, 174);
+            this.loadingbar.Location = new System.Drawing.Point(226, 174);
             this.loadingbar.Minimum = 0;
             this.loadingbar.Name = "loadingbar";
             this.loadingbar.ProgressColor = System.Drawing.Color.DodgerBlue;
@@ -71,31 +72,30 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(-7, -1);
+            this.guna2Panel3.Location = new System.Drawing.Point(-1, -1);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(529, 10);
+            this.guna2Panel3.Size = new System.Drawing.Size(523, 10);
             this.guna2Panel3.TabIndex = 30;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 114);
+            this.label2.Location = new System.Drawing.Point(97, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(327, 45);
             this.label2.TabIndex = 29;
             this.label2.Text = "TRY AGAIN LATER!";
             // 
-            // label1
+            // lblmessage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(503, 90);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "YOUR ENROLLMENT CANNOT\r\nBE PROCESS!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblmessage.Font = new System.Drawing.Font("Bahnschrift", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmessage.Location = new System.Drawing.Point(-4, 12);
+            this.lblmessage.Name = "lblmessage";
+            this.lblmessage.Size = new System.Drawing.Size(529, 90);
+            this.lblmessage.TabIndex = 28;
+            this.lblmessage.Text = "YOUR ENROLLMENT CANNOT\r\nBE PROCESS!";
+            this.lblmessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
@@ -111,11 +111,12 @@
             this.Controls.Add(this.loadingbar);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblmessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProcessDeclineMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProcessDeclineMessage";
+            this.Load += new System.EventHandler(this.ProcessDeclineMessage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +128,7 @@
         public Guna.UI2.WinForms.Guna2CircleProgressBar loadingbar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblmessage;
         private System.Windows.Forms.Timer timer1;
     }
 }

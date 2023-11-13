@@ -16,7 +16,7 @@ namespace SMARTLEARN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrontEnd.Home());
+            Application.Run(new FrontEnd.FEHome());
         }
     }
 }

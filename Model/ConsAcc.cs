@@ -9,6 +9,6 @@ namespace SMARTLEARN.Model
     public static class ConsAcc
     {
         public const string userID = "Admin";
-        public const string pass = "Root";
+        public const string pass = "smartlearn";
     }
 }

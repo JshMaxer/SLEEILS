@@ -1,6 +1,6 @@
 ﻿namespace SMARTLEARN
 {
-    partial class LoginAdmin
+    partial class FELoginAdmin
     {
         /// <summary>
         /// Required designer variable.

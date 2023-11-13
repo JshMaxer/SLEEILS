@@ -1,6 +1,6 @@
 ﻿namespace SMARTLEARN.FrontEnd
 {
-    partial class StudentEnroll
+    partial class FEStudentEnroll
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentEnroll));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEStudentEnroll));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -662,12 +662,12 @@
             this.txtgdateofbirth.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
             this.txtgdateofbirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtgdateofbirth.Location = new System.Drawing.Point(734, 138);
-            this.txtgdateofbirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.txtgdateofbirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtgdateofbirth.MaxDate = new System.DateTime(2008, 12, 31, 0, 0, 0, 0);
+            this.txtgdateofbirth.MinDate = new System.DateTime(1940, 12, 31, 0, 0, 0, 0);
             this.txtgdateofbirth.Name = "txtgdateofbirth";
             this.txtgdateofbirth.Size = new System.Drawing.Size(211, 35);
             this.txtgdateofbirth.TabIndex = 3;
-            this.txtgdateofbirth.Value = new System.DateTime(2023, 10, 8, 16, 15, 58, 699);
+            this.txtgdateofbirth.Value = new System.DateTime(2003, 6, 22, 0, 0, 0, 0);
             // 
             // txtgsuffix
             // 
@@ -1197,12 +1197,12 @@
             this.dateofbirth.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
             this.dateofbirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateofbirth.Location = new System.Drawing.Point(734, 138);
-            this.dateofbirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateofbirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateofbirth.MaxDate = new System.DateTime(2008, 12, 31, 0, 0, 0, 0);
+            this.dateofbirth.MinDate = new System.DateTime(1940, 12, 31, 0, 0, 0, 0);
             this.dateofbirth.Name = "dateofbirth";
             this.dateofbirth.Size = new System.Drawing.Size(211, 35);
             this.dateofbirth.TabIndex = 3;
-            this.dateofbirth.Value = new System.DateTime(2023, 10, 8, 16, 15, 58, 699);
+            this.dateofbirth.Value = new System.DateTime(2003, 6, 22, 0, 0, 0, 0);
             // 
             // txtsuffix
             // 
@@ -1884,7 +1884,7 @@
             this.timertoclose.Interval = 1;
             this.timertoclose.Tick += new System.EventHandler(this.timertoclose_Tick);
             // 
-            // StudentEnroll
+            // FEStudentEnroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1895,7 +1895,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2Panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StudentEnroll";
+            this.Name = "FEStudentEnroll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentEnroll";
             this.guna2Panel4.ResumeLayout(false);
