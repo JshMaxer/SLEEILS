@@ -108,6 +108,12 @@
     <Compile Include="Database\DBLoginAdmin.cs" />
     <Compile Include="Database\DBRegisterAdmin.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
+    <Compile Include="FrontEnd\FEsmallprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEsmallprofile.Designer.cs">
+      <DependentUpon>FEsmallprofile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\FEDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontEnd\FEsmallprofile.resx">
+      <DependentUpon>FEsmallprofile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FEDashboard.resx">
       <DependentUpon>FEDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +303,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-web-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
