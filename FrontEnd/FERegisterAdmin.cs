@@ -88,6 +88,22 @@ namespace SMARTLEARN.FrontEnd
             Database.DBRegisterAdmin regad = new Database.DBRegisterAdmin();
             regad.USERID(txtuserid);
         }
+
+        private void txtmobilenum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtfname_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
 

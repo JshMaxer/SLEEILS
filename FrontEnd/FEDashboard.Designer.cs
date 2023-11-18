@@ -36,34 +36,31 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.paneldash = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label3 = new System.Windows.Forms.Label();
             this.calenderofactivities = new System.Windows.Forms.MonthCalendar();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
+            this.timetoclose = new System.Windows.Forms.Timer(this.components);
+            this.lblrole = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnhome = new Guna.UI2.WinForms.Guna2Button();
+            this.btncourse = new Guna.UI2.WinForms.Guna2Button();
+            this.btnbalance = new Guna.UI2.WinForms.Guna2Button();
+            this.btnschedule = new Guna.UI2.WinForms.Guna2Button();
+            this.btnviewgrades = new Guna.UI2.WinForms.Guna2Button();
+            this.btnstudentconfirmation = new Guna.UI2.WinForms.Guna2Button();
             this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnotification = new Guna.UI2.WinForms.Guna2ImageButton();
             this.dragpanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.paneldash.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,12 +109,12 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Button1);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Button2);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Button3);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Button4);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Button5);
-            this.flowLayoutPanel1.Controls.Add(this.guna2Button6);
+            this.flowLayoutPanel1.Controls.Add(this.btnhome);
+            this.flowLayoutPanel1.Controls.Add(this.btncourse);
+            this.flowLayoutPanel1.Controls.Add(this.btnbalance);
+            this.flowLayoutPanel1.Controls.Add(this.btnschedule);
+            this.flowLayoutPanel1.Controls.Add(this.btnviewgrades);
+            this.flowLayoutPanel1.Controls.Add(this.btnstudentconfirmation);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(-1, 64);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -128,35 +125,12 @@
             // 
             this.paneldash.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.paneldash.BorderRadius = 12;
-            this.paneldash.BorderThickness = 1;
-            this.paneldash.Controls.Add(this.guna2PictureBox1);
-            this.paneldash.Controls.Add(this.label1);
-            this.paneldash.Controls.Add(this.guna2Separator1);
+            this.paneldash.BorderThickness = 2;
             this.paneldash.Location = new System.Drawing.Point(144, 116);
             this.paneldash.Name = "paneldash";
             this.paneldash.Size = new System.Drawing.Size(1150, 769);
             this.paneldash.TabIndex = 19;
             this.paneldash.Click += new System.EventHandler(this.paneldash_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.label1.Location = new System.Drawing.Point(17, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 29);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Welcome";
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(5, 44);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1142, 10);
-            this.guna2Separator1.TabIndex = 0;
             // 
             // label3
             // 
@@ -178,17 +152,17 @@
             this.calenderofactivities.Name = "calenderofactivities";
             this.calenderofactivities.TabIndex = 20;
             // 
-            // label4
+            // lblname
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.label4.Location = new System.Drawing.Point(1343, 285);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 29);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Joshua Cambal";
+            this.lblname.AutoSize = true;
+            this.lblname.BackColor = System.Drawing.Color.Transparent;
+            this.lblname.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.lblname.Location = new System.Drawing.Point(1343, 273);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(177, 29);
+            this.lblname.TabIndex = 19;
+            this.lblname.Text = "Joshua Cambal";
             // 
             // guna2TextBox1
             // 
@@ -260,6 +234,21 @@
             this.panelsmall.TabIndex = 25;
             this.panelsmall.Visible = false;
             // 
+            // timetoclose
+            // 
+            this.timetoclose.Enabled = true;
+            this.timetoclose.Tick += new System.EventHandler(this.timetoclose_Tick);
+            // 
+            // lblrole
+            // 
+            this.lblrole.AutoSize = true;
+            this.lblrole.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrole.Location = new System.Drawing.Point(1399, 305);
+            this.lblrole.Name = "lblrole";
+            this.lblrole.Size = new System.Drawing.Size(57, 19);
+            this.lblrole.TabIndex = 26;
+            this.lblrole.Text = "ADMIN";
+            // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources.account;
@@ -272,18 +261,6 @@
             this.guna2CirclePictureBox1.TabIndex = 21;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 15;
-            this.guna2PictureBox1.Image = global::SMARTLEARN.Properties.Resources.wallpaperflare_com_wallpaper__1_;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(10, 60);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1134, 664);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 22;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
@@ -294,149 +271,153 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Button1
+            // btnhome
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.BorderRadius = 12;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Image = global::SMARTLEARN.Properties.Resources.home__1_;
-            this.guna2Button1.Image = global::SMARTLEARN.Properties.Resources.home;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(14, -10);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(3, 72);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(131, 92);
-            this.guna2Button1.TabIndex = 19;
-            this.guna2Button1.Text = "Home";
-            this.guna2Button1.TextOffset = new System.Drawing.Point(-8, 30);
+            this.btnhome.Animated = true;
+            this.btnhome.BorderColor = System.Drawing.Color.White;
+            this.btnhome.BorderRadius = 12;
+            this.btnhome.BorderThickness = 1;
+            this.btnhome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnhome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnhome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnhome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnhome.FillColor = System.Drawing.Color.Transparent;
+            this.btnhome.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnhome.ForeColor = System.Drawing.Color.White;
+            this.btnhome.HoverState.Image = global::SMARTLEARN.Properties.Resources.home__1_;
+            this.btnhome.Image = global::SMARTLEARN.Properties.Resources.home;
+            this.btnhome.ImageOffset = new System.Drawing.Point(14, -10);
+            this.btnhome.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnhome.Location = new System.Drawing.Point(3, 72);
+            this.btnhome.Name = "btnhome";
+            this.btnhome.Size = new System.Drawing.Size(131, 92);
+            this.btnhome.TabIndex = 19;
+            this.btnhome.Text = "Home";
+            this.btnhome.TextOffset = new System.Drawing.Point(-8, 30);
+            this.btnhome.Click += new System.EventHandler(this.btnhome_Click);
             // 
-            // guna2Button2
+            // btncourse
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BorderColor = System.Drawing.Color.White;
-            this.guna2Button2.BorderRadius = 12;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Image = global::SMARTLEARN.Properties.Resources.learning__1_;
-            this.guna2Button2.Image = global::SMARTLEARN.Properties.Resources.learning;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(16, -10);
-            this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button2.Location = new System.Drawing.Point(3, 170);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(131, 92);
-            this.guna2Button2.TabIndex = 19;
-            this.guna2Button2.Text = "Course";
-            this.guna2Button2.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btncourse.Animated = true;
+            this.btncourse.BorderColor = System.Drawing.Color.White;
+            this.btncourse.BorderRadius = 12;
+            this.btncourse.BorderThickness = 1;
+            this.btncourse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btncourse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btncourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btncourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncourse.FillColor = System.Drawing.Color.Transparent;
+            this.btncourse.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncourse.ForeColor = System.Drawing.Color.White;
+            this.btncourse.HoverState.Image = global::SMARTLEARN.Properties.Resources.learning__1_;
+            this.btncourse.Image = global::SMARTLEARN.Properties.Resources.learning;
+            this.btncourse.ImageOffset = new System.Drawing.Point(16, -10);
+            this.btncourse.ImageSize = new System.Drawing.Size(30, 30);
+            this.btncourse.Location = new System.Drawing.Point(3, 170);
+            this.btncourse.Name = "btncourse";
+            this.btncourse.Size = new System.Drawing.Size(131, 92);
+            this.btncourse.TabIndex = 19;
+            this.btncourse.Text = "Course";
+            this.btncourse.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btncourse.Click += new System.EventHandler(this.btncourse_Click);
             // 
-            // guna2Button3
+            // btnbalance
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BorderColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderRadius = 12;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Image = global::SMARTLEARN.Properties.Resources.bill__1_;
-            this.guna2Button3.Image = global::SMARTLEARN.Properties.Resources.bill;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(18, -10);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Location = new System.Drawing.Point(3, 268);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(131, 92);
-            this.guna2Button3.TabIndex = 19;
-            this.guna2Button3.Text = "Balance";
-            this.guna2Button3.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btnbalance.Animated = true;
+            this.btnbalance.BorderColor = System.Drawing.Color.White;
+            this.btnbalance.BorderRadius = 12;
+            this.btnbalance.BorderThickness = 1;
+            this.btnbalance.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnbalance.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnbalance.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbalance.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbalance.FillColor = System.Drawing.Color.Transparent;
+            this.btnbalance.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnbalance.ForeColor = System.Drawing.Color.White;
+            this.btnbalance.HoverState.Image = global::SMARTLEARN.Properties.Resources.bill__1_;
+            this.btnbalance.Image = global::SMARTLEARN.Properties.Resources.bill;
+            this.btnbalance.ImageOffset = new System.Drawing.Point(18, -10);
+            this.btnbalance.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnbalance.Location = new System.Drawing.Point(3, 268);
+            this.btnbalance.Name = "btnbalance";
+            this.btnbalance.Size = new System.Drawing.Size(131, 92);
+            this.btnbalance.TabIndex = 19;
+            this.btnbalance.Text = "Balance";
+            this.btnbalance.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btnbalance.Click += new System.EventHandler(this.btnbalance_Click);
             // 
-            // guna2Button4
+            // btnschedule
             // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BorderColor = System.Drawing.Color.White;
-            this.guna2Button4.BorderRadius = 12;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Image = global::SMARTLEARN.Properties.Resources.schedule__1_;
-            this.guna2Button4.Image = global::SMARTLEARN.Properties.Resources.schedule;
-            this.guna2Button4.ImageOffset = new System.Drawing.Point(18, -10);
-            this.guna2Button4.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button4.Location = new System.Drawing.Point(3, 366);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(131, 92);
-            this.guna2Button4.TabIndex = 19;
-            this.guna2Button4.Text = "Schedule";
-            this.guna2Button4.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btnschedule.Animated = true;
+            this.btnschedule.BorderColor = System.Drawing.Color.White;
+            this.btnschedule.BorderRadius = 12;
+            this.btnschedule.BorderThickness = 1;
+            this.btnschedule.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnschedule.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnschedule.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnschedule.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnschedule.FillColor = System.Drawing.Color.Transparent;
+            this.btnschedule.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnschedule.ForeColor = System.Drawing.Color.White;
+            this.btnschedule.HoverState.Image = global::SMARTLEARN.Properties.Resources.schedule__1_;
+            this.btnschedule.Image = global::SMARTLEARN.Properties.Resources.schedule;
+            this.btnschedule.ImageOffset = new System.Drawing.Point(18, -10);
+            this.btnschedule.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnschedule.Location = new System.Drawing.Point(3, 366);
+            this.btnschedule.Name = "btnschedule";
+            this.btnschedule.Size = new System.Drawing.Size(131, 92);
+            this.btnschedule.TabIndex = 19;
+            this.btnschedule.Text = "Schedule";
+            this.btnschedule.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btnschedule.Click += new System.EventHandler(this.btnschedule_Click);
             // 
-            // guna2Button5
+            // btnviewgrades
             // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.BorderColor = System.Drawing.Color.White;
-            this.guna2Button5.BorderRadius = 12;
-            this.guna2Button5.BorderThickness = 1;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.Image = global::SMARTLEARN.Properties.Resources.search__1_;
-            this.guna2Button5.Image = global::SMARTLEARN.Properties.Resources.search;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(18, -10);
-            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button5.Location = new System.Drawing.Point(3, 464);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(131, 92);
-            this.guna2Button5.TabIndex = 19;
-            this.guna2Button5.Text = "Subjects";
-            this.guna2Button5.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btnviewgrades.Animated = true;
+            this.btnviewgrades.BorderColor = System.Drawing.Color.White;
+            this.btnviewgrades.BorderRadius = 12;
+            this.btnviewgrades.BorderThickness = 1;
+            this.btnviewgrades.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnviewgrades.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnviewgrades.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnviewgrades.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnviewgrades.FillColor = System.Drawing.Color.Transparent;
+            this.btnviewgrades.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnviewgrades.ForeColor = System.Drawing.Color.White;
+            this.btnviewgrades.HoverState.Image = global::SMARTLEARN.Properties.Resources.exam__1_;
+            this.btnviewgrades.Image = global::SMARTLEARN.Properties.Resources.exam;
+            this.btnviewgrades.ImageOffset = new System.Drawing.Point(25, -10);
+            this.btnviewgrades.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnviewgrades.Location = new System.Drawing.Point(3, 464);
+            this.btnviewgrades.Name = "btnviewgrades";
+            this.btnviewgrades.Size = new System.Drawing.Size(131, 92);
+            this.btnviewgrades.TabIndex = 19;
+            this.btnviewgrades.Text = "View Grades";
+            this.btnviewgrades.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btnviewgrades.Click += new System.EventHandler(this.btnviewgrades_Click);
             // 
-            // guna2Button6
+            // btnstudentconfirmation
             // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.BorderColor = System.Drawing.Color.White;
-            this.guna2Button6.BorderRadius = 12;
-            this.guna2Button6.BorderThickness = 1;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.Image = global::SMARTLEARN.Properties.Resources.exam__1_;
-            this.guna2Button6.Image = global::SMARTLEARN.Properties.Resources.exam;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(25, -10);
-            this.guna2Button6.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button6.Location = new System.Drawing.Point(3, 562);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(131, 92);
-            this.guna2Button6.TabIndex = 19;
-            this.guna2Button6.Text = "View Grades";
-            this.guna2Button6.TextOffset = new System.Drawing.Point(-12, 30);
+            this.btnstudentconfirmation.Animated = true;
+            this.btnstudentconfirmation.BorderColor = System.Drawing.Color.White;
+            this.btnstudentconfirmation.BorderRadius = 12;
+            this.btnstudentconfirmation.BorderThickness = 1;
+            this.btnstudentconfirmation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnstudentconfirmation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnstudentconfirmation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnstudentconfirmation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnstudentconfirmation.FillColor = System.Drawing.Color.Transparent;
+            this.btnstudentconfirmation.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnstudentconfirmation.ForeColor = System.Drawing.Color.White;
+            this.btnstudentconfirmation.HoverState.Image = global::SMARTLEARN.Properties.Resources.search__1_;
+            this.btnstudentconfirmation.Image = global::SMARTLEARN.Properties.Resources.search;
+            this.btnstudentconfirmation.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnstudentconfirmation.Location = new System.Drawing.Point(3, 562);
+            this.btnstudentconfirmation.Name = "btnstudentconfirmation";
+            this.btnstudentconfirmation.Size = new System.Drawing.Size(131, 92);
+            this.btnstudentconfirmation.TabIndex = 19;
+            this.btnstudentconfirmation.Text = "Student Confirmation";
+            this.btnstudentconfirmation.Click += new System.EventHandler(this.btnstudentconfirmation_Click);
             // 
             // btnsmallprofile
             // 
@@ -473,13 +454,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1573, 897);
             this.ControlBox = false;
+            this.Controls.Add(this.lblrole);
             this.Controls.Add(this.panelsmall);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.calenderofactivities);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblname);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.paneldash);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -488,14 +471,12 @@
             this.Name = "FEDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FEDashboard";
+            this.Load += new System.EventHandler(this.FEDashboard_Load);
             this.dragpanel.ResumeLayout(false);
             this.dragpanel.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.paneldash.ResumeLayout(false);
-            this.paneldash.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -509,29 +490,28 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnhome;
+        private Guna.UI2.WinForms.Guna2Button btncourse;
         private Guna.UI2.WinForms.Guna2Panel paneldash;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Panel dragpanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.MonthCalendar calenderofactivities;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblname;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.ListBox listBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btnbalance;
+        private Guna.UI2.WinForms.Guna2Button btnschedule;
+        private Guna.UI2.WinForms.Guna2Button btnviewgrades;
         private Guna.UI2.WinForms.Guna2ImageButton btnotification;
         private Guna.UI2.WinForms.Guna2ImageButton btnsmallprofile;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel panelsmall;
+        private System.Windows.Forms.Timer timetoclose;
+        private System.Windows.Forms.Label lblrole;
+        private Guna.UI2.WinForms.Guna2Button btnstudentconfirmation;
     }
 }

@@ -17,9 +17,18 @@ namespace SMARTLEARN.FrontEnd
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnlogout_Click(object sender, EventArgs e)
         {
+            FEHome.timetoclose = false; //Home timer to close set to false
+            FrontEnd.FELogin.showlog = true; //Enable the button inside the Home Form using the flag on FELogin
+            FELoginAdmin.showlog = true; //Enable the button inside the Home Form using the flag on FELoginAdmin
+            FELoginAdmin.closethis = false; //Set to false the 'closethis' flag in login
             
+            FrontEnd.FEHome home = new FEHome();
+            home.Show();
+
+            FrontEnd.FEDashboard.timertoclose = true; //Close the Dashboard
+            //this.Close();
         }
     }
 }

@@ -108,6 +108,36 @@
     <Compile Include="Database\DBLoginAdmin.cs" />
     <Compile Include="Database\DBRegisterAdmin.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
+    <Compile Include="FrontEnd\AdminForms\FEADBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADBalance.Designer.cs">
+      <DependentUpon>FEADBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADCOURSE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADCOURSE.Designer.cs">
+      <DependentUpon>FEADCOURSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADSchedule.Designer.cs">
+      <DependentUpon>FEADSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADStudentConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADStudentConfirmation.Designer.cs">
+      <DependentUpon>FEADStudentConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADViewGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\AdminForms\FEADViewGrades.Designer.cs">
+      <DependentUpon>FEADViewGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\FEsmallprofile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +167,12 @@
     </Compile>
     <Compile Include="FrontEnd\FERegisterAdmin.Designer.cs">
       <DependentUpon>FERegisterAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FEWelcomeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEWelcomeDashboard.Designer.cs">
+      <DependentUpon>FEWelcomeDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Message\LoadingForm.cs">
       <SubType>Form</SubType>
@@ -178,6 +214,21 @@
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontEnd\AdminForms\FEADBalance.resx">
+      <DependentUpon>FEADBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\AdminForms\FEADCOURSE.resx">
+      <DependentUpon>FEADCOURSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\AdminForms\FEADSchedule.resx">
+      <DependentUpon>FEADSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\AdminForms\FEADStudentConfirmation.resx">
+      <DependentUpon>FEADStudentConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\AdminForms\FEADViewGrades.resx">
+      <DependentUpon>FEADViewGrades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FEsmallprofile.resx">
       <DependentUpon>FEsmallprofile.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FERegisterAdmin.resx">
       <DependentUpon>FERegisterAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FEWelcomeDashboard.resx">
+      <DependentUpon>FEWelcomeDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Message\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
@@ -312,6 +366,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FrontEnd\FacultyForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

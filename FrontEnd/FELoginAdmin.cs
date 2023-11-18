@@ -8,9 +8,12 @@ namespace SMARTLEARN
     //FrontEnd
     public partial class FELoginAdmin : Form
     {
-        //set a flag to the timer to know if the button is clicked
+        //set a flag to the timer to know if the button is clicked.
         public static bool showlog = true;
+
+        //set a flag to the timer to close the current form.
         public static bool closethis = false;
+
         public FELoginAdmin()
         {
             InitializeComponent();

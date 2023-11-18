@@ -666,7 +666,7 @@
             this.txtgdateofbirth.MinDate = new System.DateTime(1940, 12, 31, 0, 0, 0, 0);
             this.txtgdateofbirth.Name = "txtgdateofbirth";
             this.txtgdateofbirth.Size = new System.Drawing.Size(211, 35);
-            this.txtgdateofbirth.TabIndex = 3;
+            this.txtgdateofbirth.TabIndex = 7;
             this.txtgdateofbirth.Value = new System.DateTime(2003, 6, 22, 0, 0, 0, 0);
             // 
             // txtgsuffix
@@ -689,7 +689,8 @@
             this.txtgsuffix.PlaceholderText = "(e.g. JR.)";
             this.txtgsuffix.SelectedText = "";
             this.txtgsuffix.Size = new System.Drawing.Size(208, 35);
-            this.txtgsuffix.TabIndex = 2;
+            this.txtgsuffix.TabIndex = 3;
+            this.txtgsuffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // label21
             // 
@@ -731,7 +732,8 @@
             this.txtgcitizenship.PlaceholderText = "Citizenship";
             this.txtgcitizenship.SelectedText = "";
             this.txtgcitizenship.Size = new System.Drawing.Size(211, 35);
-            this.txtgcitizenship.TabIndex = 2;
+            this.txtgcitizenship.TabIndex = 6;
+            this.txtgcitizenship.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // label23
             // 
@@ -759,7 +761,7 @@
             this.txtgstatus.Location = new System.Drawing.Point(275, 137);
             this.txtgstatus.Name = "txtgstatus";
             this.txtgstatus.Size = new System.Drawing.Size(212, 36);
-            this.txtgstatus.TabIndex = 0;
+            this.txtgstatus.TabIndex = 5;
             // 
             // txtggender
             // 
@@ -777,7 +779,7 @@
             this.txtggender.Location = new System.Drawing.Point(27, 137);
             this.txtggender.Name = "txtggender";
             this.txtggender.Size = new System.Drawing.Size(212, 36);
-            this.txtggender.TabIndex = 0;
+            this.txtggender.TabIndex = 4;
             // 
             // txtgoccupation
             // 
@@ -799,7 +801,8 @@
             this.txtgoccupation.PlaceholderText = "Occupation";
             this.txtgoccupation.SelectedText = "";
             this.txtgoccupation.Size = new System.Drawing.Size(211, 35);
-            this.txtgoccupation.TabIndex = 2;
+            this.txtgoccupation.TabIndex = 15;
+            this.txtgoccupation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // label36
             // 
@@ -831,7 +834,8 @@
             this.txtgtelephone.PlaceholderText = "";
             this.txtgtelephone.SelectedText = "";
             this.txtgtelephone.Size = new System.Drawing.Size(211, 35);
-            this.txtgtelephone.TabIndex = 2;
+            this.txtgtelephone.TabIndex = 13;
+            this.txtgtelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmobilenum_KeyPress);
             // 
             // label24
             // 
@@ -864,6 +868,7 @@
             this.txtglastname.SelectedText = "";
             this.txtglastname.Size = new System.Drawing.Size(211, 35);
             this.txtglastname.TabIndex = 2;
+            this.txtglastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // txtgrelationship
             // 
@@ -885,7 +890,8 @@
             this.txtgrelationship.PlaceholderText = "Relationship";
             this.txtgrelationship.SelectedText = "";
             this.txtgrelationship.Size = new System.Drawing.Size(285, 35);
-            this.txtgrelationship.TabIndex = 2;
+            this.txtgrelationship.TabIndex = 14;
+            this.txtgrelationship.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // label25
             // 
@@ -917,7 +923,8 @@
             this.txtgmobile.PlaceholderText = "09XXxxxxxxx";
             this.txtgmobile.SelectedText = "";
             this.txtgmobile.Size = new System.Drawing.Size(285, 35);
-            this.txtgmobile.TabIndex = 2;
+            this.txtgmobile.TabIndex = 12;
+            this.txtgmobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmobilenum_KeyPress);
             // 
             // label35
             // 
@@ -969,7 +976,8 @@
             this.txtgmiddlename.PlaceholderText = "Middle Name";
             this.txtgmiddlename.SelectedText = "";
             this.txtgmiddlename.Size = new System.Drawing.Size(211, 35);
-            this.txtgmiddlename.TabIndex = 2;
+            this.txtgmiddlename.TabIndex = 1;
+            this.txtgmiddlename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // label28
             // 
@@ -1011,7 +1019,8 @@
             this.txtgreligion.PlaceholderText = "Religion";
             this.txtgreligion.SelectedText = "";
             this.txtgreligion.Size = new System.Drawing.Size(439, 35);
-            this.txtgreligion.TabIndex = 2;
+            this.txtgreligion.TabIndex = 9;
+            this.txtgreligion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // label30
             // 
@@ -1043,7 +1052,7 @@
             this.txtgaddress.PlaceholderText = "Current Address";
             this.txtgaddress.SelectedText = "";
             this.txtgaddress.Size = new System.Drawing.Size(918, 35);
-            this.txtgaddress.TabIndex = 2;
+            this.txtgaddress.TabIndex = 10;
             // 
             // label31
             // 
@@ -1075,7 +1084,7 @@
             this.txtgbirthplace.PlaceholderText = "Birthplace";
             this.txtgbirthplace.SelectedText = "";
             this.txtgbirthplace.Size = new System.Drawing.Size(460, 35);
-            this.txtgbirthplace.TabIndex = 2;
+            this.txtgbirthplace.TabIndex = 8;
             // 
             // txtgemail
             // 
@@ -1097,7 +1106,7 @@
             this.txtgemail.PlaceholderText = "example@gmail.com";
             this.txtgemail.SelectedText = "";
             this.txtgemail.Size = new System.Drawing.Size(392, 35);
-            this.txtgemail.TabIndex = 2;
+            this.txtgemail.TabIndex = 11;
             // 
             // label32
             // 
@@ -1139,7 +1148,8 @@
             this.txtgfname.PlaceholderText = "Given Name";
             this.txtgfname.SelectedText = "";
             this.txtgfname.Size = new System.Drawing.Size(211, 35);
-            this.txtgfname.TabIndex = 2;
+            this.txtgfname.TabIndex = 0;
+            this.txtgfname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgfname_KeyPress);
             // 
             // label34
             // 
@@ -1201,7 +1211,7 @@
             this.dateofbirth.MinDate = new System.DateTime(1940, 12, 31, 0, 0, 0, 0);
             this.dateofbirth.Name = "dateofbirth";
             this.dateofbirth.Size = new System.Drawing.Size(211, 35);
-            this.dateofbirth.TabIndex = 3;
+            this.dateofbirth.TabIndex = 7;
             this.dateofbirth.Value = new System.DateTime(2003, 6, 22, 0, 0, 0, 0);
             // 
             // txtsuffix
@@ -1224,7 +1234,8 @@
             this.txtsuffix.PlaceholderText = "(e.g. JR.)";
             this.txtsuffix.SelectedText = "";
             this.txtsuffix.Size = new System.Drawing.Size(208, 35);
-            this.txtsuffix.TabIndex = 2;
+            this.txtsuffix.TabIndex = 3;
+            this.txtsuffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // label14
             // 
@@ -1266,7 +1277,8 @@
             this.txtcitizenship.PlaceholderText = "Citizenship";
             this.txtcitizenship.SelectedText = "";
             this.txtcitizenship.Size = new System.Drawing.Size(211, 35);
-            this.txtcitizenship.TabIndex = 2;
+            this.txtcitizenship.TabIndex = 6;
+            this.txtcitizenship.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // label13
             // 
@@ -1294,7 +1306,7 @@
             this.cbstatus.Location = new System.Drawing.Point(275, 137);
             this.cbstatus.Name = "cbstatus";
             this.cbstatus.Size = new System.Drawing.Size(212, 36);
-            this.cbstatus.TabIndex = 0;
+            this.cbstatus.TabIndex = 5;
             // 
             // cbgender
             // 
@@ -1312,7 +1324,7 @@
             this.cbgender.Location = new System.Drawing.Point(27, 137);
             this.cbgender.Name = "cbgender";
             this.cbgender.Size = new System.Drawing.Size(212, 36);
-            this.cbgender.TabIndex = 0;
+            this.cbgender.TabIndex = 4;
             // 
             // txttelephone
             // 
@@ -1334,7 +1346,8 @@
             this.txttelephone.PlaceholderText = "";
             this.txttelephone.SelectedText = "";
             this.txttelephone.Size = new System.Drawing.Size(211, 35);
-            this.txttelephone.TabIndex = 2;
+            this.txttelephone.TabIndex = 13;
+            this.txttelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmobilenum_KeyPress);
             // 
             // label20
             // 
@@ -1367,6 +1380,7 @@
             this.txtlname.SelectedText = "";
             this.txtlname.Size = new System.Drawing.Size(211, 35);
             this.txtlname.TabIndex = 2;
+            this.txtlname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // label8
             // 
@@ -1398,7 +1412,8 @@
             this.txtmobilenum.PlaceholderText = "09XXxxxxxxx";
             this.txtmobilenum.SelectedText = "";
             this.txtmobilenum.Size = new System.Drawing.Size(285, 35);
-            this.txtmobilenum.TabIndex = 2;
+            this.txtmobilenum.TabIndex = 12;
+            this.txtmobilenum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmobilenum_KeyPress);
             // 
             // label12
             // 
@@ -1440,7 +1455,8 @@
             this.txtmname.PlaceholderText = "Middle Name";
             this.txtmname.SelectedText = "";
             this.txtmname.Size = new System.Drawing.Size(211, 35);
-            this.txtmname.TabIndex = 2;
+            this.txtmname.TabIndex = 1;
+            this.txtmname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // label7
             // 
@@ -1482,7 +1498,8 @@
             this.txtreligion.PlaceholderText = "Religion";
             this.txtreligion.SelectedText = "";
             this.txtreligion.Size = new System.Drawing.Size(439, 35);
-            this.txtreligion.TabIndex = 2;
+            this.txtreligion.TabIndex = 9;
+            this.txtreligion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // label16
             // 
@@ -1514,7 +1531,7 @@
             this.txtaddress.PlaceholderText = "Current Address";
             this.txtaddress.SelectedText = "";
             this.txtaddress.Size = new System.Drawing.Size(918, 35);
-            this.txtaddress.TabIndex = 2;
+            this.txtaddress.TabIndex = 10;
             // 
             // label17
             // 
@@ -1546,7 +1563,7 @@
             this.txtbirthplace.PlaceholderText = "Birthplace";
             this.txtbirthplace.SelectedText = "";
             this.txtbirthplace.Size = new System.Drawing.Size(460, 35);
-            this.txtbirthplace.TabIndex = 2;
+            this.txtbirthplace.TabIndex = 8;
             // 
             // txtemail
             // 
@@ -1568,7 +1585,7 @@
             this.txtemail.PlaceholderText = "example@gmail.com";
             this.txtemail.SelectedText = "";
             this.txtemail.Size = new System.Drawing.Size(392, 35);
-            this.txtemail.TabIndex = 2;
+            this.txtemail.TabIndex = 11;
             // 
             // label15
             // 
@@ -1610,7 +1627,8 @@
             this.txtfname.PlaceholderText = "Given Name";
             this.txtfname.SelectedText = "";
             this.txtfname.Size = new System.Drawing.Size(211, 35);
-            this.txtfname.TabIndex = 2;
+            this.txtfname.TabIndex = 0;
+            this.txtfname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // label10
             // 
@@ -1750,7 +1768,7 @@
             this.cbterm.Location = new System.Drawing.Point(650, 110);
             this.cbterm.Name = "cbterm";
             this.cbterm.Size = new System.Drawing.Size(241, 36);
-            this.cbterm.TabIndex = 0;
+            this.cbterm.TabIndex = 3;
             // 
             // cbschoolyear
             // 
@@ -1765,7 +1783,7 @@
             this.cbschoolyear.Location = new System.Drawing.Point(650, 68);
             this.cbschoolyear.Name = "cbschoolyear";
             this.cbschoolyear.Size = new System.Drawing.Size(241, 36);
-            this.cbschoolyear.TabIndex = 0;
+            this.cbschoolyear.TabIndex = 2;
             this.cbschoolyear.DropDown += new System.EventHandler(this.dbschoolyear_DropDown);
             // 
             // cbyearlevel
@@ -1784,7 +1802,7 @@
             this.cbyearlevel.Location = new System.Drawing.Point(256, 110);
             this.cbyearlevel.Name = "cbyearlevel";
             this.cbyearlevel.Size = new System.Drawing.Size(241, 36);
-            this.cbyearlevel.TabIndex = 0;
+            this.cbyearlevel.TabIndex = 1;
             // 
             // cbadmittype
             // 
@@ -1850,7 +1868,7 @@
             this.rbexistingstudent.Location = new System.Drawing.Point(27, 102);
             this.rbexistingstudent.Name = "rbexistingstudent";
             this.rbexistingstudent.Size = new System.Drawing.Size(167, 27);
-            this.rbexistingstudent.TabIndex = 0;
+            this.rbexistingstudent.TabIndex = 1;
             this.rbexistingstudent.Text = "Existing Student";
             this.rbexistingstudent.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbexistingstudent.UncheckedState.BorderThickness = 2;

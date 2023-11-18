@@ -19,8 +19,8 @@ namespace SMARTLEARN.FrontEnd
             logstu.TopMost = true;
             logstu.Show();
 
-            FrontEnd.FELogin.showlog = false;
-            FELoginAdmin.showlog = false;
+            FrontEnd.FELogin.showlog = false; //Set to false the flag in FELogin to Disabled the button
+            FELoginAdmin.showlog = false; //Set to false the flag in FELoginAdmin to Disabled the button
         }
 
         private void btnexit_Click(object sender, EventArgs e)

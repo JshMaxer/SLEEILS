@@ -36,7 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.requiredfields = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtuserid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbgender = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -58,8 +60,6 @@
             this.btnnext = new Guna.UI2.WinForms.Guna2Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timertoclose = new System.Windows.Forms.Timer(this.components);
-            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.requiredfields.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -157,6 +157,31 @@
             this.txtuserid.Size = new System.Drawing.Size(241, 36);
             this.txtuserid.TabIndex = 0;
             // 
+            // txtpassword
+            // 
+            this.txtpassword.Animated = true;
+            this.txtpassword.BorderRadius = 8;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpassword.DefaultText = "";
+            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Location = new System.Drawing.Point(499, 107);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpassword.MaxLength = 50;
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '\0';
+            this.txtpassword.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtpassword.PlaceholderText = "Create account password";
+            this.txtpassword.SelectedText = "";
+            this.txtpassword.Size = new System.Drawing.Size(241, 36);
+            this.txtpassword.TabIndex = 10;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -166,6 +191,16 @@
             this.label4.Size = new System.Drawing.Size(54, 23);
             this.label4.TabIndex = 1;
             this.label4.Text = "Gender";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(394, 114);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 23);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Password";
             // 
             // label5
             // 
@@ -286,6 +321,7 @@
             this.txtlname.SelectedText = "";
             this.txtlname.Size = new System.Drawing.Size(241, 36);
             this.txtlname.TabIndex = 6;
+            this.txtlname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress_1);
             // 
             // txtmname
             // 
@@ -310,6 +346,7 @@
             this.txtmname.SelectedText = "";
             this.txtmname.Size = new System.Drawing.Size(241, 36);
             this.txtmname.TabIndex = 5;
+            this.txtmname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress_1);
             // 
             // txtmobilenum
             // 
@@ -334,6 +371,7 @@
             this.txtmobilenum.SelectedText = "";
             this.txtmobilenum.Size = new System.Drawing.Size(241, 36);
             this.txtmobilenum.TabIndex = 8;
+            this.txtmobilenum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmobilenum_KeyPress);
             // 
             // txtemail
             // 
@@ -382,6 +420,7 @@
             this.txtfname.SelectedText = "";
             this.txtfname.Size = new System.Drawing.Size(241, 36);
             this.txtfname.TabIndex = 4;
+            this.txtfname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress_1);
             // 
             // label7
             // 
@@ -501,41 +540,6 @@
             this.timertoclose.Enabled = true;
             this.timertoclose.Interval = 1;
             this.timertoclose.Tick += new System.EventHandler(this.timertoclose_Tick);
-            // 
-            // txtpassword
-            // 
-            this.txtpassword.Animated = true;
-            this.txtpassword.BorderRadius = 8;
-            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpassword.DefaultText = "";
-            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(499, 107);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtpassword.MaxLength = 50;
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '\0';
-            this.txtpassword.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtpassword.PlaceholderText = "Create account password";
-            this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(241, 36);
-            this.txtpassword.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(394, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 23);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Password";
             // 
             // FERegisterAdmin
             // 

@@ -30,6 +30,8 @@ namespace SMARTLEARN.Database
                 while (row.Read())
                 {
                     FrontEnd.FEDashboard dash = new FEDashboard();
+                    FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
+
                     dash.Show();
                     FELoginAdmin.closethis = true; // make this false on log out!
                     FEHome.timetoclose = true; //To hide the home form
