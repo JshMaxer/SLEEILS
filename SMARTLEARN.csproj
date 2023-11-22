@@ -370,5 +370,35 @@
   <ItemGroup>
     <Folder Include="FrontEnd\FacultyForms\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mortarboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main-menu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

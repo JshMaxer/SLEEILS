@@ -65,7 +65,7 @@ namespace SMARTLEARN.FrontEnd
         {
             //Change the appearance of the b utton
             btnhome.Image = Properties.Resources.home;
-            btncourse.Image = Properties.Resources.learning__1_;
+            btncourse.Image = Properties.Resources.mortarboard; //Active color
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
@@ -85,7 +85,7 @@ namespace SMARTLEARN.FrontEnd
             //Change the appearance of the b utton
             btnhome.Image = Properties.Resources.home;
             btncourse.Image = Properties.Resources.learning;
-            btnbalance.Image = Properties.Resources.bill__1_;
+            btnbalance.Image = Properties.Resources.bill1; //Active color
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentconfirmation.Image = Properties.Resources.search;
@@ -104,7 +104,7 @@ namespace SMARTLEARN.FrontEnd
             btnhome.Image = Properties.Resources.home;
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill;
-            btnschedule.Image = Properties.Resources.schedule__1_;
+            btnschedule.Image = Properties.Resources.schedule1; //Active color
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentconfirmation.Image = Properties.Resources.search;
             //________________________________________________________________
@@ -124,7 +124,7 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search__1_;
+            btnstudentconfirmation.Image = Properties.Resources.search1; //Active color
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -141,7 +141,7 @@ namespace SMARTLEARN.FrontEnd
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
-            btnviewgrades.Image = Properties.Resources.exam__1_;
+            btnviewgrades.Image = Properties.Resources.exam1; //Active color
             btnstudentconfirmation.Image = Properties.Resources.search;
             //________________________________________________________________
 
@@ -155,7 +155,7 @@ namespace SMARTLEARN.FrontEnd
         private void btnhome_Click(object sender, EventArgs e)
         {
             //Change the appearance of the b utton
-            btnhome.Image = Properties.Resources.home__1_;
+            btnhome.Image = Properties.Resources.home1; //Active color
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
@@ -172,11 +172,59 @@ namespace SMARTLEARN.FrontEnd
 
         private void FEDashboard_Load(object sender, EventArgs e)
         {
+            btnhome.Image = Properties.Resources.home1; //Active color
             paneldash.Controls.Clear();
             FrontEnd.FEWelcomeDashboard fEWelcomeDashboard = new FEWelcomeDashboard();
             fEWelcomeDashboard.TopLevel = false;
             paneldash.Controls.Add(fEWelcomeDashboard);
             fEWelcomeDashboard.Show();
+        }
+
+        private void btnmenu_Click(object sender, EventArgs e)
+        {
+            if (Sidebar.Width == 67) // OPEN
+            {
+                Sidebar.Width = 175;
+                Sidebartop.Width = 175;
+                paneldash.Width = 1114;
+
+                paneldash.Location = new Point(180, 116);
+                lbltitle.Location = new Point(175, 77);
+
+                Sidebar.Visible = false;
+                paneldash.Visible = false;
+                Sidebartop.Visible = false;
+                btnmenu.Visible = false;
+                lbltitle.Visible = false;
+
+                SidebarTransition.ShowSync(Sidebar);
+                SidebarTransition.ShowSync(Sidebartop);
+                LogoTransition.ShowSync(btnmenu);
+                SidebarTransition.ShowSync(lbltitle);
+                Dashboardtransition.ShowSync(paneldash);
+            }
+            else //CLOSE
+            {
+                Sidebar.Width = 67;
+                Sidebartop.Width = 67;
+                paneldash.Width = 1222;
+
+                paneldash.Location = new Point(72, 116);
+                lbltitle.Location = new Point(72, 77);
+
+                Sidebar.Visible = false;
+                paneldash.Visible = false;
+                Sidebartop.Visible = false;
+                btnmenu.Visible = false;
+                lbltitle.Visible = false;
+
+                SidebarTransition.ShowSync(Sidebar);
+                SidebarTransition.ShowSync(Sidebartop);
+                LogoTransition.ShowSync(btnmenu);
+                SidebarTransition.ShowSync(lbltitle);
+                Dashboardtransition.ShowSync(paneldash);
+            }
+
         }
     }
 }
