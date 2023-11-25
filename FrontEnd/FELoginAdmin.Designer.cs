@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtuserid = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnclose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnloginadmin = new Guna.UI2.WinForms.Guna2Button();
             this.lblforgot = new System.Windows.Forms.Label();
             this.timertoclose = new System.Windows.Forms.Timer(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtuserid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -49,29 +49,6 @@
             // RoundEdge
             // 
             this.RoundEdge.TargetControl = this;
-            // 
-            // txtuserid
-            // 
-            this.txtuserid.Animated = true;
-            this.txtuserid.BorderColor = System.Drawing.Color.Transparent;
-            this.txtuserid.BorderRadius = 8;
-            this.txtuserid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtuserid.DefaultText = "";
-            this.txtuserid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtuserid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtuserid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtuserid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtuserid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtuserid.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuserid.ForeColor = System.Drawing.Color.Black;
-            this.txtuserid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtuserid.Location = new System.Drawing.Point(30, 132);
-            this.txtuserid.Name = "txtuserid";
-            this.txtuserid.PasswordChar = '\0';
-            this.txtuserid.PlaceholderText = "";
-            this.txtuserid.SelectedText = "";
-            this.txtuserid.Size = new System.Drawing.Size(297, 36);
-            this.txtuserid.TabIndex = 7;
             // 
             // panel1
             // 
@@ -157,30 +134,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
-            // txtpassword
-            // 
-            this.txtpassword.Animated = true;
-            this.txtpassword.BorderColor = System.Drawing.Color.Transparent;
-            this.txtpassword.BorderRadius = 8;
-            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpassword.DefaultText = "";
-            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.ForeColor = System.Drawing.Color.Black;
-            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(30, 250);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.PasswordChar = '\0';
-            this.txtpassword.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtpassword.PlaceholderText = "";
-            this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(297, 36);
-            this.txtpassword.TabIndex = 8;
-            // 
             // btnloginadmin
             // 
             this.btnloginadmin.Animated = true;
@@ -223,6 +176,56 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // txtuserid
+            // 
+            this.txtuserid.Animated = true;
+            this.txtuserid.BorderColor = System.Drawing.Color.Transparent;
+            this.txtuserid.BorderRadius = 8;
+            this.txtuserid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtuserid.DefaultText = "";
+            this.txtuserid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtuserid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtuserid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtuserid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtuserid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtuserid.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuserid.ForeColor = System.Drawing.Color.Black;
+            this.txtuserid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtuserid.IconLeft = global::SMARTLEARN.Properties.Resources.id_card;
+            this.txtuserid.Location = new System.Drawing.Point(30, 132);
+            this.txtuserid.Name = "txtuserid";
+            this.txtuserid.PasswordChar = '\0';
+            this.txtuserid.PlaceholderText = "";
+            this.txtuserid.SelectedText = "";
+            this.txtuserid.Size = new System.Drawing.Size(297, 36);
+            this.txtuserid.TabIndex = 7;
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.Animated = true;
+            this.txtpassword.BorderColor = System.Drawing.Color.Transparent;
+            this.txtpassword.BorderRadius = 8;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpassword.DefaultText = "";
+            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.ForeColor = System.Drawing.Color.Black;
+            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.IconLeft = global::SMARTLEARN.Properties.Resources.padlock;
+            this.txtpassword.Location = new System.Drawing.Point(30, 250);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '●';
+            this.txtpassword.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtpassword.PlaceholderText = "";
+            this.txtpassword.SelectedText = "";
+            this.txtpassword.Size = new System.Drawing.Size(297, 36);
+            this.txtpassword.TabIndex = 8;
+            this.txtpassword.UseSystemPasswordChar = true;
             // 
             // FELoginAdmin
             // 

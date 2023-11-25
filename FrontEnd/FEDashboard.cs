@@ -15,6 +15,9 @@ namespace SMARTLEARN.FrontEnd
         //Set a flag to give the current role to lblrole.txt
         public static string role;
 
+        //Set a flag for user who's log-in
+        public static string user;
+
         public FEDashboard()
         {
             InitializeComponent();
@@ -238,24 +241,25 @@ namespace SMARTLEARN.FrontEnd
 
         private void FEDashboard_Load(object sender, EventArgs e)
         {
-            //add db for select profile
+            lblname.Text = user; //The user first name and last name
+            lblrole.Text = role; //The user Role
 
-
-            lblrole.Text = role;
-
-            if(role == "Faculty")
+            if(role == "FACULTY")
             {
                 btnstudentconfirmation.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnAssignments.Visible = false;
             }
-            else if (role == "Admin")
+            else if (role == "ADMIN")
             {
+                lblrole.Font = new Font(lblrole.Font.FontFamily, 25);
+                lblrole.Location = new Point(1380, 283);
+
                 btnstudentconfirmation.Visible = true;
                 btnfacultyregistration.Visible = true;
                 btnAssignments.Visible = false;
             }
-            else if(role == "Student")
+            else if(role == "STUDENT")
             {
                 btnstudentconfirmation.Visible = false;
                 btnfacultyregistration.Visible = false;

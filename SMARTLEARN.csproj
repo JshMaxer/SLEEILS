@@ -376,7 +376,9 @@
   <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\game-over.gif" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search1.png" />
   </ItemGroup>
@@ -415,6 +417,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\assignment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-media.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rocket.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idea.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossed-eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

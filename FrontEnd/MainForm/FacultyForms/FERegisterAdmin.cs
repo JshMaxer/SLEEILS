@@ -1,6 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Drawing;
+﻿using System;
 using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
@@ -11,12 +9,12 @@ namespace SMARTLEARN.FrontEnd
         {
             InitializeComponent();
         }
-        
+
         private void btnnext_Click(object sender, EventArgs e)
         {
             Backend.BEAdregister adminregister = new Backend.BEAdregister();
 
-            adminregister.grouprole(txtuserid, cbgender, cbdepartment);
+            adminregister.grouprole(txtfirstid, txtuserid, cbgender, cbdepartment);
             adminregister.personal(txtfname, txtmname, txtlname, txtemail, txtmobilenum, dateofbirth, txtpassword);
 
             FrontEnd.FEInformationList info = new FEInformationList();
@@ -27,7 +25,7 @@ namespace SMARTLEARN.FrontEnd
             if (Backend.BEAdregister.confirm == true) //Check the flag in FEInformation if the confirm flag is true.
             {
                 Database.DBRegisterAdmin regad = new Database.DBRegisterAdmin();
-                regad.insertinfo(txtuserid, cbgender, txtfname, txtmname, txtlname, cbdepartment, dateofbirth, txtmobilenum, txtemail, txtpassword);
+                regad.insertinfo(txtfirstid, txtuserid, cbgender, txtfname, txtmname, txtlname, cbdepartment, dateofbirth, txtmobilenum, txtemail, txtpassword);
             }
             else
             {
@@ -46,6 +44,7 @@ namespace SMARTLEARN.FrontEnd
                 cbdepartment.SelectedItem != null)
             {
                 if (//check personal Information
+                !string.IsNullOrWhiteSpace(txtfirstid.Text) &&
                 !string.IsNullOrWhiteSpace(txtfname.Text) &&
                 !string.IsNullOrWhiteSpace(txtmname.Text) &&
                 !string.IsNullOrWhiteSpace(txtlname.Text) &&
@@ -72,6 +71,7 @@ namespace SMARTLEARN.FrontEnd
         {
             if (Backend.BEAdregister.resetform == true) //reset current form
             {
+                txtfirstid.Text = null;
                 txtuserid.Text = null;
                 cbgender.SelectedItem = null;
                 cbdepartment.SelectedItem = null;
@@ -90,7 +90,7 @@ namespace SMARTLEARN.FrontEnd
         private void FERegisterAdmin_Load(object sender, EventArgs e)
         {
             Database.DBRegisterAdmin regad = new Database.DBRegisterAdmin();
-            regad.USERID(txtuserid);
+            regad.USERID(txtfirstid, txtuserid);
         }
 
         private void txtmobilenum_KeyPress(object sender, KeyPressEventArgs e)

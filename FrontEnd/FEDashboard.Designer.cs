@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation8 = new Guna.UI2.AnimatorNS.Animation();
-            Guna.UI2.AnimatorNS.Animation animation7 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation16 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEDashboard));
-            Guna.UI2.AnimatorNS.Animation animation9 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation17 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation18 = new Guna.UI2.AnimatorNS.Animation();
             this.Dragcontrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,9 +55,6 @@
             this.SidebarTransition = new Guna.UI2.WinForms.Guna2Transition();
             this.Dashboardtransition = new Guna.UI2.WinForms.Guna2Transition();
             this.LogoTransition = new Guna.UI2.WinForms.Guna2Transition();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnmenu = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnhome = new Guna.UI2.WinForms.Guna2Button();
             this.btncourse = new Guna.UI2.WinForms.Guna2Button();
             this.btnAssignments = new Guna.UI2.WinForms.Guna2Button();
@@ -66,6 +63,9 @@
             this.btnviewgrades = new Guna.UI2.WinForms.Guna2Button();
             this.btnstudentconfirmation = new Guna.UI2.WinForms.Guna2Button();
             this.btnfacultyregistration = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnmenu = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnotification = new Guna.UI2.WinForms.Guna2ImageButton();
             this.dragpanel.SuspendLayout();
@@ -184,18 +184,18 @@
             // 
             // lblname
             // 
-            this.lblname.AutoSize = true;
             this.lblname.BackColor = System.Drawing.Color.Transparent;
             this.LogoTransition.SetDecoration(this.lblname, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Dashboardtransition.SetDecoration(this.lblname, Guna.UI2.AnimatorNS.DecorationType.None);
             this.SidebarTransition.SetDecoration(this.lblname, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblname.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.lblname.Location = new System.Drawing.Point(1343, 273);
+            this.lblname.Location = new System.Drawing.Point(1300, 273);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(177, 29);
+            this.lblname.Size = new System.Drawing.Size(266, 29);
             this.lblname.TabIndex = 19;
             this.lblname.Text = "Joshua Cambal";
+            this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2TextBox1
             // 
@@ -292,16 +292,16 @@
             // 
             // lblrole
             // 
-            this.lblrole.AutoSize = true;
             this.LogoTransition.SetDecoration(this.lblrole, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Dashboardtransition.SetDecoration(this.lblrole, Guna.UI2.AnimatorNS.DecorationType.None);
             this.SidebarTransition.SetDecoration(this.lblrole, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblrole.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblrole.Location = new System.Drawing.Point(1399, 305);
+            this.lblrole.Location = new System.Drawing.Point(1300, 305);
             this.lblrole.Name = "lblrole";
-            this.lblrole.Size = new System.Drawing.Size(57, 19);
+            this.lblrole.Size = new System.Drawing.Size(266, 19);
             this.lblrole.TabIndex = 26;
             this.lblrole.Text = "ADMIN";
+            this.lblrole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Sidebartop
             // 
@@ -320,112 +320,64 @@
             // 
             this.SidebarTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.SidebarTransition.Cursor = null;
-            animation8.AnimateOnlyDifferences = true;
-            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
-            animation8.LeafCoeff = 0F;
-            animation8.MaxTime = 1F;
-            animation8.MinTime = 0F;
-            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
-            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
-            animation8.MosaicSize = 0;
-            animation8.Padding = new System.Windows.Forms.Padding(0);
-            animation8.RotateCoeff = 0F;
-            animation8.RotateLimit = 0F;
-            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
-            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
-            animation8.TimeCoeff = 0F;
-            animation8.TransparencyCoeff = 0F;
-            this.SidebarTransition.DefaultAnimation = animation8;
+            animation16.AnimateOnlyDifferences = true;
+            animation16.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.BlindCoeff")));
+            animation16.LeafCoeff = 0F;
+            animation16.MaxTime = 1F;
+            animation16.MinTime = 0F;
+            animation16.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicCoeff")));
+            animation16.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicShift")));
+            animation16.MosaicSize = 0;
+            animation16.Padding = new System.Windows.Forms.Padding(0);
+            animation16.RotateCoeff = 0F;
+            animation16.RotateLimit = 0F;
+            animation16.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.ScaleCoeff")));
+            animation16.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.SlideCoeff")));
+            animation16.TimeCoeff = 0F;
+            animation16.TransparencyCoeff = 0F;
+            this.SidebarTransition.DefaultAnimation = animation16;
             // 
             // Dashboardtransition
             // 
             this.Dashboardtransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.Dashboardtransition.Cursor = null;
-            animation7.AnimateOnlyDifferences = true;
-            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
-            animation7.LeafCoeff = 0F;
-            animation7.MaxTime = 1F;
-            animation7.MinTime = 0F;
-            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
-            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
-            animation7.MosaicSize = 0;
-            animation7.Padding = new System.Windows.Forms.Padding(0);
-            animation7.RotateCoeff = 0F;
-            animation7.RotateLimit = 0F;
-            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
-            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
-            animation7.TimeCoeff = 0F;
-            animation7.TransparencyCoeff = 0F;
-            this.Dashboardtransition.DefaultAnimation = animation7;
+            animation17.AnimateOnlyDifferences = true;
+            animation17.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.BlindCoeff")));
+            animation17.LeafCoeff = 0F;
+            animation17.MaxTime = 1F;
+            animation17.MinTime = 0F;
+            animation17.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.MosaicCoeff")));
+            animation17.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation17.MosaicShift")));
+            animation17.MosaicSize = 0;
+            animation17.Padding = new System.Windows.Forms.Padding(0);
+            animation17.RotateCoeff = 0F;
+            animation17.RotateLimit = 0F;
+            animation17.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.ScaleCoeff")));
+            animation17.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation17.SlideCoeff")));
+            animation17.TimeCoeff = 0F;
+            animation17.TransparencyCoeff = 0F;
+            this.Dashboardtransition.DefaultAnimation = animation17;
             // 
             // LogoTransition
             // 
             this.LogoTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Rotate;
             this.LogoTransition.Cursor = null;
-            animation9.AnimateOnlyDifferences = true;
-            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
-            animation9.LeafCoeff = 0F;
-            animation9.MaxTime = 1F;
-            animation9.MinTime = 0F;
-            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
-            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
-            animation9.MosaicSize = 0;
-            animation9.Padding = new System.Windows.Forms.Padding(50);
-            animation9.RotateCoeff = 1F;
-            animation9.RotateLimit = 0F;
-            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
-            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
-            animation9.TimeCoeff = 0F;
-            animation9.TransparencyCoeff = 1F;
-            this.LogoTransition.DefaultAnimation = animation9;
-            // 
-            // pictureBox1
-            // 
-            this.LogoTransition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Dashboardtransition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.SidebarTransition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(116, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnmenu
-            // 
-            this.btnmenu.AnimatedGIF = true;
-            this.btnmenu.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.SidebarTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Dashboardtransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnmenu.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnmenu.Image = global::SMARTLEARN.Properties.Resources.main_menu;
-            this.btnmenu.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnmenu.ImageRotate = 0F;
-            this.btnmenu.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnmenu.Location = new System.Drawing.Point(18, 17);
-            this.btnmenu.Name = "btnmenu";
-            this.btnmenu.PressedState.ImageRotate = 360F;
-            this.btnmenu.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnmenu.Size = new System.Drawing.Size(38, 29);
-            this.btnmenu.TabIndex = 19;
-            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.SidebarTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Dashboardtransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources.account;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1318, 77);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(227, 196);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 21;
-            this.guna2CirclePictureBox1.TabStop = false;
+            animation18.AnimateOnlyDifferences = true;
+            animation18.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.BlindCoeff")));
+            animation18.LeafCoeff = 0F;
+            animation18.MaxTime = 1F;
+            animation18.MinTime = 0F;
+            animation18.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.MosaicCoeff")));
+            animation18.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation18.MosaicShift")));
+            animation18.MosaicSize = 0;
+            animation18.Padding = new System.Windows.Forms.Padding(50);
+            animation18.RotateCoeff = 1F;
+            animation18.RotateLimit = 0F;
+            animation18.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.ScaleCoeff")));
+            animation18.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation18.SlideCoeff")));
+            animation18.TimeCoeff = 0F;
+            animation18.TransparencyCoeff = 1F;
+            this.LogoTransition.DefaultAnimation = animation18;
             // 
             // btnhome
             // 
@@ -657,6 +609,54 @@
             this.btnfacultyregistration.Text = "Faculty     Registration";
             this.btnfacultyregistration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnfacultyregistration.Click += new System.EventHandler(this.btnfacultyregistration_Click);
+            // 
+            // pictureBox1
+            // 
+            this.LogoTransition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Dashboardtransition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.SidebarTransition.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(116, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnmenu
+            // 
+            this.btnmenu.AnimatedGIF = true;
+            this.btnmenu.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.SidebarTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Dashboardtransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnmenu.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnmenu.Image = global::SMARTLEARN.Properties.Resources.main_menu;
+            this.btnmenu.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnmenu.ImageRotate = 0F;
+            this.btnmenu.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnmenu.Location = new System.Drawing.Point(18, 17);
+            this.btnmenu.Name = "btnmenu";
+            this.btnmenu.PressedState.ImageRotate = 360F;
+            this.btnmenu.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnmenu.Size = new System.Drawing.Size(38, 29);
+            this.btnmenu.TabIndex = 19;
+            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.SidebarTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Dashboardtransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources.profile;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1318, 77);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(227, 196);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 21;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // btnsmallprofile
             // 

@@ -11,10 +11,10 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void USERID(Guna2TextBox userid)
+        public void USERID(Guna2TextBox firstid, Guna2TextBox userid)
         {
             Random ran = new Random();
-            userid.Text = 03000 + ran.Next(100000, 999999).ToString();
+            userid.Text = ran.Next(100000, 999999).ToString();
 
             //Check if the ID is existing
             string USERID = $"SELECT UserID FROM facultyaccount where UserID = '{userid.Text}'";
@@ -26,7 +26,7 @@ namespace SMARTLEARN.Database
             {
                 while (row.Read())
                 {
-                    userid.Text = 03000 + ran.Next(100000, 999999).ToString();
+                    userid.Text = ran.Next(100000, 999999).ToString();
                 }
             }
             else
@@ -37,10 +37,10 @@ namespace SMARTLEARN.Database
         }
 
         //Insert Query
-        public void insertinfo(Guna2TextBox userid, Guna2ComboBox gender, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox department, Guna2DateTimePicker birthdate, Guna2TextBox mobile, Guna2TextBox email, Guna2TextBox password)
+        public void insertinfo(Guna2TextBox firstid, Guna2TextBox userid, Guna2ComboBox gender, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox department, Guna2DateTimePicker birthdate, Guna2TextBox mobile, Guna2TextBox email, Guna2TextBox password)
         {
             Backend.BEAdregister regad = new Backend.BEAdregister();
-            string InsertQuery = $"INSERT INTO facultyaccount VALUES ('{userid.Text}', '{gender.Text}', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{department.Text}', '{birthdate.Value.ToString("yyyy-MM-dd")}', '{mobile.Text}', '{email.Text}', '{password.Text}')";
+            string InsertQuery = $"INSERT INTO facultyaccount VALUES ('{firstid.Text + userid.Text}', '{gender.Text}', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{department.Text}', '{birthdate.Value.ToString("yyyy-MM-dd")}', '{mobile.Text}', '{email.Text}', '{password.Text}')";
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(InsertQuery, connection);
 

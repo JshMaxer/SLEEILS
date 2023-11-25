@@ -43,8 +43,6 @@ namespace SMARTLEARN.FrontEnd
 
             btnenrolll.Enabled = FrontEnd.FELogin.showlog;
             btnenrolll.Enabled = FELoginAdmin.showlog;
-
-            btnregisterad.Enabled = FELoginAdmin.showlog;
         }
 
         private void btnenroll_Click(object sender, EventArgs e)

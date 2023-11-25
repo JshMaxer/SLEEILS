@@ -20,7 +20,7 @@ namespace SMARTLEARN.Database
         public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
         {
             //login
-            string logad = $"SELECT first_name, userid, password FROM facultyaccount WHERE userid = '{userid.Text}' AND password = '{password.Text}'";
+            string logad = $"SELECT first_name, last_name, userid, password FROM facultyaccount WHERE userid = '{userid.Text}' AND password = '{password.Text}'";
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(logad, connection);
             MySqlDataReader row = cmd.ExecuteReader();
@@ -33,7 +33,11 @@ namespace SMARTLEARN.Database
                     FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                     //Role
-                    FrontEnd.FEDashboard.role = "Faculty";
+                    FrontEnd.FEDashboard.role = "FACULTY";
+
+                    //User
+                    FrontEnd.FEDashboard.user = row["first_name"].ToString() + " " + row["last_name"];
+
 
                     dash.Show();
                     FELoginAdmin.closethis = true; // make this false on log out!

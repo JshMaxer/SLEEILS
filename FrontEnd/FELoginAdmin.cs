@@ -61,7 +61,7 @@ namespace SMARTLEARN
                 FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                 //Role
-                FrontEnd.FEDashboard.role = "Admin";
+                FrontEnd.FEDashboard.role = "ADMIN";
 
                 dash.Show();
                 FELoginAdmin.closethis = true; // make this false on log out!
@@ -82,5 +82,15 @@ namespace SMARTLEARN
             }
         }
 
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnshowhide_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

@@ -23,7 +23,8 @@ namespace SMARTLEARN.FrontEnd
             FrontEnd.FELogin.showlog = true; //Enable the button inside the Home Form using the flag on FELogin
             FELoginAdmin.showlog = true; //Enable the button inside the Home Form using the flag on FELoginAdmin
             FELoginAdmin.closethis = false; //Set to false the 'closethis' flag in login
-            
+            FEDashboard.user = null; //Restore to null the user
+
             FrontEnd.FEHome home = new FEHome();
             home.Show();
 

@@ -34,9 +34,9 @@ namespace SMARTLEARN.Backend
         public static string listbirthdate = "";
         public static string listpassword = "";
 
-        public void grouprole(Guna2TextBox userid, Guna2ComboBox gender, Guna2ComboBox department)
+        public void grouprole(Guna2TextBox firstid, Guna2TextBox userid, Guna2ComboBox gender, Guna2ComboBox department)
         {
-            listuserid = ($"User ID = {userid.Text}");
+            listuserid = ($"User ID = {firstid.Text + userid.Text}");
             listgender = $"Gender = {gender.Text}";
             listdepartment = $"Department = {department.Text}";
         }
