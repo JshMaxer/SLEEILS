@@ -26,7 +26,7 @@ namespace SMARTLEARN.FrontEnd.Message
             Backend.BEStudentEnroll.closeform = false;
 
             Backend.BEAdregister.confirm = false;
-            Backend.BEAdregister.closeform = false;
+            Backend.BEAdregister.resetform = false;
 
             this.Close();
 

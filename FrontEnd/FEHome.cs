@@ -59,13 +59,6 @@ namespace SMARTLEARN.FrontEnd
             btnexit.Enabled = true;
         }
 
-        private void btnregisterad_Click(object sender, EventArgs e)
-        {
-            FrontEnd.FERegisterAdmin regad = new FERegisterAdmin();
-            regad.Show();
-            this.Hide();
-        }
-
         private void timertoclose_Tick(object sender, EventArgs e)
         {
             if (timetoclose == true)

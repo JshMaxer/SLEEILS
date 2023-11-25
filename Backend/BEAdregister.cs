@@ -13,8 +13,8 @@ namespace SMARTLEARN.Backend
         //Set a flag to know if the information is corrected or ready to next.
         public static bool confirm = false;
 
-        //Set a flag for timer to close the form of StudenEnroll
-        public static bool closeform;
+        //Set a flag for timer to reset the form of BEAdregister
+        public static bool resetform;
 
         //Student Type
         public static string listtype;

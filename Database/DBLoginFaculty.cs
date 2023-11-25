@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace SMARTLEARN.Database
 {
     //database
-    public  class DBLoginAdmin
+    public  class DBLoginFaculty
     {
         MySqlConnection connection = Host.connection;
         public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
@@ -32,6 +32,9 @@ namespace SMARTLEARN.Database
                     FrontEnd.FEDashboard dash = new FEDashboard();
                     FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
+                    //Role
+                    FrontEnd.FEDashboard.role = "Faculty";
+
                     dash.Show();
                     FELoginAdmin.closethis = true; // make this false on log out!
                     FEHome.timetoclose = true; //To hide the home form
@@ -40,8 +43,8 @@ namespace SMARTLEARN.Database
             }
             else
             {
-                err.SetError(userid, "UserID not valid!");
-                err.SetError(password, "Password not valid!");
+                err.SetError(userid, "Invalid UserID!");
+                err.SetError(password, "Invalid Password!");
             }
             connection.Close();
         }

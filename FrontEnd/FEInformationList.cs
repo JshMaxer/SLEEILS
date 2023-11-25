@@ -103,11 +103,11 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnsubmit_Click(object sender, EventArgs e)
         {
-            Backend.BEStudentEnroll.confirm = true;
-            Backend.BEStudentEnroll.closeform = true;
-
-            Backend.BEAdregister.confirm = true;
-            Backend.BEAdregister.closeform = true;
+            Backend.BEStudentEnroll.confirm = true; //Throw the data to database.
+            Backend.BEStudentEnroll.closeform = true; //close FERegisterAdmin or current form.
+            
+            Backend.BEAdregister.confirm = true; //Throw the data to database.
+            Backend.BEAdregister.resetform = true; //reset FERegisterAdmin or current form.
 
             this.Close();
         }

@@ -105,37 +105,37 @@
   <ItemGroup>
     <Compile Include="Backend\BEAdregister.cs" />
     <Compile Include="Backend\BEStudentEnroll.cs" />
-    <Compile Include="Database\DBLoginAdmin.cs" />
+    <Compile Include="Database\DBLoginFaculty.cs" />
     <Compile Include="Database\DBRegisterAdmin.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
-    <Compile Include="FrontEnd\AdminForms\FEADBalance.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADBalance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADBalance.Designer.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADBalance.Designer.cs">
       <DependentUpon>FEADBalance.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADCOURSE.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADCOURSE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADCOURSE.Designer.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADCOURSE.Designer.cs">
       <DependentUpon>FEADCOURSE.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADSchedule.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADSchedule.Designer.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADSchedule.Designer.cs">
       <DependentUpon>FEADSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADStudentConfirmation.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADStudentConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADStudentConfirmation.Designer.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADStudentConfirmation.Designer.cs">
       <DependentUpon>FEADStudentConfirmation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADViewGrades.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADViewGrades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\AdminForms\FEADViewGrades.Designer.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADViewGrades.Designer.cs">
       <DependentUpon>FEADViewGrades.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\FEsmallprofile.cs">
@@ -162,10 +162,10 @@
     <Compile Include="FrontEnd\FEInformationList.Designer.cs">
       <DependentUpon>FEInformationList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\FERegisterAdmin.cs">
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FERegisterAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\FERegisterAdmin.Designer.cs">
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FERegisterAdmin.Designer.cs">
       <DependentUpon>FERegisterAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\FEWelcomeDashboard.cs">
@@ -173,6 +173,12 @@
     </Compile>
     <Compile Include="FrontEnd\FEWelcomeDashboard.Designer.cs">
       <DependentUpon>FEWelcomeDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTAssignments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTAssignments.Designer.cs">
+      <DependentUpon>FESTAssignments.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Message\LoadingForm.cs">
       <SubType>Form</SubType>
@@ -214,19 +220,19 @@
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrontEnd\AdminForms\FEADBalance.resx">
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADBalance.resx">
       <DependentUpon>FEADBalance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\AdminForms\FEADCOURSE.resx">
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADCOURSE.resx">
       <DependentUpon>FEADCOURSE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\AdminForms\FEADSchedule.resx">
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADSchedule.resx">
       <DependentUpon>FEADSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\AdminForms\FEADStudentConfirmation.resx">
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADStudentConfirmation.resx">
       <DependentUpon>FEADStudentConfirmation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\AdminForms\FEADViewGrades.resx">
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADViewGrades.resx">
       <DependentUpon>FEADViewGrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FEsmallprofile.resx">
@@ -241,11 +247,14 @@
     <EmbeddedResource Include="FrontEnd\FEInformationList.resx">
       <DependentUpon>FEInformationList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\FERegisterAdmin.resx">
+    <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FERegisterAdmin.resx">
       <DependentUpon>FERegisterAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FEWelcomeDashboard.resx">
       <DependentUpon>FEWelcomeDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTAssignments.resx">
+      <DependentUpon>FESTAssignments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Message\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
@@ -367,9 +376,7 @@
   <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FrontEnd\FacultyForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\search1.png" />
   </ItemGroup>
@@ -399,6 +406,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\main-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMARTLEARN.FrontEnd.MainForm.StudentForm;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,7 +8,12 @@ namespace SMARTLEARN.FrontEnd
     public partial class FEDashboard : Form
     {
         private bool isPanelVisible = false;
+
+        //set a flag to the timer to close the current form.
         public static bool timertoclose = false;
+
+        //Set a flag to give the current role to lblrole.txt
+        public static string role;
 
         public FEDashboard()
         {
@@ -63,13 +69,16 @@ namespace SMARTLEARN.FrontEnd
 
         private void btncourse_Click(object sender, EventArgs e)
         {
-            //Change the appearance of the b utton
+            hide(); //always on top
+            //Change the appearance of the button
             btnhome.Image = Properties.Resources.home;
             btncourse.Image = Properties.Resources.mortarboard; //Active color
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentconfirmation.Image = Properties.Resources.search;
+            btnAssignments.Image = Properties.Resources.assignment;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -82,13 +91,16 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnbalance_Click(object sender, EventArgs e)
         {
-            //Change the appearance of the b utton
+            hide(); //always on top
+            //Change the appearance of the button
             btnhome.Image = Properties.Resources.home;
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill1; //Active color
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentconfirmation.Image = Properties.Resources.search;
+            btnAssignments.Image = Properties.Resources.assignment;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -100,13 +112,16 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnschedule_Click(object sender, EventArgs e)
         {
-            //Change the appearance of the b utton
+            hide(); //always on top
+            //Change the appearance of the button
             btnhome.Image = Properties.Resources.home;
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule1; //Active color
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentconfirmation.Image = Properties.Resources.search;
+            btnAssignments.Image = Properties.Resources.assignment;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -118,13 +133,16 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnstudentconfirmation_Click(object sender, EventArgs e)
         {
-            //Change the appearance of the b utton
+            hide(); //always on top
+            //Change the appearance of the button
             btnhome.Image = Properties.Resources.home;
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentconfirmation.Image = Properties.Resources.search1; //Active color
+            btnAssignments.Image = Properties.Resources.assignment;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -136,13 +154,16 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnviewgrades_Click(object sender, EventArgs e)
         {
-            //Change the appearance of the b utton
+            hide(); //always on top
+            //Change the appearance of the button
             btnhome.Image = Properties.Resources.home;
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam1; //Active color
             btnstudentconfirmation.Image = Properties.Resources.search;
+            btnAssignments.Image = Properties.Resources.assignment;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -154,13 +175,16 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnhome_Click(object sender, EventArgs e)
         {
-            //Change the appearance of the b utton
+            hide(); //always on top
+            //Change the appearance of the button
             btnhome.Image = Properties.Resources.home1; //Active color
             btncourse.Image = Properties.Resources.learning;
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentconfirmation.Image = Properties.Resources.search;
+            btnAssignments.Image = Properties.Resources.assignment;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -170,8 +194,74 @@ namespace SMARTLEARN.FrontEnd
             fEWelcomeDashboard.Show();
         }
 
+        private void btnAssignments_Click(object sender, EventArgs e)
+        {
+            hide(); //always on top
+            //Change the appearance of the button
+            btnhome.Image = Properties.Resources.home;
+            btncourse.Image = Properties.Resources.learning;
+            btnbalance.Image = Properties.Resources.bill;
+            btnschedule.Image = Properties.Resources.schedule;
+            btnviewgrades.Image = Properties.Resources.exam;
+            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnAssignments.Image = Properties.Resources.assignment__2_; //Active color
+            btnfacultyregistration.Image = Properties.Resources.profile1;
+            //________________________________________________________________
+
+            paneldash.Controls.Clear();
+            FrontEnd.MainForm.StudentForm.FESTAssignments fESTAssignments = new FESTAssignments();
+            fESTAssignments.TopLevel = false;
+            paneldash.Controls.Add(fESTAssignments);
+            fESTAssignments.Show();
+        }
+
+        private void btnfacultyregistration_Click(object sender, EventArgs e)
+        {
+            hide(); //always on top
+            //Change the appearance of the button
+            btnhome.Image = Properties.Resources.home;
+            btncourse.Image = Properties.Resources.learning;
+            btnbalance.Image = Properties.Resources.bill;
+            btnschedule.Image = Properties.Resources.schedule;
+            btnviewgrades.Image = Properties.Resources.exam;
+            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnAssignments.Image = Properties.Resources.assignment; 
+            btnfacultyregistration.Image = Properties.Resources.profile3; //Active color
+            //________________________________________________________________
+
+            paneldash.Controls.Clear();
+            FrontEnd.FERegisterAdmin regad = new FERegisterAdmin();
+            regad.TopLevel = false;
+            paneldash.Controls.Add(regad);
+            regad.Show();
+        }
+
         private void FEDashboard_Load(object sender, EventArgs e)
         {
+            //add db for select profile
+
+
+            lblrole.Text = role;
+
+            if(role == "Faculty")
+            {
+                btnstudentconfirmation.Visible = false;
+                btnfacultyregistration.Visible = false;
+                btnAssignments.Visible = false;
+            }
+            else if (role == "Admin")
+            {
+                btnstudentconfirmation.Visible = true;
+                btnfacultyregistration.Visible = true;
+                btnAssignments.Visible = false;
+            }
+            else if(role == "Student")
+            {
+                btnstudentconfirmation.Visible = false;
+                btnfacultyregistration.Visible = false;
+                btnAssignments.Visible = true;
+            }
+
             btnhome.Image = Properties.Resources.home1; //Active color
             paneldash.Controls.Clear();
             FrontEnd.FEWelcomeDashboard fEWelcomeDashboard = new FEWelcomeDashboard();
@@ -182,6 +272,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
+            hide(); //always on top
             if (Sidebar.Width == 67) // OPEN
             {
                 Sidebar.Width = 175;
@@ -226,5 +317,6 @@ namespace SMARTLEARN.FrontEnd
             }
 
         }
+
     }
 }

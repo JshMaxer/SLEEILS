@@ -55,8 +55,23 @@ namespace SMARTLEARN
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            Database.DBLoginAdmin Logadmin = new Database.DBLoginAdmin();
-            Logadmin.logad(txtuserid, txtpassword, errorProvider1);
+            if (txtuserid.Text == Model.ConsAcc.userID && txtpassword.Text == Model.ConsAcc.pass)
+            {
+                FrontEnd.FEDashboard dash = new FEDashboard();
+                FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
+
+                //Role
+                FrontEnd.FEDashboard.role = "Admin";
+
+                dash.Show();
+                FELoginAdmin.closethis = true; // make this false on log out!
+                FEHome.timetoclose = true; //To hide the home form
+            }
+            else
+            {
+                Database.DBLoginFaculty Logadmin = new Database.DBLoginFaculty();
+                Logadmin.logad(txtuserid, txtpassword, errorProvider1);
+            }
         }
 
         private void timertoclose_Tick(object sender, EventArgs e)

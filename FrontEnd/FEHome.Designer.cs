@@ -40,7 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnregisterad = new Guna.UI2.WinForms.Guna2Button();
             this.btnshowlog = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
             this.timertoshow = new System.Windows.Forms.Timer(this.components);
@@ -147,7 +146,6 @@
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
-            this.guna2Panel1.Controls.Add(this.btnregisterad);
             this.guna2Panel1.Controls.Add(this.btnshowlog);
             this.guna2Panel1.Location = new System.Drawing.Point(-20, -8);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -184,27 +182,6 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1292, 10);
             this.guna2Panel3.TabIndex = 14;
-            // 
-            // btnregisterad
-            // 
-            this.btnregisterad.Animated = true;
-            this.btnregisterad.AutoRoundedCorners = true;
-            this.btnregisterad.BackColor = System.Drawing.Color.Transparent;
-            this.btnregisterad.BorderRadius = 16;
-            this.btnregisterad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnregisterad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnregisterad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnregisterad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnregisterad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnregisterad.FillColor = System.Drawing.Color.Transparent;
-            this.btnregisterad.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregisterad.ForeColor = System.Drawing.Color.DimGray;
-            this.btnregisterad.Location = new System.Drawing.Point(1036, 33);
-            this.btnregisterad.Name = "btnregisterad";
-            this.btnregisterad.Size = new System.Drawing.Size(130, 34);
-            this.btnregisterad.TabIndex = 14;
-            this.btnregisterad.Text = "Register (Admin)";
-            this.btnregisterad.Click += new System.EventHandler(this.btnregisterad_Click);
             // 
             // btnshowlog
             // 
@@ -371,7 +348,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public Guna.UI2.WinForms.Guna2Button btnenroll;
         public Guna.UI2.WinForms.Guna2Button btnshowlog;
-        public Guna.UI2.WinForms.Guna2Button btnregisterad;
         public Guna.UI2.WinForms.Guna2Button btnexit;
         private System.Windows.Forms.Timer timertoshow;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;

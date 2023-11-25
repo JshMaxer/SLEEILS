@@ -24,7 +24,7 @@ namespace SMARTLEARN.FrontEnd
             info.ShowDialog();
 
             //Database
-            if (Backend.BEAdregister.confirm == true)
+            if (Backend.BEAdregister.confirm == true) //Check the flag in FEInformation if the confirm flag is true.
             {
                 Database.DBRegisterAdmin regad = new Database.DBRegisterAdmin();
                 regad.insertinfo(txtuserid, cbgender, txtfname, txtmname, txtlname, cbdepartment, dateofbirth, txtmobilenum, txtemail, txtpassword);
@@ -70,17 +70,21 @@ namespace SMARTLEARN.FrontEnd
 
         private void timertoclose_Tick(object sender, EventArgs e)
         {
-            if (Backend.BEAdregister.closeform == true)
+            if (Backend.BEAdregister.resetform == true) //reset current form
             {
-                this.Close();
-            }
-        }
+                txtuserid.Text = null;
+                cbgender.SelectedItem = null;
+                cbdepartment.SelectedItem = null;
+                txtpassword.Text = null;
 
-        private void btnback_Click(object sender, EventArgs e)
-        {
-            FEHome home = new FEHome();
-            home.Show();
-            this.Close();
+                txtfname.Text = null;
+                txtmname.Text = null;
+                txtlname.Text = null;
+                txtemail.Text = null;
+                txtmobilenum.Text = null;
+                dateofbirth.Value = new DateTime(2003, 6, 22);
+
+            }
         }
 
         private void FERegisterAdmin_Load(object sender, EventArgs e)
