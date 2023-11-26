@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
@@ -7,6 +8,10 @@ namespace SMARTLEARN.FrontEnd
     {
         //Set a flag to close the home page after the login is made
         public static bool timetoclose = false;
+
+        //Set a flag to know what is the current size of the screen so the other form can resize too.
+        public static int formWidth;
+        public static int formHeight;
 
         public FEHome()
         {
@@ -21,6 +26,10 @@ namespace SMARTLEARN.FrontEnd
 
             FrontEnd.FELogin.showlog = false; //Set to false the flag in FELogin to Disabled the button
             FELoginAdmin.showlog = false; //Set to false the flag in FELoginAdmin to Disabled the button
+
+            //Size of the form
+            formWidth = this.Width;
+            formHeight = this.Height;
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -41,8 +50,8 @@ namespace SMARTLEARN.FrontEnd
             btnshowlog.Enabled = FrontEnd.FELogin.showlog;
             btnshowlog.Enabled = FELoginAdmin.showlog;
 
-            btnenrolll.Enabled = FrontEnd.FELogin.showlog;
-            btnenrolll.Enabled = FELoginAdmin.showlog;
+            btnenroll.Enabled = FrontEnd.FELogin.showlog;
+            btnenroll.Enabled = FELoginAdmin.showlog;
         }
 
         private void btnenroll_Click(object sender, EventArgs e)
@@ -63,6 +72,34 @@ namespace SMARTLEARN.FrontEnd
             {
                 this.Hide();
             }
+        }
+
+        private void FEHome_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void FEHome_Load(object sender, EventArgs e)
+        {
+            Screen currentScreen = Screen.PrimaryScreen;
+
+            if (currentScreen.Bounds.Width > 1107 && currentScreen.Bounds.Height > 730)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.Width = currentScreen.Bounds.Width;
+                this.Height = currentScreen.Bounds.Height;
+            }
+
         }
     }
 }

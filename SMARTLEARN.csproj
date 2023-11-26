@@ -451,5 +451,8 @@
   <ItemGroup>
     <None Include="Resources\eye.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
