@@ -20,7 +20,7 @@ Faculty, Students) as described in the project proposal.
 - Students can view their balance and make payments.
 
 **5. Student Enrollment:**
-- MIS can enroll, drop, and transfer students between branch schools.
+- **ADMIN** can enroll, drop, and transfer students between branch schools.
 
 **6. Educational Games:**
 - Faculty can customize educational games for students to access.
@@ -54,6 +54,8 @@ Faculty, Students) as described in the project proposal.
 
 **6. Compatibility:**
 - Ensure compatibility with Windows operating systems and devices.
+- Best with **1920x1080** screen resolution.
+- Compatible to **800x600** screen resolution.
 
 **7. Compliance:**
 - Ensure compliance with relevant education and data protection regulations.
