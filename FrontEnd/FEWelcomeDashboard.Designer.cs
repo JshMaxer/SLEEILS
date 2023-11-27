@@ -36,6 +36,9 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2PictureBox1.BorderRadius = 15;
             this.guna2PictureBox1.Image = global::SMARTLEARN.Properties.Resources.wallpaperflare_com_wallpaper__1_;
             this.guna2PictureBox1.ImageRotate = 0F;

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lblmessage = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblfirstmeeage = new System.Windows.Forms.Label();
+            this.lblsecondmessage = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.loadingbar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -42,25 +42,25 @@
             this.RoundEdge.BorderRadius = 8;
             this.RoundEdge.TargetControl = this;
             // 
-            // lblmessage
+            // lblfirstmeeage
             // 
-            this.lblmessage.Font = new System.Drawing.Font("Bahnschrift", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmessage.Location = new System.Drawing.Point(11, 19);
-            this.lblmessage.Name = "lblmessage";
-            this.lblmessage.Size = new System.Drawing.Size(490, 90);
-            this.lblmessage.TabIndex = 24;
-            this.lblmessage.Text = "YOUR ENROLLMENT IS\r\nBEING PROCESS!";
-            this.lblmessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblfirstmeeage.Font = new System.Drawing.Font("Bahnschrift", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfirstmeeage.Location = new System.Drawing.Point(11, 19);
+            this.lblfirstmeeage.Name = "lblfirstmeeage";
+            this.lblfirstmeeage.Size = new System.Drawing.Size(490, 90);
+            this.lblfirstmeeage.TabIndex = 24;
+            this.lblfirstmeeage.Text = "YOUR ENROLLMENT IS\r\nBEING PROCESS!";
+            this.lblfirstmeeage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblsecondmessage
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(144, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 45);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "THANK YOU!";
+            this.lblsecondmessage.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsecondmessage.Location = new System.Drawing.Point(2, 116);
+            this.lblsecondmessage.Name = "lblsecondmessage";
+            this.lblsecondmessage.Size = new System.Drawing.Size(506, 45);
+            this.lblsecondmessage.TabIndex = 25;
+            this.lblsecondmessage.Text = "THANK YOU!";
+            this.lblsecondmessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel3
             // 
@@ -109,23 +109,23 @@
             this.ClientSize = new System.Drawing.Size(514, 260);
             this.Controls.Add(this.loadingbar);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblmessage);
+            this.Controls.Add(this.lblsecondmessage);
+            this.Controls.Add(this.lblfirstmeeage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProcessMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProcessMessage";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.ProcessMessage_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse RoundEdge;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblmessage;
+        private System.Windows.Forms.Label lblsecondmessage;
+        private System.Windows.Forms.Label lblfirstmeeage;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         public Guna.UI2.WinForms.Guna2CircleProgressBar loadingbar;
         private System.Windows.Forms.Timer timer1;

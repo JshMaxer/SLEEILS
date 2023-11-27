@@ -54,7 +54,8 @@ namespace SMARTLEARN.Database
                     if (cmd1.ExecuteNonQuery() == 1)
                     {
                         FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                        FrontEnd.ProcessMessage.message = "YOUR ENROLLMENT IS\r\nBEING PROCESS!";
+                        FrontEnd.ProcessMessage.firstmessage = "YOUR ENROLLMENT IS";
+                        FrontEnd.ProcessMessage.secondmessage = "BEING PROCESS! \n\rTHANK YOU!";
                         pm.Show();
 
                     }
@@ -81,7 +82,8 @@ namespace SMARTLEARN.Database
                     if (cmd2.ExecuteNonQuery() == 1)
                     {
                         FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                        FrontEnd.ProcessMessage.message = "YOUR ENROLLMENT IS\r\nBEING PROCESS!";
+                        FrontEnd.ProcessMessage.firstmessage = "YOUR ENROLLMENT IS";
+                        FrontEnd.ProcessMessage.secondmessage = "BEING PROCESS! \n\rTHANK YOU!";
                         pm.Show();
 
                     }

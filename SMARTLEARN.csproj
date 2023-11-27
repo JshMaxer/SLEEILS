@@ -105,6 +105,7 @@
   <ItemGroup>
     <Compile Include="Backend\BEAdregister.cs" />
     <Compile Include="Backend\BEStudentEnroll.cs" />
+    <Compile Include="Database\DBCheckOnline.cs" />
     <Compile Include="Database\DBLoginFaculty.cs" />
     <Compile Include="Database\DBRegisterAdmin.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />

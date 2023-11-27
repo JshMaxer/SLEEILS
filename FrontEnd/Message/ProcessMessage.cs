@@ -5,7 +5,11 @@ namespace SMARTLEARN.FrontEnd
 {
     public partial class ProcessMessage : Form
     {
-        public static string message;
+        //Set a flag for messages
+        public static string firstmessage;
+        public static string secondmessage;
+
+
         public ProcessMessage()
         {
             InitializeComponent();
@@ -13,11 +17,18 @@ namespace SMARTLEARN.FrontEnd
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (message == "YOU'RE NOW\r\nREGISTERED!")
+            if (firstmessage == "YOU'RE NOW" && secondmessage == "REGISTERED!")
             {
                 //restore to default settings
                 Backend.BEAdregister.confirm = false;
                 Backend.BEAdregister.resetform = false;
+
+                this.Close();
+            }
+            else if(firstmessage == "DATABASE NOT FOUND!" && secondmessage == "Check if it's imported or turned off.")
+            {
+                FELoginAdmin.showlog = false;
+                FELogin.showlog = false;
 
                 this.Close();
             }
@@ -36,7 +47,8 @@ namespace SMARTLEARN.FrontEnd
 
         private void ProcessMessage_Load(object sender, EventArgs e)
         {
-            lblmessage.Text = message;
+            lblfirstmeeage.Text = firstmessage;
+            lblsecondmessage.Text = secondmessage;
         }
     }
 }

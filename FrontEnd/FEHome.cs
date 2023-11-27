@@ -10,8 +10,9 @@ namespace SMARTLEARN.FrontEnd
         public static bool timetoclose = false;
 
         //Set a flag to know what is the current size of the screen so the other form can resize too.
-        public static int formWidth;
-        public static int formHeight;
+        public static int formWidth; //width of the form
+        public static int formHeight; //height of the form
+        public static bool windowStates; //window state of the form
 
         public FEHome()
         {
@@ -79,10 +80,12 @@ namespace SMARTLEARN.FrontEnd
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
+                windowStates = false;
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
+                windowStates = true;
             }
         }
 
@@ -90,7 +93,7 @@ namespace SMARTLEARN.FrontEnd
         {
             Screen currentScreen = Screen.PrimaryScreen;
 
-            if (currentScreen.Bounds.Width > 1107 && currentScreen.Bounds.Height > 730)
+            if (currentScreen.Bounds.Width == 1920 && currentScreen.Bounds.Height == 1080)
             {
                 this.WindowState = FormWindowState.Normal;
             }
@@ -100,6 +103,8 @@ namespace SMARTLEARN.FrontEnd
                 this.Height = currentScreen.Bounds.Height;
             }
 
+            Database.DBCheckOnline check = new Database.DBCheckOnline();
+            check.check();
         }
     }
 }

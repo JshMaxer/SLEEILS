@@ -63,6 +63,7 @@ namespace SMARTLEARN
                 //Role
                 FrontEnd.FEDashboard.role = "ADMIN";
 
+
                 dash.Show();
                 FELoginAdmin.closethis = true; // make this false on log out!
                 FEHome.timetoclose = true; //To hide the home form
