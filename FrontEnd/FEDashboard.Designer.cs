@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation24 = new Guna.UI2.AnimatorNS.Animation();
-            Guna.UI2.AnimatorNS.Animation animation23 = new Guna.UI2.AnimatorNS.Animation();
-            Guna.UI2.AnimatorNS.Animation animation22 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation28 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEDashboard));
+            Guna.UI2.AnimatorNS.Animation animation29 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation30 = new Guna.UI2.AnimatorNS.Animation();
             this.Dragcontrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -47,7 +47,7 @@
             this.btnbalance = new Guna.UI2.WinForms.Guna2Button();
             this.btnschedule = new Guna.UI2.WinForms.Guna2Button();
             this.btnviewgrades = new Guna.UI2.WinForms.Guna2Button();
-            this.btnstudentconfirmation = new Guna.UI2.WinForms.Guna2Button();
+            this.btnstudentregistration = new Guna.UI2.WinForms.Guna2Button();
             this.btnfacultyregistration = new Guna.UI2.WinForms.Guna2Button();
             this.lbltitle = new System.Windows.Forms.Label();
             this.calenderofactivities = new System.Windows.Forms.MonthCalendar();
@@ -55,20 +55,22 @@
             this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
             this.timetoclose = new System.Windows.Forms.Timer(this.components);
             this.lblrole = new System.Windows.Forms.Label();
-            this.btnmenu = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SidebarTransition = new Guna.UI2.WinForms.Guna2Transition();
+            this.Sidebartop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnmenu = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.paneldash = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Dashboardtransition = new Guna.UI2.WinForms.Guna2Transition();
             this.LogoTransition = new Guna.UI2.WinForms.Guna2Transition();
-            this.Sidebartop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
-            this.paneldash = new Guna.UI2.WinForms.Guna2Panel();
             this.dragpanel.SuspendLayout();
             this.Sidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.Sidebartop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Dragcontrol
@@ -91,7 +93,7 @@
             this.LogoTransition.SetDecoration(this.dragpanel, Guna.UI2.AnimatorNS.DecorationType.None);
             this.dragpanel.Location = new System.Drawing.Point(-1, 0);
             this.dragpanel.Name = "dragpanel";
-            this.dragpanel.Size = new System.Drawing.Size(1581, 64);
+            this.dragpanel.Size = new System.Drawing.Size(1599, 64);
             this.dragpanel.TabIndex = 17;
             this.dragpanel.Click += new System.EventHandler(this.dragpanel_Click);
             // 
@@ -108,7 +110,7 @@
             this.btnsmallprofile.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnsmallprofile.ImageRotate = 0F;
             this.btnsmallprofile.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnsmallprofile.Location = new System.Drawing.Point(1520, 16);
+            this.btnsmallprofile.Location = new System.Drawing.Point(1524, 16);
             this.btnsmallprofile.Name = "btnsmallprofile";
             this.btnsmallprofile.PressedState.ImageSize = new System.Drawing.Size(30, 30);
             this.btnsmallprofile.Size = new System.Drawing.Size(38, 29);
@@ -128,7 +130,7 @@
             this.btnotification.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnotification.ImageRotate = 0F;
             this.btnotification.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnotification.Location = new System.Drawing.Point(1476, 16);
+            this.btnotification.Location = new System.Drawing.Point(1480, 16);
             this.btnotification.Name = "btnotification";
             this.btnotification.PressedState.ImageSize = new System.Drawing.Size(30, 30);
             this.btnotification.Size = new System.Drawing.Size(38, 29);
@@ -168,7 +170,7 @@
             this.Sidebar.Controls.Add(this.btnbalance);
             this.Sidebar.Controls.Add(this.btnschedule);
             this.Sidebar.Controls.Add(this.btnviewgrades);
-            this.Sidebar.Controls.Add(this.btnstudentconfirmation);
+            this.Sidebar.Controls.Add(this.btnstudentregistration);
             this.Sidebar.Controls.Add(this.btnfacultyregistration);
             this.LogoTransition.SetDecoration(this.Sidebar, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Dashboardtransition.SetDecoration(this.Sidebar, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -176,7 +178,7 @@
             this.Sidebar.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar.Location = new System.Drawing.Point(-1, 119);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(67, 783);
+            this.Sidebar.Size = new System.Drawing.Size(67, 770);
             this.Sidebar.TabIndex = 18;
             // 
             // btnhome
@@ -353,34 +355,34 @@
             this.btnviewgrades.TextOffset = new System.Drawing.Point(-10, 0);
             this.btnviewgrades.Click += new System.EventHandler(this.btnviewgrades_Click);
             // 
-            // btnstudentconfirmation
+            // btnstudentregistration
             // 
-            this.btnstudentconfirmation.Animated = true;
-            this.btnstudentconfirmation.BorderColor = System.Drawing.Color.White;
-            this.btnstudentconfirmation.BorderRadius = 12;
-            this.Dashboardtransition.SetDecoration(this.btnstudentconfirmation, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.SidebarTransition.SetDecoration(this.btnstudentconfirmation, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.btnstudentconfirmation, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnstudentconfirmation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnstudentconfirmation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnstudentconfirmation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnstudentconfirmation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnstudentconfirmation.FillColor = System.Drawing.Color.Transparent;
-            this.btnstudentconfirmation.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.btnstudentconfirmation.ForeColor = System.Drawing.Color.White;
-            this.btnstudentconfirmation.HoverState.Image = global::SMARTLEARN.Properties.Resources.search__1_;
-            this.btnstudentconfirmation.Image = global::SMARTLEARN.Properties.Resources.search;
-            this.btnstudentconfirmation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnstudentconfirmation.ImageOffset = new System.Drawing.Point(13, 0);
-            this.btnstudentconfirmation.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnstudentconfirmation.Location = new System.Drawing.Point(3, 591);
-            this.btnstudentconfirmation.Name = "btnstudentconfirmation";
-            this.btnstudentconfirmation.Size = new System.Drawing.Size(168, 92);
-            this.btnstudentconfirmation.TabIndex = 19;
-            this.btnstudentconfirmation.Text = "Student      Confirmation";
-            this.btnstudentconfirmation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnstudentconfirmation.TextOffset = new System.Drawing.Point(2, 0);
-            this.btnstudentconfirmation.Click += new System.EventHandler(this.btnstudentconfirmation_Click);
+            this.btnstudentregistration.Animated = true;
+            this.btnstudentregistration.BorderColor = System.Drawing.Color.White;
+            this.btnstudentregistration.BorderRadius = 12;
+            this.Dashboardtransition.SetDecoration(this.btnstudentregistration, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.SidebarTransition.SetDecoration(this.btnstudentregistration, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.btnstudentregistration, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnstudentregistration.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnstudentregistration.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnstudentregistration.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnstudentregistration.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnstudentregistration.FillColor = System.Drawing.Color.Transparent;
+            this.btnstudentregistration.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnstudentregistration.ForeColor = System.Drawing.Color.White;
+            this.btnstudentregistration.HoverState.Image = global::SMARTLEARN.Properties.Resources.online_registration__1_;
+            this.btnstudentregistration.Image = global::SMARTLEARN.Properties.Resources.online_registration;
+            this.btnstudentregistration.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnstudentregistration.ImageOffset = new System.Drawing.Point(13, 0);
+            this.btnstudentregistration.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnstudentregistration.Location = new System.Drawing.Point(3, 591);
+            this.btnstudentregistration.Name = "btnstudentregistration";
+            this.btnstudentregistration.Size = new System.Drawing.Size(168, 92);
+            this.btnstudentregistration.TabIndex = 19;
+            this.btnstudentregistration.Text = "Student     Registration";
+            this.btnstudentregistration.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnstudentregistration.TextOffset = new System.Drawing.Point(2, 0);
+            this.btnstudentregistration.Click += new System.EventHandler(this.btnstudentconfirmation_Click);
             // 
             // btnfacultyregistration
             // 
@@ -431,7 +433,7 @@
             this.LogoTransition.SetDecoration(this.calenderofactivities, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Dashboardtransition.SetDecoration(this.calenderofactivities, Guna.UI2.AnimatorNS.DecorationType.None);
             this.SidebarTransition.SetDecoration(this.calenderofactivities, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.calenderofactivities.Location = new System.Drawing.Point(1328, 337);
+            this.calenderofactivities.Location = new System.Drawing.Point(1334, 335);
             this.calenderofactivities.MaxDate = new System.DateTime(2024, 8, 15, 0, 0, 0, 0);
             this.calenderofactivities.MinDate = new System.DateTime(2009, 12, 31, 0, 0, 0, 0);
             this.calenderofactivities.Name = "calenderofactivities";
@@ -446,9 +448,9 @@
             this.SidebarTransition.SetDecoration(this.lblname, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblname.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.lblname.Location = new System.Drawing.Point(1317, 277);
+            this.lblname.Location = new System.Drawing.Point(1327, 277);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(248, 29);
+            this.lblname.Size = new System.Drawing.Size(234, 29);
             this.lblname.TabIndex = 19;
             this.lblname.Text = "Joshua Cambal";
             this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -462,7 +464,7 @@
             this.SidebarTransition.SetDecoration(this.panelsmall, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Dashboardtransition.SetDecoration(this.panelsmall, Guna.UI2.AnimatorNS.DecorationType.None);
             this.LogoTransition.SetDecoration(this.panelsmall, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panelsmall.Location = new System.Drawing.Point(1381, 64);
+            this.panelsmall.Location = new System.Drawing.Point(1399, 64);
             this.panelsmall.Name = "panelsmall";
             this.panelsmall.Size = new System.Drawing.Size(202, 125);
             this.panelsmall.TabIndex = 25;
@@ -480,111 +482,33 @@
             this.Dashboardtransition.SetDecoration(this.lblrole, Guna.UI2.AnimatorNS.DecorationType.None);
             this.SidebarTransition.SetDecoration(this.lblrole, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblrole.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblrole.Location = new System.Drawing.Point(1311, 307);
+            this.lblrole.Location = new System.Drawing.Point(1327, 307);
             this.lblrole.Name = "lblrole";
-            this.lblrole.Size = new System.Drawing.Size(260, 19);
+            this.lblrole.Size = new System.Drawing.Size(234, 19);
             this.lblrole.TabIndex = 26;
             this.lblrole.Text = "ADMIN";
             this.lblrole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnmenu
-            // 
-            this.btnmenu.AnimatedGIF = true;
-            this.btnmenu.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.SidebarTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Dashboardtransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnmenu.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnmenu.Image = global::SMARTLEARN.Properties.Resources.main_menu;
-            this.btnmenu.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnmenu.ImageRotate = 0F;
-            this.btnmenu.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnmenu.Location = new System.Drawing.Point(18, 17);
-            this.btnmenu.Name = "btnmenu";
-            this.btnmenu.PressedState.ImageRotate = 360F;
-            this.btnmenu.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnmenu.Size = new System.Drawing.Size(38, 29);
-            this.btnmenu.TabIndex = 19;
-            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
             // SidebarTransition
             // 
             this.SidebarTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.SidebarTransition.Cursor = null;
-            animation24.AnimateOnlyDifferences = true;
-            animation24.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.BlindCoeff")));
-            animation24.LeafCoeff = 0F;
-            animation24.MaxTime = 1F;
-            animation24.MinTime = 0F;
-            animation24.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.MosaicCoeff")));
-            animation24.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation24.MosaicShift")));
-            animation24.MosaicSize = 0;
-            animation24.Padding = new System.Windows.Forms.Padding(0);
-            animation24.RotateCoeff = 0F;
-            animation24.RotateLimit = 0F;
-            animation24.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.ScaleCoeff")));
-            animation24.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation24.SlideCoeff")));
-            animation24.TimeCoeff = 0F;
-            animation24.TransparencyCoeff = 0F;
-            this.SidebarTransition.DefaultAnimation = animation24;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SidebarTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Dashboardtransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LogoTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources.profile;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1328, 81);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(227, 196);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 21;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // Dashboardtransition
-            // 
-            this.Dashboardtransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
-            this.Dashboardtransition.Cursor = null;
-            animation23.AnimateOnlyDifferences = true;
-            animation23.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.BlindCoeff")));
-            animation23.LeafCoeff = 0F;
-            animation23.MaxTime = 1F;
-            animation23.MinTime = 0F;
-            animation23.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.MosaicCoeff")));
-            animation23.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation23.MosaicShift")));
-            animation23.MosaicSize = 0;
-            animation23.Padding = new System.Windows.Forms.Padding(0);
-            animation23.RotateCoeff = 0F;
-            animation23.RotateLimit = 0F;
-            animation23.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.ScaleCoeff")));
-            animation23.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation23.SlideCoeff")));
-            animation23.TimeCoeff = 0F;
-            animation23.TransparencyCoeff = 0F;
-            this.Dashboardtransition.DefaultAnimation = animation23;
-            // 
-            // LogoTransition
-            // 
-            this.LogoTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Rotate;
-            this.LogoTransition.Cursor = null;
-            animation22.AnimateOnlyDifferences = true;
-            animation22.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.BlindCoeff")));
-            animation22.LeafCoeff = 0F;
-            animation22.MaxTime = 1F;
-            animation22.MinTime = 0F;
-            animation22.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.MosaicCoeff")));
-            animation22.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation22.MosaicShift")));
-            animation22.MosaicSize = 0;
-            animation22.Padding = new System.Windows.Forms.Padding(50);
-            animation22.RotateCoeff = 1F;
-            animation22.RotateLimit = 0F;
-            animation22.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.ScaleCoeff")));
-            animation22.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation22.SlideCoeff")));
-            animation22.TimeCoeff = 0F;
-            animation22.TransparencyCoeff = 1F;
-            this.LogoTransition.DefaultAnimation = animation22;
+            animation28.AnimateOnlyDifferences = true;
+            animation28.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.BlindCoeff")));
+            animation28.LeafCoeff = 0F;
+            animation28.MaxTime = 1F;
+            animation28.MinTime = 0F;
+            animation28.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.MosaicCoeff")));
+            animation28.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation28.MosaicShift")));
+            animation28.MosaicSize = 0;
+            animation28.Padding = new System.Windows.Forms.Padding(0);
+            animation28.RotateCoeff = 0F;
+            animation28.RotateLimit = 0F;
+            animation28.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.ScaleCoeff")));
+            animation28.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation28.SlideCoeff")));
+            animation28.TimeCoeff = 0F;
+            animation28.TransparencyCoeff = 0F;
+            this.SidebarTransition.DefaultAnimation = animation28;
             // 
             // Sidebartop
             // 
@@ -612,15 +536,32 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2ResizeForm1
+            // btnmenu
             // 
-            this.guna2ResizeForm1.TargetForm = this;
+            this.btnmenu.AnimatedGIF = true;
+            this.btnmenu.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.SidebarTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Dashboardtransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.btnmenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnmenu.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnmenu.Image = global::SMARTLEARN.Properties.Resources.main_menu;
+            this.btnmenu.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnmenu.ImageRotate = 0F;
+            this.btnmenu.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnmenu.Location = new System.Drawing.Point(18, 17);
+            this.btnmenu.Name = "btnmenu";
+            this.btnmenu.PressedState.ImageRotate = 360F;
+            this.btnmenu.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnmenu.Size = new System.Drawing.Size(38, 29);
+            this.btnmenu.TabIndex = 19;
+            this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
             // paneldash
             // 
             this.paneldash.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.paneldash.AutoScroll = true;
             this.paneldash.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.paneldash.BorderRadius = 12;
             this.SidebarTransition.SetDecoration(this.paneldash, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -628,9 +569,86 @@
             this.LogoTransition.SetDecoration(this.paneldash, Guna.UI2.AnimatorNS.DecorationType.None);
             this.paneldash.Location = new System.Drawing.Point(73, 116);
             this.paneldash.Name = "paneldash";
-            this.paneldash.Size = new System.Drawing.Size(1230, 783);
+            this.paneldash.Size = new System.Drawing.Size(1249, 773);
             this.paneldash.TabIndex = 19;
             this.paneldash.Click += new System.EventHandler(this.paneldash_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogoTransition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.SidebarTransition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Dashboardtransition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox1.Image = global::SMARTLEARN.Properties.Resources.resize;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1540, 1012);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 27;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SidebarTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Dashboardtransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.LogoTransition.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources.profile;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1334, 81);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(227, 196);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 21;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // Dashboardtransition
+            // 
+            this.Dashboardtransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
+            this.Dashboardtransition.Cursor = null;
+            animation29.AnimateOnlyDifferences = true;
+            animation29.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation29.BlindCoeff")));
+            animation29.LeafCoeff = 0F;
+            animation29.MaxTime = 1F;
+            animation29.MinTime = 0F;
+            animation29.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation29.MosaicCoeff")));
+            animation29.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation29.MosaicShift")));
+            animation29.MosaicSize = 0;
+            animation29.Padding = new System.Windows.Forms.Padding(0);
+            animation29.RotateCoeff = 0F;
+            animation29.RotateLimit = 0F;
+            animation29.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation29.ScaleCoeff")));
+            animation29.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation29.SlideCoeff")));
+            animation29.TimeCoeff = 0F;
+            animation29.TransparencyCoeff = 0F;
+            this.Dashboardtransition.DefaultAnimation = animation29;
+            // 
+            // LogoTransition
+            // 
+            this.LogoTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Rotate;
+            this.LogoTransition.Cursor = null;
+            animation30.AnimateOnlyDifferences = true;
+            animation30.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation30.BlindCoeff")));
+            animation30.LeafCoeff = 0F;
+            animation30.MaxTime = 1F;
+            animation30.MinTime = 0F;
+            animation30.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation30.MosaicCoeff")));
+            animation30.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation30.MosaicShift")));
+            animation30.MosaicSize = 0;
+            animation30.Padding = new System.Windows.Forms.Padding(50);
+            animation30.RotateCoeff = 1F;
+            animation30.RotateLimit = 0F;
+            animation30.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation30.ScaleCoeff")));
+            animation30.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation30.SlideCoeff")));
+            animation30.TimeCoeff = 0F;
+            animation30.TransparencyCoeff = 1F;
+            this.LogoTransition.DefaultAnimation = animation30;
+            // 
+            // guna2ResizeForm1
+            // 
+            this.guna2ResizeForm1.TargetForm = this;
             // 
             // FEDashboard
             // 
@@ -638,8 +656,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1573, 906);
+            this.ClientSize = new System.Drawing.Size(1573, 904);
             this.ControlBox = false;
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.Sidebar);
             this.Controls.Add(this.Sidebartop);
             this.Controls.Add(this.lblrole);
@@ -663,9 +682,10 @@
             this.dragpanel.ResumeLayout(false);
             this.dragpanel.PerformLayout();
             this.Sidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.Sidebartop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -693,7 +713,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelsmall;
         private System.Windows.Forms.Timer timetoclose;
         private System.Windows.Forms.Label lblrole;
-        private Guna.UI2.WinForms.Guna2Button btnstudentconfirmation;
+        private Guna.UI2.WinForms.Guna2Button btnstudentregistration;
         private Guna.UI2.WinForms.Guna2Button btnfacultyregistration;
         private Guna.UI2.WinForms.Guna2ImageButton btnmenu;
         private Guna.UI2.WinForms.Guna2Transition SidebarTransition;
@@ -704,5 +724,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         private Guna.UI2.WinForms.Guna2Panel paneldash;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

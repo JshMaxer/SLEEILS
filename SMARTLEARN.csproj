@@ -163,11 +163,11 @@
     <Compile Include="FrontEnd\FEInformationList.Designer.cs">
       <DependentUpon>FEInformationList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\MainForm\FacultyForms\FERegisterAdmin.cs">
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FEADRegisterAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\MainForm\FacultyForms\FERegisterAdmin.Designer.cs">
-      <DependentUpon>FERegisterAdmin.cs</DependentUpon>
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FEADRegisterAdmin.Designer.cs">
+      <DependentUpon>FEADRegisterAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\FEWelcomeDashboard.cs">
       <SubType>Form</SubType>
@@ -211,11 +211,11 @@
     <Compile Include="FrontEnd\Message\ProcessMessage.Designer.cs">
       <DependentUpon>ProcessMessage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\FEStudentEnroll.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEEDStudentEnroll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\FEStudentEnroll.Designer.cs">
-      <DependentUpon>FEStudentEnroll.cs</DependentUpon>
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEEDStudentEnroll.Designer.cs">
+      <DependentUpon>FEEDStudentEnroll.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ConsAcc.cs" />
     <Compile Include="Model\Host.cs" />
@@ -248,8 +248,8 @@
     <EmbeddedResource Include="FrontEnd\FEInformationList.resx">
       <DependentUpon>FEInformationList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FERegisterAdmin.resx">
-      <DependentUpon>FERegisterAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FEADRegisterAdmin.resx">
+      <DependentUpon>FEADRegisterAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FEWelcomeDashboard.resx">
       <DependentUpon>FEWelcomeDashboard.cs</DependentUpon>
@@ -272,8 +272,8 @@
     <EmbeddedResource Include="FrontEnd\Message\ProcessMessage.resx">
       <DependentUpon>ProcessMessage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\FEStudentEnroll.resx">
-      <DependentUpon>FEStudentEnroll.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEEDStudentEnroll.resx">
+      <DependentUpon>FEEDStudentEnroll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -454,6 +454,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-registration %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-registration %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-registration.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

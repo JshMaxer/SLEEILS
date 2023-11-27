@@ -50,14 +50,11 @@ namespace SMARTLEARN.FrontEnd
         {
             btnshowlog.Enabled = FrontEnd.FELogin.showlog;
             btnshowlog.Enabled = FELoginAdmin.showlog;
-
-            btnenroll.Enabled = FrontEnd.FELogin.showlog;
-            btnenroll.Enabled = FELoginAdmin.showlog;
         }
 
         private void btnenroll_Click(object sender, EventArgs e)
         {
-            FEStudentEnroll enroll = new FEStudentEnroll();
+            FEEDStudentEnroll enroll = new FEEDStudentEnroll();
             enroll.Show();
             this.Hide();
         }

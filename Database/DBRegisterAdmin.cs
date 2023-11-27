@@ -48,7 +48,7 @@ namespace SMARTLEARN.Database
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                    FrontEnd.ProcessMessage.firstmessage = "YOU'RE NOW"; 
+                    FrontEnd.ProcessMessage.firstmessage = "FACULTY HAS BEEN"; 
                     FrontEnd.ProcessMessage.secondmessage = "REGISTERED!\n\rTHANK YOU!";
                     pm.Show();
                 }

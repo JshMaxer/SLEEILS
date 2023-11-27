@@ -91,7 +91,7 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             btnAssignments.Image = Properties.Resources.assignment;
             btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
@@ -99,6 +99,9 @@ namespace SMARTLEARN.FrontEnd
             paneldash.Controls.Clear();
             FrontEnd.AdminForms.FEADCOURSE feadcourse = new FrontEnd.AdminForms.FEADCOURSE();
             feadcourse.TopLevel = false;
+
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
 
             // Set the form size to fit within the panel
             feadcourse.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
@@ -120,9 +123,10 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill1; //Active color
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             btnAssignments.Image = Properties.Resources.assignment;
             btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -148,9 +152,10 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule1; //Active color
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             btnAssignments.Image = Properties.Resources.assignment;
             btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -176,23 +181,24 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search1; //Active color
+            btnstudentregistration.Image = Properties.Resources.online_registration__2_; //Active color
             btnAssignments.Image = Properties.Resources.assignment;
             btnfacultyregistration.Image = Properties.Resources.profile1;
+
             //________________________________________________________________
 
             paneldash.Controls.Clear();
-            FrontEnd.AdminForms.FEADStudentConfirmation fEADStudentConfirmation = new AdminForms.FEADStudentConfirmation();
-            fEADStudentConfirmation.TopLevel = false;
+            FrontEnd.FEEDStudentEnroll fEEDStudentEnroll = new FEEDStudentEnroll();
+            fEEDStudentEnroll.TopLevel = false;
 
             // Set the form size to fit within the panel
-            fEADStudentConfirmation.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
+            fEEDStudentEnroll.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
 
             // Set the form to dock within the panel
-            fEADStudentConfirmation.Dock = System.Windows.Forms.DockStyle.Fill;
+            fEEDStudentEnroll.Dock = System.Windows.Forms.DockStyle.Fill;
 
-            paneldash.Controls.Add(fEADStudentConfirmation);
-            fEADStudentConfirmation.Show();
+            paneldash.Controls.Add(fEEDStudentEnroll);
+            fEEDStudentEnroll.Show();
         }
 
         private void btnviewgrades_Click(object sender, EventArgs e)
@@ -204,9 +210,10 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam1; //Active color
-            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             btnAssignments.Image = Properties.Resources.assignment;
             btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -232,18 +239,17 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             btnAssignments.Image = Properties.Resources.assignment;
             btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
 
-            //Size of the form
-            //dashpanelWidth = paneldash.Width;
-            //formHeight = paneldash.Height;
-
             paneldash.Controls.Clear();
             FrontEnd.FEWelcomeDashboard fEWelcomeDashboard = new FEWelcomeDashboard();
             fEWelcomeDashboard.TopLevel = false;
+
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
 
             // Set the form size to fit within the panel
             fEWelcomeDashboard.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
@@ -265,7 +271,7 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             btnAssignments.Image = Properties.Resources.assignment__2_; //Active color
             btnfacultyregistration.Image = Properties.Resources.profile1;
             //________________________________________________________________
@@ -273,6 +279,9 @@ namespace SMARTLEARN.FrontEnd
             paneldash.Controls.Clear();
             FrontEnd.MainForm.StudentForm.FESTAssignments fESTAssignments = new FESTAssignments();
             fESTAssignments.TopLevel = false;
+
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
 
             // Set the form size to fit within the panel
             fESTAssignments.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
@@ -293,14 +302,17 @@ namespace SMARTLEARN.FrontEnd
             btnbalance.Image = Properties.Resources.bill;
             btnschedule.Image = Properties.Resources.schedule;
             btnviewgrades.Image = Properties.Resources.exam;
-            btnstudentconfirmation.Image = Properties.Resources.search;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
             btnAssignments.Image = Properties.Resources.assignment; 
             btnfacultyregistration.Image = Properties.Resources.profile3; //Active color
             //________________________________________________________________
 
             paneldash.Controls.Clear();
-            FrontEnd.FERegisterAdmin regad = new FERegisterAdmin();
+            FrontEnd.FEADRegisterAdmin regad = new FEADRegisterAdmin();
             regad.TopLevel = false;
+
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
 
             // Set the form size to fit within the panel
             regad.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
@@ -314,9 +326,22 @@ namespace SMARTLEARN.FrontEnd
 
         private void FEDashboard_Load(object sender, EventArgs e)
         {
-            //Size of the form based on the last form
-            this.Width = FEHome.formWidth;
-            this.Height = FEHome.formHeight;
+            Screen currentScreen = Screen.PrimaryScreen;
+
+            if (currentScreen.Bounds.Width == 1920 && currentScreen.Bounds.Height == 1080)
+            {
+                //
+            }
+            else
+            {
+                //Size of the form based on the last form
+                this.Width = FEHome.formWidth;
+                this.Height = FEHome.formHeight;
+            }
+
+            //Size of the panel
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
 
             //Save the data size;
             formWidth = this.Width;
@@ -338,7 +363,7 @@ namespace SMARTLEARN.FrontEnd
 
             if(role == "FACULTY")
             {
-                btnstudentconfirmation.Visible = false;
+                btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnAssignments.Visible = false;
             }
@@ -347,13 +372,13 @@ namespace SMARTLEARN.FrontEnd
                 lblrole.Font = new Font(lblrole.Font.FontFamily, 15);
                 //lblrole.Location = new Point(1380, 283);
 
-                btnstudentconfirmation.Visible = true;
+                btnstudentregistration.Visible = true;
                 btnfacultyregistration.Visible = true;
                 btnAssignments.Visible = false;
             }
             else if(role == "STUDENT")
             {
-                btnstudentconfirmation.Visible = false;
+                btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnAssignments.Visible = true;
             }
@@ -380,7 +405,7 @@ namespace SMARTLEARN.FrontEnd
             {
                 Sidebar.Width = 175;
                 Sidebartop.Width = 175;
-                paneldash.Width = 1114;
+                paneldash.Width = 1141;
 
                 paneldash.Location = new Point(180, 116);
                 lbltitle.Location = new Point(175, 77);
@@ -401,10 +426,10 @@ namespace SMARTLEARN.FrontEnd
             {
                 Sidebar.Width = 67;
                 Sidebartop.Width = 67;
-                paneldash.Width = 1230;
+                paneldash.Width = 1249;
 
-                paneldash.Location = new Point(72, 116);
-                lbltitle.Location = new Point(72, 77);
+                paneldash.Location = new Point(73, 116);
+                lbltitle.Location = new Point(73, 77);
 
                 Sidebar.Visible = false;
                 paneldash.Visible = false;

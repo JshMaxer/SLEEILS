@@ -17,31 +17,23 @@ namespace SMARTLEARN.FrontEnd
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (firstmessage == "YOU'RE NOW" && secondmessage == "REGISTERED!")
+            if (FEInformationList.whatforms == "Faculty" || FEInformationList.whatforms == "Student")
             {
                 //restore to default settings
                 Backend.BEAdregister.confirm = false;
                 Backend.BEAdregister.resetform = false;
 
-                this.Close();
-            }
-            else if(firstmessage == "DATABASE NOT FOUND!" && secondmessage == "Check if it's imported or turned off.")
-            {
-                FELoginAdmin.showlog = false;
-                FELogin.showlog = false;
+                Backend.BEStudentEnroll.confirm = false;
+                Backend.BEStudentEnroll.resetform = false;
 
                 this.Close();
             }
             else
             {
-                //restore to default settings
-                Backend.BEStudentEnroll.confirm = false;
-                Backend.BEStudentEnroll.closeform = false;
+                FELoginAdmin.showlog = false;
+                FELogin.showlog = false;
 
                 this.Close();
-
-                FEHome home = new FEHome();
-                home.Show();
             }
         }
 

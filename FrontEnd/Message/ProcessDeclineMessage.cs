@@ -23,7 +23,7 @@ namespace SMARTLEARN.FrontEnd.Message
         {
             //restore to default settings
             Backend.BEStudentEnroll.confirm = false;
-            Backend.BEStudentEnroll.closeform = false;
+            Backend.BEStudentEnroll.resetform = false;
 
             Backend.BEAdregister.confirm = false;
             Backend.BEAdregister.resetform = false;

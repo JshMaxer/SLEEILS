@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
 {
-    public partial class FERegisterAdmin : Form
+    public partial class FEADRegisterAdmin : Form
     {
-        public FERegisterAdmin()
+        public FEADRegisterAdmin()
         {
             InitializeComponent();
         }
