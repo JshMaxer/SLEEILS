@@ -3,24 +3,24 @@
 ## Functional Requirements:
 
 **1. User Authentication:** 
-- Users (MIS, Faculty, Students) must be able to log in securely with unique
+- Users (Admin, Faculty, Students) must be able to log in securely with unique
 credentials.
 
 **2. User Roles and Permissions:** 
-- Differentiate access and actions based on user roles (MIS,
+- Differentiate access and actions based on user roles (Admin,
 Faculty, Students) as described in the project proposal.
 
 **3. Homework Management:**
-- MIS can create, customize, and assign homework to Faculty.
+- Admin can create, customize, and assign homework to Faculty.
 - Faculty can assign, modify, and collect homework from Students.
 - Students can view and submit homework assignments.
 
 **4. Balance Fee Management:**
-- MIS can edit and manage student balance fees.
+- Admin can edit and manage student balance fees.
 - Students can view their balance and make payments.
 
 **5. Student Enrollment:**
-- MIS can enroll, drop, and transfer students between branch schools.
+- ADMIN can enroll, drop, and transfer students between branch schools.
 
 **6. Educational Games:**
 - Faculty can customize educational games for students to access.
@@ -54,6 +54,8 @@ Faculty, Students) as described in the project proposal.
 
 **6. Compatibility:**
 - Ensure compatibility with Windows operating systems and devices.
+- Best with **1920x1080** screen resolution.
+- Compatible to **800x600** screen resolution.
 
 **7. Compliance:**
 - Ensure compliance with relevant education and data protection regulations.
