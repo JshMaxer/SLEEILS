@@ -33,10 +33,10 @@ namespace SMARTLEARN.Database
                     FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                     //Role
-                    FrontEnd.FEDashboard.role = "FACULTY";
+                    FrontEnd.FEProfile.role = "FACULTY";
 
                     //User
-                    FrontEnd.FEDashboard.user = row["first_name"].ToString() + " " + row["last_name"];
+                    FrontEnd.FEProfile.user = row["first_name"].ToString() + " " + row["last_name"];
 
 
                     dash.Show();

@@ -58,10 +58,9 @@ namespace SMARTLEARN
             if (txtuserid.Text == Model.ConsAcc.userID && txtpassword.Text == Model.ConsAcc.pass)
             {
                 FrontEnd.FEDashboard dash = new FEDashboard();
-                FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                 //Role
-                FrontEnd.FEDashboard.role = "ADMIN";
+                FrontEnd.FEProfile.role = "ADMIN";
 
 
                 dash.Show();

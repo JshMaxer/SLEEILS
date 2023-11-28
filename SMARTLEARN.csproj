@@ -109,6 +109,12 @@
     <Compile Include="Database\DBLoginFaculty.cs" />
     <Compile Include="Database\DBRegisterAdmin.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
+    <Compile Include="FrontEnd\FEProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEProfile.Designer.cs">
+      <DependentUpon>FEProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\MainForm\AdminForms\FEADBalance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontEnd\FEProfile.resx">
+      <DependentUpon>FEProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADBalance.resx">
       <DependentUpon>FEADBalance.cs</DependentUpon>
     </EmbeddedResource>

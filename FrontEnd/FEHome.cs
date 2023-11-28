@@ -21,6 +21,9 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnshowlog_Click(object sender, EventArgs e)
         {
+            FrontEnd.FEDashboard.timertoclose = false; //Close form is false on the Dashboard
+            FrontEnd.FEProfile.closeform = false; //Close form is false on the profile
+
             FrontEnd.FELogin logstu = new FELogin();
             logstu.TopMost = true;
             logstu.Show();
@@ -37,13 +40,16 @@ namespace SMARTLEARN.FrontEnd
         {
             try
             {
-                Environment.Exit(0); //add a timer 
+                Environment.Exit(0);
             }
             catch (Exception)
             {
                 MessageBox.Show("Please wait while the window is opening!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            finally
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void timertoshow_Tick(object sender, EventArgs e)

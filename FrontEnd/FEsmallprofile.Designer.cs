@@ -107,6 +107,7 @@
             this.btnprofile.Size = new System.Drawing.Size(172, 35);
             this.btnprofile.TabIndex = 17;
             this.btnprofile.Text = "Profile";
+            this.btnprofile.Click += new System.EventHandler(this.btnprofile_Click);
             // 
             // FEsmallprofile
             // 
@@ -123,6 +124,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FEsmallprofile";
             this.Text = "FECourse";
+            this.Load += new System.EventHandler(this.FEsmallprofile_Load);
             this.ResumeLayout(false);
 
         }
