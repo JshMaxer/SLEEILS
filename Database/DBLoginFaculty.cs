@@ -33,14 +33,18 @@ namespace SMARTLEARN.Database
                     FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                     //Role
-                    FrontEnd.FESTProfile.role = "FACULTY";
+                    Database.DBFacultyProfile.role = "FACULTY";
 
                     //User
-                    FrontEnd.FESTProfile.user = row["first_name"].ToString() + " " + row["last_name"];
+                    Database.DBFacultyProfile.user = row["first_name"] + " " + row["last_name"];
+
+                    //UserID
+                    Database.DBFacultyProfile.UserID = row["userid"].ToString();
+
 
 
                     dash.Show();
-                    FELoginAdmin.closethis = true; // make this false on log out!
+                    FELoginAdminFaculty.closethis = true; // make this false on log out!
                     FEHome.timetoclose = true; //To hide the home form
                 }
 

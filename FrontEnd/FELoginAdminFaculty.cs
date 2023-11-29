@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace SMARTLEARN
 {
     //FrontEnd
-    public partial class FELoginAdmin : Form
+    public partial class FELoginAdminFaculty : Form
     {
         //set a flag to the timer to know if the button is clicked.
         public static bool showlog = true;
@@ -14,7 +14,7 @@ namespace SMARTLEARN
         //set a flag to the timer to close the current form.
         public static bool closethis = false;
 
-        public FELoginAdmin()
+        public FELoginAdminFaculty()
         {
             InitializeComponent();
         }
@@ -58,10 +58,10 @@ namespace SMARTLEARN
                 FrontEnd.FEDashboard dash = new FEDashboard();
 
                 //Role
-                FrontEnd.FESTProfile.role = "ADMIN";
+                Database.DBFacultyProfile.role = "ADMIN";
                 
                 dash.Show();
-                FELoginAdmin.closethis = true; // make this false on log out!
+                FELoginAdminFaculty.closethis = true; // make this false on log out!
                 FEHome.timetoclose = true; //To hide the home form
             }
             else

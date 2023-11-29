@@ -286,7 +286,7 @@ namespace SMARTLEARN.FrontEnd
 
             if (currentScreen.Bounds.Width == 1920 && currentScreen.Bounds.Height == 1080)
             {
-                //
+                //Original Ratio of the system.
             }
             else
             {
@@ -316,26 +316,24 @@ namespace SMARTLEARN.FrontEnd
             }
 
 
-            if (FrontEnd.FESTProfile.role == "FACULTY")
+            if (Database.DBFacultyProfile.role == "FACULTY")
             {
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnbalance.Visible = false;
-                FrontEnd.FESTProfile.ifprofile = true; //To make the profile button in smallprofile visible
             }
-            else if (FrontEnd.FESTProfile.role == "ADMIN")
+            else if (Database.DBFacultyProfile.role == "ADMIN")
             {
                 btnstudentregistration.Visible = true;
                 btnfacultyregistration.Visible = true;
                 btnbalance.Visible = true;
-                FrontEnd.FESTProfile.ifprofile = false; //To make the profile button in smallprofile visible
             }
-            else if (FrontEnd.FESTProfile.role == "STUDENT")
+           
+            if (Database.DBStudentProfile.role == "STUDENT")
             {
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnbalance.Visible = false;
-                FrontEnd.FESTProfile.ifprofile = true; //To make the profile button in smallprofile visible
             }
 
             btnhome.Image = Properties.Resources.home1; //Active color
@@ -351,6 +349,12 @@ namespace SMARTLEARN.FrontEnd
 
             paneldash.Controls.Add(fEWelcomeDashboard);
             fEWelcomeDashboard.Show();
+
+            FrontEnd.FEsmallprofile.ifprofile = true; //Make this true because you're not on profile side
+
+            //Restore settings to true for access in profile
+            FrontEnd.FESTProfile.closeform = false; //Close the Profile
+            FrontEnd.MainForm.FacultyForms.FEFAProfile.closeform = false; //Close the Profile
         }
 
         

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SMARTLEARN.Database
 {
-    public class DBRegisterAdmin
+    public class DBRegisterFaculty
     {
         MySqlConnection connection = Host.connection;
 

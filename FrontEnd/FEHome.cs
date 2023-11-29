@@ -29,7 +29,7 @@ namespace SMARTLEARN.FrontEnd
             logstu.Show();
 
             FrontEnd.FELogin.showlog = false; //Set to false the flag in FELogin to Disabled the button
-            FELoginAdmin.showlog = false; //Set to false the flag in FELoginAdmin to Disabled the button
+            FELoginAdminFaculty.showlog = false; //Set to false the flag in FELoginAdmin to Disabled the button
 
             //Size of the form
             formWidth = this.Width;
@@ -55,7 +55,7 @@ namespace SMARTLEARN.FrontEnd
         private void timertoshow_Tick(object sender, EventArgs e)
         {
             btnshowlog.Enabled = FrontEnd.FELogin.showlog;
-            btnshowlog.Enabled = FELoginAdmin.showlog;
+            btnshowlog.Enabled = FELoginAdminFaculty.showlog;
         }
 
         private void btnenroll_Click(object sender, EventArgs e)
@@ -108,6 +108,7 @@ namespace SMARTLEARN.FrontEnd
 
             Database.DBCheckOnline check = new Database.DBCheckOnline();
             check.check();
+
         }
     }
 }

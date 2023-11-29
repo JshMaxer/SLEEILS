@@ -24,7 +24,7 @@ namespace SMARTLEARN.FrontEnd
             //Database
             if (Backend.BEAdregister.confirm == true) //Check the flag in FEInformation if the confirm flag is true.
             {
-                Database.DBRegisterAdmin regad = new Database.DBRegisterAdmin();
+                Database.DBRegisterFaculty regad = new Database.DBRegisterFaculty();
                 regad.insertinfo(txtfirstid, txtuserid, cbgender, txtfname, txtmname, txtlname, cbdepartment, dateofbirth, txtmobilenum, txtemail, txtpassword);
             }
             else
@@ -89,7 +89,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void FERegisterAdmin_Load(object sender, EventArgs e)
         {
-            Database.DBRegisterAdmin regad = new Database.DBRegisterAdmin();
+            Database.DBRegisterFaculty regad = new Database.DBRegisterFaculty();
             regad.USERID(txtfirstid, txtuserid);
         }
 

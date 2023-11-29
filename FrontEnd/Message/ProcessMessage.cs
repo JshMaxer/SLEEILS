@@ -30,7 +30,7 @@ namespace SMARTLEARN.FrontEnd
             }
             else
             {
-                FELoginAdmin.showlog = false;
+                FELoginAdminFaculty.showlog = false;
                 FELogin.showlog = false;
 
                 this.Close();

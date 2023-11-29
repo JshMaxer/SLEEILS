@@ -107,11 +107,18 @@
     <Compile Include="Backend\BEStudentEnroll.cs" />
     <Compile Include="Database\DBBalance.cs" />
     <Compile Include="Database\DBCheckOnline.cs" />
+    <Compile Include="Database\DBFacultyProfile.cs" />
     <Compile Include="Database\DBLoginFaculty.cs" />
     <Compile Include="Database\DBLoginStudent.cs" />
-    <Compile Include="Database\DBRegisterAdmin.cs" />
+    <Compile Include="Database\DBRegisterFaculty.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
     <Compile Include="Database\DBStudentProfile.cs" />
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FEFAProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FEFAProfile.Designer.cs">
+      <DependentUpon>FEFAProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\MainForm\StudentForm\FESTProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,10 +173,10 @@
     <Compile Include="FrontEnd\FEInformationList.Designer.cs">
       <DependentUpon>FEInformationList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\MainForm\FacultyForms\FEADRegisterAdmin.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADRegisterAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\MainForm\FacultyForms\FEADRegisterAdmin.Designer.cs">
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADRegisterAdmin.Designer.cs">
       <DependentUpon>FEADRegisterAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\FEWelcomeDashboard.cs">
@@ -196,11 +203,11 @@
     <Compile Include="FrontEnd\FELogin.Designer.cs">
       <DependentUpon>FELogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\FELoginAdmin.cs">
+    <Compile Include="FrontEnd\FELoginAdminFaculty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\FELoginAdmin.Designer.cs">
-      <DependentUpon>FELoginAdmin.cs</DependentUpon>
+    <Compile Include="FrontEnd\FELoginAdminFaculty.Designer.cs">
+      <DependentUpon>FELoginAdminFaculty.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Message\ProcessDeclineMessage.cs">
       <SubType>Form</SubType>
@@ -224,6 +231,9 @@
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FEFAProfile.resx">
+      <DependentUpon>FEFAProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTProfile.resx">
       <DependentUpon>FESTProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,7 +261,7 @@
     <EmbeddedResource Include="FrontEnd\FEInformationList.resx">
       <DependentUpon>FEInformationList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FEADRegisterAdmin.resx">
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADRegisterAdmin.resx">
       <DependentUpon>FEADRegisterAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FEWelcomeDashboard.resx">
@@ -266,8 +276,8 @@
     <EmbeddedResource Include="FrontEnd\FELogin.resx">
       <DependentUpon>FELogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\FELoginAdmin.resx">
-      <DependentUpon>FELoginAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FELoginAdminFaculty.resx">
+      <DependentUpon>FELoginAdminFaculty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Message\ProcessDeclineMessage.resx">
       <DependentUpon>ProcessDeclineMessage.cs</DependentUpon>

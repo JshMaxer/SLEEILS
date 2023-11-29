@@ -8,13 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Guna.UI2.AnimatorNS.Flags;
 
-namespace SMARTLEARN.FrontEnd
+namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 {
-    public partial class FESTProfile : Form
+    public partial class FEFAProfile : Form
     {
-        public FESTProfile()
+        public FEFAProfile()
         {
             InitializeComponent();
         }
@@ -23,7 +22,16 @@ namespace SMARTLEARN.FrontEnd
 
         public static bool closeform = false;
 
-        private void FEProfile_Load(object sender, EventArgs e)
+
+        private void timerclose_Tick(object sender, EventArgs e)
+        {
+            if (closeform == true)
+            {
+                this.Close();
+            }
+        }
+
+        private void FEFAProfile_Load(object sender, EventArgs e)
         {
             Screen currentScreen = Screen.PrimaryScreen;
 
@@ -47,14 +55,10 @@ namespace SMARTLEARN.FrontEnd
                 this.WindowState = FormWindowState.Normal;
             }
 
-
-            lblname.Text = DBStudentProfile.user; //The user first name and last name
-            lblrole.Text = DBStudentProfile.role; //The user Role
-
             FrontEnd.FEsmallprofile.ifprofile = false; //Make this false because we're on profile side
 
-            Database.DBStudentProfile stuprofile = new Database.DBStudentProfile();
-            stuprofile.searchbalance(lblname, lblrole,lblemail, lblmobile, txtfirstbalance, txtsecondbalance);
+            Database.DBFacultyProfile Facprofile = new DBFacultyProfile();
+            Facprofile.showinfo(lblname, lblemail, lblmobile, lbldepartment, lblrole, lbluserid);
         }
 
         private void btnsmallprofile_Click(object sender, EventArgs e)
@@ -74,15 +78,5 @@ namespace SMARTLEARN.FrontEnd
                 panelsmall.Controls.Clear(); // Clear any controls within panelsmall
             }
         }
-
-        private void timerclose_Tick(object sender, EventArgs e)
-        {
-            if (closeform == true)
-            {
-                this.Close();
-            }
-
-        }
-    
     }
 }

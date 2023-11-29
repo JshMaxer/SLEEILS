@@ -31,11 +31,13 @@ namespace SMARTLEARN.Database
                     FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                     //Role
-                    FrontEnd.FESTProfile.role = "STUDENT";
+                    Database.DBStudentProfile.role = "STUDENT";
 
                     //User
-                    FrontEnd.FESTProfile.user = row["firstname"].ToString() + " " + row["lastname"];
-                    FrontEnd.FESTProfile.userID = Convert.ToInt32(row["ID"]);
+                    Database.DBStudentProfile.user = row["firstname"] + " " + row["lastname"];
+
+                    //UserID
+                    Database.DBStudentProfile.UserID = row["ID"].ToString();
 
                     dash.Show();
                     FrontEnd.FELogin.closethis = true; // make this false on log out!

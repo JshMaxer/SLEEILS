@@ -35,7 +35,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnloginadmin_Click_1(object sender, EventArgs e)
         {
-            FELoginAdmin logadmin = new FELoginAdmin();
+            FELoginAdminFaculty logadmin = new FELoginAdminFaculty();
             logadmin.TopMost = true;
             logadmin.Show();
 
@@ -51,7 +51,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            FELoginAdmin.showlog = true;
+            FELoginAdminFaculty.showlog = true;
             showlog = true;
             this.Close();
         }
