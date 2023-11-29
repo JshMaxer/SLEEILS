@@ -41,31 +41,33 @@ namespace SMARTLEARN.Database
         //Insert Query
         public void insertinfo(Guna2TextBox firstID, Guna2TextBox secondID, Guna2ComboBox yearlevel, Guna2ComboBox strand, Guna2TextBox password, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox gender, Guna2DateTimePicker birth, Guna2TextBox email, Guna2TextBox mobile)
         {
-                string InsertQuery = $"INSERT INTO studentaccount VALUES ({firstID.Text + secondID.Text}, '{yearlevel.Text}', '{strand.Text}', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Text}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
-                connection.Open();
-                MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
+            string InsertQuery = $"INSERT INTO studentaccount VALUES ({firstID.Text + secondID.Text}, '{yearlevel.Text}', '{strand.Text}', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Text}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
+            string InsertStudentTable = $"INSERT INTO studenttable VALUES ({firstID.Text + secondID.Text}, '{fname.Text}', '{lname.Text}', '{strand.Text}', '0', '0', '0', '0', '0', '0')";
+            connection.Open();
+            MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
+            MySqlCommand cmd2 = new MySqlCommand(InsertStudentTable, connection);
 
-                try
+            try
+            {
+                if (cmd1.ExecuteNonQuery() == 1 && cmd2.ExecuteNonQuery() == 1)
                 {
-                    if (cmd1.ExecuteNonQuery() == 1)
-                    {
-                        FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                        FrontEnd.ProcessMessage.firstmessage = "STUDENT HAS BEEN";
-                        FrontEnd.ProcessMessage.secondmessage = "REGISTERED! \n\rTHANK YOU!";
-                        pm.Show();
+                    FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
+                    FrontEnd.ProcessMessage.firstmessage = "STUDENT HAS BEEN";
+                    FrontEnd.ProcessMessage.secondmessage = "REGISTERED! \n\rTHANK YOU!";
+                    pm.Show();
 
-                    }
-                    else
-                    {
-                        FrontEnd.Message.ProcessDeclineMessage PDM = new FrontEnd.Message.ProcessDeclineMessage();
-                        ProcessDeclineMessage.message = "STUDENT CANNOT\r\nBE PROCESS!";
-                        PDM.Show();
-                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    FrontEnd.Message.ProcessDeclineMessage PDM = new FrontEnd.Message.ProcessDeclineMessage();
+                    ProcessDeclineMessage.message = "STUDENT CANNOT\r\nBE PROCESS!";
+                    PDM.Show();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             connection.Close();
 

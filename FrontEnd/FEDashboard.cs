@@ -1,4 +1,5 @@
-﻿using SMARTLEARN.FrontEnd.MainForm.StudentForm;
+﻿using SMARTLEARN.FrontEnd.AdminForms;
+using SMARTLEARN.FrontEnd.MainForm.StudentForm;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -85,6 +86,7 @@ namespace SMARTLEARN.FrontEnd
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnbalance.Image = Properties.Resources.bill;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -115,7 +117,7 @@ namespace SMARTLEARN.FrontEnd
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
-            btnstudentregistration.Image = Properties.Resources.online_registration;
+            btnbalance.Image = Properties.Resources.bill;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -142,7 +144,7 @@ namespace SMARTLEARN.FrontEnd
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentregistration.Image = Properties.Resources.online_registration__2_; //Active color
             btnfacultyregistration.Image = Properties.Resources.profile1;
-
+            btnbalance.Image = Properties.Resources.bill;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -170,6 +172,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnstudentregistration.Image = Properties.Resources.online_registration;
+            btnbalance.Image = Properties.Resources.bill;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -196,6 +199,7 @@ namespace SMARTLEARN.FrontEnd
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnbalance.Image = Properties.Resources.bill;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -226,6 +230,7 @@ namespace SMARTLEARN.FrontEnd
             btnviewgrades.Image = Properties.Resources.exam;
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile3; //Active color
+            btnbalance.Image = Properties.Resources.bill;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -243,6 +248,36 @@ namespace SMARTLEARN.FrontEnd
 
             paneldash.Controls.Add(regad);
             regad.Show();
+        }
+
+        private void btnbalance_Click(object sender, EventArgs e)
+        {
+            hide(); //always on top
+            //Change the appearance of the button
+            btnhome.Image = Properties.Resources.home;
+            btncourse.Image = Properties.Resources.learning;
+            btnschedule.Image = Properties.Resources.schedule;
+            btnviewgrades.Image = Properties.Resources.exam;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnbalance.Image = Properties.Resources.bill__1_; //Active color
+            //________________________________________________________________
+
+            paneldash.Controls.Clear();
+            FEADBalance balance = new FEADBalance();
+            balance.TopLevel = false;
+
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
+
+            // Set the form size to fit within the panel
+            balance.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
+
+            // Set the form to dock within the panel
+            balance.Dock = System.Windows.Forms.DockStyle.Fill;
+
+            paneldash.Controls.Add(balance);
+            balance.Show();
         }
 
         private void FEDashboard_Load(object sender, EventArgs e)
@@ -268,7 +303,6 @@ namespace SMARTLEARN.FrontEnd
             formWidth = this.Width;
             formHeight = this.Height;
 
-            FrontEnd.FEProfile.ifprofile = false;
 
             if (FEHome.windowStates == true)
             {
@@ -282,20 +316,26 @@ namespace SMARTLEARN.FrontEnd
             }
 
 
-            if (FrontEnd.FEProfile.role == "FACULTY")
+            if (FrontEnd.FESTProfile.role == "FACULTY")
             {
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
+                btnbalance.Visible = false;
+                FrontEnd.FESTProfile.ifprofile = true; //To make the profile button in smallprofile visible
             }
-            else if (FrontEnd.FEProfile.role == "ADMIN")
+            else if (FrontEnd.FESTProfile.role == "ADMIN")
             {
                 btnstudentregistration.Visible = true;
                 btnfacultyregistration.Visible = true;
+                btnbalance.Visible = true;
+                FrontEnd.FESTProfile.ifprofile = false; //To make the profile button in smallprofile visible
             }
-            else if (FrontEnd.FEProfile.role == "STUDENT")
+            else if (FrontEnd.FESTProfile.role == "STUDENT")
             {
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
+                btnbalance.Visible = false;
+                FrontEnd.FESTProfile.ifprofile = true; //To make the profile button in smallprofile visible
             }
 
             btnhome.Image = Properties.Resources.home1; //Active color
@@ -313,8 +353,6 @@ namespace SMARTLEARN.FrontEnd
             fEWelcomeDashboard.Show();
         }
 
-
-
-
+        
     }
 }

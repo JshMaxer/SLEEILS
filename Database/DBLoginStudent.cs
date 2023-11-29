@@ -1,11 +1,9 @@
 ﻿using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using SMARTLEARN.FrontEnd;
-using SMARTLEARN.FrontEnd.Message;
 using SMARTLEARN.Model;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +11,14 @@ using System.Windows.Forms;
 
 namespace SMARTLEARN.Database
 {
-    //database
-    public  class DBLoginFaculty
+    public class DBLoginStudent
     {
         MySqlConnection connection = Host.connection;
-        public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
+
+        public void logstu(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
         {
             //login
-            string logad = $"SELECT first_name, last_name, userid, password FROM facultyaccount WHERE userid = '{userid.Text}' AND password = '{password.Text}'";
+            string logad = $"SELECT FirstName, LastName, ID, password FROM studentaccount WHERE ID = '{userid.Text}' AND password = '{password.Text}'";
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(logad, connection);
             MySqlDataReader row = cmd.ExecuteReader();
@@ -33,14 +31,14 @@ namespace SMARTLEARN.Database
                     FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                     //Role
-                    FrontEnd.FESTProfile.role = "FACULTY";
+                    FrontEnd.FESTProfile.role = "STUDENT";
 
                     //User
-                    FrontEnd.FESTProfile.user = row["first_name"].ToString() + " " + row["last_name"];
-
+                    FrontEnd.FESTProfile.user = row["firstname"].ToString() + " " + row["lastname"];
+                    FrontEnd.FESTProfile.userID = Convert.ToInt32(row["ID"]);
 
                     dash.Show();
-                    FELoginAdmin.closethis = true; // make this false on log out!
+                    FrontEnd.FELogin.closethis = true; // make this false on log out!
                     FEHome.timetoclose = true; //To hide the home form
                 }
 

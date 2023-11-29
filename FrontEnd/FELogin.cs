@@ -15,6 +15,9 @@ namespace SMARTLEARN.FrontEnd
         //set a flag to the timer to know if the button is clicked
         public static bool showlog = true;
 
+        //set a flag to the timer to close the current form.
+        public static bool closethis = false;
+
         public FELogin()
         {
             InitializeComponent();
@@ -48,14 +51,23 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            showlog = true;
             FELoginAdmin.showlog = true;
+            showlog = true;
             this.Close();
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            Database.DBLoginStudent Logstudent = new Database.DBLoginStudent();
+            Logstudent.logstu(txtstudentid, txtpassword, errorProvider1);
+        }
 
+        private void timertoclose_Tick(object sender, EventArgs e)
+        {
+            if (closethis == true)
+            {
+                this.Close();
+            }
         }
     }
 }

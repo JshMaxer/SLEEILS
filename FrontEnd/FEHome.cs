@@ -22,7 +22,7 @@ namespace SMARTLEARN.FrontEnd
         private void btnshowlog_Click(object sender, EventArgs e)
         {
             FrontEnd.FEDashboard.timertoclose = false; //Close form is false on the Dashboard
-            FrontEnd.FEProfile.closeform = false; //Close form is false on the profile
+            FrontEnd.FESTProfile.closeform = false; //Close form is false on the profile
 
             FrontEnd.FELogin logstu = new FELogin();
             logstu.TopMost = true;

@@ -17,8 +17,6 @@ namespace SMARTLEARN
         public FELoginAdmin()
         {
             InitializeComponent();
-            FormBorderStyle = FormBorderStyle.None;
-            CenterToScreen();
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -60,9 +58,8 @@ namespace SMARTLEARN
                 FrontEnd.FEDashboard dash = new FEDashboard();
 
                 //Role
-                FrontEnd.FEProfile.role = "ADMIN";
-
-
+                FrontEnd.FESTProfile.role = "ADMIN";
+                
                 dash.Show();
                 FELoginAdmin.closethis = true; // make this false on log out!
                 FEHome.timetoclose = true; //To hide the home form
@@ -82,15 +79,5 @@ namespace SMARTLEARN
             }
         }
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnshowhide_Click(object sender, EventArgs e)
-        {
-            
-
-        }
     }
 }

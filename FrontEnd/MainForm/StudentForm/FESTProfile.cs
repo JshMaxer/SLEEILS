@@ -11,16 +11,16 @@ using static Guna.UI2.AnimatorNS.Flags;
 
 namespace SMARTLEARN.FrontEnd
 {
-    public partial class FEProfile : Form
+    public partial class FESTProfile : Form
     {
-        public FEProfile()
+        public FESTProfile()
         {
             InitializeComponent();
         }
 
         private bool isPanelVisible = false;
 
-        //Set a flag to know where form
+        //Set a flag to know if the form is currently on profile form
         public static bool ifprofile = false;
 
         //Set a flag to give the current role to lblrole.txt
@@ -28,6 +28,10 @@ namespace SMARTLEARN.FrontEnd
 
         //Set a flag for user who's log-in
         public static string user;
+
+        //Set a flag for userID
+        public static int userID;
+
 
         public static bool closeform = false;
 
@@ -60,6 +64,9 @@ namespace SMARTLEARN.FrontEnd
             lblrole.Text = role; //The user Role
 
             ifprofile = true; //Make this true for the flag to know if we're on profile side
+
+
+            //student prifle database
         }
 
         private void btnsmallprofile_Click(object sender, EventArgs e)

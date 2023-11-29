@@ -37,9 +37,11 @@
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbgender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbyearlevel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbstrand = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnnext = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -55,8 +57,6 @@
             this.txtmname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtfname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbyearlevel = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.ResetTimer = new System.Windows.Forms.Timer(this.components);
             this.Timertoproceed = new System.Windows.Forms.Timer(this.components);
             this.requiredfields.SuspendLayout();
@@ -121,7 +121,7 @@
             this.txtfirstid.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
             this.txtfirstid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtfirstid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfirstid.Location = new System.Drawing.Point(150, 47);
+            this.txtfirstid.Location = new System.Drawing.Point(151, 61);
             this.txtfirstid.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtfirstid.MaxLength = 6;
             this.txtfirstid.Name = "txtfirstid";
@@ -147,7 +147,7 @@
             this.txtsecondid.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
             this.txtsecondid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtsecondid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtsecondid.Location = new System.Drawing.Point(271, 47);
+            this.txtsecondid.Location = new System.Drawing.Point(272, 61);
             this.txtsecondid.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtsecondid.MaxLength = 6;
             this.txtsecondid.Name = "txtsecondid";
@@ -173,7 +173,7 @@
             this.txtpassword.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(150, 216);
+            this.txtpassword.Location = new System.Drawing.Point(151, 230);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.MaxLength = 50;
             this.txtpassword.Name = "txtpassword";
@@ -190,7 +190,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 89);
+            this.label4.Location = new System.Drawing.Point(40, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 23);
             this.label4.TabIndex = 1;
@@ -202,11 +202,23 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(39, 223);
+            this.label6.Location = new System.Drawing.Point(40, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 23);
             this.label6.TabIndex = 1;
             this.label6.Text = "Password";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Year Level";
             // 
             // label5
             // 
@@ -214,7 +226,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 173);
+            this.label5.Location = new System.Drawing.Point(40, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 23);
             this.label5.TabIndex = 1;
@@ -226,7 +238,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 47);
+            this.label1.Location = new System.Drawing.Point(40, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 23);
             this.label1.TabIndex = 1;
@@ -247,10 +259,30 @@
             this.cbgender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbgender.Location = new System.Drawing.Point(150, 89);
+            this.cbgender.Location = new System.Drawing.Point(151, 103);
             this.cbgender.Name = "cbgender";
             this.cbgender.Size = new System.Drawing.Size(236, 36);
             this.cbgender.TabIndex = 1;
+            // 
+            // cbyearlevel
+            // 
+            this.cbyearlevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbyearlevel.BackColor = System.Drawing.Color.Transparent;
+            this.cbyearlevel.BorderRadius = 8;
+            this.cbyearlevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbyearlevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbyearlevel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbyearlevel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbyearlevel.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
+            this.cbyearlevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbyearlevel.ItemHeight = 30;
+            this.cbyearlevel.Items.AddRange(new object[] {
+            "Grade 11",
+            "Grade 12"});
+            this.cbyearlevel.Location = new System.Drawing.Point(151, 145);
+            this.cbyearlevel.Name = "cbyearlevel";
+            this.cbyearlevel.Size = new System.Drawing.Size(236, 36);
+            this.cbyearlevel.TabIndex = 2;
             // 
             // cbstrand
             // 
@@ -266,7 +298,7 @@
             this.cbstrand.ItemHeight = 30;
             this.cbstrand.Items.AddRange(new object[] {
             "Information Communication Technology (ICT)"});
-            this.cbstrand.Location = new System.Drawing.Point(150, 173);
+            this.cbstrand.Location = new System.Drawing.Point(151, 187);
             this.cbstrand.Name = "cbstrand";
             this.cbstrand.Size = new System.Drawing.Size(236, 36);
             this.cbstrand.TabIndex = 2;
@@ -538,38 +570,6 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Middle Name";
             // 
-            // cbyearlevel
-            // 
-            this.cbyearlevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbyearlevel.BackColor = System.Drawing.Color.Transparent;
-            this.cbyearlevel.BorderRadius = 8;
-            this.cbyearlevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbyearlevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbyearlevel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbyearlevel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbyearlevel.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
-            this.cbyearlevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbyearlevel.ItemHeight = 30;
-            this.cbyearlevel.Items.AddRange(new object[] {
-            "Grade 11",
-            "Grade 12"});
-            this.cbyearlevel.Location = new System.Drawing.Point(150, 131);
-            this.cbyearlevel.Name = "cbyearlevel";
-            this.cbyearlevel.Size = new System.Drawing.Size(236, 36);
-            this.cbyearlevel.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Year Level";
-            // 
             // ResetTimer
             // 
             this.ResetTimer.Enabled = true;
@@ -580,7 +580,7 @@
             this.Timertoproceed.Enabled = true;
             this.Timertoproceed.Tick += new System.EventHandler(this.Timertoproceed_Tick);
             // 
-            // FEStudentEnroll
+            // FEEDStudentEnroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -593,7 +593,7 @@
             this.Controls.Add(this.guna2Separator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(440, 775);
-            this.Name = "FEStudentEnroll";
+            this.Name = "FEEDStudentEnroll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentEnroll";
             this.Load += new System.EventHandler(this.FEStudentEnroll_Load);

@@ -21,6 +21,7 @@ namespace SMARTLEARN.FrontEnd
                 //Students Information
                 listBox1.Items.Add("");
                 listBox1.Items.Add("STUDENT INFORMATION");
+                listBox1.Items.Add("");
                 listBox1.Items.Add(Backend.BEStudentEnroll.listid);
                 listBox1.Items.Add(Backend.BEStudentEnroll.listyearlevel);
                 listBox1.Items.Add(Backend.BEStudentEnroll.liststrand);
@@ -36,7 +37,9 @@ namespace SMARTLEARN.FrontEnd
             else 
             {
                 //Role
+                listBox1.Items.Add("");
                 listBox1.Items.Add("ROLE INFORMATION");
+                listBox1.Items.Add("");
                 listBox1.Items.Add(Backend.BEAdregister.listuserid);
                 listBox1.Items.Add(Backend.BEAdregister.listgender);
                 listBox1.Items.Add(Backend.BEAdregister.listdepartment);
@@ -45,6 +48,7 @@ namespace SMARTLEARN.FrontEnd
                 //Personal
                 listBox1.Items.Add("");
                 listBox1.Items.Add("PERSONAL INFORMATION");
+                listBox1.Items.Add("");
                 listBox1.Items.Add(Backend.BEAdregister.listfirstname);
                 listBox1.Items.Add(Backend.BEAdregister.listmiddlename);
                 listBox1.Items.Add(Backend.BEAdregister.listlastname);

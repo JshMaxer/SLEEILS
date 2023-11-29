@@ -1,6 +1,6 @@
 ﻿namespace SMARTLEARN.FrontEnd
 {
-    partial class FEProfile
+    partial class FESTProfile
     {
         /// <summary>
         /// Required designer variable.

@@ -41,6 +41,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtstudentid = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.timertoclose = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -220,6 +221,11 @@
             this.txtpassword.TabIndex = 8;
             this.txtpassword.UseSystemPasswordChar = true;
             // 
+            // timertoclose
+            // 
+            this.timertoclose.Enabled = true;
+            this.timertoclose.Tick += new System.EventHandler(this.timertoclose_Tick);
+            // 
             // FELogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,5 +268,6 @@
         private Guna.UI2.WinForms.Guna2Elipse RoundEdge;
         private Guna.UI2.WinForms.Guna2Button btnlogin;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Timer timertoclose;
     }
 }

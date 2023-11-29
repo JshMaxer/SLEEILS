@@ -50,6 +50,7 @@
             this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnbalance = new Guna.UI2.WinForms.Guna2Button();
             this.dragpanel.SuspendLayout();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -73,7 +74,7 @@
             this.dragpanel.Controls.Add(this.label2);
             this.dragpanel.Location = new System.Drawing.Point(-1, 0);
             this.dragpanel.Name = "dragpanel";
-            this.dragpanel.Size = new System.Drawing.Size(1599, 64);
+            this.dragpanel.Size = new System.Drawing.Size(1574, 64);
             this.dragpanel.TabIndex = 17;
             this.dragpanel.Click += new System.EventHandler(this.dragpanel_Click);
             // 
@@ -141,10 +142,11 @@
             this.Sidebar.Controls.Add(this.btnviewgrades);
             this.Sidebar.Controls.Add(this.btnstudentregistration);
             this.Sidebar.Controls.Add(this.btnfacultyregistration);
+            this.Sidebar.Controls.Add(this.btnbalance);
             this.Sidebar.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sidebar.Location = new System.Drawing.Point(1, 215);
+            this.Sidebar.Location = new System.Drawing.Point(1, 171);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(67, 578);
+            this.Sidebar.Size = new System.Drawing.Size(67, 682);
             this.Sidebar.TabIndex = 18;
             // 
             // btnhome
@@ -356,6 +358,28 @@
             this.guna2CirclePictureBox1.TabIndex = 28;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // btnbalance
+            // 
+            this.btnbalance.Animated = true;
+            this.btnbalance.BorderColor = System.Drawing.Color.White;
+            this.btnbalance.BorderRadius = 12;
+            this.btnbalance.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnbalance.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnbalance.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbalance.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbalance.FillColor = System.Drawing.Color.Transparent;
+            this.btnbalance.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnbalance.ForeColor = System.Drawing.Color.White;
+            this.btnbalance.HoverState.Image = global::SMARTLEARN.Properties.Resources.bill__1_;
+            this.btnbalance.Image = global::SMARTLEARN.Properties.Resources.bill;
+            this.btnbalance.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnbalance.Location = new System.Drawing.Point(3, 591);
+            this.btnbalance.Name = "btnbalance";
+            this.btnbalance.Size = new System.Drawing.Size(64, 92);
+            this.btnbalance.TabIndex = 19;
+            this.btnbalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnbalance.Click += new System.EventHandler(this.btnbalance_Click);
+            // 
             // FEDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,5 +434,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlToolTip Helpforbutton;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnbalance;
     }
 }

@@ -105,15 +105,18 @@
   <ItemGroup>
     <Compile Include="Backend\BEAdregister.cs" />
     <Compile Include="Backend\BEStudentEnroll.cs" />
+    <Compile Include="Database\DBBalance.cs" />
     <Compile Include="Database\DBCheckOnline.cs" />
     <Compile Include="Database\DBLoginFaculty.cs" />
+    <Compile Include="Database\DBLoginStudent.cs" />
     <Compile Include="Database\DBRegisterAdmin.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
-    <Compile Include="FrontEnd\FEProfile.cs">
+    <Compile Include="Database\DBStudentProfile.cs" />
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\FEProfile.Designer.cs">
-      <DependentUpon>FEProfile.cs</DependentUpon>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTProfile.Designer.cs">
+      <DependentUpon>FESTProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\MainForm\AdminForms\FEADBalance.cs">
       <SubType>Form</SubType>
@@ -132,12 +135,6 @@
     </Compile>
     <Compile Include="FrontEnd\MainForm\AdminForms\FEADSchedule.Designer.cs">
       <DependentUpon>FEADSchedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrontEnd\MainForm\AdminForms\FEADStudentConfirmation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\MainForm\AdminForms\FEADStudentConfirmation.Designer.cs">
-      <DependentUpon>FEADStudentConfirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\MainForm\AdminForms\FEADViewGrades.cs">
       <SubType>Form</SubType>
@@ -227,8 +224,8 @@
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrontEnd\FEProfile.resx">
-      <DependentUpon>FEProfile.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTProfile.resx">
+      <DependentUpon>FESTProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADBalance.resx">
       <DependentUpon>FEADBalance.cs</DependentUpon>
@@ -238,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADSchedule.resx">
       <DependentUpon>FEADSchedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADStudentConfirmation.resx">
-      <DependentUpon>FEADStudentConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADViewGrades.resx">
       <DependentUpon>FEADViewGrades.cs</DependentUpon>
