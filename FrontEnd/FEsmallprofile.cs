@@ -39,12 +39,12 @@ namespace SMARTLEARN.FrontEnd
             Backend.BEStudentEnroll.resetform = false;
 
             FrontEnd.FEDashboard.timertoclose = true; //Close the Dashboard
+
             FrontEnd.FESTProfile.closeform = true; //Close the Profile
             FrontEnd.MainForm.FacultyForms.FEFAProfile.closeform = true; //Close the Profile
-            FrontEnd.FEDashboard.timertoclose = false; //Close the Dashboard
 
-            FrontEnd.FEHome home = new FEHome();
-            home.Show();
+            //Show hiding form
+            FEHome.Instance.Show();
         }
 
         private void btnprofile_Click(object sender, EventArgs e)

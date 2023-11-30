@@ -158,7 +158,7 @@
             this.lblrole.Name = "lblrole";
             this.lblrole.Size = new System.Drawing.Size(1082, 19);
             this.lblrole.TabIndex = 39;
-            this.lblrole.Text = "ADMIN";
+            this.lblrole.Text = "ROLE";
             this.lblrole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CirclePictureBox1
@@ -184,7 +184,7 @@
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(1078, 29);
             this.lblname.TabIndex = 35;
-            this.lblname.Text = "Joshua Cambal";
+            this.lblname.Text = "Faculty Name";
             this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbldepartment

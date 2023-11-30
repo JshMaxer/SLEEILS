@@ -8,6 +8,8 @@ namespace SMARTLEARN.FrontEnd
 {
     public partial class FEDashboard : Form
     {
+        public static FEDashboard Instance; //An existing instance of a form.
+
         private bool isPanelVisible = false;
 
         //set a flag to the timer to close the current form.
@@ -27,6 +29,7 @@ namespace SMARTLEARN.FrontEnd
         public FEDashboard()
         {
             InitializeComponent();
+            Instance = this;
         }
 
         void hide() // the panel will hide if you click somewhere!

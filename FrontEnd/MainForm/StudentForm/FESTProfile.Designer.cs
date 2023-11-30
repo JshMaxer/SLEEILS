@@ -118,11 +118,11 @@
             // lblrole
             // 
             this.lblrole.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblrole.Location = new System.Drawing.Point(10, 280);
+            this.lblrole.Location = new System.Drawing.Point(10, 267);
             this.lblrole.Name = "lblrole";
             this.lblrole.Size = new System.Drawing.Size(234, 19);
             this.lblrole.TabIndex = 29;
-            this.lblrole.Text = "ADMIN";
+            this.lblrole.Text = "ROLE";
             this.lblrole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblname
@@ -134,7 +134,7 @@
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(863, 29);
             this.lblname.TabIndex = 27;
-            this.lblname.Text = "Joshua Cambal";
+            this.lblname.Text = "Student Name";
             this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1

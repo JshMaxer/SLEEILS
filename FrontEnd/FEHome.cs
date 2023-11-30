@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
 {
     public partial class FEHome : Form
     {
+        public static FEHome Instance; //An existing instance of a form.
+
         //Set a flag to close the home page after the login is made
         public static bool timetoclose = false;
 
@@ -17,6 +18,7 @@ namespace SMARTLEARN.FrontEnd
         public FEHome()
         {
             InitializeComponent();
+            Instance = this;
         }
 
         private void btnshowlog_Click(object sender, EventArgs e)
@@ -58,13 +60,6 @@ namespace SMARTLEARN.FrontEnd
             btnshowlog.Enabled = FELoginAdminFaculty.showlog;
         }
 
-        private void btnenroll_Click(object sender, EventArgs e)
-        {
-            FEEDStudentEnroll enroll = new FEEDStudentEnroll();
-            enroll.Show();
-            this.Hide();
-        }
-
         private void timerbeforeexit_Tick(object sender, EventArgs e)
         {
             btnexit.Enabled = true;
@@ -74,7 +69,7 @@ namespace SMARTLEARN.FrontEnd
         {
             if (timetoclose == true)
             {
-                this.Hide();
+                FEHome.Instance.Hide();
             }
         }
 
