@@ -551,11 +551,11 @@
             this.guna2Separator1.Size = new System.Drawing.Size(1142, 10);
             this.guna2Separator1.TabIndex = 24;
             // 
-            // FERegisterAdmin
+            // FEADRegisterAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1150, 775);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.guna2Separator1);
@@ -564,7 +564,7 @@
             this.Controls.Add(this.requiredfields);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(440, 775);
-            this.Name = "FERegisterAdmin";
+            this.Name = "FEADRegisterAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FERegisterAdmin";
             this.Load += new System.EventHandler(this.FERegisterAdmin_Load);

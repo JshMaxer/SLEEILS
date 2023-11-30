@@ -43,6 +43,7 @@
             this.btnviewgrades = new Guna.UI2.WinForms.Guna2Button();
             this.btnstudentregistration = new Guna.UI2.WinForms.Guna2Button();
             this.btnfacultyregistration = new Guna.UI2.WinForms.Guna2Button();
+            this.btnbalance = new Guna.UI2.WinForms.Guna2Button();
             this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
             this.timetoclose = new System.Windows.Forms.Timer(this.components);
             this.paneldash = new Guna.UI2.WinForms.Guna2Panel();
@@ -50,7 +51,6 @@
             this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnbalance = new Guna.UI2.WinForms.Guna2Button();
             this.dragpanel.SuspendLayout();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -292,10 +292,33 @@
             this.Helpforbutton.SetToolTip(this.btnfacultyregistration, "Faculty Registration");
             this.btnfacultyregistration.Click += new System.EventHandler(this.btnfacultyregistration_Click);
             // 
+            // btnbalance
+            // 
+            this.btnbalance.Animated = true;
+            this.btnbalance.BorderColor = System.Drawing.Color.White;
+            this.btnbalance.BorderRadius = 12;
+            this.btnbalance.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnbalance.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnbalance.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbalance.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbalance.FillColor = System.Drawing.Color.Transparent;
+            this.btnbalance.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnbalance.ForeColor = System.Drawing.Color.White;
+            this.btnbalance.HoverState.Image = global::SMARTLEARN.Properties.Resources.bill__1_;
+            this.btnbalance.Image = global::SMARTLEARN.Properties.Resources.bill;
+            this.btnbalance.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnbalance.Location = new System.Drawing.Point(3, 591);
+            this.btnbalance.Name = "btnbalance";
+            this.btnbalance.Size = new System.Drawing.Size(64, 92);
+            this.btnbalance.TabIndex = 19;
+            this.btnbalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnbalance.Click += new System.EventHandler(this.btnbalance_Click);
+            // 
             // panelsmall
             // 
             this.panelsmall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelsmall.AutoSize = true;
+            this.panelsmall.BackColor = System.Drawing.Color.Transparent;
             this.panelsmall.BorderRadius = 25;
             this.panelsmall.BorderThickness = 1;
             this.panelsmall.Location = new System.Drawing.Point(1371, 66);
@@ -357,28 +380,6 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 28;
             this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // btnbalance
-            // 
-            this.btnbalance.Animated = true;
-            this.btnbalance.BorderColor = System.Drawing.Color.White;
-            this.btnbalance.BorderRadius = 12;
-            this.btnbalance.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnbalance.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnbalance.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbalance.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnbalance.FillColor = System.Drawing.Color.Transparent;
-            this.btnbalance.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.btnbalance.ForeColor = System.Drawing.Color.White;
-            this.btnbalance.HoverState.Image = global::SMARTLEARN.Properties.Resources.bill__1_;
-            this.btnbalance.Image = global::SMARTLEARN.Properties.Resources.bill;
-            this.btnbalance.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnbalance.Location = new System.Drawing.Point(3, 591);
-            this.btnbalance.Name = "btnbalance";
-            this.btnbalance.Size = new System.Drawing.Size(64, 92);
-            this.btnbalance.TabIndex = 19;
-            this.btnbalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnbalance.Click += new System.EventHandler(this.btnbalance_Click);
             // 
             // FEDashboard
             // 

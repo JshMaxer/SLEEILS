@@ -19,7 +19,6 @@ namespace SMARTLEARN.FrontEnd
             InitializeComponent();
         }
 
-        private bool isPanelVisible = false;
 
         public static bool closeform = false;
 
@@ -51,28 +50,8 @@ namespace SMARTLEARN.FrontEnd
             lblname.Text = DBStudentProfile.user; //The user first name and last name
             lblrole.Text = DBStudentProfile.role; //The user Role
 
-            FrontEnd.FEsmallprofile.ifprofile = false; //Make this false because we're on profile side
-
             Database.DBStudentProfile stuprofile = new Database.DBStudentProfile();
             stuprofile.searchbalance(lblname, lblrole,lblemail, lblmobile, txtfirstbalance, txtsecondbalance);
-        }
-
-        private void btnsmallprofile_Click(object sender, EventArgs e)
-        {
-            isPanelVisible = !isPanelVisible;
-            panelsmall.Visible = isPanelVisible;
-
-            if (isPanelVisible)
-            {
-                FEsmallprofile smallprofile = new FEsmallprofile() { TopLevel = false, TopMost = true };
-                smallprofile.FormBorderStyle = FormBorderStyle.None;
-                panelsmall.Controls.Add(smallprofile);
-                smallprofile.Show();
-            }
-            else
-            {
-                panelsmall.Controls.Clear(); // Clear any controls within panelsmall
-            }
         }
 
         private void timerclose_Tick(object sender, EventArgs e)
@@ -83,6 +62,10 @@ namespace SMARTLEARN.FrontEnd
             }
 
         }
-    
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.Dragcontrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
@@ -49,6 +48,8 @@
             this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
             this.timerclose = new System.Windows.Forms.Timer(this.components);
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnback = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.dragpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,29 +66,11 @@
             this.dragpanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dragpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.dragpanel.Controls.Add(this.btnsmallprofile);
             this.dragpanel.Controls.Add(this.label2);
             this.dragpanel.Location = new System.Drawing.Point(-5, -1);
             this.dragpanel.Name = "dragpanel";
             this.dragpanel.Size = new System.Drawing.Size(1114, 64);
             this.dragpanel.TabIndex = 18;
-            // 
-            // btnsmallprofile
-            // 
-            this.btnsmallprofile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnsmallprofile.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnsmallprofile.HoverState.Image = global::SMARTLEARN.Properties.Resources.user__1_;
-            this.btnsmallprofile.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnsmallprofile.Image = global::SMARTLEARN.Properties.Resources.user;
-            this.btnsmallprofile.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnsmallprofile.ImageRotate = 0F;
-            this.btnsmallprofile.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnsmallprofile.Location = new System.Drawing.Point(1062, 16);
-            this.btnsmallprofile.Name = "btnsmallprofile";
-            this.btnsmallprofile.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsmallprofile.Size = new System.Drawing.Size(38, 29);
-            this.btnsmallprofile.TabIndex = 19;
-            this.btnsmallprofile.Click += new System.EventHandler(this.btnsmallprofile_Click);
             // 
             // label2
             // 
@@ -278,11 +261,41 @@
             this.guna2CirclePictureBox1.TabIndex = 28;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // btnback
+            // 
+            this.btnback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnback.Animated = true;
+            this.btnback.AutoRoundedCorners = true;
+            this.btnback.BackColor = System.Drawing.Color.Transparent;
+            this.btnback.BorderRadius = 14;
+            this.btnback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnback.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnback.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnback.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnback.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnback.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.btnback.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnback.ForeColor = System.Drawing.Color.White;
+            this.btnback.Location = new System.Drawing.Point(21, 688);
+            this.btnback.Name = "btnback";
+            this.btnback.ShadowDecoration.BorderRadius = 2;
+            this.btnback.ShadowDecoration.Depth = 10;
+            this.btnback.Size = new System.Drawing.Size(103, 30);
+            this.btnback.TabIndex = 34;
+            this.btnback.Text = "Back";
+            this.btnback.UseTransparentBackground = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // FESTProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 730);
+            this.Controls.Add(this.btnback);
             this.Controls.Add(this.panelsmall);
             this.Controls.Add(this.txtsecondbalance);
             this.Controls.Add(this.txtfirstbalance);
@@ -318,7 +331,6 @@
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2Panel dragpanel;
-        private Guna.UI2.WinForms.Guna2ImageButton btnsmallprofile;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblrole;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
@@ -333,5 +345,7 @@
         private System.Windows.Forms.Label lblemail;
         private Guna.UI2.WinForms.Guna2Panel panelsmall;
         private System.Windows.Forms.Timer timerclose;
+        public Guna.UI2.WinForms.Guna2Button btnback;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

@@ -179,7 +179,7 @@ namespace SMARTLEARN.FrontEnd
             //________________________________________________________________
 
             paneldash.Controls.Clear();
-            FrontEnd.AdminForms.FEADViewGrades fEADViewGrades = new AdminForms.FEADViewGrades();
+            FrontEnd.AdminForms.FEFAGrades fEADViewGrades = new AdminForms.FEFAGrades();
             fEADViewGrades.TopLevel = false;
 
             // Set the form size to fit within the panel
@@ -285,6 +285,8 @@ namespace SMARTLEARN.FrontEnd
 
         private void FEDashboard_Load(object sender, EventArgs e)
         {
+            FEHome.showlog = true; //btnshowlog enable = true
+
             Screen currentScreen = Screen.PrimaryScreen;
 
             if (currentScreen.Bounds.Width == 1920 && currentScreen.Bounds.Height == 1080)
@@ -324,12 +326,16 @@ namespace SMARTLEARN.FrontEnd
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnbalance.Visible = false;
+                btnviewgrades.Visible = true;
+                btnschedule.Visible = true;
             }
             else if (Database.DBFacultyProfile.role == "ADMIN")
             {
                 btnstudentregistration.Visible = true;
                 btnfacultyregistration.Visible = true;
                 btnbalance.Visible = true;
+                btnviewgrades.Visible = false;
+                btnschedule.Visible = false;
             }
            
             if (Database.DBStudentProfile.role == "STUDENT")
@@ -337,6 +343,8 @@ namespace SMARTLEARN.FrontEnd
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnbalance.Visible = false;
+                btnviewgrades.Visible = false;
+                btnschedule.Visible = true;
             }
 
             btnhome.Image = Properties.Resources.home1; //Active color
@@ -352,8 +360,6 @@ namespace SMARTLEARN.FrontEnd
 
             paneldash.Controls.Add(fEWelcomeDashboard);
             fEWelcomeDashboard.Show();
-
-            FrontEnd.FEsmallprofile.ifprofile = true; //Make this true because you're not on profile side
 
             //Restore settings to true for access in profile
             FrontEnd.FESTProfile.closeform = false; //Close the Profile

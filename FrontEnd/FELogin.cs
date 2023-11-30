@@ -12,9 +12,6 @@ namespace SMARTLEARN.FrontEnd
 {
     public partial class FELogin : Form
     {
-        //set a flag to the timer to know if the button is clicked
-        public static bool showlog = true;
-
         //set a flag to the timer to close the current form.
         public static bool closethis = false;
 
@@ -37,9 +34,8 @@ namespace SMARTLEARN.FrontEnd
         {
             FELoginAdminFaculty logadmin = new FELoginAdminFaculty();
             logadmin.TopMost = true;
-            logadmin.Show();
-
             this.Close();
+            logadmin.Show();
         }
 
         private void lblforgot_Click_1(object sender, EventArgs e)
@@ -51,8 +47,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            FELoginAdminFaculty.showlog = true;
-            showlog = true;
+            FEHome.showlog = true; FEHome.showlog = true; //btnshowlog enable = true
             this.Close();
         }
 

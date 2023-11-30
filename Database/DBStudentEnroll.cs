@@ -42,7 +42,7 @@ namespace SMARTLEARN.Database
         public void insertinfo(Guna2TextBox firstID, Guna2TextBox secondID, Guna2ComboBox yearlevel, Guna2ComboBox strand, Guna2TextBox password, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox gender, Guna2DateTimePicker birth, Guna2TextBox email, Guna2TextBox mobile)
         {
             string InsertQuery = $"INSERT INTO studentaccount VALUES ({firstID.Text + secondID.Text}, '{yearlevel.Text}', '{strand.Text}', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
-            string InsertStudentTable = $"INSERT INTO studenttable VALUES ({firstID.Text + secondID.Text}, '{fname.Text}', '{lname.Text}', '{strand.Text}', '0', '0', '0', '0', '0', '0')";
+            string InsertStudentTable = $"INSERT INTO studenttable VALUES ({firstID.Text + secondID.Text}, '{fname.Text}', '{lname.Text}', '{strand.Text}', '0', '0', '0', '0', '0', '0', '0', '0')";
             connection.Open();
             MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
             MySqlCommand cmd2 = new MySqlCommand(InsertStudentTable, connection);

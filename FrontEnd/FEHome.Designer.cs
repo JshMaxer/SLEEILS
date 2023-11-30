@@ -36,11 +36,11 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnshowlog = new Guna.UI2.WinForms.Guna2Button();
             this.btnexit = new Guna.UI2.WinForms.Guna2Button();
-            this.timertoshow = new System.Windows.Forms.Timer(this.components);
             this.timerbeforeexit = new System.Windows.Forms.Timer(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.timertoclose = new System.Windows.Forms.Timer(this.components);
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
+            this.showlogtimer = new System.Windows.Forms.Timer(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -140,11 +140,6 @@
             this.btnexit.UseTransparentBackground = true;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
-            // timertoshow
-            // 
-            this.timertoshow.Enabled = true;
-            this.timertoshow.Tick += new System.EventHandler(this.timertoshow_Tick);
-            // 
             // timerbeforeexit
             // 
             this.timerbeforeexit.Enabled = true;
@@ -164,9 +159,15 @@
             // 
             this.guna2ResizeForm1.TargetForm = this;
             // 
+            // showlogtimer
+            // 
+            this.showlogtimer.Enabled = true;
+            this.showlogtimer.Tick += new System.EventHandler(this.showlogtimer_Tick);
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::SMARTLEARN.Properties.Resources.resize;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(1074, 698);
@@ -212,11 +213,11 @@
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2Button btnshowlog;
         public Guna.UI2.WinForms.Guna2Button btnexit;
-        private System.Windows.Forms.Timer timertoshow;
         private System.Windows.Forms.Timer timerbeforeexit;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Timer timertoclose;
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Timer showlogtimer;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Mozilla;
+using SMARTLEARN.FrontEnd.AdminForms;
+using System;
 using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
@@ -6,6 +8,9 @@ namespace SMARTLEARN.FrontEnd
     public partial class FEHome : Form
     {
         public static FEHome Instance; //An existing instance of a form.
+
+        //Set a flag for login button enable
+        public static bool showlog = true;
 
         //Set a flag to close the home page after the login is made
         public static bool timetoclose = false;
@@ -28,10 +33,10 @@ namespace SMARTLEARN.FrontEnd
 
             FrontEnd.FELogin logstu = new FELogin();
             logstu.TopMost = true;
-            logstu.Show();
 
-            FrontEnd.FELogin.showlog = false; //Set to false the flag in FELogin to Disabled the button
-            FELoginAdminFaculty.showlog = false; //Set to false the flag in FELoginAdmin to Disabled the button
+            showlog = false; //btnshowlog enable = false
+
+            logstu.ShowDialog();
 
             //Size of the form
             formWidth = this.Width;
@@ -52,12 +57,6 @@ namespace SMARTLEARN.FrontEnd
             {
                 Environment.Exit(0);
             }
-        }
-
-        private void timertoshow_Tick(object sender, EventArgs e)
-        {
-            btnshowlog.Enabled = FrontEnd.FELogin.showlog;
-            btnshowlog.Enabled = FELoginAdminFaculty.showlog;
         }
 
         private void timerbeforeexit_Tick(object sender, EventArgs e)
@@ -103,7 +102,11 @@ namespace SMARTLEARN.FrontEnd
 
             Database.DBCheckOnline check = new Database.DBCheckOnline();
             check.check();
+        }
 
+        private void showlogtimer_Tick(object sender, EventArgs e)
+        {
+            btnshowlog.Enabled = showlog; 
         }
     }
 }

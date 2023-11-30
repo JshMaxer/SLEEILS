@@ -124,7 +124,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FEsmallprofile";
             this.Text = "FECourse";
-            this.Load += new System.EventHandler(this.FEsmallprofile_Load);
             this.ResumeLayout(false);
 
         }

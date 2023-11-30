@@ -12,18 +12,12 @@ namespace SMARTLEARN.FrontEnd
             InitializeComponent();
         }
 
-        //Set a flag to know if the form is currently on profile form
-        public static bool ifprofile = false;
-
         private void btnlogout_Click(object sender, EventArgs e)
         {
             FEHome.timetoclose = false; //Home timer to close set to false
 
-            FrontEnd.FELogin.showlog = true; //Enable the button inside the Home Form using the flag on FELogin
-            FELoginAdminFaculty.showlog = true; //Enable the button inside the Home Form using the flag on FELoginAdmin
-
-            FELoginAdminFaculty.closethis = false; //Set to false the 'closethis' flag in login
-            FELogin.closethis = false;
+            FELoginAdminFaculty.closethis = false; //Set to false the 'closethis' flag in loginAdmin
+            FELogin.closethis = false; //Set to false the 'closethis' flag in login
 
             Database.DBStudentProfile.user = null; //Restore to null the user in Student form
             Database.DBFacultyProfile.user = null; //Restore to null the user in Faculty form
@@ -32,11 +26,11 @@ namespace SMARTLEARN.FrontEnd
             Database.DBStudentProfile.role = null; //Restore role to default
 
             //restore to default settings
-            Backend.BEAdregister.confirm = false;
-            Backend.BEAdregister.resetform = false;
+            Backend.BEAdregister.confirm = false; //Restore the confirm flag for database
+            Backend.BEAdregister.resetform = false; //Restore resetform flag to not reset the form auto
 
-            Backend.BEStudentEnroll.confirm = false;
-            Backend.BEStudentEnroll.resetform = false;
+            Backend.BEStudentEnroll.confirm = false; //Restore the confirm flag for database
+            Backend.BEStudentEnroll.resetform = false; //Restore resetform flag to not reset the form auto
 
             FrontEnd.FEDashboard.timertoclose = true; //Close the Dashboard
 
@@ -52,32 +46,18 @@ namespace SMARTLEARN.FrontEnd
             if (Database.DBStudentProfile.role == "STUDENT")
             {
                 FESTProfile profile = new FESTProfile();
+                profile.ShowDialog();
                 this.Close();
-                profile.Show();
-                FrontEnd.FEDashboard.timertoclose = true; //Close the Dashboard
             }
             
             if (Database.DBFacultyProfile.role == "ADMIN" || Database.DBFacultyProfile.role == "FACULTY")
             {
                 FEFAProfile FAprofile = new FEFAProfile();
+                FAprofile.ShowDialog();
                 this.Close();
-                FAprofile.Show();
-                FrontEnd.FEDashboard.timertoclose = true; //Close the Dashboard
             }
 
         }
 
-        private void FEsmallprofile_Load(object sender, EventArgs e)
-        {
-            if (ifprofile == true)
-            {
-                btnprofile.Enabled = true;
-            }
-            else
-            {
-                btnprofile.Enabled = false;
-            }
-
-        }
     }
 }

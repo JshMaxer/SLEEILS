@@ -18,7 +18,6 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
             InitializeComponent();
         }
 
-        private bool isPanelVisible = false;
 
         public static bool closeform = false;
 
@@ -55,28 +54,13 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
                 this.WindowState = FormWindowState.Normal;
             }
 
-            FrontEnd.FEsmallprofile.ifprofile = false; //Make this false because we're on profile side
-
             Database.DBFacultyProfile Facprofile = new DBFacultyProfile();
             Facprofile.showinfo(lblname, lblemail, lblmobile, lbldepartment, lblrole, lbluserid);
         }
 
-        private void btnsmallprofile_Click(object sender, EventArgs e)
+        private void btnback_Click(object sender, EventArgs e)
         {
-            isPanelVisible = !isPanelVisible;
-            panelsmall.Visible = isPanelVisible;
-
-            if (isPanelVisible)
-            {
-                FEsmallprofile smallprofile = new FEsmallprofile() { TopLevel = false, TopMost = true };
-                smallprofile.FormBorderStyle = FormBorderStyle.None;
-                panelsmall.Controls.Add(smallprofile);
-                smallprofile.Show();
-            }
-            else
-            {
-                panelsmall.Controls.Clear(); // Clear any controls within panelsmall
-            }
+            this.Close();
         }
     }
 }

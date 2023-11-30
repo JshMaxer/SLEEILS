@@ -42,6 +42,7 @@
             this.txtstudentid = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.timertoclose = new System.Windows.Forms.Timer(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -226,6 +227,11 @@
             this.timertoclose.Enabled = true;
             this.timertoclose.Tick += new System.EventHandler(this.timertoclose_Tick);
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 150;
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // FELogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,5 +275,6 @@
         private Guna.UI2.WinForms.Guna2Button btnlogin;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Timer timertoclose;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }
