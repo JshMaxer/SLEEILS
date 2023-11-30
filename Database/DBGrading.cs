@@ -22,6 +22,7 @@ namespace SMARTLEARN.Database
             {
                 try
                 {
+                    connection.Close();
                     connection.Open();
                     string query = $"SELECT ID, Firstname, Lastname, course, firstperiodgrades, secondperiodgrades FROM studenttable";
                     MySqlCommand command = new MySqlCommand(query, connection);
@@ -42,6 +43,7 @@ namespace SMARTLEARN.Database
             {
                 try
                 {
+                    connection.Close();
                     connection.Open();
                     string query = $"SELECT ID, Firstname, Lastname, course, thirdperiodgrades, fourthperiodgrades FROM studenttable";
                     MySqlCommand command = new MySqlCommand(query, connection);
@@ -64,63 +66,56 @@ namespace SMARTLEARN.Database
 
         public void insertGrade(Guna2DataGridView dgvstudent, Guna2TextBox firstquarter, Guna2TextBox secondquarter, Guna2ComboBox semester, Guna2ComboBox schoolyear, Guna2TextBox avg)
         {
-            if (semester.SelectedItem == null)
+            try
             {
-                //
-            }
-            else if (semester.SelectedIndex == 0)
-            {
-                try
+                if (semester.SelectedItem == null)
                 {
-                    connection.Close();
-                    connection.Open();
-
-                    string updatequery = $"UPDATE studenttable SET firstperiodgrades = '{firstquarter.Text}', secondperiodgrades = '{secondquarter.Text}', firstsemaverage = '{avg.Text}' WHERE id = '{IDs}'";
-                    MySqlCommand cmd = new MySqlCommand(updatequery, connection);
-
-                    if (cmd.ExecuteNonQuery() == 1)
-                    {
-                        MessageBox.Show("Data updated successfully!");
-                        DisplayStudents(dgvstudent, semester); // Reload data to refresh the DataGridView after update
-                    }
-                    else
-                    {
-                        MessageBox.Show("No rows affected. Update failed.");
-                    }
+                    // Handle when no semester is selected
                 }
-                catch (MySqlException ex)
+                else
                 {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-
-            }
-            else if (semester.SelectedIndex == 1)
-            {
-                try
-                {
-                    connection.Close();
-                    connection.Open();
-                    string updatequery = $"UPDATE studenttable SET thirdperiodgrades = '{firstquarter.Text}', fourthperiodgrades = '{secondquarter.Text}', secondsemaverage = '{avg.Text}' WHERE id = '{IDs}'";
-                    MySqlCommand cmd = new MySqlCommand(updatequery, connection);
-
-                    if (cmd.ExecuteNonQuery() == 1)
+                    string updatequery = "";
+                    if (semester.SelectedIndex == 0)
                     {
-                        MessageBox.Show("Data updated successfully!");
-                        DisplayStudents(dgvstudent, semester); // Reload data to refresh the DataGridView after update
+                        updatequery = "UPDATE studenttable SET FirstPeriodGrades = @FirstPeriodGrades, SecondPeriodGrades = @SecondPeriodGrades, FirstSemAverage = @FirstSemAverage WHERE id = @ID";
                     }
-                    else
+                    else if (semester.SelectedIndex == 1)
                     {
-                        MessageBox.Show("No rows affected. Update failed.");
+                        updatequery = "UPDATE studenttable SET ThirdPeriodGrades = @ThirdPeriodGrades, FourthPeriodGrades = @FourthPeriodGrades, SecondSemAverage = @SecondSemAverage WHERE id = @ID";
                     }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
+
+                    using (MySqlConnection connection = Host.connection)
+                    {
+                        connection.Open();
+
+                        MySqlCommand cmd = new MySqlCommand(updatequery, connection);
+                        cmd.Parameters.AddWithValue("@FirstPeriodGrades", firstquarter.Text);
+                        cmd.Parameters.AddWithValue("@SecondPeriodGrades", secondquarter.Text);
+                        cmd.Parameters.AddWithValue("@ThirdPeriodGrades", firstquarter.Text); // Change to appropriate value
+                        cmd.Parameters.AddWithValue("@FourthPeriodGrades", secondquarter.Text); // Change to appropriate value
+                        cmd.Parameters.AddWithValue("@FirstSemAverage", avg.Text);
+                        cmd.Parameters.AddWithValue("@SecondSemAverage", avg.Text); // Change to appropriate value
+                        cmd.Parameters.AddWithValue("@ID", IDs); // Ensure IDs contains the correct value
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester); // Reload data to refresh the DataGridView after update
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                        }
+                    }
                 }
             }
-
-            connection.Close();
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
+
 
         public void selection(Guna2DataGridView dgvstudent, Guna2TextBox firstquarter, Guna2TextBox secondquarter, Guna2ComboBox semester, Guna2ComboBox schoolyear)
         {
@@ -138,7 +133,9 @@ namespace SMARTLEARN.Database
                     // Assuming the columns are in order: Name, LastName
                     string first = selectedRow.Cells[4].Value.ToString();
                     string second = selectedRow.Cells[5].Value.ToString();
+                    string studentids = selectedRow.Cells[0].Value.ToString();
 
+                    IDs = studentids;
                     firstquarter.Text = first;
                     secondquarter.Text = second;
                 }
@@ -152,7 +149,9 @@ namespace SMARTLEARN.Database
                     // Assuming the columns are in order: Name, LastName
                     string first = selectedRow.Cells[4].Value.ToString();
                     string second = selectedRow.Cells[5].Value.ToString();
+                    string studentids = selectedRow.Cells[0].Value.ToString();
 
+                    IDs = studentids;
                     firstquarter.Text = first;
                     secondquarter.Text = second;
                 }
