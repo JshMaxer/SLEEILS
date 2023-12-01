@@ -12,15 +12,13 @@ namespace SMARTLEARN.Database
         MySqlConnection connection = Host.connection;
 
         public static string StudentID;
-        public static string firstname;
-        public static string lastname;
 
         public void loaddgv(Guna2DataGridView Studentlist)
         {
             try
             {
                 connection.Open();
-                string query = "SELECT ID, FirstName, MiddleName, LastName, YearLevel, Strand FROM studentaccount"; // Replace with your table name and column name
+                string query = "SELECT ID, FirstName, MiddleName, LastName, YearLevel, Strand FROM studentaccount";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
@@ -42,7 +40,6 @@ namespace SMARTLEARN.Database
             {
                 DataGridViewRow selectedRow = Studentlist.SelectedRows[0];
 
-                // Assuming the columns are in order: Name, LastName
                 string StuID = selectedRow.Cells[0].Value.ToString();
                 string firstname = selectedRow.Cells[1].Value.ToString();
                 string lastName = selectedRow.Cells[3].Value.ToString();
@@ -59,9 +56,8 @@ namespace SMARTLEARN.Database
                 connection.Close();
                 connection.Open();
 
-                string query = $"UPDATE studenttable SET FirstSemesterBalance = '{firstsem.Text}', SecondSemesterBalance = '{secondsem.Text}' WHERE id = '{StudentID}'";
+                string query = $"UPDATE studentterm SET FirstSemBalance = '{firstsem.Text}', SecondSemBalance = '{secondsem.Text}' WHERE id = '{StudentID}'";
                 MySqlCommand command = new MySqlCommand(query, connection);
-
 
                 if (command.ExecuteNonQuery() == 1)
                 {

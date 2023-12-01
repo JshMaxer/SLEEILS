@@ -27,7 +27,7 @@ namespace SMARTLEARN
 
         private void btnloginadmin_Click_1(object sender, EventArgs e)
         {
-            FrontEnd.FELogin logstu = new FrontEnd.FELogin();
+            FrontEnd.FEStudentLogin logstu = new FrontEnd.FEStudentLogin();
             logstu.TopMost = true;
             logstu.Show();
             this.Close();
@@ -53,7 +53,7 @@ namespace SMARTLEARN
                 FrontEnd.FEDashboard dash = new FEDashboard();
 
                 //Role
-                Database.DBFacultyProfile.role = "ADMIN";
+                Model.Accounts.role = "ADMIN";
                 
                 dash.Show();
                 FELoginAdminFaculty.closethis = true; // make this false on log out!

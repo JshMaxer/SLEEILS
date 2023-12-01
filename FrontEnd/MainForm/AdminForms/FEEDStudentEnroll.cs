@@ -15,7 +15,7 @@ namespace SMARTLEARN.FrontEnd
         private void FEStudentEnroll_Load(object sender, EventArgs e)
         {
             Database.DBStudentEnroll ID = new Database.DBStudentEnroll();
-            ID.USERID(txtfirstid, txtsecondid);
+            ID.USERID(txtsecondid);
 
         }
 
@@ -33,7 +33,7 @@ namespace SMARTLEARN.FrontEnd
             if (Backend.BEStudentEnroll.confirm == true) //Check the flag in FEInformation if the confirm flag is true.
             {
                 Database.DBStudentEnroll regad = new Database.DBStudentEnroll();
-                regad.insertinfo(txtfirstid, txtsecondid, cbyearlevel, cbstrand, txtpassword, txtfname, txtmname, txtlname, cbgender, dtmdateofbirth, txtemail, txtmobilenum);
+                regad.insertinfo(txtfirstid, txtsecondid, cbyearlevel, cbstrand, cbschoolyear, txtfname, txtmname, txtlname, cbgender, dtmdateofbirth, txtemail, txtmobilenum, txtpassword);
             }
             else
             {
@@ -50,6 +50,7 @@ namespace SMARTLEARN.FrontEnd
                 cbgender.SelectedItem = null;
                 cbyearlevel.SelectedItem = null;
                 cbstrand.SelectedItem = null;
+                cbschoolyear.SelectedItem = null;
                 txtpassword.Text = null;
 
                 txtfname.Text = null;
@@ -69,7 +70,9 @@ namespace SMARTLEARN.FrontEnd
             // Check Role Information
             if (!string.IsNullOrWhiteSpace(txtfirstid.Text) &&
                 cbgender.SelectedItem != null &&
-                cbstrand.SelectedItem != null)
+                cbyearlevel.SelectedItem != null &&
+                cbstrand.SelectedItem != null &&
+                cbschoolyear.SelectedItem != null)
             {
                 if (//check personal Information
                 !string.IsNullOrWhiteSpace(txtpassword.Text) &&
@@ -108,6 +111,23 @@ namespace SMARTLEARN.FrontEnd
             {
                 e.Handled = true;
             }
+        }
+
+        private void cbschoolyear_DropDown(object sender, EventArgs e)
+        {
+            cbschoolyear.Items.Clear();
+            // Get the current year
+            int currentYear = DateTime.Now.Year;
+
+            // Calculate the year from a year before the current year
+            int lastYear = currentYear - 1;
+
+            // Create the text string in the format "yyyy-yyyy"
+            string yearRange = $"{lastYear}-{currentYear}";
+
+            // Add the generated yearRange string to your ComboBox
+            cbschoolyear.Items.Add(yearRange);
+
         }
     }
 }

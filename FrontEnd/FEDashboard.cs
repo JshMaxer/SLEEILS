@@ -90,6 +90,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -121,6 +122,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -148,6 +150,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration__2_; //Active color
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -176,6 +179,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -203,6 +207,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -234,6 +239,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile3; //Active color
             btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -264,6 +270,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill__1_; //Active color
+            btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -281,6 +288,37 @@ namespace SMARTLEARN.FrontEnd
 
             paneldash.Controls.Add(balance);
             balance.Show();
+        }
+
+        private void btnstudentgrades_Click(object sender, EventArgs e)
+        {
+            hide(); //always on top
+            //Change the appearance of the button
+            btnhome.Image = Properties.Resources.home;
+            btncourse.Image = Properties.Resources.learning;
+            btnschedule.Image = Properties.Resources.schedule;
+            btnviewgrades.Image = Properties.Resources.exam;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment__2_; //Active color
+            //________________________________________________________________
+
+            paneldash.Controls.Clear();
+            FESTGrades grades = new FESTGrades();
+            grades.TopLevel = false;
+
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
+
+            // Set the form size to fit within the panel
+            grades.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
+
+            // Set the form to dock within the panel
+            grades.Dock = System.Windows.Forms.DockStyle.Fill;
+
+            paneldash.Controls.Add(grades);
+            grades.Show();
         }
 
         private void FEDashboard_Load(object sender, EventArgs e)
@@ -321,30 +359,33 @@ namespace SMARTLEARN.FrontEnd
             }
 
 
-            if (Database.DBFacultyProfile.role == "FACULTY")
+            if (Model.Accounts.role == "FACULTY")
             {
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnbalance.Visible = false;
                 btnviewgrades.Visible = true;
                 btnschedule.Visible = true;
+                btnstudentgrades.Visible = false;
             }
-            else if (Database.DBFacultyProfile.role == "ADMIN")
+            else if (Model.Accounts.role == "ADMIN")
             {
                 btnstudentregistration.Visible = true;
                 btnfacultyregistration.Visible = true;
                 btnbalance.Visible = true;
                 btnviewgrades.Visible = false;
                 btnschedule.Visible = false;
+                btnstudentgrades.Visible = false;
             }
            
-            if (Database.DBStudentProfile.role == "STUDENT")
+            if (Model.Accounts.role == "STUDENT")
             {
                 btnstudentregistration.Visible = false;
                 btnfacultyregistration.Visible = false;
                 btnbalance.Visible = false;
                 btnviewgrades.Visible = false;
                 btnschedule.Visible = true;
+                btnstudentgrades.Visible = true;
             }
 
             btnhome.Image = Properties.Resources.home1; //Active color

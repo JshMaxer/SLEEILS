@@ -5,10 +5,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Guna.UI2.AnimatorNS.Flags;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SMARTLEARN.FrontEnd
 {
@@ -46,12 +49,10 @@ namespace SMARTLEARN.FrontEnd
                 this.WindowState = FormWindowState.Normal;
             }
 
-
-            lblname.Text = DBStudentProfile.user; //The user first name and last name
-            lblrole.Text = DBStudentProfile.role; //The user Role
+           
 
             Database.DBStudentProfile stuprofile = new Database.DBStudentProfile();
-            stuprofile.searchbalance(lblname, lblrole,lblemail, lblmobile, txtfirstbalance, txtsecondbalance);
+            stuprofile.searchbalance(lblname, lblrole, lblemail, lblmobile, txtfirstbalance, txtsecondbalance);
         }
 
         private void timerclose_Tick(object sender, EventArgs e)

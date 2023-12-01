@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd
 {
-    public partial class FELogin : Form
+    public partial class FEStudentLogin : Form
     {
         //set a flag to the timer to close the current form.
         public static bool closethis = false;
 
-        public FELogin()
+        public FEStudentLogin()
         {
             InitializeComponent();
         }

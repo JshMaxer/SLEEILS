@@ -1,5 +1,4 @@
-﻿using SMARTLEARN.Database;
-using SMARTLEARN.FrontEnd.MainForm.FacultyForms;
+﻿using SMARTLEARN.FrontEnd.MainForm.FacultyForms;
 using System;
 using System.Windows.Forms;
 
@@ -17,13 +16,11 @@ namespace SMARTLEARN.FrontEnd
             FEHome.timetoclose = false; //Home timer to close set to false
 
             FELoginAdminFaculty.closethis = false; //Set to false the 'closethis' flag in loginAdmin
-            FELogin.closethis = false; //Set to false the 'closethis' flag in login
+            FEStudentLogin.closethis = false; //Set to false the 'closethis' flag in login
 
-            Database.DBStudentProfile.user = null; //Restore to null the user in Student form
-            Database.DBFacultyProfile.user = null; //Restore to null the user in Faculty form
+            Model.Accounts.user = null; //Restore to null the user in Student form
 
-            Database.DBFacultyProfile.role = null; //Restore role to default
-            Database.DBStudentProfile.role = null; //Restore role to default
+            Model.Accounts.role = null; //Restore role to default
 
             //restore to default settings
             Backend.BEAdregister.confirm = false; //Restore the confirm flag for database
@@ -43,14 +40,13 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnprofile_Click(object sender, EventArgs e)
         {
-            if (Database.DBStudentProfile.role == "STUDENT")
+            if (Model.Accounts.role == "STUDENT")
             {
                 FESTProfile profile = new FESTProfile();
                 profile.ShowDialog();
                 this.Close();
             }
-            
-            if (Database.DBFacultyProfile.role == "ADMIN" || Database.DBFacultyProfile.role == "FACULTY")
+            else if (Model.Accounts.role == "FACULTY")
             {
                 FEFAProfile FAprofile = new FEFAProfile();
                 FAprofile.ShowDialog();
@@ -59,5 +55,20 @@ namespace SMARTLEARN.FrontEnd
 
         }
 
+        private void FEsmallprofile_Load(object sender, EventArgs e)
+        {
+            if (Model.Accounts.role == "STUDENT")
+            {
+                btnprofile.Visible = true;
+            }
+            else if (Model.Accounts.role == "FACULTY")
+            {
+                btnprofile.Visible = true;
+            }
+            else
+            {
+                btnprofile.Visible = false;
+            }
+        }
     }
 }

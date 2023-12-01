@@ -31,7 +31,7 @@ namespace SMARTLEARN.FrontEnd
             FrontEnd.FEDashboard.timertoclose = false; //Close form is false on the Dashboard
             FrontEnd.FESTProfile.closeform = false; //Close form is false on the profile
 
-            FrontEnd.FELogin logstu = new FELogin();
+            FrontEnd.FEStudentLogin logstu = new FEStudentLogin();
             logstu.TopMost = true;
 
             showlog = false; //btnshowlog enable = false

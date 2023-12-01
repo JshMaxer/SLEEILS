@@ -108,12 +108,35 @@
     <Compile Include="Database\DBBalance.cs" />
     <Compile Include="Database\DBCheckOnline.cs" />
     <Compile Include="Database\DBFacultyProfile.cs" />
+    <Compile Include="Database\DBFACustom.cs" />
+    <Compile Include="Database\DBFASTGHandoutDownload.cs" />
     <Compile Include="Database\DBGrading.cs" />
+    <Compile Include="Database\DBHandouts.cs" />
     <Compile Include="Database\DBLoginFaculty.cs" />
     <Compile Include="Database\DBLoginStudent.cs" />
     <Compile Include="Database\DBRegisterFaculty.cs" />
+    <Compile Include="Database\DBSTCustomDownload.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
+    <Compile Include="Database\DBStudentGrade.cs" />
     <Compile Include="Database\DBStudentProfile.cs" />
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADHandoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADHandoutForm.Designer.cs">
+      <DependentUpon>FEADHandoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FEFASTHandout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEFASTHandout.Designer.cs">
+      <DependentUpon>FEFASTHandout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FAFACustomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FAFACustomForm.Designer.cs">
+      <DependentUpon>FAFACustomForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\MainForm\FacultyForms\FEFAProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +148,18 @@
     </Compile>
     <Compile Include="FrontEnd\MainForm\FacultyForms\FEFAGrading.Designer.cs">
       <DependentUpon>FEFAGrading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTCustom.Designer.cs">
+      <DependentUpon>FESTCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTGrades.Designer.cs">
+      <DependentUpon>FESTGrades.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\MainForm\StudentForm\FESTProfile.cs">
       <SubType>Form</SubType>
@@ -204,11 +239,11 @@
     <Compile Include="FrontEnd\Message\LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\FELogin.cs">
+    <Compile Include="FrontEnd\FEStudentLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\FELogin.Designer.cs">
-      <DependentUpon>FELogin.cs</DependentUpon>
+    <Compile Include="FrontEnd\FEStudentLogin.Designer.cs">
+      <DependentUpon>FEStudentLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\FELoginAdminFaculty.cs">
       <SubType>Form</SubType>
@@ -234,15 +269,31 @@
     <Compile Include="FrontEnd\MainForm\AdminForms\FEEDStudentEnroll.Designer.cs">
       <DependentUpon>FEEDStudentEnroll.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Accounts.cs" />
     <Compile Include="Model\ConsAcc.cs" />
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADHandoutForm.resx">
+      <DependentUpon>FEADHandoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FEFASTHandout.resx">
+      <DependentUpon>FEFASTHandout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FAFACustomForm.resx">
+      <DependentUpon>FAFACustomForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FEFAProfile.resx">
       <DependentUpon>FEFAProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FEFAGrading.resx">
       <DependentUpon>FEFAGrading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTCustom.resx">
+      <DependentUpon>FESTCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTGrades.resx">
+      <DependentUpon>FESTGrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTProfile.resx">
       <DependentUpon>FESTProfile.cs</DependentUpon>
@@ -283,8 +334,8 @@
     <EmbeddedResource Include="FrontEnd\Message\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\FELogin.resx">
-      <DependentUpon>FELogin.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FEStudentLogin.resx">
+      <DependentUpon>FEStudentLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FELoginAdminFaculty.resx">
       <DependentUpon>FELoginAdminFaculty.cs</DependentUpon>

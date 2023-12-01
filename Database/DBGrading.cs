@@ -10,92 +10,244 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
+        //Set a flag for a subjec click
+        public static string sub;
+
         public static string IDs;
 
         public void DisplayStudents(Guna2DataGridView dgvstudent, Guna2ComboBox semester)
         {
-            if (semester.SelectedItem == null)
-            {
-                //
-            }
-            else if (semester.SelectedIndex == 0)
-            {
-                try
-                {
-                    connection.Close();
-                    connection.Open();
-                    string query = $"SELECT ID, Firstname, Lastname, course, firstperiodgrades, secondperiodgrades FROM studenttable";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dgvstudent.DataSource = dataTable;
-
-                    connection.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-            else if (semester.SelectedIndex == 1)
-            {
-                try
-                {
-                    connection.Close();
-                    connection.Open();
-                    string query = $"SELECT ID, Firstname, Lastname, course, thirdperiodgrades, fourthperiodgrades FROM studenttable";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dgvstudent.DataSource = dataTable;
-
-                    connection.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-
-            }
-            connection.Close();
-        }
-
-        public void insertGrade(Guna2DataGridView dgvstudent, Guna2TextBox firstquarter, Guna2TextBox secondquarter, Guna2ComboBox semester, Guna2ComboBox schoolyear, Guna2TextBox avg)
-        {
-            try
+            if (sub == "Programming for Beginners")
             {
                 if (semester.SelectedItem == null)
                 {
-                    // Handle when no semester is selected
+                    //
                 }
-                else
+                else if (semester.SelectedIndex == 0)
                 {
-                    string updatequery = "";
-                    if (semester.SelectedIndex == 0)
+                    try
                     {
-                        updatequery = "UPDATE studenttable SET FirstPeriodGrades = @FirstPeriodGrades, SecondPeriodGrades = @SecondPeriodGrades, FirstSemAverage = @FirstSemAverage WHERE id = @ID";
-                    }
-                    else if (semester.SelectedIndex == 1)
-                    {
-                        updatequery = "UPDATE studenttable SET ThirdPeriodGrades = @ThirdPeriodGrades, FourthPeriodGrades = @FourthPeriodGrades, SecondSemAverage = @SecondSemAverage WHERE id = @ID";
-                    }
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, firstperiodgrades, secondperiodgrades FROM ProgrammingForBeginners";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
 
-                    using (MySqlConnection connection = Host.connection)
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
                     {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                else if (semester.SelectedIndex == 1)
+                {
+                    try
+                    {
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, thirdperiodgrades, fourthperiodgrades FROM ProgrammingForBeginners";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                connection.Close();
+            }
+            else if (sub == "Web Development Design")
+            {
+                if (semester.SelectedItem == null)
+                {
+                    //
+                }
+                else if (semester.SelectedIndex == 0)
+                {
+                    try
+                    {
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, firstperiodgrades, secondperiodgrades FROM WebDevelopmentDesign";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                else if (semester.SelectedIndex == 1)
+                {
+                    try
+                    {
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, thirdperiodgrades, fourthperiodgrades FROM WebDevelopmentDesign";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                connection.Close();
+            }
+            else if (sub == "IT Essentials")
+            {
+                if (semester.SelectedItem == null)
+                {
+                    //
+                }
+                else if (semester.SelectedIndex == 0)
+                {
+                    try
+                    {
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, firstperiodgrades, secondperiodgrades FROM ITEssentials";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                else if (semester.SelectedIndex == 1)
+                {
+                    try
+                    {
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, thirdperiodgrades, fourthperiodgrades FROM ITEssentials";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                connection.Close();
+            }
+            else if (sub == "Computer Hardware Servicing")
+            {
+                if (semester.SelectedItem == null)
+                {
+                    //
+                }
+                else if (semester.SelectedIndex == 0)
+                {
+                    try
+                    {
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, firstperiodgrades, secondperiodgrades FROM ComputerHardwareServicing";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                else if (semester.SelectedIndex == 1)
+                {
+                    try
+                    {
+                        connection.Close();
+                        connection.Open();
+                        string query = $"SELECT ID, Firstname, Lastname, course, thirdperiodgrades, fourthperiodgrades FROM ComputerHardwareServicing";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvstudent.DataSource = dataTable;
+
+                        connection.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+                connection.Close();
+            }
+
+        }
+
+
+        //Programming For Beginners
+        public void insertGrade(Guna2DataGridView dgvstudent, Guna2TextBox firstquarter, Guna2TextBox secondquarter, Guna2ComboBox semester, Guna2ComboBox schoolyear, Guna2TextBox avg)
+        {
+            if (sub == "Programming for Beginners")
+            {
+                try
+                {
+                    if (semester.SelectedItem == null)
+                    {
+                        // Handle when no semester is selected
+                    }
+                    else
+                    {
+                        string updatequery = "";
+                        if (semester.SelectedIndex == 0)
+                        {
+                            updatequery = $"UPDATE ProgrammingForBeginners SET FirstPeriodGrades = '{firstquarter.Text}', SecondPeriodGrades = '{secondquarter.Text}', FirstSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+                        else if (semester.SelectedIndex == 1)
+                        {
+                            updatequery = $"UPDATE ProgrammingForBeginners SET ThirdPeriodGrades = '{firstquarter.Text}', FourthPeriodGrades = '{secondquarter.Text}', SecondSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+
+                        connection.Close();
                         connection.Open();
 
                         MySqlCommand cmd = new MySqlCommand(updatequery, connection);
-                        cmd.Parameters.AddWithValue("@FirstPeriodGrades", firstquarter.Text);
-                        cmd.Parameters.AddWithValue("@SecondPeriodGrades", secondquarter.Text);
-                        cmd.Parameters.AddWithValue("@ThirdPeriodGrades", firstquarter.Text); // Change to appropriate value
-                        cmd.Parameters.AddWithValue("@FourthPeriodGrades", secondquarter.Text); // Change to appropriate value
-                        cmd.Parameters.AddWithValue("@FirstSemAverage", avg.Text);
-                        cmd.Parameters.AddWithValue("@SecondSemAverage", avg.Text); // Change to appropriate value
-                        cmd.Parameters.AddWithValue("@ID", IDs); // Ensure IDs contains the correct value
 
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
@@ -108,18 +260,151 @@ namespace SMARTLEARN.Database
                             MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
                         }
                     }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
 
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                connection.Close();
+            }
+            else if (sub == "Web Development Design")
+            {
+                try
+                {
+                    if (semester.SelectedItem == null)
+                    {
+                        // Handle when no semester is selected
+                    }
+                    else
+                    {
+                        string updatequery = "";
+                        if (semester.SelectedIndex == 0)
+                        {
+                            updatequery = $"UPDATE WebDevelopmentDesign SET FirstPeriodGrades = '{firstquarter.Text}', SecondPeriodGrades = '{secondquarter.Text}', FirstSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+                        else if (semester.SelectedIndex == 1)
+                        {
+                            updatequery = $"UPDATE WebDevelopmentDesign SET ThirdPeriodGrades = '{firstquarter.Text}', FourthPeriodGrades = '{secondquarter.Text}', SecondSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+
+                        connection.Close();
+                        connection.Open();
+
+                        MySqlCommand cmd = new MySqlCommand(updatequery, connection);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester); // Reload data to refresh the DataGridView after update
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                        }
+                    }
+
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                connection.Close();
+            }
+            else if (sub == "IT Essentials")
+            {
+                try
+                {
+                    if (semester.SelectedItem == null)
+                    {
+                        // Handle when no semester is selected
+                    }
+                    else
+                    {
+                        string updatequery = "";
+                        if (semester.SelectedIndex == 0)
+                        {
+                            updatequery = $"UPDATE ITEssentials SET FirstPeriodGrades = '{firstquarter.Text}', SecondPeriodGrades = '{secondquarter.Text}', FirstSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+                        else if (semester.SelectedIndex == 1)
+                        {
+                            updatequery = $"UPDATE ITEssentials SET ThirdPeriodGrades = '{firstquarter.Text}', FourthPeriodGrades = '{secondquarter.Text}', SecondSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+
+                        connection.Close();
+                        connection.Open();
+
+                        MySqlCommand cmd = new MySqlCommand(updatequery, connection);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester); // Reload data to refresh the DataGridView after update
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                        }
+                    }
+
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                connection.Close();
+            }
+            else if (sub == "Computer Hardware Servicing")
+            {
+                try
+                {
+                    if (semester.SelectedItem == null)
+                    {
+                        // Handle when no semester is selected
+                    }
+                    else
+                    {
+                        string updatequery = "";
+                        if (semester.SelectedIndex == 0)
+                        {
+                            updatequery = $"UPDATE ComputerHardwareServicing SET FirstPeriodGrades = '{firstquarter.Text}', SecondPeriodGrades = '{secondquarter.Text}', FirstSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+                        else if (semester.SelectedIndex == 1)
+                        {
+                            updatequery = $"UPDATE ComputerHardwareServicing SET ThirdPeriodGrades = '{firstquarter.Text}', FourthPeriodGrades = '{secondquarter.Text}', SecondSemAverage = '{avg.Text}' WHERE id = {IDs}";
+                        }
+
+                        connection.Close();
+                        connection.Open();
+
+                        MySqlCommand cmd = new MySqlCommand(updatequery, connection);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester); // Reload data to refresh the DataGridView after update
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                        }
+                    }
+
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                connection.Close();
+            }
+
+        }
 
         public void selection(Guna2DataGridView dgvstudent, Guna2TextBox firstquarter, Guna2TextBox secondquarter, Guna2ComboBox semester, Guna2ComboBox schoolyear)
         {
-            
             if (semester.SelectedItem == null)
             {
                 //
@@ -156,8 +441,8 @@ namespace SMARTLEARN.Database
                     secondquarter.Text = second;
                 }
             }
-
-
         }
+
+
     }
 }

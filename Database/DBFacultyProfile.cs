@@ -15,19 +15,10 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        //Set a flag to give the current role to lblrole.txt
-        public static string role;
-
-        //Set a flag for user who's log-in
-        public static string user;
-
-        //Set a flag for userID
-        public static string UserID;
-
         public void showinfo(System.Windows.Forms.Label username, System.Windows.Forms.Label email, System.Windows.Forms.Label mobile, System.Windows.Forms.Label department, System.Windows.Forms.Label roles, System.Windows.Forms.Label ID)
         {
             //login
-            string logad = $"SELECT userid, email, mobilenumber, department FROM facultyaccount WHERE userid = '{UserID}'";
+            string logad = $"SELECT department FROM facultyaccount WHERE userid = '{Model.Accounts.UserID}'";
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(logad, connection);
             MySqlDataReader row = cmd.ExecuteReader();
@@ -36,12 +27,12 @@ namespace SMARTLEARN.Database
             {
                 while (row.Read())
                 {
-                    username.Text = user;
-                    roles.Text = role;
-                    ID.Text = UserID;
+                    username.Text = Model.Accounts.user;
+                    roles.Text = Model.Accounts.role;
+                    ID.Text = Model.Accounts.UserID;
 
-                    email.Text = row["email"].ToString();
-                    mobile.Text = row["mobilenumber"].ToString();
+                    email.Text = Model.Accounts.email;
+                    mobile.Text = Model.Accounts.mobile;
                     department.Text = row["department"].ToString();
                 }
 

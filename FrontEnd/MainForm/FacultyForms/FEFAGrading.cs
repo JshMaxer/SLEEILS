@@ -98,5 +98,10 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
         {
             grading.selection(DGVStudentlist, txtstudentfirst, txtstudentsecond, cbsemester, cbschoolyear);
         }
+
+        private void cbsubjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbsemester.Enabled = true;
+        }
     }
 }

@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblprogramming = new System.Windows.Forms.Label();
             this.lblitesssentials = new System.Windows.Forms.Label();
             this.lblcomputerharware = new System.Windows.Forms.Label();
             this.lblwebdevelopment = new System.Windows.Forms.Label();
-            this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
             this.btncomputerharware = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnwebdevelopment = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnitesssentials = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -110,10 +108,6 @@
             this.lblwebdevelopment.Text = "Web Development\r\nDesign";
             this.lblwebdevelopment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2ResizeForm1
-            // 
-            this.guna2ResizeForm1.TargetForm = this;
-            // 
             // btncomputerharware
             // 
             this.btncomputerharware.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -130,6 +124,7 @@
             this.btncomputerharware.PressedState.ImageSize = new System.Drawing.Size(220, 220);
             this.btncomputerharware.Size = new System.Drawing.Size(173, 166);
             this.btncomputerharware.TabIndex = 30;
+            this.btncomputerharware.Click += new System.EventHandler(this.btncomputerharware_Click);
             // 
             // btnwebdevelopment
             // 
@@ -147,6 +142,7 @@
             this.btnwebdevelopment.PressedState.ImageSize = new System.Drawing.Size(220, 220);
             this.btnwebdevelopment.Size = new System.Drawing.Size(173, 166);
             this.btnwebdevelopment.TabIndex = 31;
+            this.btnwebdevelopment.Click += new System.EventHandler(this.btnwebdevelopment_Click);
             // 
             // btnitesssentials
             // 
@@ -164,6 +160,7 @@
             this.btnitesssentials.PressedState.ImageSize = new System.Drawing.Size(220, 220);
             this.btnitesssentials.Size = new System.Drawing.Size(173, 166);
             this.btnitesssentials.TabIndex = 28;
+            this.btnitesssentials.Click += new System.EventHandler(this.btnitesssentials_Click);
             // 
             // btnprogramming
             // 
@@ -221,6 +218,5 @@
         private System.Windows.Forms.Label lblwebdevelopment;
         private Guna.UI2.WinForms.Guna2ImageButton btncomputerharware;
         private Guna.UI2.WinForms.Guna2ImageButton btnwebdevelopment;
-        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
     }
 }

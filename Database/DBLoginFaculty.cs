@@ -20,7 +20,7 @@ namespace SMARTLEARN.Database
         public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
         {
             //login
-            string logad = $"SELECT first_name, last_name, userid, password FROM facultyaccount WHERE userid = '{userid.Text}' AND password = '{password.Text}'";
+            string logad = $"SELECT first_name, last_name, userid, email, mobilenumber, password FROM facultyaccount WHERE userid = '{userid.Text}' AND password = '{password.Text}'";
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(logad, connection);
             MySqlDataReader row = cmd.ExecuteReader();
@@ -33,15 +33,19 @@ namespace SMARTLEARN.Database
                     FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
 
                     //Role
-                    Database.DBFacultyProfile.role = "FACULTY";
+                    Model.Accounts.role = "FACULTY";
 
                     //User
-                    Database.DBFacultyProfile.user = row["first_name"] + " " + row["last_name"];
+                    Model.Accounts.user = row["first_name"] + " " + row["last_name"];
 
                     //UserID
-                    Database.DBFacultyProfile.UserID = row["userid"].ToString();
+                    Model.Accounts.UserID = row["userid"].ToString();
 
+                    //Email
+                    Model.Accounts.email = row["email"].ToString();
 
+                    //Mobile
+                    Model.Accounts.mobile = row["mobilenumber"].ToString();
 
                     dash.Show();
                     FELoginAdminFaculty.closethis = true; // make this false on log out!

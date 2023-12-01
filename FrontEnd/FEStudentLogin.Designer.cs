@@ -1,6 +1,6 @@
 ﻿namespace SMARTLEARN.FrontEnd
 {
-    partial class FELogin
+    partial class FEStudentLogin
     {
         /// <summary>
         /// Required designer variable.
