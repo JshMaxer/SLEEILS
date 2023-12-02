@@ -32,28 +32,6 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 
         private void FEFAProfile_Load(object sender, EventArgs e)
         {
-            Screen currentScreen = Screen.PrimaryScreen;
-
-            if (currentScreen.Bounds.Width == 1920 && currentScreen.Bounds.Height == 1080)
-            {
-                //
-            }
-            else
-            {
-                //Size of the form based on the last form
-                this.Width = FEDashboard.formWidth;
-                this.Height = FEDashboard.formHeight;
-            }
-
-            if (FEDashboard.windowStates == true)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-
             Database.DBFacultyProfile Facprofile = new DBFacultyProfile();
             Facprofile.showinfo(lblname, lblemail, lblmobile, lbldepartment, lblrole, lbluserid);
         }

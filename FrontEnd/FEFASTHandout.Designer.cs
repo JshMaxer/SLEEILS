@@ -39,7 +39,7 @@
             this.lbhandouts.ItemHeight = 23;
             this.lbhandouts.Location = new System.Drawing.Point(12, 12);
             this.lbhandouts.Name = "lbhandouts";
-            this.lbhandouts.Size = new System.Drawing.Size(783, 487);
+            this.lbhandouts.Size = new System.Drawing.Size(564, 372);
             this.lbhandouts.TabIndex = 0;
             // 
             // btndownload
@@ -55,7 +55,7 @@
             this.btndownload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.btndownload.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndownload.ForeColor = System.Drawing.Color.White;
-            this.btndownload.Location = new System.Drawing.Point(290, 532);
+            this.btndownload.Location = new System.Drawing.Point(182, 400);
             this.btndownload.Name = "btndownload";
             this.btndownload.Size = new System.Drawing.Size(224, 49);
             this.btndownload.TabIndex = 41;
@@ -66,7 +66,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 624);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(588, 467);
             this.Controls.Add(this.btndownload);
             this.Controls.Add(this.lbhandouts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

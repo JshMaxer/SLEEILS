@@ -83,6 +83,36 @@ namespace SMARTLEARN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3D_Animation_Style_Student_holding_a_book_and_using_a_computer_3 {
+            get {
+                object obj = ResourceManager.GetObject("3D_Animation_Style_Student_holding_a_book_and_using_a_computer_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3D_Animation_Style_Student_using_a_computer_in_school_computer_2 {
+            get {
+                object obj = ResourceManager.GetObject("3D_Animation_Style_Student_using_a_computer_in_school_computer_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8_3ly8mzdSXziXsSf {
+            get {
+                object obj = ResourceManager.GetObject("8-3ly8mzdSXziXsSf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8_uw3G6L5m0JdAlk9__1_ {
             get {
                 object obj = ResourceManager.GetObject("8-uw3G6L5m0JdAlk9 (1)", resourceCulture);

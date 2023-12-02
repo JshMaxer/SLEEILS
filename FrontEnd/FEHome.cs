@@ -15,11 +15,6 @@ namespace SMARTLEARN.FrontEnd
         //Set a flag to close the home page after the login is made
         public static bool timetoclose = false;
 
-        //Set a flag to know what is the current size of the screen so the other form can resize too.
-        public static int formWidth; //width of the form
-        public static int formHeight; //height of the form
-        public static bool windowStates; //window state of the form
-
         public FEHome()
         {
             InitializeComponent();
@@ -37,10 +32,6 @@ namespace SMARTLEARN.FrontEnd
             showlog = false; //btnshowlog enable = false
 
             logstu.ShowDialog();
-
-            //Size of the form
-            formWidth = this.Width;
-            formHeight = this.Height;
         }
 
         private void btnexit_Click(object sender, EventArgs e)
@@ -69,20 +60,6 @@ namespace SMARTLEARN.FrontEnd
             if (timetoclose == true)
             {
                 FEHome.Instance.Hide();
-            }
-        }
-
-        private void FEHome_DoubleClick(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                windowStates = false;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                windowStates = true;
             }
         }
 

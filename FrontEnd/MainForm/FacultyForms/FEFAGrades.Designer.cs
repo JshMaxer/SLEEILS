@@ -42,11 +42,12 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.label1.Location = new System.Drawing.Point(14, 15);
+            this.label1.Location = new System.Drawing.Point(11, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 29);
             this.label1.TabIndex = 27;
@@ -54,11 +55,11 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(3, 51);
+            this.guna2Separator1.Location = new System.Drawing.Point(-4, 45);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1142, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(950, 10);
             this.guna2Separator1.TabIndex = 26;
             // 
             // lblprogramming
@@ -66,7 +67,7 @@
             this.lblprogramming.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblprogramming.AutoSize = true;
             this.lblprogramming.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprogramming.Location = new System.Drawing.Point(269, 277);
+            this.lblprogramming.Location = new System.Drawing.Point(169, 241);
             this.lblprogramming.Name = "lblprogramming";
             this.lblprogramming.Size = new System.Drawing.Size(165, 66);
             this.lblprogramming.TabIndex = 29;
@@ -78,7 +79,7 @@
             this.lblitesssentials.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblitesssentials.AutoSize = true;
             this.lblitesssentials.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblitesssentials.Location = new System.Drawing.Point(287, 612);
+            this.lblitesssentials.Location = new System.Drawing.Point(187, 542);
             this.lblitesssentials.Name = "lblitesssentials";
             this.lblitesssentials.Size = new System.Drawing.Size(126, 33);
             this.lblitesssentials.TabIndex = 29;
@@ -89,7 +90,7 @@
             this.lblcomputerharware.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblcomputerharware.AutoSize = true;
             this.lblcomputerharware.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcomputerharware.Location = new System.Drawing.Point(682, 595);
+            this.lblcomputerharware.Location = new System.Drawing.Point(582, 525);
             this.lblcomputerharware.Name = "lblcomputerharware";
             this.lblcomputerharware.Size = new System.Drawing.Size(192, 66);
             this.lblcomputerharware.TabIndex = 32;
@@ -101,7 +102,7 @@
             this.lblwebdevelopment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblwebdevelopment.AutoSize = true;
             this.lblwebdevelopment.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwebdevelopment.Location = new System.Drawing.Point(689, 277);
+            this.lblwebdevelopment.Location = new System.Drawing.Point(589, 241);
             this.lblwebdevelopment.Name = "lblwebdevelopment";
             this.lblwebdevelopment.Size = new System.Drawing.Size(172, 66);
             this.lblwebdevelopment.TabIndex = 33;
@@ -118,7 +119,7 @@
             this.btncomputerharware.ImageOffset = new System.Drawing.Point(0, 0);
             this.btncomputerharware.ImageRotate = 0F;
             this.btncomputerharware.ImageSize = new System.Drawing.Size(150, 150);
-            this.btncomputerharware.Location = new System.Drawing.Point(688, 426);
+            this.btncomputerharware.Location = new System.Drawing.Point(588, 356);
             this.btncomputerharware.Name = "btncomputerharware";
             this.btncomputerharware.PressedState.Image = global::SMARTLEARN.Properties.Resources._0ca69e74_203f_4724_bbfa_bb1e4b9d3b75;
             this.btncomputerharware.PressedState.ImageSize = new System.Drawing.Size(220, 220);
@@ -136,7 +137,7 @@
             this.btnwebdevelopment.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnwebdevelopment.ImageRotate = 0F;
             this.btnwebdevelopment.ImageSize = new System.Drawing.Size(150, 150);
-            this.btnwebdevelopment.Location = new System.Drawing.Point(688, 108);
+            this.btnwebdevelopment.Location = new System.Drawing.Point(588, 72);
             this.btnwebdevelopment.Name = "btnwebdevelopment";
             this.btnwebdevelopment.PressedState.Image = global::SMARTLEARN.Properties.Resources._22636799_62de_4ee5_b2f9_c4bb1300bf2b;
             this.btnwebdevelopment.PressedState.ImageSize = new System.Drawing.Size(220, 220);
@@ -154,7 +155,7 @@
             this.btnitesssentials.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnitesssentials.ImageRotate = 0F;
             this.btnitesssentials.ImageSize = new System.Drawing.Size(150, 150);
-            this.btnitesssentials.Location = new System.Drawing.Point(261, 426);
+            this.btnitesssentials.Location = new System.Drawing.Point(161, 356);
             this.btnitesssentials.Name = "btnitesssentials";
             this.btnitesssentials.PressedState.Image = global::SMARTLEARN.Properties.Resources._f7b38e90_d0c2_408a_9d8a_608fb19da32f;
             this.btnitesssentials.PressedState.ImageSize = new System.Drawing.Size(220, 220);
@@ -172,7 +173,7 @@
             this.btnprogramming.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnprogramming.ImageRotate = 0F;
             this.btnprogramming.ImageSize = new System.Drawing.Size(150, 150);
-            this.btnprogramming.Location = new System.Drawing.Point(261, 108);
+            this.btnprogramming.Location = new System.Drawing.Point(161, 72);
             this.btnprogramming.Name = "btnprogramming";
             this.btnprogramming.PressedState.Image = global::SMARTLEARN.Properties.Resources._db341dda_8f05_45fe_b7f4_25d931d981d2;
             this.btnprogramming.PressedState.ImageSize = new System.Drawing.Size(220, 220);
@@ -185,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1150, 775);
+            this.ClientSize = new System.Drawing.Size(945, 610);
             this.Controls.Add(this.lblcomputerharware);
             this.Controls.Add(this.lblwebdevelopment);
             this.Controls.Add(this.btncomputerharware);
@@ -197,7 +198,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(440, 775);
             this.Name = "FEFAGrades";
             this.Text = "FEADViewGrades";
             this.Resize += new System.EventHandler(this.FEFAGrades_Resize);

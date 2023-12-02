@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnlogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnhelp = new Guna.UI2.WinForms.Guna2Button();
             this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
+            this.btnhelp = new Guna.UI2.WinForms.Guna2Button();
+            this.btnlogout = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,45 +45,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(193, 132);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.Animated = true;
-            this.btnlogout.BorderRadius = 8;
-            this.btnlogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnlogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
-            this.btnlogout.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.Image = global::SMARTLEARN.Properties.Resources.logout;
-            this.btnlogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnlogout.Location = new System.Drawing.Point(3, 85);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(191, 35);
-            this.btnlogout.TabIndex = 20;
-            this.btnlogout.Text = "Log out";
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
-            // 
-            // btnhelp
-            // 
-            this.btnhelp.Animated = true;
-            this.btnhelp.BorderRadius = 8;
-            this.btnhelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnhelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnhelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnhelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnhelp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
-            this.btnhelp.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.btnhelp.ForeColor = System.Drawing.Color.White;
-            this.btnhelp.Image = global::SMARTLEARN.Properties.Resources.help_web_button;
-            this.btnhelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnhelp.Location = new System.Drawing.Point(3, 44);
-            this.btnhelp.Name = "btnhelp";
-            this.btnhelp.Size = new System.Drawing.Size(191, 35);
-            this.btnhelp.TabIndex = 21;
-            this.btnhelp.Text = "Help";
             // 
             // btnprofile
             // 
@@ -104,6 +65,45 @@
             this.btnprofile.TabIndex = 22;
             this.btnprofile.Text = "Profile";
             this.btnprofile.Click += new System.EventHandler(this.btnprofile_Click);
+            // 
+            // btnhelp
+            // 
+            this.btnhelp.Animated = true;
+            this.btnhelp.BorderRadius = 8;
+            this.btnhelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnhelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnhelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnhelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnhelp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.btnhelp.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnhelp.ForeColor = System.Drawing.Color.White;
+            this.btnhelp.Image = global::SMARTLEARN.Properties.Resources.help_web_button;
+            this.btnhelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnhelp.Location = new System.Drawing.Point(3, 44);
+            this.btnhelp.Name = "btnhelp";
+            this.btnhelp.Size = new System.Drawing.Size(191, 35);
+            this.btnhelp.TabIndex = 21;
+            this.btnhelp.Text = "Help";
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.Animated = true;
+            this.btnlogout.BorderRadius = 8;
+            this.btnlogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnlogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnlogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnlogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.btnlogout.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnlogout.ForeColor = System.Drawing.Color.White;
+            this.btnlogout.Image = global::SMARTLEARN.Properties.Resources.logout;
+            this.btnlogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnlogout.Location = new System.Drawing.Point(3, 85);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(191, 35);
+            this.btnlogout.TabIndex = 20;
+            this.btnlogout.Text = "Log out";
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // guna2Panel5
             // 

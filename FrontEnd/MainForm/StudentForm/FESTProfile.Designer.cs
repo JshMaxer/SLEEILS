@@ -33,7 +33,6 @@
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.lblrole = new System.Windows.Forms.Label();
             this.lblname = new System.Windows.Forms.Label();
@@ -88,10 +87,6 @@
             // 
             this.RoundEdge.BorderRadius = 8;
             this.RoundEdge.TargetControl = this;
-            // 
-            // guna2ResizeForm1
-            // 
-            this.guna2ResizeForm1.TargetForm = this;
             // 
             // guna2AnimateWindow1
             // 
@@ -294,6 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1107, 730);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.panelsmall);
@@ -328,7 +324,6 @@
 
         private Guna.UI2.WinForms.Guna2DragControl Dragcontrol;
         private Guna.UI2.WinForms.Guna2Elipse RoundEdge;
-        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2Panel dragpanel;
         private System.Windows.Forms.Label label2;

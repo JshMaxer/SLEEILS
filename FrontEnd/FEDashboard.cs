@@ -20,12 +20,6 @@ namespace SMARTLEARN.FrontEnd
         public static int dashpanelHeight; //height of the form
 
 
-        //Set a flag to know what is the current size of the screen so the other form can resize too.
-        public static int formWidth; //width of the form
-        public static int formHeight; //height of the form
-        public static bool windowStates; //window state of the form
-
-
         public FEDashboard()
         {
             InitializeComponent();
@@ -323,42 +317,6 @@ namespace SMARTLEARN.FrontEnd
 
         private void FEDashboard_Load(object sender, EventArgs e)
         {
-            FEHome.showlog = true; //btnshowlog enable = true
-
-            Screen currentScreen = Screen.PrimaryScreen;
-
-            if (currentScreen.Bounds.Width == 1920 && currentScreen.Bounds.Height == 1080)
-            {
-                //Original Ratio of the system.
-            }
-            else
-            {
-                //Size of the form based on the last form
-                this.Width = FEHome.formWidth;
-                this.Height = FEHome.formHeight;
-            }
-
-            //Size of the panel
-            dashpanelWidth = paneldash.Width;
-            dashpanelHeight = paneldash.Height;
-
-            //Save the data size;
-            formWidth = this.Width;
-            formHeight = this.Height;
-
-
-            if (FEHome.windowStates == true)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                windowStates = true;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-                windowStates = false;
-            }
-
-
             if (Model.Accounts.role == "FACULTY")
             {
                 btnstudentregistration.Visible = false;

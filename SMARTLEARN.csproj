@@ -550,5 +550,14 @@
   <ItemGroup>
     <None Include="Resources\_0ca69e74-203f-4724-bbfa-bb1e4b9d3b75.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3D_Animation_Style_Student_holding_a_book_and_using_a_computer_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8-3ly8mzdSXziXsSf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3D_Animation_Style_Student_using_a_computer_in_school_computer_2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -227,10 +227,11 @@
             this.txtpassword.TabIndex = 8;
             this.txtpassword.UseSystemPasswordChar = true;
             // 
-            // FELoginAdmin
+            // FELoginAdminFaculty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(361, 449);
             this.ControlBox = false;
@@ -243,7 +244,7 @@
             this.Controls.Add(this.btnloginadmin);
             this.Controls.Add(this.lblforgot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FELoginAdmin";
+            this.Name = "FELoginAdminFaculty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModerrnLogin1";
             this.Load += new System.EventHandler(this.Login_Load);

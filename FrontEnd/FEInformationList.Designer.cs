@@ -45,6 +45,9 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.listBox1.Font = new System.Drawing.Font("Bahnschrift", 14.25F);
             this.listBox1.ForeColor = System.Drawing.Color.Black;
@@ -52,11 +55,12 @@
             this.listBox1.ItemHeight = 23;
             this.listBox1.Location = new System.Drawing.Point(12, 104);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(906, 648);
+            this.listBox1.Size = new System.Drawing.Size(747, 533);
             this.listBox1.TabIndex = 0;
             // 
             // btnsubmit
             // 
+            this.btnsubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnsubmit.Animated = true;
             this.btnsubmit.AutoRoundedCorners = true;
             this.btnsubmit.BackColor = System.Drawing.Color.Transparent;
@@ -69,7 +73,7 @@
             this.btnsubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.btnsubmit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnsubmit.ForeColor = System.Drawing.Color.White;
-            this.btnsubmit.Location = new System.Drawing.Point(815, 768);
+            this.btnsubmit.Location = new System.Drawing.Point(656, 658);
             this.btnsubmit.Name = "btnsubmit";
             this.btnsubmit.ShadowDecoration.BorderRadius = 2;
             this.btnsubmit.ShadowDecoration.Depth = 10;
@@ -91,17 +95,20 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(162, 25);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(162, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(627, 60);
+            this.label1.Size = new System.Drawing.Size(381, 37);
             this.label1.TabIndex = 23;
             this.label1.Text = "CHECK YOUR INFORMATION";
             // 
             // btnback
             // 
+            this.btnback.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnback.Animated = true;
             this.btnback.AutoRoundedCorners = true;
             this.btnback.BackColor = System.Drawing.Color.Transparent;
@@ -114,7 +121,7 @@
             this.btnback.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.btnback.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnback.ForeColor = System.Drawing.Color.White;
-            this.btnback.Location = new System.Drawing.Point(12, 768);
+            this.btnback.Location = new System.Drawing.Point(12, 658);
             this.btnback.Name = "btnback";
             this.btnback.ShadowDecoration.BorderRadius = 2;
             this.btnback.ShadowDecoration.Depth = 10;
@@ -124,21 +131,20 @@
             this.btnback.UseTransparentBackground = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
-            // InformationList
+            // FEInformationList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(930, 810);
+            this.ClientSize = new System.Drawing.Size(771, 700);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InformationList";
+            this.Name = "FEInformationList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InformationList";
             this.Load += new System.EventHandler(this.InformationList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

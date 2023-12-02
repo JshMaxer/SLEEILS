@@ -74,27 +74,36 @@ namespace SMARTLEARN.FrontEnd.AdminForms
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             DBHandouts.whatweek = "Week1";
+            btnhandout.Enabled = true;
+            btncustom.Enabled = true;
         }
 
         private void btnweek2_Click(object sender, EventArgs e)
         {
             DBHandouts.whatweek = "Week2";
+            btnhandout.Enabled = true;
+            btncustom.Enabled = true;
         }
 
         private void btnweek3_Click(object sender, EventArgs e)
         {
             DBHandouts.whatweek = "Week3";
+            btnhandout.Enabled = true;
+            btncustom.Enabled = true;
         }
 
         private void btnweek4_Click(object sender, EventArgs e)
         {
             DBHandouts.whatweek = "Week4";
+            btnhandout.Enabled = true;
+            btncustom.Enabled = true;
         }
 
         private void btnweek5_Click(object sender, EventArgs e)
         {
             DBHandouts.whatweek = "Week5";
+            btnhandout.Enabled = true;
+            btncustom.Enabled = true;
         }
-
     }
 }

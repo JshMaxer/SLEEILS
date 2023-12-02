@@ -232,10 +232,11 @@
             this.guna2ShadowForm1.BorderRadius = 150;
             this.guna2ShadowForm1.TargetForm = this;
             // 
-            // FELogin
+            // FEStudentLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(361, 449);
             this.ControlBox = false;
@@ -248,7 +249,7 @@
             this.Controls.Add(this.btnloginadmin);
             this.Controls.Add(this.lblforgot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FELogin";
+            this.Name = "FEStudentLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

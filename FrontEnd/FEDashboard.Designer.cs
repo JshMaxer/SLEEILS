@@ -31,17 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.Dragcontrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnotification = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.Sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
-            this.timetoclose = new System.Windows.Forms.Timer(this.components);
-            this.paneldash = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
-            this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnhome = new Guna.UI2.WinForms.Guna2Button();
             this.btncourse = new Guna.UI2.WinForms.Guna2Button();
             this.btnschedule = new Guna.UI2.WinForms.Guna2Button();
@@ -49,13 +44,19 @@
             this.btnstudentregistration = new Guna.UI2.WinForms.Guna2Button();
             this.btnfacultyregistration = new Guna.UI2.WinForms.Guna2Button();
             this.btnbalance = new Guna.UI2.WinForms.Guna2Button();
-            this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnotification = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnstudentgrades = new Guna.UI2.WinForms.Guna2Button();
+            this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
+            this.timetoclose = new System.Windows.Forms.Timer(this.components);
+            this.paneldash = new Guna.UI2.WinForms.Guna2Panel();
+            this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dragpanel.SuspendLayout();
             this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Dragcontrol
@@ -70,14 +71,48 @@
             this.dragpanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dragpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
+            this.dragpanel.Controls.Add(this.guna2CirclePictureBox1);
             this.dragpanel.Controls.Add(this.btnsmallprofile);
             this.dragpanel.Controls.Add(this.btnotification);
             this.dragpanel.Controls.Add(this.label2);
             this.dragpanel.Location = new System.Drawing.Point(-1, 0);
             this.dragpanel.Name = "dragpanel";
-            this.dragpanel.Size = new System.Drawing.Size(1591, 64);
+            this.dragpanel.Size = new System.Drawing.Size(1059, 64);
             this.dragpanel.TabIndex = 17;
             this.dragpanel.Click += new System.EventHandler(this.dragpanel_Click);
+            // 
+            // btnsmallprofile
+            // 
+            this.btnsmallprofile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnsmallprofile.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnsmallprofile.HoverState.Image = global::SMARTLEARN.Properties.Resources.user__1_;
+            this.btnsmallprofile.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnsmallprofile.Image = global::SMARTLEARN.Properties.Resources.user;
+            this.btnsmallprofile.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnsmallprofile.ImageRotate = 0F;
+            this.btnsmallprofile.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnsmallprofile.Location = new System.Drawing.Point(1009, 16);
+            this.btnsmallprofile.Name = "btnsmallprofile";
+            this.btnsmallprofile.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnsmallprofile.Size = new System.Drawing.Size(38, 29);
+            this.btnsmallprofile.TabIndex = 19;
+            this.btnsmallprofile.Click += new System.EventHandler(this.btnsmallprofile_Click);
+            // 
+            // btnotification
+            // 
+            this.btnotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnotification.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnotification.HoverState.Image = global::SMARTLEARN.Properties.Resources.bell__1_;
+            this.btnotification.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnotification.Image = global::SMARTLEARN.Properties.Resources.bell;
+            this.btnotification.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnotification.ImageRotate = 0F;
+            this.btnotification.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnotification.Location = new System.Drawing.Point(965, 16);
+            this.btnotification.Name = "btnotification";
+            this.btnotification.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnotification.Size = new System.Drawing.Size(38, 29);
+            this.btnotification.TabIndex = 19;
             // 
             // label2
             // 
@@ -85,7 +120,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 16);
+            this.label2.Location = new System.Drawing.Point(65, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 29);
             this.label2.TabIndex = 18;
@@ -103,7 +138,7 @@
             // 
             // Sidebar
             // 
-            this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.Sidebar.BackColor = System.Drawing.Color.Transparent;
             this.Sidebar.Controls.Add(this.btnhome);
             this.Sidebar.Controls.Add(this.btncourse);
             this.Sidebar.Controls.Add(this.btnschedule);
@@ -113,78 +148,10 @@
             this.Sidebar.Controls.Add(this.btnbalance);
             this.Sidebar.Controls.Add(this.btnstudentgrades);
             this.Sidebar.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sidebar.Location = new System.Drawing.Point(1, 171);
+            this.Sidebar.Location = new System.Drawing.Point(10, 28);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(67, 718);
+            this.Sidebar.Size = new System.Drawing.Size(67, 501);
             this.Sidebar.TabIndex = 18;
-            // 
-            // panelsmall
-            // 
-            this.panelsmall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelsmall.AutoSize = true;
-            this.panelsmall.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelsmall.BackColor = System.Drawing.Color.Transparent;
-            this.panelsmall.BorderRadius = 25;
-            this.panelsmall.BorderThickness = 1;
-            this.panelsmall.Location = new System.Drawing.Point(1590, 66);
-            this.panelsmall.Name = "panelsmall";
-            this.panelsmall.Size = new System.Drawing.Size(0, 0);
-            this.panelsmall.TabIndex = 25;
-            this.panelsmall.Visible = false;
-            // 
-            // timetoclose
-            // 
-            this.timetoclose.Enabled = true;
-            this.timetoclose.Tick += new System.EventHandler(this.timetoclose_Tick);
-            // 
-            // paneldash
-            // 
-            this.paneldash.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.paneldash.AutoScroll = true;
-            this.paneldash.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.paneldash.BorderRadius = 12;
-            this.paneldash.Location = new System.Drawing.Point(73, 70);
-            this.paneldash.Name = "paneldash";
-            this.paneldash.Size = new System.Drawing.Size(1505, 795);
-            this.paneldash.TabIndex = 19;
-            this.paneldash.Click += new System.EventHandler(this.paneldash_Click);
-            // 
-            // guna2ResizeForm1
-            // 
-            this.guna2ResizeForm1.TargetForm = this;
-            // 
-            // Helpforbutton
-            // 
-            this.Helpforbutton.AllowLinksHandling = true;
-            this.Helpforbutton.MaximumSize = new System.Drawing.Size(0, 0);
-            this.Helpforbutton.TitleFont = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Helpforbutton.ToolTipTitle = "What\'s this?";
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 69);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 28;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2PictureBox1.Image = global::SMARTLEARN.Properties.Resources.resize;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1557, 988);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(21, 20);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 27;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // btnhome
             // 
@@ -349,40 +316,8 @@
             this.btnbalance.Size = new System.Drawing.Size(64, 92);
             this.btnbalance.TabIndex = 19;
             this.btnbalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Helpforbutton.SetToolTip(this.btnbalance, "Balance");
             this.btnbalance.Click += new System.EventHandler(this.btnbalance_Click);
-            // 
-            // btnsmallprofile
-            // 
-            this.btnsmallprofile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnsmallprofile.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnsmallprofile.HoverState.Image = global::SMARTLEARN.Properties.Resources.user__1_;
-            this.btnsmallprofile.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnsmallprofile.Image = global::SMARTLEARN.Properties.Resources.user;
-            this.btnsmallprofile.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnsmallprofile.ImageRotate = 0F;
-            this.btnsmallprofile.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnsmallprofile.Location = new System.Drawing.Point(1524, 16);
-            this.btnsmallprofile.Name = "btnsmallprofile";
-            this.btnsmallprofile.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsmallprofile.Size = new System.Drawing.Size(38, 29);
-            this.btnsmallprofile.TabIndex = 19;
-            this.btnsmallprofile.Click += new System.EventHandler(this.btnsmallprofile_Click);
-            // 
-            // btnotification
-            // 
-            this.btnotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnotification.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnotification.HoverState.Image = global::SMARTLEARN.Properties.Resources.bell__1_;
-            this.btnotification.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnotification.Image = global::SMARTLEARN.Properties.Resources.bell;
-            this.btnotification.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnotification.ImageRotate = 0F;
-            this.btnotification.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnotification.Location = new System.Drawing.Point(1480, 16);
-            this.btnotification.Name = "btnotification";
-            this.btnotification.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnotification.Size = new System.Drawing.Size(38, 29);
-            this.btnotification.TabIndex = 19;
             // 
             // btnstudentgrades
             // 
@@ -406,17 +341,91 @@
             this.btnstudentgrades.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnstudentgrades.Click += new System.EventHandler(this.btnstudentgrades_Click);
             // 
+            // panelsmall
+            // 
+            this.panelsmall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelsmall.AutoSize = true;
+            this.panelsmall.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelsmall.BackColor = System.Drawing.Color.Transparent;
+            this.panelsmall.BorderRadius = 25;
+            this.panelsmall.BorderThickness = 1;
+            this.panelsmall.Location = new System.Drawing.Point(1058, 66);
+            this.panelsmall.Name = "panelsmall";
+            this.panelsmall.Size = new System.Drawing.Size(0, 0);
+            this.panelsmall.TabIndex = 25;
+            this.panelsmall.Visible = false;
+            // 
+            // timetoclose
+            // 
+            this.timetoclose.Enabled = true;
+            this.timetoclose.Tick += new System.EventHandler(this.timetoclose_Tick);
+            // 
+            // paneldash
+            // 
+            this.paneldash.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.paneldash.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.paneldash.BorderRadius = 12;
+            this.paneldash.Location = new System.Drawing.Point(101, 69);
+            this.paneldash.Name = "paneldash";
+            this.paneldash.Size = new System.Drawing.Size(945, 610);
+            this.paneldash.TabIndex = 19;
+            this.paneldash.Click += new System.EventHandler(this.paneldash_Click);
+            // 
+            // Helpforbutton
+            // 
+            this.Helpforbutton.AllowLinksHandling = true;
+            this.Helpforbutton.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Helpforbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Helpforbutton.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Helpforbutton.TitleFont = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Helpforbutton.ToolTipTitle = "What\'s this?";
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 7);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(52, 49);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 28;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.Image = global::SMARTLEARN.Properties.Resources.resize;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1025, 995);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 27;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.Sidebar);
+            this.guna2Panel1.Location = new System.Drawing.Point(6, 102);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(89, 549);
+            this.guna2Panel1.TabIndex = 28;
+            // 
             // FEDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1573, 904);
+            this.ClientSize = new System.Drawing.Size(1058, 691);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2CirclePictureBox1);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.Sidebar);
             this.Controls.Add(this.panelsmall);
             this.Controls.Add(this.paneldash);
             this.Controls.Add(this.dragpanel);
@@ -432,6 +441,7 @@
             this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,12 +465,12 @@
         private System.Windows.Forms.Timer timetoclose;
         private Guna.UI2.WinForms.Guna2Button btnstudentregistration;
         private Guna.UI2.WinForms.Guna2Button btnfacultyregistration;
-        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         private Guna.UI2.WinForms.Guna2Panel paneldash;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlToolTip Helpforbutton;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnbalance;
         private Guna.UI2.WinForms.Guna2Button btnstudentgrades;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
