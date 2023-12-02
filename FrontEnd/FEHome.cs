@@ -65,18 +65,6 @@ namespace SMARTLEARN.FrontEnd
 
         private void FEHome_Load(object sender, EventArgs e)
         {
-            Screen currentScreen = Screen.PrimaryScreen;
-
-            if (currentScreen.Bounds.Width == 1920 && currentScreen.Bounds.Height == 1080)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                this.Width = currentScreen.Bounds.Width;
-                this.Height = currentScreen.Bounds.Height;
-            }
-
             Database.DBCheckOnline check = new Database.DBCheckOnline();
             check.check();
         }
