@@ -30,7 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
-            this.btnhelp = new Guna.UI2.WinForms.Guna2Button();
+            this.btnchangepass = new Guna.UI2.WinForms.Guna2Button();
             this.btnlogout = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1.SuspendLayout();
@@ -39,12 +39,13 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnprofile);
-            this.flowLayoutPanel1.Controls.Add(this.btnhelp);
+            this.flowLayoutPanel1.Controls.Add(this.btnchangepass);
             this.flowLayoutPanel1.Controls.Add(this.btnlogout);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(193, 132);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // btnprofile
             // 
@@ -66,24 +67,25 @@
             this.btnprofile.Text = "Profile";
             this.btnprofile.Click += new System.EventHandler(this.btnprofile_Click);
             // 
-            // btnhelp
+            // btnchangepass
             // 
-            this.btnhelp.Animated = true;
-            this.btnhelp.BorderRadius = 8;
-            this.btnhelp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnhelp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnhelp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnhelp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnhelp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
-            this.btnhelp.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.btnhelp.ForeColor = System.Drawing.Color.White;
-            this.btnhelp.Image = global::SMARTLEARN.Properties.Resources.help_web_button;
-            this.btnhelp.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnhelp.Location = new System.Drawing.Point(3, 44);
-            this.btnhelp.Name = "btnhelp";
-            this.btnhelp.Size = new System.Drawing.Size(191, 35);
-            this.btnhelp.TabIndex = 21;
-            this.btnhelp.Text = "Help";
+            this.btnchangepass.Animated = true;
+            this.btnchangepass.BorderRadius = 8;
+            this.btnchangepass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnchangepass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnchangepass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnchangepass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnchangepass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(102)))), ((int)(((byte)(194)))));
+            this.btnchangepass.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnchangepass.ForeColor = System.Drawing.Color.White;
+            this.btnchangepass.Image = global::SMARTLEARN.Properties.Resources.help_web_button;
+            this.btnchangepass.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnchangepass.Location = new System.Drawing.Point(3, 44);
+            this.btnchangepass.Name = "btnchangepass";
+            this.btnchangepass.Size = new System.Drawing.Size(191, 35);
+            this.btnchangepass.TabIndex = 21;
+            this.btnchangepass.Text = "Change password";
+            this.btnchangepass.Click += new System.EventHandler(this.btnchangepass_Click);
             // 
             // btnlogout
             // 
@@ -135,7 +137,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button btnprofile;
-        private Guna.UI2.WinForms.Guna2Button btnhelp;
+        private Guna.UI2.WinForms.Guna2Button btnchangepass;
         private Guna.UI2.WinForms.Guna2Button btnlogout;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
     }

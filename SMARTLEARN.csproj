@@ -107,6 +107,7 @@
     <Compile Include="Backend\BEStudentEnroll.cs" />
     <Compile Include="Database\DBADSchedule.cs" />
     <Compile Include="Database\DBBalance.cs" />
+    <Compile Include="Database\DBChangepass.cs" />
     <Compile Include="Database\DBCheckOnline.cs" />
     <Compile Include="Database\DBFacultyProfile.cs" />
     <Compile Include="Database\DBFACustom.cs" />
@@ -121,6 +122,12 @@
     <Compile Include="Database\DBStudentEnroll.cs" />
     <Compile Include="Database\DBStudentGrade.cs" />
     <Compile Include="Database\DBStudentProfile.cs" />
+    <Compile Include="FrontEnd\FEChangepass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEChangepass.Designer.cs">
+      <DependentUpon>FEChangepass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\MainForm\AdminForms\FEADHandoutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +289,9 @@
     <Compile Include="Model\Host.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontEnd\FEChangepass.resx">
+      <DependentUpon>FEChangepass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADHandoutForm.resx">
       <DependentUpon>FEADHandoutForm.cs</DependentUpon>
     </EmbeddedResource>

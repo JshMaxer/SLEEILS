@@ -61,15 +61,29 @@ namespace SMARTLEARN.FrontEnd
             if (Model.Accounts.role == "STUDENT")
             {
                 btnprofile.Visible = true;
+                btnchangepass.Visible = true;
             }
             else if (Model.Accounts.role == "FACULTY")
             {
                 btnprofile.Visible = true;
+                btnchangepass.Visible = true;
             }
             else
             {
+                btnchangepass.Visible = false;
                 btnprofile.Visible = false;
             }
+        }
+
+        private void btnchangepass_Click(object sender, EventArgs e)
+        {
+            FEChangepass chg = new FEChangepass();
+            chg.ShowDialog();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
