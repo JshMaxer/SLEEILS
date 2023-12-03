@@ -105,6 +105,7 @@
   <ItemGroup>
     <Compile Include="Backend\BEAdregister.cs" />
     <Compile Include="Backend\BEStudentEnroll.cs" />
+    <Compile Include="Database\DBADSchedule.cs" />
     <Compile Include="Database\DBBalance.cs" />
     <Compile Include="Database\DBCheckOnline.cs" />
     <Compile Include="Database\DBFacultyProfile.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Database\DBLoginStudent.cs" />
     <Compile Include="Database\DBRegisterFaculty.cs" />
     <Compile Include="Database\DBSTCustomDownload.cs" />
+    <Compile Include="Database\DBSTSchedule.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
     <Compile Include="Database\DBStudentGrade.cs" />
     <Compile Include="Database\DBStudentProfile.cs" />
@@ -233,6 +235,12 @@
     <Compile Include="FrontEnd\MainForm\StudentForm\FESTAssignments.Designer.cs">
       <DependentUpon>FESTAssignments.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTSchedule.Designer.cs">
+      <DependentUpon>FESTSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Message\LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTAssignments.resx">
       <DependentUpon>FESTAssignments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTSchedule.resx">
+      <DependentUpon>FESTSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Message\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>

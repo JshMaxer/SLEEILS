@@ -20,11 +20,11 @@ namespace SMARTLEARN.FrontEnd
             if (FEInformationList.whatforms == "Faculty" || FEInformationList.whatforms == "Student")
             {
                 //restore to default settings
-                Backend.BEAdregister.confirm = false;
-                Backend.BEAdregister.resetform = false;
+                Backend.BEAdregister.confirm = false; //To false the pass to database flag
+                Backend.BEAdregister.resetform = false; //To false the reset on form from flag
 
-                Backend.BEStudentEnroll.confirm = false;
-                Backend.BEStudentEnroll.resetform = false;
+                Backend.BEStudentEnroll.confirm = false; //To false the pass to database flag
+                Backend.BEStudentEnroll.resetform = false; //To false the reset on form from flag
 
                 this.Close();
             }

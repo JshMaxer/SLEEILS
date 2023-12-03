@@ -14,6 +14,7 @@ namespace SMARTLEARN.FrontEnd
         private void btnlogout_Click(object sender, EventArgs e)
         {
             FEHome.timetoclose = false; //Home timer to close set to false
+            FEHome.showlog = true;
 
             FELoginAdminFaculty.closethis = false; //Set to false the 'closethis' flag in loginAdmin
             FEStudentLogin.closethis = false; //Set to false the 'closethis' flag in login

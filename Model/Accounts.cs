@@ -11,7 +11,7 @@ namespace SMARTLEARN.Model
         //Set a flag to give for current role
         public static string role;
 
-        //Set a flag for user who's log-in
+        //Set a flag for user who's log-in (Name)
         public static string user;
 
         //Set a flag for userID

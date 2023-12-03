@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.Dragcontrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnotification = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,12 +50,11 @@
             this.timetoclose = new System.Windows.Forms.Timer(this.components);
             this.paneldash = new Guna.UI2.WinForms.Guna2Panel();
             this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dragpanel.SuspendLayout();
-            this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.Sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,18 @@
             this.dragpanel.Size = new System.Drawing.Size(1059, 64);
             this.dragpanel.TabIndex = 17;
             this.dragpanel.Click += new System.EventHandler(this.dragpanel_Click);
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 7);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(52, 49);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 28;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // btnsmallprofile
             // 
@@ -148,9 +160,9 @@
             this.Sidebar.Controls.Add(this.btnbalance);
             this.Sidebar.Controls.Add(this.btnstudentgrades);
             this.Sidebar.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sidebar.Location = new System.Drawing.Point(10, 28);
+            this.Sidebar.Location = new System.Drawing.Point(10, 1);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(67, 501);
+            this.Sidebar.Size = new System.Drawing.Size(67, 599);
             this.Sidebar.TabIndex = 18;
             // 
             // btnhome
@@ -382,18 +394,6 @@
             this.Helpforbutton.TitleFont = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Helpforbutton.ToolTipTitle = "What\'s this?";
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 7);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(52, 49);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 28;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -412,9 +412,9 @@
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.Sidebar);
-            this.guna2Panel1.Location = new System.Drawing.Point(6, 102);
+            this.guna2Panel1.Location = new System.Drawing.Point(6, 79);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(89, 549);
+            this.guna2Panel1.Size = new System.Drawing.Size(89, 600);
             this.guna2Panel1.TabIndex = 28;
             // 
             // FEDashboard
@@ -438,8 +438,8 @@
             this.Load += new System.EventHandler(this.FEDashboard_Load);
             this.dragpanel.ResumeLayout(false);
             this.dragpanel.PerformLayout();
-            this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.Sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);

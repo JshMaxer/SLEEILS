@@ -1,5 +1,6 @@
 ﻿using SMARTLEARN.FrontEnd.AdminForms;
 using SMARTLEARN.FrontEnd.MainForm.StudentForm;
+using SMARTLEARN.Model;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -119,18 +120,39 @@ namespace SMARTLEARN.FrontEnd
             btnstudentgrades.Image = Properties.Resources.assignment;
             //________________________________________________________________
 
-            paneldash.Controls.Clear();
-            FrontEnd.AdminForms.FEADSchedule fEADSchedule = new AdminForms.FEADSchedule();
-            fEADSchedule.TopLevel = false;
+            if (Accounts.role == "ADMIN")
+            {
+                paneldash.Controls.Clear();
+                FrontEnd.AdminForms.FEADSchedule fEADSchedule = new AdminForms.FEADSchedule();
+                fEADSchedule.TopLevel = false;
 
-            // Set the form size to fit within the panel
-            fEADSchedule.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
+                // Set the form size to fit within the panel
+                fEADSchedule.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
 
-            // Set the form to dock within the panel
-            fEADSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
+                // Set the form to dock within the panel
+                fEADSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
 
-            paneldash.Controls.Add(fEADSchedule);
-            fEADSchedule.Show();
+                paneldash.Controls.Add(fEADSchedule);
+                fEADSchedule.Show();
+            }
+            else
+            {
+                paneldash.Controls.Clear();
+                FESTSchedule fESTSchedule = new FESTSchedule();
+                fESTSchedule.TopLevel = false;
+
+                // Set the form size to fit within the panel
+                fESTSchedule.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
+
+                // Set the form to dock within the panel
+                fESTSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
+
+                paneldash.Controls.Add(fESTSchedule);
+                fESTSchedule.Show();
+            }
+
+
+
         }
 
         private void btnstudentconfirmation_Click(object sender, EventArgs e)
@@ -332,10 +354,10 @@ namespace SMARTLEARN.FrontEnd
                 btnfacultyregistration.Visible = true;
                 btnbalance.Visible = true;
                 btnviewgrades.Visible = false;
-                btnschedule.Visible = false;
+                btnschedule.Visible = true;
                 btnstudentgrades.Visible = false;
             }
-           
+
             if (Model.Accounts.role == "STUDENT")
             {
                 btnstudentregistration.Visible = false;
@@ -365,6 +387,6 @@ namespace SMARTLEARN.FrontEnd
             FrontEnd.MainForm.FacultyForms.FEFAProfile.closeform = false; //Close the Profile
         }
 
-        
+
     }
 }
