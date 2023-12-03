@@ -33,7 +33,6 @@
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnsmallprofile = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnotification = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
@@ -73,7 +72,6 @@
             this.dragpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.dragpanel.Controls.Add(this.guna2CirclePictureBox1);
             this.dragpanel.Controls.Add(this.btnsmallprofile);
-            this.dragpanel.Controls.Add(this.btnotification);
             this.dragpanel.Controls.Add(this.label2);
             this.dragpanel.Location = new System.Drawing.Point(-1, 0);
             this.dragpanel.Name = "dragpanel";
@@ -109,22 +107,6 @@
             this.btnsmallprofile.Size = new System.Drawing.Size(38, 29);
             this.btnsmallprofile.TabIndex = 19;
             this.btnsmallprofile.Click += new System.EventHandler(this.btnsmallprofile_Click);
-            // 
-            // btnotification
-            // 
-            this.btnotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnotification.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnotification.HoverState.Image = global::SMARTLEARN.Properties.Resources.bell__1_;
-            this.btnotification.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnotification.Image = global::SMARTLEARN.Properties.Resources.bell;
-            this.btnotification.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnotification.ImageRotate = 0F;
-            this.btnotification.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnotification.Location = new System.Drawing.Point(965, 16);
-            this.btnotification.Name = "btnotification";
-            this.btnotification.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnotification.Size = new System.Drawing.Size(38, 29);
-            this.btnotification.TabIndex = 19;
             // 
             // label2
             // 
@@ -459,7 +441,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnschedule;
         private Guna.UI2.WinForms.Guna2Button btnviewgrades;
-        private Guna.UI2.WinForms.Guna2ImageButton btnotification;
         private Guna.UI2.WinForms.Guna2ImageButton btnsmallprofile;
         private Guna.UI2.WinForms.Guna2Panel panelsmall;
         private System.Windows.Forms.Timer timetoclose;

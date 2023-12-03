@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
 {
-    public partial class FESTSchedule : Form
+    public partial class FEFASTSchedule : Form
     {
-        public FESTSchedule()
+        public FEFASTSchedule()
         {
             InitializeComponent();
         }
@@ -21,6 +21,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
         private void FESTSchedule_Load(object sender, EventArgs e)
         {
             txtname.Text = Accounts.user;
+
             Database.DBSTSchedule dBSTSchedule = new Database.DBSTSchedule();
             dBSTSchedule.showsched(DGVschedule, txtstrand);
         }

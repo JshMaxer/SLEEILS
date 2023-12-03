@@ -54,7 +54,6 @@
             this.guna2TextBox20 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox21 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox22 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnupdate = new Guna.UI2.WinForms.Guna2Button();
             this.monday1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tuesday1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.wednesday1 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -141,7 +140,8 @@
             this.thursday17 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.friday17 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbstudent = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2TextBox24 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbstufac = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnupdate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -621,8 +621,9 @@
             // guna2TextBox17
             // 
             this.guna2TextBox17.Animated = true;
-            this.guna2TextBox17.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox17.BorderColor = System.Drawing.SystemColors.Highlight;
             this.guna2TextBox17.BorderRadius = 8;
+            this.guna2TextBox17.BorderThickness = 2;
             this.guna2TextBox17.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox17.DefaultText = "MONDAY";
             this.guna2TextBox17.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -647,8 +648,9 @@
             // guna2TextBox18
             // 
             this.guna2TextBox18.Animated = true;
-            this.guna2TextBox18.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox18.BorderColor = System.Drawing.SystemColors.Highlight;
             this.guna2TextBox18.BorderRadius = 8;
+            this.guna2TextBox18.BorderThickness = 2;
             this.guna2TextBox18.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox18.DefaultText = "TUESDAY";
             this.guna2TextBox18.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -673,8 +675,9 @@
             // guna2TextBox19
             // 
             this.guna2TextBox19.Animated = true;
-            this.guna2TextBox19.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox19.BorderColor = System.Drawing.SystemColors.Highlight;
             this.guna2TextBox19.BorderRadius = 8;
+            this.guna2TextBox19.BorderThickness = 2;
             this.guna2TextBox19.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox19.DefaultText = "WEDNESDAY";
             this.guna2TextBox19.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -699,8 +702,9 @@
             // guna2TextBox20
             // 
             this.guna2TextBox20.Animated = true;
-            this.guna2TextBox20.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox20.BorderColor = System.Drawing.SystemColors.Highlight;
             this.guna2TextBox20.BorderRadius = 8;
+            this.guna2TextBox20.BorderThickness = 2;
             this.guna2TextBox20.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox20.DefaultText = "THURSDAY";
             this.guna2TextBox20.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -725,8 +729,9 @@
             // guna2TextBox21
             // 
             this.guna2TextBox21.Animated = true;
-            this.guna2TextBox21.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox21.BorderColor = System.Drawing.SystemColors.Highlight;
             this.guna2TextBox21.BorderRadius = 8;
+            this.guna2TextBox21.BorderThickness = 2;
             this.guna2TextBox21.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox21.DefaultText = "FRIDAY";
             this.guna2TextBox21.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -751,8 +756,9 @@
             // guna2TextBox22
             // 
             this.guna2TextBox22.Animated = true;
-            this.guna2TextBox22.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox22.BorderColor = System.Drawing.SystemColors.Highlight;
             this.guna2TextBox22.BorderRadius = 8;
+            this.guna2TextBox22.BorderThickness = 2;
             this.guna2TextBox22.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox22.DefaultText = "TIME";
             this.guna2TextBox22.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -773,29 +779,6 @@
             this.guna2TextBox22.Size = new System.Drawing.Size(116, 31);
             this.guna2TextBox22.TabIndex = 27;
             this.guna2TextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnupdate
-            // 
-            this.btnupdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnupdate.Animated = true;
-            this.btnupdate.AutoRoundedCorners = true;
-            this.btnupdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnupdate.BorderRadius = 17;
-            this.btnupdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnupdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnupdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnupdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnupdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.btnupdate.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnupdate.ForeColor = System.Drawing.Color.White;
-            this.btnupdate.Location = new System.Drawing.Point(896, 474);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.ShadowDecoration.Depth = 10;
-            this.btnupdate.Size = new System.Drawing.Size(37, 124);
-            this.btnupdate.TabIndex = 29;
-            this.btnupdate.Text = "SUBMIT";
-            this.btnupdate.UseTransparentBackground = true;
-            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // monday1
             // 
@@ -2772,8 +2755,9 @@
             // cbstudent
             // 
             this.cbstudent.BackColor = System.Drawing.Color.Transparent;
-            this.cbstudent.BorderColor = System.Drawing.Color.Black;
+            this.cbstudent.BorderColor = System.Drawing.SystemColors.Highlight;
             this.cbstudent.BorderRadius = 7;
+            this.cbstudent.BorderThickness = 2;
             this.cbstudent.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbstudent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbstudent.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -2784,36 +2768,51 @@
             this.cbstudent.Location = new System.Drawing.Point(669, 6);
             this.cbstudent.Name = "cbstudent";
             this.cbstudent.Size = new System.Drawing.Size(264, 26);
-            this.cbstudent.StartIndex = 0;
             this.cbstudent.TabIndex = 28;
             this.cbstudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cbstudent.SelectedIndexChanged += new System.EventHandler(this.cbstudent_SelectedIndexChanged);
             // 
-            // guna2TextBox24
+            // cbstufac
             // 
-            this.guna2TextBox24.Animated = true;
-            this.guna2TextBox24.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox24.BorderRadius = 8;
-            this.guna2TextBox24.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox24.DefaultText = "STUDENT";
-            this.guna2TextBox24.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox24.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox24.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox24.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox24.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox24.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox24.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox24.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox24.Location = new System.Drawing.Point(534, 6);
-            this.guna2TextBox24.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox24.Name = "guna2TextBox24";
-            this.guna2TextBox24.PasswordChar = '\0';
-            this.guna2TextBox24.PlaceholderText = "";
-            this.guna2TextBox24.ReadOnly = true;
-            this.guna2TextBox24.SelectedText = "";
-            this.guna2TextBox24.Size = new System.Drawing.Size(116, 26);
-            this.guna2TextBox24.TabIndex = 27;
-            this.guna2TextBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbstufac.BackColor = System.Drawing.Color.Transparent;
+            this.cbstufac.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.cbstufac.BorderRadius = 7;
+            this.cbstufac.BorderThickness = 2;
+            this.cbstufac.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbstufac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbstufac.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbstufac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbstufac.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Bold);
+            this.cbstufac.ForeColor = System.Drawing.Color.Black;
+            this.cbstufac.ItemHeight = 20;
+            this.cbstufac.Items.AddRange(new object[] {
+            "STUDENT",
+            "FACULTY"});
+            this.cbstufac.Location = new System.Drawing.Point(526, 6);
+            this.cbstufac.Name = "cbstufac";
+            this.cbstufac.Size = new System.Drawing.Size(137, 26);
+            this.cbstufac.StartIndex = 0;
+            this.cbstufac.TabIndex = 28;
+            this.cbstufac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cbstufac.SelectedIndexChanged += new System.EventHandler(this.cbstufac_SelectedIndexChanged);
+            // 
+            // btnupdate
+            // 
+            this.btnupdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnupdate.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnupdate.HoverState.Image = global::SMARTLEARN.Properties.Resources.submit;
+            this.btnupdate.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnupdate.Image = global::SMARTLEARN.Properties.Resources.submit__1_;
+            this.btnupdate.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnupdate.ImageRotate = 0F;
+            this.btnupdate.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnupdate.Location = new System.Drawing.Point(896, 555);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.PressedState.Image = global::SMARTLEARN.Properties.Resources.submit;
+            this.btnupdate.PressedState.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnupdate.Size = new System.Drawing.Size(48, 43);
+            this.btnupdate.TabIndex = 30;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // FEADSchedule
             // 
@@ -2821,11 +2820,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(945, 610);
-            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.guna2TextBox22);
             this.Controls.Add(this.friday17);
             this.Controls.Add(this.friday16);
             this.Controls.Add(this.friday14);
+            this.Controls.Add(this.cbstufac);
             this.Controls.Add(this.cbstudent);
             this.Controls.Add(this.friday12);
             this.Controls.Add(this.friday10);
@@ -2916,8 +2915,8 @@
             this.Controls.Add(this.guna2TextBox20);
             this.Controls.Add(this.guna2TextBox19);
             this.Controls.Add(this.guna2TextBox18);
-            this.Controls.Add(this.guna2TextBox24);
             this.Controls.Add(this.guna2TextBox17);
+            this.Controls.Add(this.btnupdate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FEADSchedule";
             this.Text = "FEADSchedule";
@@ -2955,7 +2954,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        public Guna.UI2.WinForms.Guna2Button btnupdate;
         private Guna.UI2.WinForms.Guna2ComboBox monday1;
         private Guna.UI2.WinForms.Guna2ComboBox tuesday1;
         private Guna.UI2.WinForms.Guna2ComboBox wednesday1;
@@ -3043,6 +3041,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox thursday17;
         private Guna.UI2.WinForms.Guna2ComboBox friday17;
         private Guna.UI2.WinForms.Guna2ComboBox cbstudent;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox24;
+        private Guna.UI2.WinForms.Guna2ComboBox cbstufac;
+        private Guna.UI2.WinForms.Guna2ImageButton btnupdate;
     }
 }

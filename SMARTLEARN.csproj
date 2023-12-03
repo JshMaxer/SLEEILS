@@ -235,11 +235,11 @@
     <Compile Include="FrontEnd\MainForm\StudentForm\FESTAssignments.Designer.cs">
       <DependentUpon>FESTAssignments.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\MainForm\StudentForm\FESTSchedule.cs">
+    <Compile Include="FrontEnd\FEFASTSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrontEnd\MainForm\StudentForm\FESTSchedule.Designer.cs">
-      <DependentUpon>FESTSchedule.cs</DependentUpon>
+    <Compile Include="FrontEnd\FEFASTSchedule.Designer.cs">
+      <DependentUpon>FEFASTSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Message\LoadingForm.cs">
       <SubType>Form</SubType>
@@ -339,8 +339,8 @@
     <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTAssignments.resx">
       <DependentUpon>FESTAssignments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTSchedule.resx">
-      <DependentUpon>FESTSchedule.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\FEFASTSchedule.resx">
+      <DependentUpon>FEFASTSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\Message\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
@@ -569,6 +569,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\3D_Animation_Style_Student_using_a_computer_in_school_computer_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

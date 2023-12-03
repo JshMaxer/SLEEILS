@@ -138,7 +138,7 @@ namespace SMARTLEARN.FrontEnd
             else
             {
                 paneldash.Controls.Clear();
-                FESTSchedule fESTSchedule = new FESTSchedule();
+                FEFASTSchedule fESTSchedule = new FEFASTSchedule();
                 fESTSchedule.TopLevel = false;
 
                 // Set the form size to fit within the panel
