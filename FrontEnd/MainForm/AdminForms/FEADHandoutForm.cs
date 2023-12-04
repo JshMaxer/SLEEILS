@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SMARTLEARN.FrontEnd.MainForm.AdminForms
@@ -32,5 +25,13 @@ namespace SMARTLEARN.FrontEnd.MainForm.AdminForms
         {
             handouts.deleteSelectedHandout(lbhandouts);
         }
+
+        private void lbhandouts_DoubleClick(object sender, EventArgs e)
+        {
+            //
+        }
+
+
+
     }
 }

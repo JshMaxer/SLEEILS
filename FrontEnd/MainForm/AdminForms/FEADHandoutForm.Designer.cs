@@ -43,6 +43,7 @@
             this.lbhandouts.Name = "lbhandouts";
             this.lbhandouts.Size = new System.Drawing.Size(564, 372);
             this.lbhandouts.TabIndex = 0;
+            this.lbhandouts.DoubleClick += new System.EventHandler(this.lbhandouts_DoubleClick);
             // 
             // btnuploadhandout
             // 

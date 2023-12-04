@@ -67,7 +67,7 @@
             this.lblprogramming.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblprogramming.AutoSize = true;
             this.lblprogramming.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprogramming.Location = new System.Drawing.Point(169, 241);
+            this.lblprogramming.Location = new System.Drawing.Point(169, 262);
             this.lblprogramming.Name = "lblprogramming";
             this.lblprogramming.Size = new System.Drawing.Size(165, 66);
             this.lblprogramming.TabIndex = 29;
@@ -102,7 +102,7 @@
             this.lblwebdevelopment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblwebdevelopment.AutoSize = true;
             this.lblwebdevelopment.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwebdevelopment.Location = new System.Drawing.Point(589, 241);
+            this.lblwebdevelopment.Location = new System.Drawing.Point(589, 262);
             this.lblwebdevelopment.Name = "lblwebdevelopment";
             this.lblwebdevelopment.Size = new System.Drawing.Size(172, 66);
             this.lblwebdevelopment.TabIndex = 33;
@@ -200,7 +200,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FEFAGrades";
             this.Text = "FEADViewGrades";
-            this.Resize += new System.EventHandler(this.FEFAGrades_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 

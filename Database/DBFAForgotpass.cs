@@ -52,7 +52,7 @@ namespace SMARTLEARN.Database
                         PDM.Show();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("REQUEST ALREADY BEEN SUBMITTED!\nAfter ADMIN Confirmed your submission, your password will set as default (1234).", "WAIT FOR ADMIN TO RESET YOUR PASSWORD", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
