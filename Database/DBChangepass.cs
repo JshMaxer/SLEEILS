@@ -56,7 +56,7 @@ namespace SMARTLEARN.Database
                     error.SetError(confirmpass, "Passwords do not match.");
                 }
             }
-            else
+            else if(Accounts.role == "FACULTY")
             {
                 if (newpass.Text == confirmpass.Text)
                 {

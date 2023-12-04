@@ -1,4 +1,6 @@
 ﻿using SMARTLEARN.FrontEnd;
+using SMARTLEARN.FrontEnd.MainForm.FacultyForms;
+using SMARTLEARN.FrontEnd.MainForm.StudentForm;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -38,6 +40,10 @@ namespace SMARTLEARN
             FrontEnd.LoadingForm load = new FrontEnd.LoadingForm();
             load.TopMost = true;
             load.ShowDialog();
+
+            FEFAForgotpass forgot = new FEFAForgotpass();
+            forgot.TopMost = true;
+            forgot.ShowDialog();
         }
 
         private void btnclose_Click_1(object sender, EventArgs e)

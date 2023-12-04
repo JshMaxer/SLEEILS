@@ -111,13 +111,16 @@
     <Compile Include="Database\DBCheckOnline.cs" />
     <Compile Include="Database\DBFacultyProfile.cs" />
     <Compile Include="Database\DBFACustom.cs" />
+    <Compile Include="Database\DBFAForgotpass.cs" />
     <Compile Include="Database\DBFASTGHandoutDownload.cs" />
     <Compile Include="Database\DBGrading.cs" />
     <Compile Include="Database\DBHandouts.cs" />
     <Compile Include="Database\DBLoginFaculty.cs" />
     <Compile Include="Database\DBLoginStudent.cs" />
     <Compile Include="Database\DBRegisterFaculty.cs" />
+    <Compile Include="Database\DBresetpass.cs" />
     <Compile Include="Database\DBSTCustomDownload.cs" />
+    <Compile Include="Database\DBSTForgotpass.cs" />
     <Compile Include="Database\DBSTSchedule.cs" />
     <Compile Include="Database\DBStudentEnroll.cs" />
     <Compile Include="Database\DBStudentGrade.cs" />
@@ -127,6 +130,12 @@
     </Compile>
     <Compile Include="FrontEnd\FEChangepass.Designer.cs">
       <DependentUpon>FEChangepass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADResetpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\AdminForms\FEADResetpass.Designer.cs">
+      <DependentUpon>FEADResetpass.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\MainForm\AdminForms\FEADHandoutForm.cs">
       <SubType>Form</SubType>
@@ -139,6 +148,12 @@
     </Compile>
     <Compile Include="FrontEnd\FEFASTHandout.Designer.cs">
       <DependentUpon>FEFASTHandout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FEFAForgotpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\FacultyForms\FEFAForgotpass.Designer.cs">
+      <DependentUpon>FEFAForgotpass.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\MainForm\FacultyForms\FAFACustomForm.cs">
       <SubType>Form</SubType>
@@ -163,6 +178,12 @@
     </Compile>
     <Compile Include="FrontEnd\MainForm\StudentForm\FESTCustom.Designer.cs">
       <DependentUpon>FESTCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTForgotpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\MainForm\StudentForm\FESTForgotpass.Designer.cs">
+      <DependentUpon>FESTForgotpass.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\MainForm\StudentForm\FESTGrades.cs">
       <SubType>Form</SubType>
@@ -292,11 +313,17 @@
     <EmbeddedResource Include="FrontEnd\FEChangepass.resx">
       <DependentUpon>FEChangepass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADResetpass.resx">
+      <DependentUpon>FEADResetpass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\AdminForms\FEADHandoutForm.resx">
       <DependentUpon>FEADHandoutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FEFASTHandout.resx">
       <DependentUpon>FEFASTHandout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FEFAForgotpass.resx">
+      <DependentUpon>FEFAForgotpass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\FacultyForms\FAFACustomForm.resx">
       <DependentUpon>FAFACustomForm.cs</DependentUpon>
@@ -309,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTCustom.resx">
       <DependentUpon>FESTCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTForgotpass.resx">
+      <DependentUpon>FESTForgotpass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\MainForm\StudentForm\FESTGrades.resx">
       <DependentUpon>FESTGrades.cs</DependentUpon>

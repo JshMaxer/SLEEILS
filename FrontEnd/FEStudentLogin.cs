@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMARTLEARN.FrontEnd.MainForm.StudentForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,10 @@ namespace SMARTLEARN.FrontEnd
             FrontEnd.LoadingForm load = new FrontEnd.LoadingForm();
             load.TopMost = true;
             load.ShowDialog();
+
+            FESTForgotpass forgot = new FESTForgotpass();
+            forgot.TopMost = true;
+            forgot.ShowDialog();
         }
 
         private void btnclose_Click(object sender, EventArgs e)

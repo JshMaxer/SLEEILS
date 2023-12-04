@@ -1,4 +1,6 @@
-﻿using SMARTLEARN.FrontEnd.MainForm.FacultyForms;
+﻿using SMARTLEARN.FrontEnd.MainForm.AdminForms;
+using SMARTLEARN.FrontEnd.MainForm.FacultyForms;
+using SMARTLEARN.Model;
 using System;
 using System.Windows.Forms;
 
@@ -70,15 +72,24 @@ namespace SMARTLEARN.FrontEnd
             }
             else
             {
-                btnchangepass.Visible = false;
+                btnchangepass.Visible = true;
                 btnprofile.Visible = false;
             }
         }
 
         private void btnchangepass_Click(object sender, EventArgs e)
         {
-            FEChangepass chg = new FEChangepass();
-            chg.ShowDialog();
+            if (Accounts.role == "FACULTY" || Accounts.role == "STUDENT")
+            {
+                FEChangepass chg = new FEChangepass();
+                chg.ShowDialog();
+            }
+            else
+            {
+                FEADResetpass reset = new FEADResetpass();
+                reset.ShowDialog();
+            }
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
