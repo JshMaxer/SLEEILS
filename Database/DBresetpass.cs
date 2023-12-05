@@ -82,8 +82,8 @@ namespace SMARTLEARN.Database
                         fname.Text = null;
                         lname.Text = null;
 
-                        ProcessMessage.firstmessage = "Password Reset";
-                        ProcessMessage.secondmessage = "Successfully!";
+                        ProcessMessage.firstmessage = "Password reset successful!";
+                       //ProcessMessage.secondmessage = "\n\rThank you!";
                         ProcessMessage pm = new ProcessMessage();
                         pm.Show();
 
@@ -123,8 +123,8 @@ namespace SMARTLEARN.Database
                         fname.Text = null;
                         lname.Text = null;
 
-                        ProcessMessage.firstmessage = "Password Reset";
-                        ProcessMessage.secondmessage = "Successfully!";
+                        ProcessMessage.firstmessage = "Password reset successful!";
+                        //ProcessMessage.secondmessage = "\n\rThank you!";
                         ProcessMessage pm = new ProcessMessage();
                         pm.Show();
 

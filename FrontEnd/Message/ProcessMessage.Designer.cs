@@ -44,12 +44,12 @@
             // 
             // lblfirstmeeage
             // 
-            this.lblfirstmeeage.Font = new System.Drawing.Font("Bahnschrift", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfirstmeeage.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfirstmeeage.Location = new System.Drawing.Point(11, 19);
             this.lblfirstmeeage.Name = "lblfirstmeeage";
             this.lblfirstmeeage.Size = new System.Drawing.Size(490, 90);
             this.lblfirstmeeage.TabIndex = 24;
-            this.lblfirstmeeage.Text = "YOUR ENROLLMENT IS\r\nBEING PROCESS!";
+            this.lblfirstmeeage.Text = "Faculty has been registered!";
             this.lblfirstmeeage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblsecondmessage

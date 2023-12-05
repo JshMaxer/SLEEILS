@@ -114,11 +114,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(102, 33);
+            this.label1.Location = new System.Drawing.Point(90, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 33);
+            this.label1.Size = new System.Drawing.Size(167, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome";
+            this.label1.Text = "Smart Learn";
             // 
             // guna2Panel3
             // 

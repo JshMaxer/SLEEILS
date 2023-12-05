@@ -35,8 +35,8 @@ namespace SMARTLEARN.Database
                         MySqlCommand cmd1 = new MySqlCommand(changepass, connection);
                         cmd1.ExecuteNonQuery();
 
-                        ProcessMessage.firstmessage = "Password changed ";
-                        ProcessMessage.secondmessage = "successfully.";
+                        ProcessMessage.firstmessage = "Password changed successfully";
+                        ProcessMessage.secondmessage = "\n\rThank you!.";
 
                         ProcessMessage pr = new ProcessMessage();
                         pr.Show();
@@ -74,8 +74,8 @@ namespace SMARTLEARN.Database
                         MySqlCommand cmd1 = new MySqlCommand(changepass, connection);
                         cmd1.ExecuteNonQuery();
 
-                        ProcessMessage.firstmessage = "Password changed ";
-                        ProcessMessage.secondmessage = "Successfully.";
+                        ProcessMessage.firstmessage = "Password changed successfully";
+                        ProcessMessage.secondmessage = "\n\rThank you!.";
 
                         ProcessMessage pr = new ProcessMessage();
                         pr.Show();

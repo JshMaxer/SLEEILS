@@ -106,8 +106,8 @@ namespace SMARTLEARN.Database
                 {
                     sched(firstid, userid);
                     FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                    FrontEnd.ProcessMessage.firstmessage = "FACULTY HAS BEEN";
-                    FrontEnd.ProcessMessage.secondmessage = "REGISTERED!\n\rTHANK YOU!";
+                    FrontEnd.ProcessMessage.firstmessage = "Faculty has been registered!";
+                    FrontEnd.ProcessMessage.secondmessage = "\n\rThank you!";
                     pm.Show();
                 }
                 else

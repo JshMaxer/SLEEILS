@@ -128,7 +128,7 @@
             this.btnloginadmin.Name = "btnloginadmin";
             this.btnloginadmin.Size = new System.Drawing.Size(379, 31);
             this.btnloginadmin.TabIndex = 10;
-            this.btnloginadmin.Text = "MIS / Faculty Login ";
+            this.btnloginadmin.Text = "Admin / Faculty Login ";
             this.btnloginadmin.Click += new System.EventHandler(this.btnloginadmin_Click_1);
             // 
             // lblforgot

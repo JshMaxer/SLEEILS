@@ -41,8 +41,8 @@ namespace SMARTLEARN.Database
                     if (rowsAffected == 1)
                     {
                         FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                        FrontEnd.ProcessMessage.firstmessage = "REQUEST";
-                        FrontEnd.ProcessMessage.secondmessage = "SUBMITTED! \n\rTHANK YOU!";
+                        FrontEnd.ProcessMessage.firstmessage = "Request submitted!";
+                        FrontEnd.ProcessMessage.secondmessage = "\n\rThank you!";
                         pm.Show();
                     }
                     else

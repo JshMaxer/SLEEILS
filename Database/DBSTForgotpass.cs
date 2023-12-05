@@ -41,8 +41,8 @@ namespace SMARTLEARN.Database
                     if (rowsAffected == 1)
                     {
                         FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                        FrontEnd.ProcessMessage.firstmessage = "REQUEST";
-                        FrontEnd.ProcessMessage.secondmessage = "SUBMITTED! \n\rTHANK YOU!";
+                        FrontEnd.ProcessMessage.firstmessage = "Request submitted!";
+                        FrontEnd.ProcessMessage.secondmessage = "\n\rThank you!";
                         pm.Show();
                     }
                     else
@@ -54,7 +54,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("REQUEST ALREADY BEEN SUBMITTED!\nAfter ADMIN Confirmed your submission, your password will set as default (1234).", "WAIT FOR ADMIN TO RESET YOUR PASSWORD", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Request already submitted.\nWait for the admin to confirm your submission. When the admin confirms your submission, your password will be set to '1234' by default.", "SmartLearn", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else

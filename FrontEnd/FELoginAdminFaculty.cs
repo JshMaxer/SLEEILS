@@ -67,7 +67,7 @@ namespace SMARTLEARN
             }
             else
             {
-                Database.DBLoginFaculty Logadmin = new Database.DBLoginFaculty();
+                DBLoginFaculty Logadmin = new DBLoginFaculty();
                 Logadmin.logad(txtuserid, txtpassword, errorProvider1);
             }
         }

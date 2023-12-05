@@ -1,4 +1,5 @@
-﻿using SMARTLEARN.FrontEnd.MainForm.AdminForms;
+﻿using MySql.Data.MySqlClient;
+using SMARTLEARN.FrontEnd.MainForm.AdminForms;
 using SMARTLEARN.FrontEnd.MainForm.FacultyForms;
 using SMARTLEARN.Model;
 using System;
@@ -15,6 +16,9 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnlogout_Click(object sender, EventArgs e)
         {
+            MySqlConnection connection = Host.connection;
+            connection.Close();
+
             FEHome.timetoclose = false; //Home timer to close set to false
             FEHome.showlog = true;
 

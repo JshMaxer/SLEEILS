@@ -1,64 +1,83 @@
 ﻿using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using SMARTLEARN.FrontEnd;
-using SMARTLEARN.FrontEnd.Message;
 using SMARTLEARN.Model;
-using System;
+using SMARTLEARN;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
+using System;
 
-namespace SMARTLEARN.Database
+public class DBLoginFaculty
 {
-    //database
-    public  class DBLoginFaculty
+    MySqlConnection connection = Host.connection;
+
+    public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
     {
-        MySqlConnection connection = Host.connection;
-        public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
+        try
         {
-            //login
             string logad = $"SELECT first_name, last_name, userid, email, mobilenumber, password FROM facultyaccount WHERE userid = '{userid.Text}' AND password = '{password.Text}'";
+
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(logad, connection);
             MySqlDataReader row = cmd.ExecuteReader();
 
-            if (row.HasRows)
+            List<string[]> userData = new List<string[]>();
+
+            while (row.Read())
             {
-                while (row.Read())
+                string[] data = new string[]
                 {
-                    FrontEnd.FEDashboard dash = new FEDashboard();
-                    FrontEnd.FEDashboard.timertoclose = false; //Set the flag to false on the Dashboard
+                    row["first_name"].ToString(),
+                    row["last_name"].ToString(),
+                    row["userid"].ToString(),
+                    row["email"].ToString(),
+                    row["mobilenumber"].ToString()
+                };
+                userData.Add(data);
+            }
 
-                    //Role
-                    Model.Accounts.role = "FACULTY";
+            row.Close();
+            connection.Close();
 
-                    //User
-                    Model.Accounts.user = row["first_name"] + " " + row["last_name"];
+            if (userData.Count > 0)
+            {
+                FEDashboard dash = new FEDashboard();
+                FEDashboard.timertoclose = false; // Set the flag to false on the Dashboard
 
-                    //UserID
-                    Model.Accounts.UserID = row["userid"].ToString();
+                // Role
+                Accounts.role = "FACULTY";
 
-                    //Email
-                    Model.Accounts.email = row["email"].ToString();
+                // User
+                Accounts.user = $"{userData[0][0]} {userData[0][1]}";
 
-                    //Mobile
-                    Model.Accounts.mobile = row["mobilenumber"].ToString();
+                // UserID
+                Accounts.UserID = userData[0][2];
 
-                    dash.Show();
-                    FELoginAdminFaculty.closethis = true; // make this false on log out!
-                    FEHome.timetoclose = true; //To hide the home form
-                }
+                // Email
+                Accounts.email = userData[0][3];
 
+                // Mobile
+                Accounts.mobile = userData[0][4];
+
+                dash.Show();
+                FELoginAdminFaculty.closethis = true; // Make this false on log out!
+                FEHome.timetoclose = true; // To hide the home form
             }
             else
             {
                 err.SetError(userid, "Invalid UserID!");
                 err.SetError(password, "Invalid Password!");
             }
-            connection.Close();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error: " + ex.Message);
+        }
+        finally
+        {
+            if (connection.State == ConnectionState.Open)
+                connection.Close();
         }
     }
 }

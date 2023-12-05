@@ -17,8 +17,6 @@ namespace SMARTLEARN.FrontEnd
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (FEInformationList.whatforms == "Faculty" || FEInformationList.whatforms == "Student")
-            {
                 //restore to default settings
                 Backend.BEAdregister.confirm = false; //To false the pass to database flag
                 Backend.BEAdregister.resetform = false; //To false the reset on form from flag
@@ -27,11 +25,6 @@ namespace SMARTLEARN.FrontEnd
                 Backend.BEStudentEnroll.resetform = false; //To false the reset on form from flag
 
                 this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
         }
 
         private void ProcessMessage_Load(object sender, EventArgs e)
