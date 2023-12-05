@@ -52,7 +52,7 @@ namespace SMARTLEARN.FrontEnd
             {
                 slideshowRunning = true;
                 Timer slideshowTimer = new Timer();
-                slideshowTimer.Interval = 3000; // Set the interval for image change (in milliseconds)
+                slideshowTimer.Interval = 10000; // Set the interval for image change (in milliseconds)
                 slideshowTimer.Tick += (sender, e) => DisplayNextImage();
                 slideshowTimer.Start(); // Start the timer
             }

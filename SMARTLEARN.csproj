@@ -631,5 +631,11 @@
   <ItemGroup>
     <None Include="Resources\submit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\What_Family_Day_When_December_22_2023_800_AM_-_400_PM_Where_DHS_covered_court..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -633,6 +633,16 @@ namespace SMARTLEARN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stock {
+            get {
+                object obj = ResourceManager.GetObject("stock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap submit {
             get {
                 object obj = ResourceManager.GetObject("submit", resourceCulture);
@@ -696,6 +706,16 @@ namespace SMARTLEARN.Properties {
         internal static System.Drawing.Bitmap wer1 {
             get {
                 object obj = ResourceManager.GetObject("wer1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap What_Family_Day_When_December_22_2023_800_AM___400_PM_Where_DHS_covered_court_ {
+            get {
+                object obj = ResourceManager.GetObject("What_Family_Day_When_December_22_2023_800_AM_-_400_PM_Where_DHS_covered_court.", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,34 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureboxslide = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnaddimage = new Guna.UI2.WinForms.Guna2Button();
             this.btnremoveimage = new Guna.UI2.WinForms.Guna2Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.picturequotes = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnaddimagequotes = new Guna.UI2.WinForms.Guna2Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnremovequotes = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureboxslide)).BeginInit();
+            this.picturequotes = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureboxslide = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturequotes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxslide)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureboxslide
-            // 
-            this.pictureboxslide.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureboxslide.BorderRadius = 15;
-            this.pictureboxslide.Image = global::SMARTLEARN.Properties.Resources.wallpaperflare_com_wallpaper__1_;
-            this.pictureboxslide.ImageRotate = 0F;
-            this.pictureboxslide.Location = new System.Drawing.Point(9, 76);
-            this.pictureboxslide.Name = "pictureboxslide";
-            this.pictureboxslide.Size = new System.Drawing.Size(662, 505);
-            this.pictureboxslide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureboxslide.TabIndex = 25;
-            this.pictureboxslide.TabStop = false;
             // 
             // label1
             // 
@@ -133,21 +118,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 3000;
             // 
-            // picturequotes
-            // 
-            this.picturequotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picturequotes.BorderRadius = 15;
-            this.picturequotes.Image = global::SMARTLEARN.Properties.Resources.wallpaperflare_com_wallpaper__1_;
-            this.picturequotes.ImageRotate = 0F;
-            this.picturequotes.Location = new System.Drawing.Point(677, 76);
-            this.picturequotes.Name = "picturequotes";
-            this.picturequotes.Size = new System.Drawing.Size(265, 237);
-            this.picturequotes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturequotes.TabIndex = 25;
-            this.picturequotes.TabStop = false;
-            // 
             // btnaddimagequotes
             // 
             this.btnaddimagequotes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -205,6 +175,36 @@
             this.btnremovequotes.Visible = false;
             this.btnremovequotes.Click += new System.EventHandler(this.btnremovequotes_Click);
             // 
+            // picturequotes
+            // 
+            this.picturequotes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picturequotes.BorderRadius = 15;
+            this.picturequotes.Image = global::SMARTLEARN.Properties.Resources.stock;
+            this.picturequotes.ImageRotate = 0F;
+            this.picturequotes.Location = new System.Drawing.Point(677, 76);
+            this.picturequotes.Name = "picturequotes";
+            this.picturequotes.Size = new System.Drawing.Size(265, 237);
+            this.picturequotes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturequotes.TabIndex = 25;
+            this.picturequotes.TabStop = false;
+            // 
+            // pictureboxslide
+            // 
+            this.pictureboxslide.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureboxslide.BorderRadius = 15;
+            this.pictureboxslide.Image = global::SMARTLEARN.Properties.Resources.What_Family_Day_When_December_22_2023_800_AM___400_PM_Where_DHS_covered_court_;
+            this.pictureboxslide.ImageRotate = 0F;
+            this.pictureboxslide.Location = new System.Drawing.Point(9, 76);
+            this.pictureboxslide.Name = "pictureboxslide";
+            this.pictureboxslide.Size = new System.Drawing.Size(662, 505);
+            this.pictureboxslide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureboxslide.TabIndex = 25;
+            this.pictureboxslide.TabStop = false;
+            // 
             // FEWelcomeDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,8 +224,8 @@
             this.Name = "FEWelcomeDashboard";
             this.Text = "FEWelcomeDashboard";
             this.Load += new System.EventHandler(this.FEWelcomeDashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureboxslide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturequotes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxslide)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
