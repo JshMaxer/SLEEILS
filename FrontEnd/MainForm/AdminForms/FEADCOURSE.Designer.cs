@@ -105,6 +105,7 @@
             this.btngames.Size = new System.Drawing.Size(228, 102);
             this.btngames.TabIndex = 16;
             this.btngames.Text = "GAMES";
+            this.btngames.Click += new System.EventHandler(this.btngames_Click);
             // 
             // btnweek5
             // 

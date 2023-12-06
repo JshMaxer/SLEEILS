@@ -110,5 +110,19 @@ namespace SMARTLEARN.FrontEnd.AdminForms
             btnhandout.Enabled = true;
             btncustom.Enabled = true;
         }
+
+        private void btngames_Click(object sender, EventArgs e)
+        {
+            if (Accounts.role == "FACULTY")
+            {
+                SLGame2.frmCustomizeGame custom = new SLGame2.frmCustomizeGame();
+                custom.ShowDialog();
+            }
+            else if(Accounts.role == "STUDENT")
+            {
+                SLGame2.frmGame1_CrossWord game = new SLGame2.frmGame1_CrossWord();
+                game.ShowDialog();
+            }
+        }
     }
 }
