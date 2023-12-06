@@ -59,6 +59,8 @@ namespace SMARTLEARN.FrontEnd.AdminForms
           sched.ShowSchedule("3:00 - 3:30", monday16, tuesday16, wednesday16, thursday16, friday16, cbstufac);
           sched.ShowSchedule("3:30 - 4:00", monday17, tuesday17, wednesday17, thursday17, friday17, cbstufac);
 
+            
+
         }
 
         private void cbstufac_SelectedIndexChanged(object sender, EventArgs e)
