@@ -107,7 +107,7 @@ namespace SMARTLEARN.Database
 
             if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 0)
             {
-                string InsertQuery = $"INSERT INTO studentaccount_section1 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
+                string InsertQuery = $"INSERT INTO studentaccount_section1 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, 'Section 1', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
                 MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
 
                 try
@@ -137,7 +137,7 @@ namespace SMARTLEARN.Database
             }
             else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 1)
             {
-                string InsertQuery = $"INSERT INTO studentaccount_section2 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
+                string InsertQuery = $"INSERT INTO studentaccount_section2 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, 'Section 2', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
                 MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
 
                 try
@@ -167,7 +167,7 @@ namespace SMARTLEARN.Database
             }
             else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 2)
             {
-                string InsertQuery = $"INSERT INTO studentaccount_section3 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
+                string InsertQuery = $"INSERT INTO studentaccount_section3 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, 'Section 3', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
                 MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
 
                 try

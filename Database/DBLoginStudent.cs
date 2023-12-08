@@ -16,7 +16,7 @@ namespace SMARTLEARN.Database
         {
             try
             {
-                string logad = $"SELECT FirstName, LastName, ID, password, email, mobile\r\nFROM studentaccount_section1\r\nWHERE ID = '{userid.Text}' AND password = '{password.Text}'\r\n\r\nUNION ALL\r\n\r\nSELECT FirstName, LastName, ID, password, email, mobile\r\nFROM studentaccount_section2\r\nWHERE ID = '{userid.Text}' AND password = '{password.Text}'\r\n\r\nUNION ALL\r\n\r\nSELECT FirstName, LastName, ID, password, email, mobile\r\nFROM studentaccount_section3\r\nWHERE ID = '{userid.Text}' AND password = '{password.Text}';\r\n";
+                string logad = $"SELECT FirstName, LastName, ID, password, email, mobile, section FROM studentaccount_section1 WHERE ID = '{userid.Text}' AND password = '{password.Text}' UNION ALL SELECT FirstName, LastName, ID, password, email, mobile, section FROM studentaccount_section2 WHERE ID = '{userid.Text}' AND password = '{password.Text}' UNION ALL SELECT FirstName, LastName, ID, password, email, mobile, section FROM studentaccount_section3 WHERE ID = '{userid.Text}' AND password = '{password.Text}';";
 
                 using (MySqlCommand cmd = new MySqlCommand(logad, connection))
                 {
@@ -31,6 +31,7 @@ namespace SMARTLEARN.Database
                             string userID = string.Empty;
                             string userEmail = string.Empty;
                             string userMobile = string.Empty;
+                            string sect = string.Empty;
 
                             while (row.Read())
                             {
@@ -39,6 +40,7 @@ namespace SMARTLEARN.Database
                                 userID = row["ID"].ToString();
                                 userEmail = row["email"].ToString();
                                 userMobile = row["mobile"].ToString();
+                                sect = row["Section"].ToString();
                             }
 
                             FrontEnd.FEDashboard dash = new FEDashboard();
@@ -58,6 +60,9 @@ namespace SMARTLEARN.Database
 
                             // Mobile
                             Model.Accounts.mobile = userMobile;
+
+                            //Section
+                            Model.Accounts.section = sect;
 
                             dash.Show();
                             FrontEnd.FEStudentLogin.closethis = true; // Make this false on log out!

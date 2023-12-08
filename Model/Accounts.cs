@@ -22,5 +22,8 @@ namespace SMARTLEARN.Model
 
         //Set a flag for mobile Number
         public static string mobile;
+
+        //Set a flag for Section
+        public static string section;
     }
 }

@@ -13,7 +13,7 @@ namespace SMARTLEARN.Database
 
         public void sched(Guna2TextBox firstid, Guna2TextBox secondid)
         {
-            string InsertTime1 = $"INSERT INTO schedule_faculty VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-')";
+            string InsertTime1 = $"INSERT INTO schedule_faculty VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-')";
             MySqlCommand cmd1 = new MySqlCommand(InsertTime1, connection);
             cmd1.ExecuteNonQuery();
         }

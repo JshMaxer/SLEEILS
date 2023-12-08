@@ -10,15 +10,15 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void showsched(Guna2DataGridView schedlist, Guna2TextBox strands)
+        public void showsched(Guna2DataGridView schedlist)
         {
-            if (Accounts.role == "STUDENT")
+            if (Accounts.role == "STUDENT" && Accounts.section == "Section 1")
             {
                 try
                 {
                     connection.Close();
                     connection.Open();
-                    string query = $"SELECT time AS 'TIME', monday AS 'Monday', tuesday AS 'Tuesday', wednesday AS 'Wednesday', thursday AS 'Thursday' , friday AS 'Friday' FROM schedule WHERE ID = '{Accounts.UserID}'";
+                    string query = $"SELECT PFB_Monday, PFB_Tuesday, PFB_Wednesday, PFB_Thursday, PFB_Friday, WDD_Monday, WDD_Tuesday, WDD_Wednesday, WDD_Thursday, WDD_Friday, ITe_Monday, ITe_Tuesday, ITe_Wednesday, ITe_Thursday, ITe_Friday, CHS_Monday, CHS_Tuesday, CHS_Wednesday, CHS_Thursday, CHS_Friday FROM schedule_section1 WHERE ID = '{Accounts.UserID}'";
                     MySqlCommand command = new MySqlCommand(query, connection);
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(command);
@@ -36,35 +36,68 @@ namespace SMARTLEARN.Database
                 }
 
                 connection.Close();
-
-                //------------------------------------------
-
-                string strand = $"SELECT Strand FROM studentaccount WHERE ID = '{Accounts.UserID}'";
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand(strand, connection);
-                MySqlDataReader row = cmd.ExecuteReader();
-
-                if (row.HasRows)
+            }
+            //------------------------------------------
+            else if (Accounts.role == "STUDENT" && Accounts.section == "Section 2")
+            {
+                try
                 {
-                    while (row.Read())
-                    {
-                        strands.Text = row["strand"].ToString();
-                    }
+                    connection.Close();
+                    connection.Open();
+                    string query = $"SELECT PFB_Monday, PFB_Tuesday, PFB_Wednesday, PFB_Thursday, PFB_Friday, WDD_Monday, WDD_Tuesday, WDD_Wednesday, WDD_Thursday, WDD_Friday, ITe_Monday, ITe_Tuesday, ITe_Wednesday, ITe_Thursday, ITe_Friday, CHS_Monday, CHS_Tuesday, CHS_Wednesday, CHS_Thursday, CHS_Friday FROM schedule_section2 WHERE ID = '{Accounts.UserID}'";
+                    MySqlCommand command = new MySqlCommand(query, connection);
 
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    schedlist.DataSource = dataTable;
+
+
+                    connection.Close();
                 }
-                else
+                catch (MySqlException ex)
                 {
-                    //
+                    MessageBox.Show("Error: " + ex.Message);
                 }
+
                 connection.Close();
             }
+            //------------------------------------------
+            else if (Accounts.role == "STUDENT" && Accounts.section == "Section 3")
+            {
+                try
+                {
+                    connection.Close();
+                    connection.Open();
+                    string query = $"SELECT PFB_Monday, PFB_Tuesday, PFB_Wednesday, PFB_Thursday, PFB_Friday, WDD_Monday, WDD_Tuesday, WDD_Wednesday, WDD_Thursday, WDD_Friday, ITe_Monday, ITe_Tuesday, ITe_Wednesday, ITe_Thursday, ITe_Friday, CHS_Monday, CHS_Tuesday, CHS_Wednesday, CHS_Thursday, CHS_Friday FROM schedule_section3 WHERE ID = '{Accounts.UserID}'";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    schedlist.DataSource = dataTable;
+
+
+                    connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+                connection.Close();
+            }
+
+
             else if (Accounts.role == "FACULTY")
             {
                 try
                 {
                     connection.Close();
                     connection.Open();
-                    string query = $"SELECT time AS 'TIME', monday AS 'Monday', tuesday AS 'Tuesday', wednesday AS 'Wednesday', thursday AS 'Thursday' , friday AS 'Friday' FROM schedule_faculty WHERE ID = '{Accounts.UserID}'";
+                    string query = $"SELECT PFB_Monday, PFB_Tuesday, PFB_Wednesday, PFB_Thursday, PFB_Friday, WDD_Monday, WDD_Tuesday, WDD_Wednesday, WDD_Thursday, WDD_Friday, ITe_Monday, ITe_Tuesday, ITe_Wednesday, ITe_Thursday, ITe_Friday, CHS_Monday, CHS_Tuesday, CHS_Wednesday, CHS_Thursday, CHS_Friday FROM schedule_faculty WHERE ID = '{Accounts.UserID}'";
                     MySqlCommand command = new MySqlCommand(query, connection);
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(command);
@@ -80,7 +113,6 @@ namespace SMARTLEARN.Database
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-                strands.Text = "FACULTY";
                 connection.Close();
 
             }

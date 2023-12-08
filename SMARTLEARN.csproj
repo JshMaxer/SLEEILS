@@ -119,6 +119,8 @@
     <Compile Include="Database\DBFAForgotpass.cs" />
     <Compile Include="Database\DBFASTGHandoutDownload.cs" />
     <Compile Include="Database\DBFAGrading.cs" />
+    <Compile Include="Database\DBForum.cs" />
+    <Compile Include="Database\DBForumMessage.cs" />
     <Compile Include="Database\DBHandouts.cs" />
     <Compile Include="Database\DBLoginFaculty.cs" />
     <Compile Include="Database\DBLoginStudent.cs" />
@@ -136,6 +138,18 @@
     </Compile>
     <Compile Include="FrontEnd\FEChangepass.Designer.cs">
       <DependentUpon>FEChangepass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FEForum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEForum.Designer.cs">
+      <DependentUpon>FEForum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FEForumMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FEForumMessage.Designer.cs">
+      <DependentUpon>FEForumMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\FERemoveImage.cs">
       <SubType>Form</SubType>
@@ -324,6 +338,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrontEnd\FEChangepass.resx">
       <DependentUpon>FEChangepass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FEForum.resx">
+      <DependentUpon>FEForum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\FEForumMessage.resx">
+      <DependentUpon>FEForumMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\FERemoveImage.resx">
       <DependentUpon>FERemoveImage.cs</DependentUpon>
@@ -642,6 +662,15 @@
       <Project>{a59296d3-1eb2-4de4-90ee-1d752f7f9dcc}</Project>
       <Name>SLGame2</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discussion %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discussion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discussion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

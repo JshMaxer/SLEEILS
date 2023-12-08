@@ -86,6 +86,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
             btnstudentgrades.Image = Properties.Resources.assignment;
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -118,6 +119,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
             btnstudentgrades.Image = Properties.Resources.assignment;
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             if (Accounts.role == "ADMIN")
@@ -167,6 +169,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
             btnstudentgrades.Image = Properties.Resources.assignment;
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -196,6 +199,7 @@ namespace SMARTLEARN.FrontEnd
             btnstudentregistration.Image = Properties.Resources.online_registration;
             btnbalance.Image = Properties.Resources.bill;
             btnstudentgrades.Image = Properties.Resources.assignment;
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -224,6 +228,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
             btnstudentgrades.Image = Properties.Resources.assignment;
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -256,6 +261,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile3; //Active color
             btnbalance.Image = Properties.Resources.bill;
             btnstudentgrades.Image = Properties.Resources.assignment;
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -287,6 +293,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill__1_; //Active color
             btnstudentgrades.Image = Properties.Resources.assignment;
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -318,6 +325,7 @@ namespace SMARTLEARN.FrontEnd
             btnfacultyregistration.Image = Properties.Resources.profile1;
             btnbalance.Image = Properties.Resources.bill;
             btnstudentgrades.Image = Properties.Resources.assignment__2_; //Active color
+            btnforum.Image = Properties.Resources.discussion;
             //________________________________________________________________
 
             paneldash.Controls.Clear();
@@ -335,6 +343,38 @@ namespace SMARTLEARN.FrontEnd
 
             paneldash.Controls.Add(grades);
             grades.Show();
+        }
+
+        private void btnforum_Click(object sender, EventArgs e)
+        {
+            hide(); //always on top
+            //Change the appearance of the button
+            btnhome.Image = Properties.Resources.home;
+            btncourse.Image = Properties.Resources.learning;
+            btnschedule.Image = Properties.Resources.schedule;
+            btnviewgrades.Image = Properties.Resources.exam;
+            btnstudentregistration.Image = Properties.Resources.online_registration;
+            btnfacultyregistration.Image = Properties.Resources.profile1;
+            btnbalance.Image = Properties.Resources.bill;
+            btnstudentgrades.Image = Properties.Resources.assignment; //Active color
+            btnforum.Image = Properties.Resources.discussion__2_;
+            //________________________________________________________________
+
+            paneldash.Controls.Clear();
+            FEForum forum = new FEForum();
+            forum.TopLevel = false;
+
+            dashpanelWidth = paneldash.Width;
+            dashpanelHeight = paneldash.Height;
+
+            // Set the form size to fit within the panel
+            forum.Size = new System.Drawing.Size(dashpanelWidth, dashpanelHeight);
+
+            // Set the form to dock within the panel
+            forum.Dock = System.Windows.Forms.DockStyle.Fill;
+
+            paneldash.Controls.Add(forum);
+            forum.Show();
         }
 
         private void FEDashboard_Load(object sender, EventArgs e)
@@ -387,6 +427,6 @@ namespace SMARTLEARN.FrontEnd
             FrontEnd.MainForm.FacultyForms.FEFAProfile.closeform = false; //Close the Profile
         }
 
-
+       
     }
 }

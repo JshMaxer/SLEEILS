@@ -36,7 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtstrand = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.DGVschedule = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -63,31 +62,6 @@
             this.guna2Separator1.Size = new System.Drawing.Size(941, 10);
             this.guna2Separator1.TabIndex = 30;
             // 
-            // txtstrand
-            // 
-            this.txtstrand.Animated = true;
-            this.txtstrand.BorderColor = System.Drawing.Color.Black;
-            this.txtstrand.BorderRadius = 8;
-            this.txtstrand.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtstrand.DefaultText = "";
-            this.txtstrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtstrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtstrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtstrand.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtstrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtstrand.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtstrand.ForeColor = System.Drawing.Color.Black;
-            this.txtstrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtstrand.Location = new System.Drawing.Point(568, 37);
-            this.txtstrand.Name = "txtstrand";
-            this.txtstrand.PasswordChar = '\0';
-            this.txtstrand.PlaceholderText = "";
-            this.txtstrand.ReadOnly = true;
-            this.txtstrand.SelectedText = "";
-            this.txtstrand.Size = new System.Drawing.Size(375, 24);
-            this.txtstrand.TabIndex = 43;
-            this.txtstrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtname
             // 
             this.txtname.Animated = true;
@@ -103,7 +77,7 @@
             this.txtname.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.ForeColor = System.Drawing.Color.Black;
             this.txtname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtname.Location = new System.Drawing.Point(568, 7);
+            this.txtname.Location = new System.Drawing.Point(568, 25);
             this.txtname.Name = "txtname";
             this.txtname.PasswordChar = '\0';
             this.txtname.PlaceholderText = "";
@@ -125,10 +99,9 @@
             this.DGVschedule.AllowUserToDeleteRows = false;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Empty;
             this.DGVschedule.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DGVschedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGVschedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVschedule.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGVschedule.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -204,7 +177,6 @@
             this.ClientSize = new System.Drawing.Size(945, 610);
             this.Controls.Add(this.DGVschedule);
             this.Controls.Add(this.txtname);
-            this.Controls.Add(this.txtstrand);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -220,7 +192,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2TextBox txtstrand;
         private Guna.UI2.WinForms.Guna2TextBox txtname;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DataGridView DGVschedule;
