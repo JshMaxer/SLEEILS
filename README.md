@@ -85,4 +85,5 @@ improvements.
 - Implement a system for users to provide feedback and report issues in the application.
 
 # DATABASE FILE
-[12/6/2023 - Gzipped Copy](https://github.com/JshMaxer/SLEEILS/files/13574233/SmartLearn.zip)
+
+[12/9/2023 - Gzipped Copy](https://github.com/JshMaxer/SLEEILS/files/13619269/smartlearn.sql.gz)
