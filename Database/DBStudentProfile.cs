@@ -11,7 +11,7 @@ namespace SMARTLEARN.Database
 
         public void searchbalance(System.Windows.Forms.Label username, System.Windows.Forms.Label rolse, System.Windows.Forms.Label email, System.Windows.Forms.Label mobile, Guna2TextBox firstbalance, Guna2TextBox secondbalance)
         {
-            string logadQuery = $"SELECT FirstSemBalance, SecondSemBalance FROM studentterm WHERE ID = '{Model.Accounts.UserID}'";
+            string logadQuery = $"SELECT FirstSemBalance, SecondSemBalance FROM studentbalance WHERE ID = '{Model.Accounts.UserID}'";
 
             connection.Open();
             MySqlCommand cmd = new MySqlCommand(logadQuery, connection);

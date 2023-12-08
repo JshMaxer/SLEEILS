@@ -16,7 +16,7 @@ namespace SMARTLEARN.Database
         {
             try
             {
-                string logad = $"SELECT FirstName, LastName, ID, password, email, mobile FROM studentaccount WHERE ID = '{userid.Text}' AND password = '{password.Text}'";
+                string logad = $"SELECT FirstName, LastName, ID, password, email, mobile\r\nFROM studentaccount_section1\r\nWHERE ID = '{userid.Text}' AND password = '{password.Text}'\r\n\r\nUNION ALL\r\n\r\nSELECT FirstName, LastName, ID, password, email, mobile\r\nFROM studentaccount_section2\r\nWHERE ID = '{userid.Text}' AND password = '{password.Text}'\r\n\r\nUNION ALL\r\n\r\nSELECT FirstName, LastName, ID, password, email, mobile\r\nFROM studentaccount_section3\r\nWHERE ID = '{userid.Text}' AND password = '{password.Text}';\r\n";
 
                 using (MySqlCommand cmd = new MySqlCommand(logad, connection))
                 {

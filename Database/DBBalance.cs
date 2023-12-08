@@ -18,7 +18,7 @@ namespace SMARTLEARN.Database
             try
             {
                 connection.Open();
-                string query = "SELECT ID, FirstName, MiddleName, LastName, YearLevel, Strand FROM studentaccount";
+                string query = "SELECT ID, FirstName, MiddleName, LastName, YearLevel, Strand\r\nFROM studentaccount_section1\r\n\r\nUNION ALL\r\n\r\nSELECT ID, FirstName, MiddleName, LastName, YearLevel, Strand\r\nFROM studentaccount_section2\r\n\r\nUNION ALL\r\n\r\nSELECT ID, FirstName, MiddleName, LastName, YearLevel, Strand\r\nFROM studentaccount_section3;\r\n";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
@@ -56,7 +56,7 @@ namespace SMARTLEARN.Database
                 connection.Close();
                 connection.Open();
 
-                string query = $"UPDATE studentterm SET FirstSemBalance = '{firstsem.Text}', SecondSemBalance = '{secondsem.Text}' WHERE id = '{StudentID}'";
+                string query = $"UPDATE studentbalance SET FirstSemBalance = '{firstsem.Text}', SecondSemBalance = '{secondsem.Text}' WHERE id = '{StudentID}'";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 if (command.ExecuteNonQuery() == 1)

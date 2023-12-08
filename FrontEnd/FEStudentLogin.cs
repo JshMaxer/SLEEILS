@@ -69,5 +69,19 @@ namespace SMARTLEARN.FrontEnd
                 this.Close();
             }
         }
+
+        private void txtpassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Login
+                Database.DBLoginStudent Logstudent = new Database.DBLoginStudent();
+                Logstudent.logstu(txtstudentid, txtpassword, errorProvider1);
+
+                // Optionally, prevent further handling of the Enter key
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

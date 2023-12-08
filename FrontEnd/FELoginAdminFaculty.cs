@@ -80,5 +80,32 @@ namespace SMARTLEARN
             }
         }
 
+        private void txtpassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Login
+                if (txtuserid.Text == Model.ConsAcc.userID && txtpassword.Text == Model.ConsAcc.pass)
+                {
+                    FrontEnd.FEDashboard dash = new FEDashboard();
+
+                    //Role
+                    Model.Accounts.role = "ADMIN";
+
+                    dash.Show();
+                    FELoginAdminFaculty.closethis = true; // make this false on log out!
+                    FEHome.timetoclose = true; //To hide the home form
+                }
+                else
+                {
+                    DBLoginFaculty Logadmin = new DBLoginFaculty();
+                    Logadmin.logad(txtuserid, txtpassword, errorProvider1);
+                }
+
+                // Optionally, prevent further handling of the Enter key
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

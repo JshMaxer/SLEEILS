@@ -221,6 +221,7 @@
             this.txtpassword.Size = new System.Drawing.Size(297, 36);
             this.txtpassword.TabIndex = 8;
             this.txtpassword.UseSystemPasswordChar = true;
+            this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             // 
             // timertoclose
             // 

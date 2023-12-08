@@ -4,8 +4,6 @@ using SMARTLEARN.FrontEnd.Message;
 using SMARTLEARN.Model;
 using System;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Collections.Specialized.BitVector32;
 
 namespace SMARTLEARN.Database
 {
@@ -33,7 +31,7 @@ namespace SMARTLEARN.Database
                 cmd3.ExecuteNonQuery();
                 cmd4.ExecuteNonQuery();
             }
-            else if(strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 1)
+            else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 1)
             {
                 string Prog = $"INSERT INTO pfb_section2 (id, firstname, lastname, course, yearlevel, firstperiodgrades, secondperiodgrades, firstsemaverage, thirdperiodgrades, fourthperiodgrades, secondsemaverage) VALUES ('{firstid.Text + secondid.Text}', '{fname.Text}', '{lname.Text}', '{strand.Text}', '{yearlevel.Text}', '0', '0', '0', '0', '0', '0')";
                 string Web = $"INSERT INTO wdd_section2 (id, firstname, lastname, course, yearlevel, firstperiodgrades, secondperiodgrades, firstsemaverage, thirdperiodgrades, fourthperiodgrades, secondsemaverage) VALUES ('{firstid.Text + secondid.Text}', '{fname.Text}', '{lname.Text}', '{strand.Text}', '{yearlevel.Text}', '0', '0', '0', '0', '0', '0')";
@@ -73,26 +71,26 @@ namespace SMARTLEARN.Database
         {
             if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 0)
             {
-                string InsertTime1 = $"INSERT INTO schedule_section1 VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-')";
+                string InsertTime1 = $"INSERT INTO schedule_section1 VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-','-', '-', '-', '-', '-','-', '-', '-', '-', '-')";
                 MySqlCommand cmd1 = new MySqlCommand(InsertTime1, connection);
                 cmd1.ExecuteNonQuery();
             }
-            else if(strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 2)
+            else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 1)
             {
-                string InsertTime1 = $"INSERT INTO schedule_section2 VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-')";
+                string InsertTime1 = $"INSERT INTO schedule_section2 VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-', '-','-', '-', '-', '-', '-','-', '-', '-', '-', '-','-', '-', '-', '-', '-')";
                 MySqlCommand cmd1 = new MySqlCommand(InsertTime1, connection);
                 cmd1.ExecuteNonQuery();
             }
-            else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 3)
+            else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 2)
             {
-                string InsertTime1 = $"INSERT INTO schedule_section3 VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-')";
+                string InsertTime1 = $"INSERT INTO schedule_section3 VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-', '-','-', '-', '-', '-', '-','-', '-', '-', '-', '-','-', '-', '-', '-', '-')";
                 MySqlCommand cmd1 = new MySqlCommand(InsertTime1, connection);
                 cmd1.ExecuteNonQuery();
             }
         }
 
 
-        public void term(Guna2TextBox firstid, Guna2TextBox secondid, Guna2TextBox fname, Guna2TextBox lname)
+        public void balance(Guna2TextBox firstid, Guna2TextBox secondid, Guna2TextBox fname, Guna2TextBox lname)
         {
             string InsertTerm = $"INSERT INTO studentbalance VALUES ('{firstid.Text + secondid.Text}', '{fname.Text}', '{lname.Text}', '0', '0')";
 
@@ -117,37 +115,7 @@ namespace SMARTLEARN.Database
                     if (cmd1.ExecuteNonQuery() == 1)
                     {
                         subjects(firstid, secondid, fname, lname, strand, yearlevel, section); // Execute the insertion
-                        term(firstid, secondid, fname, lname);
-                        sched(firstid, secondid, strand, section);
-
-                        FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
-                        FrontEnd.ProcessMessage.firstmessage = "Student has been registered!";
-                        FrontEnd.ProcessMessage.secondmessage = "\n\rThank you!";
-                        pm.Show();
-                    }
-                    else
-                    {
-                        FrontEnd.Message.ProcessDeclineMessage PDM = new FrontEnd.Message.ProcessDeclineMessage();
-                        ProcessDeclineMessage.message = "STUDENT CANNOT\r\nBE PROCESS!";
-                        PDM.Show();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else if(strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 1)
-            {
-                string InsertQuery = $"INSERT INTO studentaccount_section2 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
-                MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
-
-                try
-                {
-                    if (cmd1.ExecuteNonQuery() == 1)
-                    {
-                        subjects(firstid, secondid, fname, lname, strand, yearlevel, section); // Execute the insertion
-                        term(firstid, secondid, fname, lname);
+                        balance(firstid, secondid, fname, lname);
                         sched(firstid, secondid, strand, section);
 
                         FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
@@ -169,6 +137,36 @@ namespace SMARTLEARN.Database
             }
             else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 1)
             {
+                string InsertQuery = $"INSERT INTO studentaccount_section2 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
+                MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
+
+                try
+                {
+                    if (cmd1.ExecuteNonQuery() == 1)
+                    {
+                        subjects(firstid, secondid, fname, lname, strand, yearlevel, section); // Execute the insertion
+                        balance(firstid, secondid, fname, lname);
+                        sched(firstid, secondid, strand, section);
+
+                        FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
+                        FrontEnd.ProcessMessage.firstmessage = "Student has been registered!";
+                        FrontEnd.ProcessMessage.secondmessage = "\n\rThank you!";
+                        pm.Show();
+                    }
+                    else
+                    {
+                        FrontEnd.Message.ProcessDeclineMessage PDM = new FrontEnd.Message.ProcessDeclineMessage();
+                        ProcessDeclineMessage.message = "STUDENT CANNOT\r\nBE PROCESS!";
+                        PDM.Show();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 2)
+            {
                 string InsertQuery = $"INSERT INTO studentaccount_section3 VALUES ({firstid.Text + secondid.Text}, '{yearlevel.Text}', '{strand.Text}', {schoolyear.Text}, '{fname.Text}', '{mname.Text}', '{lname.Text}', '{gender.Text}', '{birth.Value.ToString("yyyy-MM-dd")}', '{email.Text}', '{mobile.Text}', '{password.Text}')";
                 MySqlCommand cmd1 = new MySqlCommand(InsertQuery, connection);
 
@@ -177,7 +175,7 @@ namespace SMARTLEARN.Database
                     if (cmd1.ExecuteNonQuery() == 1)
                     {
                         subjects(firstid, secondid, fname, lname, strand, yearlevel, section); // Execute the insertion
-                        term(firstid, secondid, fname, lname);
+                        balance(firstid, secondid, fname, lname);
                         sched(firstid, secondid, strand, section);
 
                         FrontEnd.ProcessMessage pm = new FrontEnd.ProcessMessage();
