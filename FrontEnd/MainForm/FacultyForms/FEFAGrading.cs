@@ -14,7 +14,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 {
     public partial class FEFAGrading : Form
     {
-        Database.DBGrading grading = new Database.DBGrading();
+        Database.DBFAGrading grading = new Database.DBFAGrading();
 
         public FEFAGrading()
         {
@@ -23,12 +23,12 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 
         private void FEGrading_Load(object sender, EventArgs e)
         {
-            grading.DisplayStudents(DGVStudentlist, cbsemester);
+            grading.DisplayStudents(DGVStudentlist, cbsemester, cbsection);
         }
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            grading.insertGrade(DGVStudentlist, txtstudentfirst, txtstudentsecond, cbsemester, cbschoolyear, txtstudentaverage);
+            grading.insertGrade(DGVStudentlist, txtstudentfirst, txtstudentsecond, cbsemester, cbsection, txtstudentaverage, cbsection);
         }
 
         private void CalculateAverage()
@@ -79,7 +79,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
         private void cbsemester_SelectedIndexChanged(object sender, EventArgs e)
         {
             DGVStudentlist.ClearSelection();
-            grading.DisplayStudents(DGVStudentlist, cbsemester);
+            grading.DisplayStudents(DGVStudentlist, cbsemester, cbsection);
 
             if (cbsemester.SelectedIndex == 0)
             {
@@ -96,7 +96,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 
         private void DGVStudentlist_SelectionChanged(object sender, EventArgs e)
         {
-            grading.selection(DGVStudentlist, txtstudentfirst, txtstudentsecond, cbsemester, cbschoolyear);
+            grading.selection(DGVStudentlist, txtstudentfirst, txtstudentsecond, cbsemester, cbsection);
         }
     }
 }

@@ -35,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.cbschoolyear = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbsection = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.dragpanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -61,31 +61,35 @@
             this.RoundEdge.BorderRadius = 8;
             this.RoundEdge.TargetControl = this;
             // 
-            // cbschoolyear
+            // cbsection
             // 
-            this.cbschoolyear.BackColor = System.Drawing.Color.Transparent;
-            this.cbschoolyear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbschoolyear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbschoolyear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbschoolyear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbschoolyear.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbschoolyear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbschoolyear.ItemHeight = 30;
-            this.cbschoolyear.Location = new System.Drawing.Point(13, 97);
-            this.cbschoolyear.Name = "cbschoolyear";
-            this.cbschoolyear.Size = new System.Drawing.Size(189, 36);
-            this.cbschoolyear.TabIndex = 20;
-            this.cbschoolyear.TabStop = false;
+            this.cbsection.BackColor = System.Drawing.Color.Transparent;
+            this.cbsection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbsection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbsection.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbsection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbsection.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbsection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbsection.ItemHeight = 30;
+            this.cbsection.Items.AddRange(new object[] {
+            "Section 1",
+            "Section 2",
+            "Section 3"});
+            this.cbsection.Location = new System.Drawing.Point(13, 97);
+            this.cbsection.Name = "cbsection";
+            this.cbsection.Size = new System.Drawing.Size(189, 36);
+            this.cbsection.TabIndex = 20;
+            this.cbsection.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 66);
+            this.label7.Location = new System.Drawing.Point(13, 66);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 25);
+            this.label7.Size = new System.Drawing.Size(64, 25);
             this.label7.TabIndex = 21;
-            this.label7.Text = "School year";
+            this.label7.Text = "Section";
             // 
             // guna2ShadowForm1
             // 
@@ -408,7 +412,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbsemester);
-            this.Controls.Add(this.cbschoolyear);
+            this.Controls.Add(this.cbsection);
             this.Controls.Add(this.dragpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(2160, 1230);
@@ -440,7 +444,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cbsemester;
-        private Guna.UI2.WinForms.Guna2ComboBox cbschoolyear;
+        private Guna.UI2.WinForms.Guna2ComboBox cbsection;
         private Guna.UI2.WinForms.Guna2Panel dragpanel;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;

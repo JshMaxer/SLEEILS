@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using SMARTLEARN.Model;
 using System;
 
@@ -8,11 +9,11 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void check()
+        public void check(Guna2Button loginbutton)
         {
             try
             {
-                string search = $"SELECT * FROM studentaccount";
+                string search = $"SELECT * FROM handout_week1";
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand(search, connection);
                 cmd.ExecuteNonQuery();
@@ -24,6 +25,7 @@ namespace SMARTLEARN.Database
                 FrontEnd.ProcessMessage mess = new FrontEnd.ProcessMessage();
                 FrontEnd.ProcessMessage.firstmessage = "DATABASE NOT FOUND!";
                 FrontEnd.ProcessMessage.secondmessage = "Check if it's imported or turned off.";
+                loginbutton.Enabled = false;
 
                 mess.Show();
             }

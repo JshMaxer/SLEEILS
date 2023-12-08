@@ -61,6 +61,8 @@
             this.cbstrand = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ResetTimer = new System.Windows.Forms.Timer(this.components);
             this.Timertoproceed = new System.Windows.Forms.Timer(this.components);
+            this.cbsection = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             this.requiredfields.SuspendLayout();
             this.SuspendLayout();
@@ -363,11 +365,13 @@
             this.requiredfields.Controls.Add(this.label6);
             this.requiredfields.Controls.Add(this.label2);
             this.requiredfields.Controls.Add(this.label3);
+            this.requiredfields.Controls.Add(this.label14);
             this.requiredfields.Controls.Add(this.label5);
             this.requiredfields.Controls.Add(this.label1);
             this.requiredfields.Controls.Add(this.cbgender);
             this.requiredfields.Controls.Add(this.cbyearlevel);
             this.requiredfields.Controls.Add(this.cbschoolyear);
+            this.requiredfields.Controls.Add(this.cbsection);
             this.requiredfields.Controls.Add(this.cbstrand);
             this.requiredfields.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold);
             this.requiredfields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -496,7 +500,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(416, 144);
+            this.label3.Location = new System.Drawing.Point(421, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 1;
@@ -508,7 +512,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(416, 102);
+            this.label5.Location = new System.Drawing.Point(421, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 23);
             this.label5.TabIndex = 1;
@@ -598,9 +602,10 @@
             this.cbstrand.ItemHeight = 30;
             this.cbstrand.Items.AddRange(new object[] {
             "Information Communication Technology (ICT)"});
-            this.cbstrand.Location = new System.Drawing.Point(520, 95);
+            this.cbstrand.Location = new System.Drawing.Point(520, 54);
             this.cbstrand.Name = "cbstrand";
             this.cbstrand.Size = new System.Drawing.Size(236, 36);
+            this.cbstrand.StartIndex = 0;
             this.cbstrand.TabIndex = 2;
             // 
             // ResetTimer
@@ -612,6 +617,40 @@
             // 
             this.Timertoproceed.Enabled = true;
             this.Timertoproceed.Tick += new System.EventHandler(this.Timertoproceed_Tick);
+            // 
+            // cbsection
+            // 
+            this.cbsection.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbsection.BackColor = System.Drawing.Color.Transparent;
+            this.cbsection.BorderRadius = 8;
+            this.cbsection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbsection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbsection.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbsection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbsection.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbsection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbsection.ItemHeight = 30;
+            this.cbsection.Items.AddRange(new object[] {
+            "Section 1",
+            "Section 2",
+            "Section 3"});
+            this.cbsection.Location = new System.Drawing.Point(520, 95);
+            this.cbsection.Name = "cbsection";
+            this.cbsection.Size = new System.Drawing.Size(236, 36);
+            this.cbsection.StartIndex = 0;
+            this.cbsection.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(421, 102);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 23);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Section";
             // 
             // FEEDStudentEnroll
             // 
@@ -671,5 +710,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbstrand;
         private System.Windows.Forms.Timer ResetTimer;
         private System.Windows.Forms.Timer Timertoproceed;
+        private System.Windows.Forms.Label label14;
+        private Guna.UI2.WinForms.Guna2ComboBox cbsection;
     }
 }

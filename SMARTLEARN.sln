@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMARTLEARN", "SMARTLEARN.csproj", "{9119355C-FB18-42D3-87F3-6A3DEF5A769A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLGame2", "..\Game Container\SLGame2\SLGame2.csproj", "{A59296D3-1EB2-4DE4-90EE-1D752F7F9DCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLGame2", "D:\joshu\Documents\Codess\Repos\Game Container\SLGame2\SLGame2.csproj", "{A59296D3-1EB2-4DE4-90EE-1D752F7F9DCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

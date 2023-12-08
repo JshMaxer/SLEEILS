@@ -89,8 +89,8 @@ namespace SMARTLEARN.FrontEnd
 
         private void FERegisterAdmin_Load(object sender, EventArgs e)
         {
-            Database.DBRegisterFaculty regad = new Database.DBRegisterFaculty();
-            regad.USERID(txtfirstid, txtuserid);
+            Random ran = new Random();
+            txtuserid.Text = ran.Next(100000, 999999).ToString();
         }
 
         private void txtmobilenum_KeyPress(object sender, KeyPressEventArgs e)

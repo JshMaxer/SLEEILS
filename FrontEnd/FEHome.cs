@@ -66,7 +66,7 @@ namespace SMARTLEARN.FrontEnd
         private void FEHome_Load(object sender, EventArgs e)
         {
             Database.DBCheckOnline check = new Database.DBCheckOnline();
-            check.check();
+            check.check(btnshowlog);
         }
 
         private void showlogtimer_Tick(object sender, EventArgs e)

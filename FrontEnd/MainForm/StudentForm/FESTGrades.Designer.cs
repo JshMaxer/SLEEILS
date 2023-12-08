@@ -67,7 +67,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 65);
+            this.label7.Location = new System.Drawing.Point(14, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 25);
             this.label7.TabIndex = 39;
@@ -86,7 +86,7 @@
             this.cbsemester.Items.AddRange(new object[] {
             "1st Sem",
             "2nd Sem"});
-            this.cbsemester.Location = new System.Drawing.Point(19, 93);
+            this.cbsemester.Location = new System.Drawing.Point(19, 98);
             this.cbsemester.Name = "cbsemester";
             this.cbsemester.Size = new System.Drawing.Size(189, 36);
             this.cbsemester.TabIndex = 40;
@@ -144,6 +144,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVStudentlist.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DGVStudentlist.RowHeadersVisible = false;
             this.DGVStudentlist.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

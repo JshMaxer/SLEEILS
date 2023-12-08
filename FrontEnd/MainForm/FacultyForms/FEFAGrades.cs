@@ -53,28 +53,28 @@ namespace SMARTLEARN.FrontEnd.AdminForms
 
         private void btnprogramming_Click(object sender, EventArgs e)
         {
-            Database.DBGrading.sub = "Programming for Beginners";
+            Database.DBFAGrading.sub = "Programming for Beginners";
             FEFAGrading grading = new FEFAGrading();
             grading.ShowDialog();
         }
 
         private void btnwebdevelopment_Click(object sender, EventArgs e)
         {
-            Database.DBGrading.sub = "Web Development Design";
+            Database.DBFAGrading.sub = "Web Development Design";
             FEFAGrading grading = new FEFAGrading();
             grading.ShowDialog();
         }
 
         private void btnitesssentials_Click(object sender, EventArgs e)
         {
-            Database.DBGrading.sub = "IT Essentials";
+            Database.DBFAGrading.sub = "IT Essentials";
             FEFAGrading grading = new FEFAGrading();
             grading.ShowDialog();
         }
 
         private void btncomputerharware_Click(object sender, EventArgs e)
         {
-            Database.DBGrading.sub = "Computer Hardware Servicing";
+            Database.DBFAGrading.sub = "Computer Hardware Servicing";
             FEFAGrading grading = new FEFAGrading();
             grading.ShowDialog();
         }

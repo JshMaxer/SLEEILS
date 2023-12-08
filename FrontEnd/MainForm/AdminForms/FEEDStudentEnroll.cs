@@ -14,8 +14,8 @@ namespace SMARTLEARN.FrontEnd
 
         private void FEStudentEnroll_Load(object sender, EventArgs e)
         {
-            Database.DBStudentEnroll ID = new Database.DBStudentEnroll();
-            ID.USERID(txtsecondid);
+            Random ran = new Random();
+            txtsecondid.Text = ran.Next(100000, 999999).ToString();
 
         }
 
@@ -33,7 +33,7 @@ namespace SMARTLEARN.FrontEnd
             if (Backend.BEStudentEnroll.confirm == true) //Check the flag in FEInformation if the confirm flag is true.
             {
                 Database.DBStudentEnroll regad = new Database.DBStudentEnroll();
-                regad.insertinfo(txtfirstid, txtsecondid, cbyearlevel, cbstrand, cbschoolyear, txtfname, txtmname, txtlname, cbgender, dtmdateofbirth, txtemail, txtmobilenum, txtpassword);
+                regad.insertinfo(txtfirstid, txtsecondid, cbyearlevel, cbstrand, cbschoolyear, txtfname, txtmname, txtlname, cbgender, dtmdateofbirth, txtemail, txtmobilenum, txtpassword, cbsection);
             }
             else
             {
@@ -51,6 +51,7 @@ namespace SMARTLEARN.FrontEnd
                 cbyearlevel.SelectedItem = null;
                 cbstrand.SelectedItem = null;
                 cbschoolyear.SelectedItem = null;
+                cbsection.SelectedIndex = 0;
                 txtpassword.Text = null;
 
                 txtfname.Text = null;
