@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using SMARTLEARN.Model;
 using System;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ namespace SMARTLEARN.Database
         public static string fname;
         public static string lname;
 
-        public void message(RichTextBox messagebox)
+        public void message(RichTextBox messagebox, Guna2MessageDialog messageDialog)
         {
             if (Accounts.role == "STUDENT")
             {
@@ -37,12 +38,12 @@ namespace SMARTLEARN.Database
                     string query = $"INSERT INTO forum VALUES ('{ID}', '{fname + " " + lname}', '{messagebox.Text}', NOW())";
                     MySqlCommand insertCommand = new MySqlCommand(query, connection);
                     insertCommand.ExecuteNonQuery();
-                    MessageBox.Show("Posted");
+                    messageDialog.Show("Posted");
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    messageDialog.Show(ex.Message);
                 }
                 finally
                 {
@@ -71,12 +72,12 @@ namespace SMARTLEARN.Database
                     string query = $"INSERT INTO forum VALUES ('{ID}', '{fname + " " + lname}', '{messagebox.Text}', NOW())";
                     MySqlCommand insertCommand = new MySqlCommand(query, connection);
                     insertCommand.ExecuteNonQuery();
-                    MessageBox.Show("Posted");
+                    messageDialog.Show("Posted");
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    messageDialog.Show(ex.Message);
                 }
 
                 finally
@@ -90,7 +91,7 @@ namespace SMARTLEARN.Database
                 connection.Open();
                 MySqlCommand insertCommand = new MySqlCommand(query, connection);
                 insertCommand.ExecuteNonQuery();
-                MessageBox.Show("Posted");
+                messageDialog.Show("Posted");
                 connection.Close();
             }
 

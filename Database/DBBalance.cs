@@ -13,7 +13,7 @@ namespace SMARTLEARN.Database
 
         public static string StudentID;
 
-        public void loaddgv(Guna2DataGridView Studentlist)
+        public void loaddgv(Guna2DataGridView Studentlist, Guna2MessageDialog messageDialog)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace SMARTLEARN.Database
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                messageDialog.Show("Error: " + ex.Message);
             }
         }
 
@@ -49,7 +49,7 @@ namespace SMARTLEARN.Database
             }
         }
 
-        public void save(Guna2TextBox firstsem, Guna2TextBox secondsem)
+        public void save(Guna2TextBox firstsem, Guna2TextBox secondsem, Guna2MessageDialog messageDialog)
         {
             try
             {
@@ -73,14 +73,14 @@ namespace SMARTLEARN.Database
                 }
                 else
                 {
-                    MessageBox.Show("No rows affected. Update failed.");
+                    messageDialog.Show("No rows affected. Update failed.");
                 }
 
                 connection.Close();
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                messageDialog.Show("Error: " + ex.Message);
             }
         }
 

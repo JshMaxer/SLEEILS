@@ -16,7 +16,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void forgot(Guna2TextBox ID, ErrorProvider error)
+        public void forgot(Guna2TextBox ID, ErrorProvider error, Guna2MessageDialog messageDialog)
         {
             string searchID = $"SELECT userID, first_name, last_name FROM facultyaccount WHERE userid = '{ID.Text}'";
             connection.Open();
@@ -54,7 +54,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("REQUEST ALREADY BEEN SUBMITTED!\nAfter ADMIN Confirmed your submission, your password will set as default (1234).", "WAIT FOR ADMIN TO RESET YOUR PASSWORD", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    messageDialog.Show("REQUEST ALREADY BEEN SUBMITTED!\nAfter ADMIN Confirmed your submission, your password will set as default (1234).", "WAIT FOR ADMIN TO RESET YOUR PASSWORD");
                 }
             }
             else

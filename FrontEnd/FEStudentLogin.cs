@@ -59,7 +59,7 @@ namespace SMARTLEARN.FrontEnd
         private void btnlogin_Click(object sender, EventArgs e)
         {
             Database.DBLoginStudent Logstudent = new Database.DBLoginStudent();
-            Logstudent.logstu(txtstudentid, txtpassword, errorProvider1);
+            Logstudent.logstu(txtstudentid, txtpassword, errorProvider1, MessageDialog1);
         }
 
         private void timertoclose_Tick(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace SMARTLEARN.FrontEnd
             {
                 // Login
                 Database.DBLoginStudent Logstudent = new Database.DBLoginStudent();
-                Logstudent.logstu(txtstudentid, txtpassword, errorProvider1);
+                Logstudent.logstu(txtstudentid, txtpassword, errorProvider1, MessageDialog1);
 
                 // Optionally, prevent further handling of the Enter key
                 e.Handled = true;

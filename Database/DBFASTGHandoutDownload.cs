@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using SMARTLEARN.Model;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void downloadSelectedHandout(System.Windows.Forms.ListBox listboxhandout)
+        public void downloadSelectedHandout(System.Windows.Forms.ListBox listboxhandout, Guna2MessageDialog messageDialog)
         {
             if (listboxhandout.SelectedItem != null)
             {
@@ -46,18 +47,18 @@ namespace SMARTLEARN.Database
 
                                 // Save the file to the specified location
                                 File.WriteAllBytes(filePath, fileData);
-                                MessageBox.Show("File downloaded successfully!");
+                                messageDialog.Show("File downloaded successfully!");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("File not found!");
+                            messageDialog.Show("File not found!");
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -66,7 +67,7 @@ namespace SMARTLEARN.Database
             }
             else
             {
-                MessageBox.Show("Please select an item to download.");
+                messageDialog.Show("Please select an item to download.");
             }
         }
 

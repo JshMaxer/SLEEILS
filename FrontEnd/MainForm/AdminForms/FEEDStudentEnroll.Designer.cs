@@ -53,16 +53,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbgender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbyearlevel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbschoolyear = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbsection = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbstrand = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ResetTimer = new System.Windows.Forms.Timer(this.components);
             this.Timertoproceed = new System.Windows.Forms.Timer(this.components);
-            this.cbsection = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2GroupBox1.SuspendLayout();
             this.requiredfields.SuspendLayout();
             this.SuspendLayout();
@@ -506,6 +507,18 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "School Year";
             // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(421, 102);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 23);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Section";
+            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -588,6 +601,28 @@
             this.cbschoolyear.TabIndex = 2;
             this.cbschoolyear.DropDown += new System.EventHandler(this.cbschoolyear_DropDown);
             // 
+            // cbsection
+            // 
+            this.cbsection.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbsection.BackColor = System.Drawing.Color.Transparent;
+            this.cbsection.BorderRadius = 8;
+            this.cbsection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbsection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbsection.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbsection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbsection.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbsection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbsection.ItemHeight = 30;
+            this.cbsection.Items.AddRange(new object[] {
+            "Section 1",
+            "Section 2",
+            "Section 3"});
+            this.cbsection.Location = new System.Drawing.Point(520, 95);
+            this.cbsection.Name = "cbsection";
+            this.cbsection.Size = new System.Drawing.Size(236, 36);
+            this.cbsection.StartIndex = 0;
+            this.cbsection.TabIndex = 2;
+            // 
             // cbstrand
             // 
             this.cbstrand.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -618,39 +653,14 @@
             this.Timertoproceed.Enabled = true;
             this.Timertoproceed.Tick += new System.EventHandler(this.Timertoproceed_Tick);
             // 
-            // cbsection
+            // MessageDialog1
             // 
-            this.cbsection.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbsection.BackColor = System.Drawing.Color.Transparent;
-            this.cbsection.BorderRadius = 8;
-            this.cbsection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbsection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbsection.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbsection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbsection.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbsection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbsection.ItemHeight = 30;
-            this.cbsection.Items.AddRange(new object[] {
-            "Section 1",
-            "Section 2",
-            "Section 3"});
-            this.cbsection.Location = new System.Drawing.Point(520, 95);
-            this.cbsection.Name = "cbsection";
-            this.cbsection.Size = new System.Drawing.Size(236, 36);
-            this.cbsection.StartIndex = 0;
-            this.cbsection.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(421, 102);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 23);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Section";
+            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.MessageDialog1.Caption = "Smart Learn";
+            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.MessageDialog1.Parent = this;
+            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.MessageDialog1.Text = null;
             // 
             // FEEDStudentEnroll
             // 
@@ -712,5 +722,6 @@
         private System.Windows.Forms.Timer Timertoproceed;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2ComboBox cbsection;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

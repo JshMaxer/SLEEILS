@@ -42,7 +42,7 @@ namespace SMARTLEARN.FrontEnd
             }
             catch (Exception)
             {
-                MessageBox.Show("Please wait while the window is opening!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                guna2MessageDialog1.Show("Please wait while the window is opening!");
             }
             finally
             {

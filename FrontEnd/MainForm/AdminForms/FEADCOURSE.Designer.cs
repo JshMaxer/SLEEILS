@@ -306,6 +306,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FEADCOURSE";
             this.Text = "FEADCOURSE";
+            this.Load += new System.EventHandler(this.FEADCOURSE_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.handpanel.ResumeLayout(false);
             this.ResumeLayout(false);

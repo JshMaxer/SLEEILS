@@ -12,7 +12,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void logstu(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
+        public void logstu(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err, Guna2MessageDialog messageDialog)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace SMARTLEARN.Database
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                messageDialog.Show("Error: " + ex.Message);
             }
             finally
             {

@@ -2,11 +2,6 @@
 using MySql.Data.MySqlClient;
 using SMARTLEARN.FrontEnd;
 using SMARTLEARN.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SMARTLEARN.Database
@@ -24,14 +19,17 @@ namespace SMARTLEARN.Database
                     connection.Open();
 
                     // Check if the current password matches
-                    string logad = $"SELECT password FROM studentaccount WHERE id = '{Accounts.UserID}' AND password = '{current.Text}'";
+                    string logad = $"SELECT password FROM studentaccount_section1 WHERE id = '{Accounts.UserID}' AND password = '{current.Text}' UNION ALL SELECT password FROM studentaccount_section2 WHERE id = '{Accounts.UserID}' AND password = '{current.Text}' UNION ALL SELECT password FROM studentaccount_section3 WHERE id = '{Accounts.UserID}' AND password = '{current.Text}'";
                     MySqlCommand cmd = new MySqlCommand(logad, connection);
                     object result = cmd.ExecuteScalar();
 
                     if (result != null)  // Current password matches
                     {
                         // Update the password
-                        string changepass = $"UPDATE studentaccount SET password = '{confirmpass.Text}' WHERE id = '{Accounts.UserID}'";
+                        string changepass = $"UPDATE studentaccount_section1 SET password = '1234' WHERE ID = {confirmpass.Text};" +
+                                            $"UPDATE studentaccount_section2 SET password = '1234' WHERE ID = {confirmpass.Text};" +
+                                            $"UPDATE studentaccount_section3 SET password = '1234' WHERE ID = {confirmpass.Text};";
+
                         MySqlCommand cmd1 = new MySqlCommand(changepass, connection);
                         cmd1.ExecuteNonQuery();
 
@@ -56,7 +54,7 @@ namespace SMARTLEARN.Database
                     error.SetError(confirmpass, "Passwords do not match.");
                 }
             }
-            else if(Accounts.role == "FACULTY")
+            else if (Accounts.role == "FACULTY")
             {
                 if (newpass.Text == confirmpass.Text)
                 {

@@ -100,7 +100,7 @@ namespace SMARTLEARN.Database
 
 
         //Insert Query
-        public void insertinfo(Guna2TextBox firstid, Guna2TextBox secondid, Guna2ComboBox yearlevel, Guna2ComboBox strand, Guna2ComboBox schoolyear, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox gender, Guna2DateTimePicker birth, Guna2TextBox email, Guna2TextBox mobile, Guna2TextBox password, Guna2ComboBox section)
+        public void insertinfo(Guna2TextBox firstid, Guna2TextBox secondid, Guna2ComboBox yearlevel, Guna2ComboBox strand, Guna2ComboBox schoolyear, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox gender, Guna2DateTimePicker birth, Guna2TextBox email, Guna2TextBox mobile, Guna2TextBox password, Guna2ComboBox section, Guna2MessageDialog messageDialog)
         {
             connection.Close();
             connection.Open(); // Open the connection
@@ -132,7 +132,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    messageDialog.Show(ex.Message);
                 }
             }
             else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 1)
@@ -162,7 +162,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    messageDialog.Show(ex.Message);
                 }
             }
             else if (strand.SelectedItem.Equals("Information Communication Technology (ICT)") && section.SelectedIndex == 2)
@@ -192,7 +192,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    messageDialog.Show(ex.Message);
                 }
             }
             connection.Close(); // Close the connection

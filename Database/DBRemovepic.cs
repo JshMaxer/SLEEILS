@@ -11,7 +11,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void removepic(Guna2ComboBox  dropdownID)
+        public void removepic(Guna2ComboBox  dropdownID, Guna2MessageDialog messageDialog)
         {
             if (dropdownID.SelectedItem != null)
             {
@@ -23,15 +23,15 @@ namespace SMARTLEARN.Database
                     connection.Open();
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Image deleted successfully!");
+                    messageDialog.Show("Image deleted successfully!");
 
                     dropdownID.Items.Clear();
                     connection.Close();
-                    showid(dropdownID);
+                    showid(dropdownID, messageDialog);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error deleting image: " + ex.Message);
+                    messageDialog.Show("Error deleting image: " + ex.Message);
                 }
                 finally
                 {
@@ -40,12 +40,12 @@ namespace SMARTLEARN.Database
             }
             else
             {
-                MessageBox.Show("Please select an image ID.");
+                messageDialog.Show("Please select an image ID.");
             }
             connection.Close();
         }
 
-        public void showid(Guna2ComboBox dropdownID)
+        public void showid(Guna2ComboBox dropdownID, Guna2MessageDialog messageDialog)
         {
             string IDPIC = "SELECT id from dashboard WHERE role = 'Dashboard'";
             try
@@ -69,7 +69,7 @@ namespace SMARTLEARN.Database
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error fetching IDs: " + ex.Message);
+                messageDialog.Show("Error fetching IDs: " + ex.Message);
             }
             finally
             {
@@ -78,7 +78,7 @@ namespace SMARTLEARN.Database
             connection.Close();
         }
 
-        public void showimageinid(Guna2ComboBox dropdownID, PictureBox showpicture)
+        public void showimageinid(Guna2ComboBox dropdownID, PictureBox showpicture, Guna2MessageDialog messageDialog)
         {
             try
             {
@@ -128,7 +128,7 @@ namespace SMARTLEARN.Database
             catch (Exception ex)
             {
                 // Handle exceptions
-                MessageBox.Show("Error: " + ex.Message);
+                messageDialog.Show("Error: " + ex.Message);
             }
             finally
             {

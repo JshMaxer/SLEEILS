@@ -26,7 +26,7 @@ namespace SMARTLEARN.FrontEnd.AdminForms
         private void FEADBalance_Load(object sender, EventArgs e)
         {
             
-            balance.loaddgv(DGVStudentlist);
+            balance.loaddgv(DGVStudentlist, MessageDialog1);
         }
 
         private void DGVStudentlist_SelectionChanged(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace SMARTLEARN.FrontEnd.AdminForms
         }
         private void btnsave_Click(object sender, EventArgs e)
         {
-            balance.save(txtfirstsemester, txtsecondsemester);
+            balance.save(txtfirstsemester, txtsecondsemester, MessageDialog1);
         }
 
         private void TimerDisable_Tick(object sender, EventArgs e)

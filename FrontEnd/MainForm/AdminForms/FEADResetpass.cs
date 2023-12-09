@@ -26,12 +26,12 @@ namespace SMARTLEARN.FrontEnd.MainForm.AdminForms
 
         private void FEADChangepass_Load(object sender, EventArgs e)
         {
-            chng.searchAccount(DGVlist);
+            chng.searchAccount(DGVlist, MessageDialog1);
         }
 
         private void btnshowlog_Click(object sender, EventArgs e)
         {
-            chng.updatePass(DGVlist, txtID, txtfname, txtlname);
+            chng.updatePass(DGVlist, txtID, txtfname, txtlname, MessageDialog1);
         }
 
         private void btncancel_Click(object sender, EventArgs e)

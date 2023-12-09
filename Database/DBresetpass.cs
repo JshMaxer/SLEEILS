@@ -2,15 +2,8 @@
 using MySql.Data.MySqlClient;
 using SMARTLEARN.FrontEnd;
 using SMARTLEARN.Model;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace SMARTLEARN.Database
 {
@@ -20,7 +13,7 @@ namespace SMARTLEARN.Database
 
         public static string role;
 
-        public void searchAccount(Guna2DataGridView list)
+        public void searchAccount(Guna2DataGridView list, Guna2MessageDialog messageDialog)
         {
             try
             {
@@ -35,7 +28,7 @@ namespace SMARTLEARN.Database
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                messageDialog.Show("Error: " + ex.Message);
             }
             connection.Close();
         }
@@ -59,7 +52,7 @@ namespace SMARTLEARN.Database
 
         }
 
-        public void updatePass(Guna2DataGridView list, Guna2TextBox ID, Guna2TextBox fname, Guna2TextBox lname)
+        public void updatePass(Guna2DataGridView list, Guna2TextBox ID, Guna2TextBox fname, Guna2TextBox lname, Guna2MessageDialog messageDialog)
         {
             if (role == "STUDENT")
             {
@@ -67,7 +60,10 @@ namespace SMARTLEARN.Database
                 {
                     connection.Open();
 
-                    string query = $"UPDATE studentaccount SET password = '1234' WHERE ID = '{ID.Text}'";
+                    string query = $"UPDATE studentaccount_section1 SET password = '1234' WHERE ID = {ID.Text};" +
+                                   $"UPDATE studentaccount_section2 SET password = '1234' WHERE ID = {ID.Text};" +
+                                   $"UPDATE studentaccount_section3 SET password = '1234' WHERE ID = {ID.Text};";
+
                     MySqlCommand command = new MySqlCommand(query, connection);
 
                     int rowsAffected = command.ExecuteNonQuery();
@@ -83,22 +79,22 @@ namespace SMARTLEARN.Database
                         lname.Text = null;
 
                         ProcessMessage.firstmessage = "Password reset successful!";
-                       //ProcessMessage.secondmessage = "\n\rThank you!";
+                        //ProcessMessage.secondmessage = "\n\rThank you!";
                         ProcessMessage pm = new ProcessMessage();
                         pm.Show();
 
                         connection.Close();
-                        searchAccount(list);
+                        searchAccount(list, messageDialog);
                     }
                     else
                     {
-                        MessageBox.Show("No rows affected. Update failed.");
+                        messageDialog.Show("No rows affected. Update failed.");
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 connection.Close();
             }
@@ -129,17 +125,17 @@ namespace SMARTLEARN.Database
                         pm.Show();
 
                         connection.Close();
-                        searchAccount(list);
+                        searchAccount(list, messageDialog);
                     }
                     else
                     {
-                        MessageBox.Show("No rows affected. Update failed.");
+                        messageDialog.Show("No rows affected. Update failed.");
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 connection.Close();
             }

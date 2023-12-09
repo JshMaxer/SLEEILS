@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using SMARTLEARN.Model;
 using System;
 using System.IO;
@@ -10,7 +11,7 @@ namespace SMARTLEARN.Database
     {
         private MySqlConnection connection = Host.connection;
 
-        public void ShowCustom(System.Windows.Forms.ListBox listBoxCustom)
+        public void ShowCustom(System.Windows.Forms.ListBox listBoxCustom, Guna2MessageDialog messageDialog)
         {
             listBoxCustom.Items.Clear(); // Clear previous items
 
@@ -39,7 +40,7 @@ namespace SMARTLEARN.Database
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                messageDialog.Show("Error: " + ex.Message);
             }
             finally
             {
@@ -47,7 +48,7 @@ namespace SMARTLEARN.Database
             }
         }
 
-        public void InsertCustom(System.Windows.Forms.ListBox listBoxCustom)
+        public void InsertCustom(System.Windows.Forms.ListBox listBoxCustom, Guna2MessageDialog messageDialog)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "PDF Files|*.pdf|Word Documents|*.doc;*.docx"; // Filter for PDF and DOC files
@@ -82,18 +83,18 @@ namespace SMARTLEARN.Database
 
                         if (cmd.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("File uploaded!");
+                            messageDialog.Show("File uploaded!");
                             connection.Close();
-                            ShowCustom(listBoxCustom);
+                            ShowCustom(listBoxCustom, messageDialog);
                         }
                         else
                         {
-                            MessageBox.Show("File upload failed!");
+                            messageDialog.Show("File upload failed!");
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error: " + ex.Message);
+                        messageDialog.Show("Error: " + ex.Message);
                     }
                     finally
                     {
@@ -102,12 +103,12 @@ namespace SMARTLEARN.Database
                 }
                 else
                 {
-                    MessageBox.Show("Please upload a PDF or DOC file.");
+                    messageDialog.Show("Please upload a PDF or DOC file.");
                 }
             }
         }
 
-        public void DeleteSelectedCustom(System.Windows.Forms.ListBox listBoxCustom)
+        public void DeleteSelectedCustom(System.Windows.Forms.ListBox listBoxCustom, Guna2MessageDialog messageDialog)
         {
             if (listBoxCustom.SelectedItem != null)
             {
@@ -124,17 +125,17 @@ namespace SMARTLEARN.Database
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("File deleted!");
-                        ShowCustom(listBoxCustom); // Refresh the ListBox after deletion
+                        messageDialog.Show("File deleted!");
+                        ShowCustom(listBoxCustom, messageDialog); // Refresh the ListBox after deletion
                     }
                     else
                     {
-                        MessageBox.Show("No file deleted!");
+                        messageDialog.Show("No file deleted!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -143,7 +144,7 @@ namespace SMARTLEARN.Database
             }
             else
             {
-                MessageBox.Show("Please select an item to delete.");
+                messageDialog.Show("Please select an item to delete.");
             }
         }
     }

@@ -20,7 +20,7 @@ namespace SMARTLEARN.FrontEnd
         private void FEForum_Load(object sender, EventArgs e)
         {
             Database.DBForum forum = new Database.DBForum();
-            forum.forum(DGVforum);
+            forum.forum(DGVforum, MessageDialog1);
         }
 
         private void btnmessage_Click(object sender, EventArgs e)

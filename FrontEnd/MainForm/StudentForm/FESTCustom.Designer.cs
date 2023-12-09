@@ -30,6 +30,7 @@
         {
             this.btndownload = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbcustom = new System.Windows.Forms.ListBox();
+            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.SuspendLayout();
             // 
             // btndownload
@@ -62,6 +63,15 @@
             this.lbcustom.Size = new System.Drawing.Size(564, 372);
             this.lbcustom.TabIndex = 42;
             // 
+            // MessageDialog1
+            // 
+            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.MessageDialog1.Caption = "Smart Learn";
+            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.MessageDialog1.Parent = this;
+            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.MessageDialog1.Text = null;
+            // 
             // FESTCustom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,5 +92,6 @@
 
         private Guna.UI2.WinForms.Guna2GradientButton btndownload;
         private System.Windows.Forms.ListBox lbcustom;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

@@ -49,6 +49,7 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnback = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.dragpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -285,6 +286,15 @@
             // 
             this.guna2ShadowForm1.TargetForm = this;
             // 
+            // MessageDialog1
+            // 
+            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.MessageDialog1.Caption = "Smart Learn";
+            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.MessageDialog1.Parent = this;
+            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.MessageDialog1.Text = null;
+            // 
             // FESTProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +352,6 @@
         private System.Windows.Forms.Timer timerclose;
         public Guna.UI2.WinForms.Guna2Button btnback;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

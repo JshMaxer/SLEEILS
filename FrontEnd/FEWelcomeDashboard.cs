@@ -40,7 +40,7 @@ namespace SMARTLEARN.FrontEnd
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageDialog1.Show("Error: " + ex.Message);
             }
 
             StartSlideshow(); // Start the slideshow after fetching images
@@ -98,7 +98,7 @@ namespace SMARTLEARN.FrontEnd
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageDialog1.Show("Error: " + ex.Message);
             }
             finally
             {
@@ -121,14 +121,14 @@ namespace SMARTLEARN.FrontEnd
 
                     // Insert the image bytes into the database
                     InsertImageIntoDatabase(imageBytes);
-                    MessageBox.Show("Image uploaded successfully!");
+                    MessageDialog1.Show("Image uploaded successfully!");
 
                     // Refresh imageDataTable after uploading a new image
                     FetchImages();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error uploading image: " + ex.Message);
+                    MessageDialog1.Show("Error uploading image: " + ex.Message);
                 }
             }
         }
@@ -175,14 +175,14 @@ namespace SMARTLEARN.FrontEnd
 
                     // Insert the image bytes into the database
                     InsertQuotesIntoDatabase(imageBytes);
-                    MessageBox.Show("Image uploaded successfully!");
+                    MessageDialog1.Show("Image uploaded successfully!");
 
                     // Display the inserted image in the PictureBox
                     picturequotes.Image = Image.FromStream(new MemoryStream(imageBytes));
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error uploading and displaying image: " + ex.Message);
+                    MessageDialog1.Show("Error uploading and displaying image: " + ex.Message);
                 }
             }
         }
@@ -224,19 +224,19 @@ namespace SMARTLEARN.FrontEnd
 
                     connection.Open();
                     deleteCmd.ExecuteNonQuery();
-                    MessageBox.Show("Image deleted from the database.");
+                    MessageDialog1.Show("Image deleted from the database.");
 
                     // Clear the image from the PictureBox
                     picturequotes.Image = null;
                 }
                 else
                 {
-                    MessageBox.Show("No image to remove.");
+                    MessageDialog1.Show("No image to remove.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error removing image: " + ex.Message);
+                MessageDialog1.Show("Error removing image: " + ex.Message);
             }
             finally
             {

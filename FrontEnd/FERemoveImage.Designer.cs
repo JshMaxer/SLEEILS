@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnremove = new Guna.UI2.WinForms.Guna2Button();
             this.cbcancel = new Guna.UI2.WinForms.Guna2Button();
+            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureboxremove)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +86,7 @@
             this.btnremove.Animated = true;
             this.btnremove.AutoRoundedCorners = true;
             this.btnremove.BackColor = System.Drawing.Color.Transparent;
-            this.btnremove.BorderRadius = 16;
+            this.btnremove.BorderRadius = 26;
             this.btnremove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnremove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnremove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -127,6 +128,15 @@
             this.cbcancel.Text = "Cancel";
             this.cbcancel.Click += new System.EventHandler(this.cbcancel_Click);
             // 
+            // MessageDialog1
+            // 
+            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.MessageDialog1.Caption = "Smart Learn";
+            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.MessageDialog1.Parent = this;
+            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.MessageDialog1.Text = null;
+            // 
             // FERemoveImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,5 +167,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbids;
         public Guna.UI2.WinForms.Guna2Button btnremove;
         public Guna.UI2.WinForms.Guna2Button cbcancel;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

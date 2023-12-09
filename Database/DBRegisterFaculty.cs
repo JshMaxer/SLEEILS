@@ -19,7 +19,7 @@ namespace SMARTLEARN.Database
         }
 
         //Insert Query
-        public void insertinfo(Guna2TextBox firstid, Guna2TextBox userid, Guna2ComboBox gender, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox department, Guna2DateTimePicker birthdate, Guna2TextBox mobile, Guna2TextBox email, Guna2TextBox password)
+        public void insertinfo(Guna2TextBox firstid, Guna2TextBox userid, Guna2ComboBox gender, Guna2TextBox fname, Guna2TextBox mname, Guna2TextBox lname, Guna2ComboBox department, Guna2DateTimePicker birthdate, Guna2TextBox mobile, Guna2TextBox email, Guna2TextBox password, Guna2MessageDialog messageDialog)
         {
             string InsertQuery = $"INSERT INTO facultyaccount VALUES ('{firstid.Text + userid.Text}', '{gender.Text}', '{fname.Text}', '{mname.Text}', '{lname.Text}', '{department.Text}', '{birthdate.Value.ToString("yyyy-MM-dd")}', '{mobile.Text}', '{email.Text}', '{password.Text}')";
             connection.Open();
@@ -44,7 +44,7 @@ namespace SMARTLEARN.Database
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                messageDialog.Show(ex.Message);
             }
             connection.Close();
         }

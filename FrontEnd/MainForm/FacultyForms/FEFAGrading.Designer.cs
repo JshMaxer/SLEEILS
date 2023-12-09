@@ -52,6 +52,7 @@
             this.btncancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnsave = new Guna.UI2.WinForms.Guna2Button();
             this.DGVStudentlist = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.dragpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudentlist)).BeginInit();
             this.SuspendLayout();
@@ -394,6 +395,15 @@
             this.DGVStudentlist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DGVStudentlist.SelectionChanged += new System.EventHandler(this.DGVStudentlist_SelectionChanged);
             // 
+            // MessageDialog1
+            // 
+            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.MessageDialog1.Caption = "Smart Learn";
+            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.MessageDialog1.Parent = this;
+            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.MessageDialog1.Text = null;
+            // 
             // FEFAGrading
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -449,5 +459,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2DataGridView DGVStudentlist;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

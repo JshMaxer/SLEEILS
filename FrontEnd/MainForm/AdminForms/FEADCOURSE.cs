@@ -124,5 +124,17 @@ namespace SMARTLEARN.FrontEnd.AdminForms
                 game.ShowDialog();
             }
         }
+
+        private void FEADCOURSE_Load(object sender, EventArgs e)
+        {
+            if (Accounts.role == "ADMIN")
+            {
+                btngames.Visible = false;
+            }
+            else
+            {
+                btngames.Visible = true;
+            }
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
         private void cbsemester_SelectedIndexChanged(object sender, EventArgs e)
         {
             Database.DBStudentGrade grade = new Database.DBStudentGrade();
-            grade.Display(DGVStudentlist, cbsemester);
+            grade.Display(DGVStudentlist, cbsemester, MessageDialog1);
         }
     }
 }

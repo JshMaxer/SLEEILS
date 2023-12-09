@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Guna.UI2.WinForms;
+using MySql.Data.MySqlClient;
 using SMARTLEARN.Model;
 using System;
 using System.IO;
@@ -38,7 +39,7 @@ namespace SMARTLEARN.Database
             connection.Close();
         }
 
-        public void inserthandout(System.Windows.Forms.ListBox listboxhandout)
+        public void inserthandout(System.Windows.Forms.ListBox listboxhandout, Guna2MessageDialog messageDialog)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "PDF Files|*.pdf|Word Documents|*.doc;*.docx"; // Filter for PDF and DOC files
@@ -71,18 +72,18 @@ namespace SMARTLEARN.Database
                     {
                         if (cmd.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("File uploaded!");
+                            messageDialog.Show("File uploaded!");
                             connection.Close();
                             showhandout(listboxhandout);
                         }
                         else
                         {
-                            MessageBox.Show("File upload failed!");
+                            messageDialog.Show("File upload failed!");
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error: " + ex.Message);
+                        messageDialog.Show("Error: " + ex.Message);
                     }
                     finally
                     {
@@ -91,7 +92,7 @@ namespace SMARTLEARN.Database
                 }
                 else
                 {
-                    MessageBox.Show("Please upload a PDF or DOC file.");
+                    messageDialog.Show("Please upload a PDF or DOC file.");
                 }
             }
         }

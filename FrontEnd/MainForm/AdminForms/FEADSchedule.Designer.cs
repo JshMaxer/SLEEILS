@@ -104,14 +104,15 @@
             this.chsfriday2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox70 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnsubmit = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtfname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtlname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -128,7 +129,6 @@
             this.label1.Size = new System.Drawing.Size(112, 29);
             this.label1.TabIndex = 25;
             this.label1.Text = "Schedule";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Separator1
             // 
@@ -508,6 +508,7 @@
             this.guna2TextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox7.Location = new System.Drawing.Point(335, 171);
+            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox7.MaxLength = 2;
             this.guna2TextBox7.Name = "guna2TextBox7";
             this.guna2TextBox7.PasswordChar = '\0';
@@ -610,6 +611,7 @@
             this.guna2TextBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox11.Location = new System.Drawing.Point(335, 276);
+            this.guna2TextBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox11.MaxLength = 2;
             this.guna2TextBox11.Name = "guna2TextBox11";
             this.guna2TextBox11.PasswordChar = '\0';
@@ -686,6 +688,7 @@
             this.guna2TextBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox14.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox14.Location = new System.Drawing.Point(335, 376);
+            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox14.MaxLength = 2;
             this.guna2TextBox14.Name = "guna2TextBox14";
             this.guna2TextBox14.PasswordChar = '\0';
@@ -762,6 +765,7 @@
             this.guna2TextBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox21.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox21.Location = new System.Drawing.Point(335, 470);
+            this.guna2TextBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox21.MaxLength = 2;
             this.guna2TextBox21.Name = "guna2TextBox21";
             this.guna2TextBox21.PasswordChar = '\0';
@@ -864,6 +868,7 @@
             this.guna2TextBox26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox26.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox26.Location = new System.Drawing.Point(465, 171);
+            this.guna2TextBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox26.MaxLength = 2;
             this.guna2TextBox26.Name = "guna2TextBox26";
             this.guna2TextBox26.PasswordChar = '\0';
@@ -966,6 +971,7 @@
             this.guna2TextBox30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox30.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox30.Location = new System.Drawing.Point(465, 276);
+            this.guna2TextBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox30.MaxLength = 2;
             this.guna2TextBox30.Name = "guna2TextBox30";
             this.guna2TextBox30.PasswordChar = '\0';
@@ -1016,6 +1022,7 @@
             this.guna2TextBox32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox32.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox32.Location = new System.Drawing.Point(465, 376);
+            this.guna2TextBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox32.MaxLength = 2;
             this.guna2TextBox32.Name = "guna2TextBox32";
             this.guna2TextBox32.PasswordChar = '\0';
@@ -1066,6 +1073,7 @@
             this.guna2TextBox34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox34.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox34.Location = new System.Drawing.Point(465, 470);
+            this.guna2TextBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox34.MaxLength = 2;
             this.guna2TextBox34.Name = "guna2TextBox34";
             this.guna2TextBox34.PasswordChar = '\0';
@@ -1168,6 +1176,7 @@
             this.guna2TextBox38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox38.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox38.Location = new System.Drawing.Point(594, 171);
+            this.guna2TextBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox38.MaxLength = 2;
             this.guna2TextBox38.Name = "guna2TextBox38";
             this.guna2TextBox38.PasswordChar = '\0';
@@ -1270,6 +1279,7 @@
             this.guna2TextBox42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox42.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox42.Location = new System.Drawing.Point(594, 276);
+            this.guna2TextBox42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox42.MaxLength = 2;
             this.guna2TextBox42.Name = "guna2TextBox42";
             this.guna2TextBox42.PasswordChar = '\0';
@@ -1320,6 +1330,7 @@
             this.guna2TextBox44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox44.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox44.Location = new System.Drawing.Point(594, 376);
+            this.guna2TextBox44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox44.MaxLength = 2;
             this.guna2TextBox44.Name = "guna2TextBox44";
             this.guna2TextBox44.PasswordChar = '\0';
@@ -1370,6 +1381,7 @@
             this.guna2TextBox46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox46.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox46.Location = new System.Drawing.Point(594, 470);
+            this.guna2TextBox46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox46.MaxLength = 2;
             this.guna2TextBox46.Name = "guna2TextBox46";
             this.guna2TextBox46.PasswordChar = '\0';
@@ -1472,6 +1484,7 @@
             this.guna2TextBox50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox50.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox50.Location = new System.Drawing.Point(722, 171);
+            this.guna2TextBox50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox50.MaxLength = 2;
             this.guna2TextBox50.Name = "guna2TextBox50";
             this.guna2TextBox50.PasswordChar = '\0';
@@ -1574,6 +1587,7 @@
             this.guna2TextBox54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox54.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox54.Location = new System.Drawing.Point(722, 276);
+            this.guna2TextBox54.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox54.MaxLength = 2;
             this.guna2TextBox54.Name = "guna2TextBox54";
             this.guna2TextBox54.PasswordChar = '\0';
@@ -1624,6 +1638,7 @@
             this.guna2TextBox56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox56.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox56.Location = new System.Drawing.Point(722, 376);
+            this.guna2TextBox56.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox56.MaxLength = 2;
             this.guna2TextBox56.Name = "guna2TextBox56";
             this.guna2TextBox56.PasswordChar = '\0';
@@ -1674,6 +1689,7 @@
             this.guna2TextBox58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox58.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox58.Location = new System.Drawing.Point(722, 470);
+            this.guna2TextBox58.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox58.MaxLength = 2;
             this.guna2TextBox58.Name = "guna2TextBox58";
             this.guna2TextBox58.PasswordChar = '\0';
@@ -1776,6 +1792,7 @@
             this.guna2TextBox62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox62.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox62.Location = new System.Drawing.Point(847, 171);
+            this.guna2TextBox62.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox62.MaxLength = 2;
             this.guna2TextBox62.Name = "guna2TextBox62";
             this.guna2TextBox62.PasswordChar = '\0';
@@ -1878,6 +1895,7 @@
             this.guna2TextBox66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox66.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox66.Location = new System.Drawing.Point(847, 276);
+            this.guna2TextBox66.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox66.MaxLength = 2;
             this.guna2TextBox66.Name = "guna2TextBox66";
             this.guna2TextBox66.PasswordChar = '\0';
@@ -1928,6 +1946,7 @@
             this.guna2TextBox68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox68.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox68.Location = new System.Drawing.Point(847, 376);
+            this.guna2TextBox68.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox68.MaxLength = 2;
             this.guna2TextBox68.Name = "guna2TextBox68";
             this.guna2TextBox68.PasswordChar = '\0';
@@ -1978,6 +1997,7 @@
             this.guna2TextBox70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox70.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox70.Location = new System.Drawing.Point(847, 470);
+            this.guna2TextBox70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox70.MaxLength = 2;
             this.guna2TextBox70.Name = "guna2TextBox70";
             this.guna2TextBox70.PasswordChar = '\0';
@@ -2002,15 +2022,15 @@
             this.guna2Panel2.Size = new System.Drawing.Size(260, 51);
             this.guna2Panel2.TabIndex = 28;
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MIN = 7";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(182, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 19);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "N/A = -";
             // 
             // label3
             // 
@@ -2021,6 +2041,16 @@
             this.label3.Size = new System.Drawing.Size(64, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "MAX = 4";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "MIN = 7";
             // 
             // guna2Panel3
             // 
@@ -2067,16 +2097,6 @@
             this.btnsubmit.TabIndex = 30;
             this.btnsubmit.Text = "Submit";
             this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(182, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "N/A = -";
             // 
             // txtfname
             // 
@@ -2131,6 +2151,15 @@
             this.txtlname.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtlname.TabIndex = 29;
             this.txtlname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MessageDialog1
+            // 
+            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.MessageDialog1.Caption = "Smart Learn";
+            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.MessageDialog1.Parent = this;
+            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.MessageDialog1.Text = null;
             // 
             // FEADSchedule
             // 
@@ -2314,5 +2343,6 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtfname;
         private Guna.UI2.WinForms.Guna2TextBox txtlname;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

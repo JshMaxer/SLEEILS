@@ -20,7 +20,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnpost_Click(object sender, EventArgs e)
         {
-            forummess.message(richTextBox1);
+            forummess.message(richTextBox1, MessageDialog1);
         }
 
         private void btnclose_Click(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace SMARTLEARN.FrontEnd
             if (Backend.BEAdregister.confirm == true) //Check the flag in FEInformation if the confirm flag is true.
             {
                 Database.DBRegisterFaculty regad = new Database.DBRegisterFaculty();
-                regad.insertinfo(txtfirstid, txtuserid, cbgender, txtfname, txtmname, txtlname, cbdepartment, dateofbirth, txtmobilenum, txtemail, txtpassword);
+                regad.insertinfo(txtfirstid, txtuserid, cbgender, txtfname, txtmname, txtlname, cbdepartment, dateofbirth, txtmobilenum, txtemail, txtpassword, MessageDialog1);
             }
             else
             {

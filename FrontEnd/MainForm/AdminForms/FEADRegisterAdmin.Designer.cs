@@ -58,6 +58,7 @@
             this.timertoreset = new System.Windows.Forms.Timer(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.requiredfields.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -551,6 +552,15 @@
             this.guna2Separator1.Size = new System.Drawing.Size(940, 10);
             this.guna2Separator1.TabIndex = 24;
             // 
+            // MessageDialog1
+            // 
+            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.MessageDialog1.Caption = "Smart Learn";
+            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.MessageDialog1.Parent = this;
+            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.MessageDialog1.Text = null;
+            // 
             // FEADRegisterAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,5 +617,6 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2TextBox txtfirstid;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

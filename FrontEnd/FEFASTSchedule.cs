@@ -23,7 +23,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
             txtname.Text = Accounts.user;
 
             Database.DBSTSchedule dBSTSchedule = new Database.DBSTSchedule();
-            dBSTSchedule.showsched(DGVschedule);
+            dBSTSchedule.showsched(DGVschedule, MessageDialog1);
         }
     }
 }

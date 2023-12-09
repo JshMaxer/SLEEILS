@@ -33,7 +33,7 @@ namespace SMARTLEARN.FrontEnd
             if (Backend.BEStudentEnroll.confirm == true) //Check the flag in FEInformation if the confirm flag is true.
             {
                 Database.DBStudentEnroll regad = new Database.DBStudentEnroll();
-                regad.insertinfo(txtfirstid, txtsecondid, cbyearlevel, cbstrand, cbschoolyear, txtfname, txtmname, txtlname, cbgender, dtmdateofbirth, txtemail, txtmobilenum, txtpassword, cbsection);
+                regad.insertinfo(txtfirstid, txtsecondid, cbyearlevel, cbstrand, cbschoolyear, txtfname, txtmname, txtlname, cbgender, dtmdateofbirth, txtemail, txtmobilenum, txtpassword, cbsection, MessageDialog1);
             }
             else
             {

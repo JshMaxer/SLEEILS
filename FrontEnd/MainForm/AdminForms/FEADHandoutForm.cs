@@ -13,7 +13,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.AdminForms
 
         private void btnuploadhandout_Click(object sender, EventArgs e)
         {
-            handouts.inserthandout(lbhandouts);
+            handouts.inserthandout(lbhandouts, MessageDialog1);
         }
 
         private void FEADHandoutForm_Load(object sender, EventArgs e)

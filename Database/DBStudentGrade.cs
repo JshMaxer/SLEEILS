@@ -16,7 +16,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void Display(Guna2DataGridView dgvstudent, Guna2ComboBox semester)
+        public void Display(Guna2DataGridView dgvstudent, Guna2ComboBox semester, Guna2MessageDialog messageDialog)
         {
             if(semester.SelectedItem == null)
             {
@@ -51,7 +51,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -87,7 +87,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -123,7 +123,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -160,7 +160,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -196,7 +196,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -232,7 +232,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    messageDialog.Show("Error: " + ex.Message);
                 }
                 finally
                 {
