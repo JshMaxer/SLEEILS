@@ -31,7 +31,7 @@ namespace SMARTLEARN.FrontEnd
 
             showlog = false; //btnshowlog enable = false
 
-            logstu.ShowDialog();
+            logstu.Show();
         }
 
         private void btnexit_Click(object sender, EventArgs e)

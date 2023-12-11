@@ -54,7 +54,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (Exception)
                 {
-                    messageDialog.Show("REQUEST ALREADY BEEN SUBMITTED!\nAfter ADMIN Confirmed your submission, your password will set as default (1234).", "WAIT FOR ADMIN TO RESET YOUR PASSWORD");
+                    messageDialog.Show("Wait for the admin to reset your password.\nWhen the admin confirms your submission, your password will be set as \"1234\" by default.", "Request Submitted!");
                 }
             }
             else

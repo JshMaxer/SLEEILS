@@ -9,7 +9,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void searchbalance(System.Windows.Forms.Label username, System.Windows.Forms.Label rolse, System.Windows.Forms.Label email, System.Windows.Forms.Label mobile, Guna2TextBox firstbalance, Guna2TextBox secondbalance, Guna2MessageDialog message)
+        public void searchbalance(System.Windows.Forms.Label username, System.Windows.Forms.Label rolse, System.Windows.Forms.Label email, System.Windows.Forms.Label id, System.Windows.Forms.Label mobile, Guna2TextBox firstbalance, Guna2TextBox secondbalance, Guna2MessageDialog message)
         {
             string logadQuery = $"SELECT FirstSemBalance, SecondSemBalance FROM studentbalance WHERE ID = '{Model.Accounts.UserID}'";
 
@@ -25,7 +25,9 @@ namespace SMARTLEARN.Database
                     rolse.Text = Model.Accounts.role;
 
                     email.Text = Model.Accounts.email;
+                    id.Text = Model.Accounts.UserID;
                     mobile.Text = Model.Accounts.mobile;
+
 
                     firstbalance.Text = row["FirstSemBalance"].ToString();
                     secondbalance.Text = row["SecondSemBalance"].ToString();

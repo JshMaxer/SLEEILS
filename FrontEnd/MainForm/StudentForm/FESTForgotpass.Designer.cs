@@ -38,6 +38,7 @@
             this.txtstudentid = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,6 +159,10 @@
             this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.MessageDialog1.Text = null;
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // FESTForgotpass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,5 +195,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtstudentid;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

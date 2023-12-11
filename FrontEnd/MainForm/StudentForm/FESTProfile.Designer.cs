@@ -44,12 +44,12 @@
             this.txtsecondbalance = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblemail = new System.Windows.Forms.Label();
             this.lblmobile = new System.Windows.Forms.Label();
-            this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
             this.timerclose = new System.Windows.Forms.Timer(this.components);
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnback = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.lblstudentid = new System.Windows.Forms.Label();
             this.dragpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -221,24 +221,12 @@
             // lblmobile
             // 
             this.lblmobile.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmobile.Location = new System.Drawing.Point(250, 185);
+            this.lblmobile.Location = new System.Drawing.Point(250, 175);
             this.lblmobile.Name = "lblmobile";
             this.lblmobile.Size = new System.Drawing.Size(845, 19);
             this.lblmobile.TabIndex = 29;
             this.lblmobile.Text = "Mobile Number";
             this.lblmobile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panelsmall
-            // 
-            this.panelsmall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelsmall.AutoSize = true;
-            this.panelsmall.BorderRadius = 25;
-            this.panelsmall.BorderThickness = 1;
-            this.panelsmall.Location = new System.Drawing.Point(903, 63);
-            this.panelsmall.Name = "panelsmall";
-            this.panelsmall.Size = new System.Drawing.Size(202, 125);
-            this.panelsmall.TabIndex = 33;
-            this.panelsmall.Visible = false;
             // 
             // timerclose
             // 
@@ -295,6 +283,16 @@
             this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.MessageDialog1.Text = null;
             // 
+            // lblstudentid
+            // 
+            this.lblstudentid.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstudentid.Location = new System.Drawing.Point(250, 137);
+            this.lblstudentid.Name = "lblstudentid";
+            this.lblstudentid.Size = new System.Drawing.Size(845, 19);
+            this.lblstudentid.TabIndex = 29;
+            this.lblstudentid.Text = "ID";
+            this.lblstudentid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FESTProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,13 +300,13 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1107, 730);
             this.Controls.Add(this.btnback);
-            this.Controls.Add(this.panelsmall);
             this.Controls.Add(this.txtsecondbalance);
             this.Controls.Add(this.txtfirstbalance);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblmobile);
+            this.Controls.Add(this.lblstudentid);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblrole);
@@ -348,10 +346,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblmobile;
         private System.Windows.Forms.Label lblemail;
-        private Guna.UI2.WinForms.Guna2Panel panelsmall;
         private System.Windows.Forms.Timer timerclose;
         public Guna.UI2.WinForms.Guna2Button btnback;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
+        private System.Windows.Forms.Label lblstudentid;
     }
 }

@@ -41,6 +41,7 @@
             this.btnsubmit = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btncancel = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,6 +211,10 @@
             this.btncancel.Text = "Cancel";
             this.btncancel.Click += new System.EventHandler(this.Cancel);
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // FEChangepass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,5 +254,6 @@
         public Guna.UI2.WinForms.Guna2Button btnsubmit;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         public Guna.UI2.WinForms.Guna2Button btncancel;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

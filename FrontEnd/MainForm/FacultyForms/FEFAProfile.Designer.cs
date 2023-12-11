@@ -44,6 +44,7 @@
             this.lbldepartment = new System.Windows.Forms.Label();
             this.lbluserid = new System.Windows.Forms.Label();
             this.btnback = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.dragpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -212,6 +213,10 @@
             this.btnback.UseTransparentBackground = true;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // FEFAProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,5 +265,6 @@
         private System.Windows.Forms.Label lbldepartment;
         private System.Windows.Forms.Label lbluserid;
         public Guna.UI2.WinForms.Guna2Button btnback;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

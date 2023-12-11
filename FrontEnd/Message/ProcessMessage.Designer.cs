@@ -35,6 +35,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.loadingbar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.SuspendLayout();
             // 
             // RoundEdge
@@ -102,6 +103,10 @@
             this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // ProcessMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,5 +135,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         public Guna.UI2.WinForms.Guna2CircleProgressBar loadingbar;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

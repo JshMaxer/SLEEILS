@@ -387,6 +387,7 @@ namespace SMARTLEARN.FrontEnd
                 btnviewgrades.Visible = true;
                 btnschedule.Visible = true;
                 btnstudentgrades.Visible = false;
+                containerofsidebar.AutoScroll = false;
             }
             else if (Model.Accounts.role == "ADMIN")
             {
@@ -396,6 +397,7 @@ namespace SMARTLEARN.FrontEnd
                 btnviewgrades.Visible = false;
                 btnschedule.Visible = true;
                 btnstudentgrades.Visible = false;
+                containerofsidebar.AutoScroll = true;
             }
 
             if (Model.Accounts.role == "STUDENT")
@@ -406,6 +408,7 @@ namespace SMARTLEARN.FrontEnd
                 btnviewgrades.Visible = false;
                 btnschedule.Visible = true;
                 btnstudentgrades.Visible = true;
+                containerofsidebar.AutoScroll = false;
             }
 
             btnhome.Image = Properties.Resources.home1; //Active color
