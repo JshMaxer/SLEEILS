@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEADHandoutForm));
             this.lbhandouts = new System.Windows.Forms.ListBox();
             this.btnuploadhandout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -109,7 +110,9 @@
             this.Controls.Add(this.btnuploadhandout);
             this.Controls.Add(this.lbhandouts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FEADHandoutForm";
+            this.ShowInTaskbar = false;
             this.Text = "FEADHandoutForm";
             this.Load += new System.EventHandler(this.FEADHandoutForm_Load);
             this.ResumeLayout(false);

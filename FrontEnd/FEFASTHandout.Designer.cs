@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEFAHandout));
             this.lbhandouts = new System.Windows.Forms.ListBox();
             this.btndownload = new Guna.UI2.WinForms.Guna2GradientButton();
             this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
@@ -81,7 +82,9 @@
             this.Controls.Add(this.btndownload);
             this.Controls.Add(this.lbhandouts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FEFAHandout";
+            this.ShowInTaskbar = false;
             this.Text = "FEFAHandout";
             this.Load += new System.EventHandler(this.FEFAHandout_Load);
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAFACustomForm));
             this.btnuploadhandout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbcustom = new System.Windows.Forms.ListBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -109,7 +110,9 @@
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.lbcustom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FAFACustomForm";
+            this.ShowInTaskbar = false;
             this.Text = "FACustomForm";
             this.Load += new System.EventHandler(this.FACustomForm_Load);
             this.ResumeLayout(false);

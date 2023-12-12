@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FESTForgotpass));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btncancel = new Guna.UI2.WinForms.Guna2Button();
@@ -175,7 +176,9 @@
             this.Controls.Add(this.txtstudentid);
             this.Controls.Add(this.guna2Panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FESTForgotpass";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FESTForgotpass";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEADRegisterAdmin));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.requiredfields = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtfirstid = new Guna.UI2.WinForms.Guna2TextBox();
@@ -573,7 +574,9 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.requiredfields);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FEADRegisterAdmin";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FERegisterAdmin";
             this.Load += new System.EventHandler(this.FERegisterAdmin_Load);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FELoginAdminFaculty));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnclose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -260,7 +261,9 @@
             this.Controls.Add(this.btnloginadmin);
             this.Controls.Add(this.lblforgot);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FELoginAdminFaculty";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModerrnLogin1";
             this.Load += new System.EventHandler(this.Login_Load);

@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEForum));
             this.btnmessage = new Guna.UI2.WinForms.Guna2GradientButton();
             this.DGVforum = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
@@ -155,7 +156,9 @@
             this.Controls.Add(this.DGVforum);
             this.Controls.Add(this.btnmessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FEForum";
+            this.ShowInTaskbar = false;
             this.Text = "FEForum";
             this.Load += new System.EventHandler(this.FEForum_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVforum)).EndInit();

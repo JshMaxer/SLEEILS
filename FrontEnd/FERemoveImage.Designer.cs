@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FERemoveImage));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pictureboxremove = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cbids = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -154,7 +155,9 @@
             this.Controls.Add(this.cbids);
             this.Controls.Add(this.pictureboxremove);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FERemoveImage";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FERemoveImage";
             this.Load += new System.EventHandler(this.FERemoveImage_Load);

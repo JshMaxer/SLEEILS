@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEADResetpass));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.DGVlist = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtfname = new Guna.UI2.WinForms.Guna2TextBox();
@@ -273,7 +274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(622, 672);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnreset);
@@ -282,7 +283,9 @@
             this.Controls.Add(this.txtfname);
             this.Controls.Add(this.DGVlist);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FEADResetpass";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FEADChangepass";
             this.Load += new System.EventHandler(this.FEADChangepass_Load);

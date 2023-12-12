@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessDeclineMessage));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.loadingbar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -114,7 +115,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblmessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProcessDeclineMessage";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProcessDeclineMessage";
             this.Load += new System.EventHandler(this.ProcessDeclineMessage_Load);

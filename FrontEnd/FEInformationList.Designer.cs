@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEInformationList));
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnsubmit = new Guna.UI2.WinForms.Guna2Button();
@@ -148,7 +149,9 @@
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FEInformationList";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.InformationList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

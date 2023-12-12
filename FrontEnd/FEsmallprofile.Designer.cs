@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FEsmallprofile));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnprofile = new Guna.UI2.WinForms.Guna2Button();
             this.btnchangepass = new Guna.UI2.WinForms.Guna2Button();
@@ -125,7 +126,9 @@
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FEsmallprofile";
+            this.ShowInTaskbar = false;
             this.Text = "FECourse";
             this.Load += new System.EventHandler(this.FEsmallprofile_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
