@@ -47,6 +47,12 @@
             this.TimerDisable = new System.Windows.Forms.Timer(this.components);
             this.DGVStudentlist = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.txtfirstmisc = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtfirstpta = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtfirstother = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtsecondmisc = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtsecondpta = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtsecondother = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbprofile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudentlist)).BeginInit();
             this.SuspendLayout();
@@ -86,14 +92,16 @@
             this.txtfirstsemester.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtfirstsemester.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfirstsemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtfirstsemester.Location = new System.Drawing.Point(384, 135);
+            this.txtfirstsemester.Location = new System.Drawing.Point(299, 191);
             this.txtfirstsemester.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtfirstsemester.Name = "txtfirstsemester";
             this.txtfirstsemester.PasswordChar = '\0';
-            this.txtfirstsemester.PlaceholderText = "000000";
+            this.txtfirstsemester.PlaceholderText = "Total ";
+            this.txtfirstsemester.ReadOnly = true;
             this.txtfirstsemester.SelectedText = "";
             this.txtfirstsemester.Size = new System.Drawing.Size(252, 36);
             this.txtfirstsemester.TabIndex = 0;
+            this.txtfirstsemester.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtfirstsemester.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
             // 
             // txtsecondsemester
@@ -109,14 +117,16 @@
             this.txtsecondsemester.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsecondsemester.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsecondsemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtsecondsemester.Location = new System.Drawing.Point(685, 135);
+            this.txtsecondsemester.Location = new System.Drawing.Point(654, 191);
             this.txtsecondsemester.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtsecondsemester.Name = "txtsecondsemester";
             this.txtsecondsemester.PasswordChar = '\0';
-            this.txtsecondsemester.PlaceholderText = "000000";
+            this.txtsecondsemester.PlaceholderText = "Total";
+            this.txtsecondsemester.ReadOnly = true;
             this.txtsecondsemester.SelectedText = "";
             this.txtsecondsemester.Size = new System.Drawing.Size(252, 36);
             this.txtsecondsemester.TabIndex = 1;
+            this.txtsecondsemester.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtsecondsemester.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
             // 
             // label3
@@ -126,7 +136,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(424, 88);
+            this.label3.Location = new System.Drawing.Point(339, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 29);
             this.label3.TabIndex = 35;
@@ -139,7 +149,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(710, 88);
+            this.label4.Location = new System.Drawing.Point(679, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(203, 29);
             this.label4.TabIndex = 35;
@@ -176,10 +186,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pbprofile.Image = global::SMARTLEARN.Properties.Resources._8_uw3G6L5m0JdAlk9__1_;
             this.pbprofile.ImageRotate = 0F;
-            this.pbprofile.Location = new System.Drawing.Point(19, 67);
+            this.pbprofile.Location = new System.Drawing.Point(42, 67);
             this.pbprofile.Name = "pbprofile";
             this.pbprofile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbprofile.Size = new System.Drawing.Size(168, 157);
+            this.pbprofile.Size = new System.Drawing.Size(111, 104);
             this.pbprofile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbprofile.TabIndex = 37;
             this.pbprofile.TabStop = false;
@@ -190,13 +200,14 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lblname.AutoSize = true;
             this.lblname.BackColor = System.Drawing.Color.Transparent;
-            this.lblname.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ForeColor = System.Drawing.Color.DimGray;
-            this.lblname.Location = new System.Drawing.Point(193, 185);
+            this.lblname.Location = new System.Drawing.Point(41, 174);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(166, 29);
+            this.lblname.Size = new System.Drawing.Size(112, 19);
             this.lblname.TabIndex = 35;
             this.lblname.Text = "Student Name";
+            this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TimerDisable
             // 
@@ -211,7 +222,9 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(229)))), ((int)(((byte)(251)))));
             this.DGVStudentlist.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVStudentlist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGVStudentlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGVStudentlist.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGVStudentlist.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DGVStudentlist.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
@@ -261,7 +274,7 @@
             this.DGVStudentlist.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DGVStudentlist.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DGVStudentlist.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DGVStudentlist.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DGVStudentlist.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.DGVStudentlist.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(230)))), ((int)(((byte)(251)))));
             this.DGVStudentlist.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
             this.DGVStudentlist.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -288,6 +301,156 @@
             this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.MessageDialog1.Text = null;
             // 
+            // txtfirstmisc
+            // 
+            this.txtfirstmisc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtfirstmisc.Animated = true;
+            this.txtfirstmisc.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtfirstmisc.DefaultText = "";
+            this.txtfirstmisc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtfirstmisc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtfirstmisc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstmisc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstmisc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstmisc.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfirstmisc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstmisc.Location = new System.Drawing.Point(268, 100);
+            this.txtfirstmisc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfirstmisc.Name = "txtfirstmisc";
+            this.txtfirstmisc.PasswordChar = '\0';
+            this.txtfirstmisc.PlaceholderText = "Miscellaneous";
+            this.txtfirstmisc.SelectedText = "";
+            this.txtfirstmisc.Size = new System.Drawing.Size(134, 35);
+            this.txtfirstmisc.TabIndex = 0;
+            this.txtfirstmisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfirstmisc.TextChanged += new System.EventHandler(this.ComputeFirstSem);
+            this.txtfirstmisc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
+            // 
+            // txtfirstpta
+            // 
+            this.txtfirstpta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtfirstpta.Animated = true;
+            this.txtfirstpta.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtfirstpta.DefaultText = "";
+            this.txtfirstpta.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtfirstpta.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtfirstpta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstpta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstpta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstpta.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfirstpta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstpta.Location = new System.Drawing.Point(443, 100);
+            this.txtfirstpta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfirstpta.Name = "txtfirstpta";
+            this.txtfirstpta.PasswordChar = '\0';
+            this.txtfirstpta.PlaceholderText = "PTA";
+            this.txtfirstpta.SelectedText = "";
+            this.txtfirstpta.Size = new System.Drawing.Size(134, 35);
+            this.txtfirstpta.TabIndex = 0;
+            this.txtfirstpta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfirstpta.TextChanged += new System.EventHandler(this.ComputeFirstSem);
+            this.txtfirstpta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
+            // 
+            // txtfirstother
+            // 
+            this.txtfirstother.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtfirstother.Animated = true;
+            this.txtfirstother.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtfirstother.DefaultText = "";
+            this.txtfirstother.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtfirstother.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtfirstother.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstother.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtfirstother.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstother.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfirstother.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtfirstother.Location = new System.Drawing.Point(332, 145);
+            this.txtfirstother.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfirstother.Name = "txtfirstother";
+            this.txtfirstother.PasswordChar = '\0';
+            this.txtfirstother.PlaceholderText = "Other school fees";
+            this.txtfirstother.SelectedText = "";
+            this.txtfirstother.Size = new System.Drawing.Size(186, 35);
+            this.txtfirstother.TabIndex = 0;
+            this.txtfirstother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfirstother.TextChanged += new System.EventHandler(this.ComputeFirstSem);
+            this.txtfirstother.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
+            // 
+            // txtsecondmisc
+            // 
+            this.txtsecondmisc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtsecondmisc.Animated = true;
+            this.txtsecondmisc.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtsecondmisc.DefaultText = "";
+            this.txtsecondmisc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtsecondmisc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtsecondmisc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsecondmisc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsecondmisc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtsecondmisc.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsecondmisc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtsecondmisc.Location = new System.Drawing.Point(621, 100);
+            this.txtsecondmisc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsecondmisc.Name = "txtsecondmisc";
+            this.txtsecondmisc.PasswordChar = '\0';
+            this.txtsecondmisc.PlaceholderText = "Miscellaneous";
+            this.txtsecondmisc.SelectedText = "";
+            this.txtsecondmisc.Size = new System.Drawing.Size(134, 35);
+            this.txtsecondmisc.TabIndex = 0;
+            this.txtsecondmisc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsecondmisc.TextChanged += new System.EventHandler(this.txtsecondmisc_TextChanged);
+            this.txtsecondmisc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
+            // 
+            // txtsecondpta
+            // 
+            this.txtsecondpta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtsecondpta.Animated = true;
+            this.txtsecondpta.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtsecondpta.DefaultText = "";
+            this.txtsecondpta.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtsecondpta.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtsecondpta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsecondpta.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsecondpta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtsecondpta.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsecondpta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtsecondpta.Location = new System.Drawing.Point(796, 100);
+            this.txtsecondpta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsecondpta.Name = "txtsecondpta";
+            this.txtsecondpta.PasswordChar = '\0';
+            this.txtsecondpta.PlaceholderText = "PTA";
+            this.txtsecondpta.SelectedText = "";
+            this.txtsecondpta.Size = new System.Drawing.Size(134, 35);
+            this.txtsecondpta.TabIndex = 0;
+            this.txtsecondpta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsecondpta.TextChanged += new System.EventHandler(this.txtsecondmisc_TextChanged);
+            this.txtsecondpta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
+            // 
+            // txtsecondother
+            // 
+            this.txtsecondother.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtsecondother.Animated = true;
+            this.txtsecondother.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtsecondother.DefaultText = "";
+            this.txtsecondother.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtsecondother.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtsecondother.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsecondother.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsecondother.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtsecondother.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsecondother.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtsecondother.Location = new System.Drawing.Point(687, 145);
+            this.txtsecondother.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsecondother.Name = "txtsecondother";
+            this.txtsecondother.PasswordChar = '\0';
+            this.txtsecondother.PlaceholderText = "Other school fees";
+            this.txtsecondother.SelectedText = "";
+            this.txtsecondother.Size = new System.Drawing.Size(186, 35);
+            this.txtsecondother.TabIndex = 0;
+            this.txtsecondother.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsecondother.TextChanged += new System.EventHandler(this.txtsecondmisc_TextChanged);
+            this.txtsecondother.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfirstsemester_KeyPress);
+            // 
             // FEADBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +464,12 @@
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtsecondsemester);
+            this.Controls.Add(this.txtsecondother);
+            this.Controls.Add(this.txtsecondpta);
+            this.Controls.Add(this.txtfirstother);
+            this.Controls.Add(this.txtsecondmisc);
+            this.Controls.Add(this.txtfirstpta);
+            this.Controls.Add(this.txtfirstmisc);
             this.Controls.Add(this.txtfirstsemester);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator1);
@@ -331,5 +500,11 @@
         private System.Windows.Forms.Timer TimerDisable;
         private Guna.UI2.WinForms.Guna2DataGridView DGVStudentlist;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
+        private Guna.UI2.WinForms.Guna2TextBox txtfirstother;
+        private Guna.UI2.WinForms.Guna2TextBox txtfirstpta;
+        private Guna.UI2.WinForms.Guna2TextBox txtfirstmisc;
+        private Guna.UI2.WinForms.Guna2TextBox txtsecondother;
+        private Guna.UI2.WinForms.Guna2TextBox txtsecondpta;
+        private Guna.UI2.WinForms.Guna2TextBox txtsecondmisc;
     }
 }

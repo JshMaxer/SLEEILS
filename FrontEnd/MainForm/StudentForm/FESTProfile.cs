@@ -28,7 +28,7 @@ namespace SMARTLEARN.FrontEnd
         private void FEProfile_Load(object sender, EventArgs e)
         {
             Database.DBStudentProfile stuprofile = new Database.DBStudentProfile();
-            stuprofile.searchbalance(lblname, lblrole, lblemail, lblstudentid, lblmobile, txtfirstbalance, txtsecondbalance, MessageDialog1);
+            stuprofile.searchbalance(lblname, lblrole, lblemail, lblstudentid, lblmobile, txtfirstmisc, txtfirstpta, txtfirstother, txtfirstsem, txtsecondmisc, txtsecondpta, txtsecondother, txtsecondsem, MessageDialog1);
         }
 
         private void timerclose_Tick(object sender, EventArgs e)
@@ -43,6 +43,16 @@ namespace SMARTLEARN.FrontEnd
         private void btnback_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ComputeFirstSem(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtfirstsemester_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

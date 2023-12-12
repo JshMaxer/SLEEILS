@@ -36,7 +36,6 @@
             this.RoundEdge = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.timerclose = new System.Windows.Forms.Timer(this.components);
-            this.panelsmall = new Guna.UI2.WinForms.Guna2Panel();
             this.lblmobile = new System.Windows.Forms.Label();
             this.lblemail = new System.Windows.Forms.Label();
             this.lblrole = new System.Windows.Forms.Label();
@@ -94,19 +93,6 @@
             // 
             this.timerclose.Enabled = true;
             this.timerclose.Tick += new System.EventHandler(this.timerclose_Tick);
-            // 
-            // panelsmall
-            // 
-            this.panelsmall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelsmall.AutoSize = true;
-            this.panelsmall.BackColor = System.Drawing.Color.Transparent;
-            this.panelsmall.BorderRadius = 25;
-            this.panelsmall.BorderThickness = 1;
-            this.panelsmall.Location = new System.Drawing.Point(907, 63);
-            this.panelsmall.Name = "panelsmall";
-            this.panelsmall.Size = new System.Drawing.Size(202, 125);
-            this.panelsmall.TabIndex = 34;
-            this.panelsmall.Visible = false;
             // 
             // lblmobile
             // 
@@ -232,7 +218,6 @@
             this.Controls.Add(this.lblrole);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.lblname);
-            this.Controls.Add(this.panelsmall);
             this.Controls.Add(this.dragpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -246,7 +231,6 @@
             this.dragpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -258,7 +242,6 @@
         private System.Windows.Forms.Timer timerclose;
         private Guna.UI2.WinForms.Guna2Panel dragpanel;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Panel panelsmall;
         private System.Windows.Forms.Label lblmobile;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.Label lblrole;
