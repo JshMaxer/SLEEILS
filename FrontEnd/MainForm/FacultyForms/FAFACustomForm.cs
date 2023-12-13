@@ -33,5 +33,10 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
         {
             custom.DeleteSelectedCustom(lbcustom, MessageDialog1);
         }
+
+        private void lbcustom_DoubleClick(object sender, EventArgs e)
+        {
+            custom.ViewPDF(lbcustom);
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 {
     public partial class FEFAHandout : Form
     {
+        DBHandouts handout = new DBHandouts();
         public FEFAHandout()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 
         private void FEFAHandout_Load(object sender, EventArgs e)
         {
-            DBHandouts handout = new DBHandouts();
+            
             handout.showhandout(lbhandouts);
         }
 
@@ -28,6 +29,11 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
         {
             DBFASTGHandoutDownload dl = new DBFASTGHandoutDownload();
             dl.downloadSelectedHandout(lbhandouts, MessageDialog1);
+        }
+
+        private void lbhandouts_DoubleClick(object sender, EventArgs e)
+        {
+            handout.ViewPDF(lbhandouts);
         }
     }
 }

@@ -32,6 +32,7 @@
             this.lbhandouts = new System.Windows.Forms.ListBox();
             this.btndownload = new Guna.UI2.WinForms.Guna2GradientButton();
             this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.SuspendLayout();
             // 
             // lbhandouts
@@ -43,6 +44,8 @@
             this.lbhandouts.Name = "lbhandouts";
             this.lbhandouts.Size = new System.Drawing.Size(564, 372);
             this.lbhandouts.TabIndex = 0;
+            this.Helpforbutton.SetToolTip(this.lbhandouts, "Double Click the item to view.");
+            this.lbhandouts.DoubleClick += new System.EventHandler(this.lbhandouts_DoubleClick);
             // 
             // btndownload
             // 
@@ -73,6 +76,15 @@
             this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.MessageDialog1.Text = null;
             // 
+            // Helpforbutton
+            // 
+            this.Helpforbutton.AllowLinksHandling = true;
+            this.Helpforbutton.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Helpforbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Helpforbutton.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Helpforbutton.TitleFont = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Helpforbutton.ToolTipTitle = "Guide";
+            // 
             // FEFAHandout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.ListBox lbhandouts;
         private Guna.UI2.WinForms.Guna2GradientButton btndownload;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip Helpforbutton;
     }
 }

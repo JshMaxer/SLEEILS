@@ -28,7 +28,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.AdminForms
 
         private void lbhandouts_DoubleClick(object sender, EventArgs e)
         {
-            //
+            handouts.ViewPDF(lbhandouts);
         }
 
 

@@ -66,6 +66,7 @@
             this.lbcustom.Name = "lbcustom";
             this.lbcustom.Size = new System.Drawing.Size(564, 372);
             this.lbcustom.TabIndex = 42;
+            this.lbcustom.DoubleClick += new System.EventHandler(this.lbcustom_DoubleClick);
             // 
             // openFileDialog1
             // 

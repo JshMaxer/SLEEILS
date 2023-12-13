@@ -13,6 +13,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
 {
     public partial class FESTCustom : Form
     {
+        DBFACustom custom = new DBFACustom();
         public FESTCustom()
         {
             InitializeComponent();
@@ -26,8 +27,13 @@ namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
 
         private void FESTCustom_Load(object sender, EventArgs e)
         {
-            DBFACustom custom = new DBFACustom();
+            
             custom.ShowCustom(lbcustom, MessageDialog1);
+        }
+
+        private void lbcustom_DoubleClick(object sender, EventArgs e)
+        {
+            custom.ViewPDF(lbcustom);
         }
     }
 }

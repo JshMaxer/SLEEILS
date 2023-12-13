@@ -40,7 +40,7 @@ namespace SMARTLEARN.Database
             }
             catch (Exception ex)
             {
-                messageDialog.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
@@ -83,18 +83,18 @@ namespace SMARTLEARN.Database
 
                         if (cmd.ExecuteNonQuery() == 1)
                         {
-                            messageDialog.Show("File uploaded!");
+                            MessageBox.Show("File uploaded!");
                             connection.Close();
                             ShowCustom(listBoxCustom, messageDialog);
                         }
                         else
                         {
-                            messageDialog.Show("File upload failed!");
+                            MessageBox.Show("File upload failed!");
                         }
                     }
                     catch (Exception ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                     finally
                     {
@@ -103,7 +103,7 @@ namespace SMARTLEARN.Database
                 }
                 else
                 {
-                    messageDialog.Show("Please upload a PDF or DOC file.");
+                    MessageBox.Show("Please upload a PDF or DOC file.");
                 }
             }
         }
@@ -125,17 +125,17 @@ namespace SMARTLEARN.Database
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        messageDialog.Show("File deleted!");
+                        MessageBox.Show("File deleted!");
                         ShowCustom(listBoxCustom, messageDialog); // Refresh the ListBox after deletion
                     }
                     else
                     {
-                        messageDialog.Show("No file deleted!");
+                        MessageBox.Show("No file deleted!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -144,8 +144,51 @@ namespace SMARTLEARN.Database
             }
             else
             {
-                messageDialog.Show("Please select an item to delete.");
+                MessageBox.Show("Please select an item to delete.");
             }
         }
+
+        public void ViewPDF(System.Windows.Forms.ListBox listboxhandout)
+        {
+            if (listboxhandout.SelectedItem != null)
+            {
+                try
+                {
+                    connection.Open();
+                    string selectedItem = listboxhandout.SelectedItem.ToString();
+                    string query = $"SELECT Files FROM custom_files WHERE Filename = @selectedItem"; // Adjust table name and column names
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@selectedItem", selectedItem);
+
+                    object fileDataObj = cmd.ExecuteScalar();
+
+                    if (fileDataObj != null)
+                    {
+                        byte[] fileData = (byte[])fileDataObj;
+
+                        // Save the retrieved file temporarily
+                        string tempFilePath = Path.GetTempFileName();
+                        File.WriteAllBytes(tempFilePath, fileData);
+
+                        // Open the file with the default application associated with PDF files
+                        System.Diagnostics.Process.Start(tempFilePath);
+                    }
+                    else
+                    {
+                        MessageBox.Show("File data is null or empty.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
     }
 }

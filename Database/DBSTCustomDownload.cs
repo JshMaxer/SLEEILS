@@ -44,18 +44,18 @@ namespace SMARTLEARN.Database
 
                                 // Save the file to the specified location
                                 File.WriteAllBytes(filePath, fileData);
-                                messageDialog.Show("File downloaded successfully!");
+                                MessageBox.Show("File downloaded successfully!");
                             }
                         }
                         else
                         {
-                            messageDialog.Show("File not found!");
+                            MessageBox.Show("File not found!");
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
                 finally
                 {
@@ -64,7 +64,7 @@ namespace SMARTLEARN.Database
             }
             else
             {
-                messageDialog.Show("Please select an item to download.");
+                MessageBox.Show("Please select an item to download.");
             }
         }
     }

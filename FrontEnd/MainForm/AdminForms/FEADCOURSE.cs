@@ -77,6 +77,8 @@ namespace SMARTLEARN.FrontEnd.AdminForms
 
             btnhandout.Enabled = true;
             btncustom.Enabled = true;
+
+            btnhandout.PerformClick();
         }
 
         private void btnweek2_Click(object sender, EventArgs e)
@@ -85,6 +87,8 @@ namespace SMARTLEARN.FrontEnd.AdminForms
 
             btnhandout.Enabled = true;
             btncustom.Enabled = true;
+
+            btnhandout.PerformClick();
         }
 
         private void btnweek3_Click(object sender, EventArgs e)
@@ -93,6 +97,8 @@ namespace SMARTLEARN.FrontEnd.AdminForms
 
             btnhandout.Enabled = true;
             btncustom.Enabled = true;
+
+            btnhandout.PerformClick();
         }
 
         private void btnweek4_Click(object sender, EventArgs e)
@@ -101,6 +107,8 @@ namespace SMARTLEARN.FrontEnd.AdminForms
 
             btnhandout.Enabled = true;
             btncustom.Enabled = true;
+
+            btnhandout.PerformClick();
         }
 
         private void btnweek5_Click(object sender, EventArgs e)
@@ -109,6 +117,8 @@ namespace SMARTLEARN.FrontEnd.AdminForms
 
             btnhandout.Enabled = true;
             btncustom.Enabled = true;
+
+            btnhandout.PerformClick();
         }
 
         private void btngames_Click(object sender, EventArgs e)
