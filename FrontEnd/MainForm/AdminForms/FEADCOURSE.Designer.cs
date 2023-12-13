@@ -99,7 +99,7 @@
             this.btngames.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btngames.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btngames.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.btngames.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngames.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngames.ForeColor = System.Drawing.Color.White;
             this.btngames.Location = new System.Drawing.Point(38, 415);
             this.btngames.Name = "btngames";
@@ -120,13 +120,13 @@
             this.btnweek5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnweek5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnweek5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
-            this.btnweek5.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnweek5.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnweek5.ForeColor = System.Drawing.Color.White;
-            this.btnweek5.Location = new System.Drawing.Point(38, 323);
+            this.btnweek5.Location = new System.Drawing.Point(38, 335);
             this.btnweek5.Name = "btnweek5";
             this.btnweek5.Size = new System.Drawing.Size(228, 56);
             this.btnweek5.TabIndex = 16;
-            this.btnweek5.Text = "WEEK 5";
+            this.btnweek5.Text = "Extra Learning Materials";
             this.btnweek5.Click += new System.EventHandler(this.btnweek5_Click);
             // 
             // btnweek4
@@ -143,11 +143,11 @@
             this.btnweek4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.btnweek4.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnweek4.ForeColor = System.Drawing.Color.White;
-            this.btnweek4.Location = new System.Drawing.Point(38, 244);
+            this.btnweek4.Location = new System.Drawing.Point(38, 256);
             this.btnweek4.Name = "btnweek4";
             this.btnweek4.Size = new System.Drawing.Size(228, 56);
             this.btnweek4.TabIndex = 16;
-            this.btnweek4.Text = "WEEK 4";
+            this.btnweek4.Text = "4th Quarter";
             this.btnweek4.Click += new System.EventHandler(this.btnweek4_Click);
             // 
             // btnweek3
@@ -164,11 +164,11 @@
             this.btnweek3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.btnweek3.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnweek3.ForeColor = System.Drawing.Color.White;
-            this.btnweek3.Location = new System.Drawing.Point(38, 168);
+            this.btnweek3.Location = new System.Drawing.Point(38, 180);
             this.btnweek3.Name = "btnweek3";
             this.btnweek3.Size = new System.Drawing.Size(228, 56);
             this.btnweek3.TabIndex = 16;
-            this.btnweek3.Text = "WEEK 3";
+            this.btnweek3.Text = "3rd Quarter";
             this.btnweek3.Click += new System.EventHandler(this.btnweek3_Click);
             // 
             // guna2GradientButton2
@@ -185,11 +185,11 @@
             this.guna2GradientButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.guna2GradientButton2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(38, 20);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(38, 32);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
             this.guna2GradientButton2.Size = new System.Drawing.Size(228, 56);
             this.guna2GradientButton2.TabIndex = 16;
-            this.guna2GradientButton2.Text = "WEEK 1";
+            this.guna2GradientButton2.Text = "1st Quarter";
             this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
             // 
             // btnweek2
@@ -206,11 +206,11 @@
             this.btnweek2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(158)))));
             this.btnweek2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnweek2.ForeColor = System.Drawing.Color.White;
-            this.btnweek2.Location = new System.Drawing.Point(38, 92);
+            this.btnweek2.Location = new System.Drawing.Point(38, 104);
             this.btnweek2.Name = "btnweek2";
             this.btnweek2.Size = new System.Drawing.Size(228, 56);
             this.btnweek2.TabIndex = 16;
-            this.btnweek2.Text = "WEEK 2";
+            this.btnweek2.Text = "2nd Quarter";
             this.btnweek2.Click += new System.EventHandler(this.btnweek2_Click);
             // 
             // handpanel
