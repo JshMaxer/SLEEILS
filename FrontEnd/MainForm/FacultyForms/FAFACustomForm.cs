@@ -21,17 +21,17 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 
         private void FACustomForm_Load(object sender, EventArgs e)
         {
-            custom.ShowCustom(lbcustom, MessageDialog1);
+            custom.ShowCustom(lbcustom);
         }
 
         private void btnuploadhandout_Click(object sender, EventArgs e)
         {
-            custom.InsertCustom(lbcustom, MessageDialog1);
+            custom.InsertCustom(lbcustom);
         }
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            custom.DeleteSelectedCustom(lbcustom, MessageDialog1);
+            custom.DeleteSelectedCustom(lbcustom);
         }
 
         private void lbcustom_DoubleClick(object sender, EventArgs e)

@@ -43,7 +43,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtuserid = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -231,15 +230,6 @@
             this.txtpassword.UseSystemPasswordChar = true;
             this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.TargetForm = this;
@@ -290,7 +280,6 @@
         private System.Windows.Forms.Label lblforgot;
         private System.Windows.Forms.Timer timertoclose;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

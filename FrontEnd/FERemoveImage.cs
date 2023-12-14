@@ -21,12 +21,12 @@ namespace SMARTLEARN.FrontEnd
 
         private void btnremove_Click(object sender, EventArgs e)
         {
-            bRemovepic.removepic(cbids, MessageDialog1);
+            bRemovepic.removepic(cbids);
         }
 
         private void FERemoveImage_Load(object sender, EventArgs e)
         {
-            bRemovepic.showid(cbids, MessageDialog1);
+            bRemovepic.showid(cbids);
         }
 
         private void cbcancel_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace SMARTLEARN.FrontEnd
 
         private void cbids_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bRemovepic.showimageinid(cbids, pictureboxremove, MessageDialog1);
+            bRemovepic.showimageinid(cbids, pictureboxremove);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             DBFAForgotpass forgot = new DBFAForgotpass();
-            forgot.forgot(txtusertid, errorProvider1, MessageDialog1);
+            forgot.forgot(txtusertid, errorProvider1);
         }
 
         private void btncancel_Click(object sender, EventArgs e)

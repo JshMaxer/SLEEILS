@@ -64,7 +64,6 @@
             this.cbstrand = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ResetTimer = new System.Windows.Forms.Timer(this.components);
             this.Timertoproceed = new System.Windows.Forms.Timer(this.components);
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2GroupBox1.SuspendLayout();
             this.requiredfields.SuspendLayout();
             this.SuspendLayout();
@@ -654,15 +653,6 @@
             this.Timertoproceed.Enabled = true;
             this.Timertoproceed.Tick += new System.EventHandler(this.Timertoproceed_Tick);
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // FEEDStudentEnroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -725,6 +715,5 @@
         private System.Windows.Forms.Timer Timertoproceed;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2ComboBox cbsection;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

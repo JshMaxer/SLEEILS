@@ -22,13 +22,13 @@ namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
         private void btndownload_Click_1(object sender, EventArgs e)
         {
             DBSTCustomDownload dl = new DBSTCustomDownload();
-            dl.DownloadSelectedHandout(lbcustom, MessageDialog1);
+            dl.DownloadSelectedHandout(lbcustom);
         }
 
         private void FESTCustom_Load(object sender, EventArgs e)
         {
             
-            custom.ShowCustom(lbcustom, MessageDialog1);
+            custom.ShowCustom(lbcustom);
         }
 
         private void lbcustom_DoubleClick(object sender, EventArgs e)

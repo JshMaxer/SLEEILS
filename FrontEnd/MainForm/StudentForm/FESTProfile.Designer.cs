@@ -46,7 +46,6 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnback = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.lblstudentid = new System.Windows.Forms.Label();
             this.lblfirstmisc = new System.Windows.Forms.Label();
             this.lblfirstpta = new System.Windows.Forms.Label();
@@ -230,15 +229,6 @@
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
             // 
             // lblstudentid
             // 
@@ -652,7 +642,6 @@
         private System.Windows.Forms.Timer timerclose;
         public Guna.UI2.WinForms.Guna2Button btnback;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
         private System.Windows.Forms.Label lblstudentid;
         private System.Windows.Forms.Label lblfirstother;
         private System.Windows.Forms.Label lblfirstpta;

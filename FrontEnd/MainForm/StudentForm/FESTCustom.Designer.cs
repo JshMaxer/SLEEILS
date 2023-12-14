@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FESTCustom));
             this.btndownload = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbcustom = new System.Windows.Forms.ListBox();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.SuspendLayout();
             // 
@@ -67,15 +66,6 @@
             this.Helpforbutton.SetToolTip(this.lbcustom, "Double Click the item to view.");
             this.lbcustom.DoubleClick += new System.EventHandler(this.lbcustom_DoubleClick);
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // Helpforbutton
             // 
             this.Helpforbutton.AllowLinksHandling = true;
@@ -107,7 +97,6 @@
 
         private Guna.UI2.WinForms.Guna2GradientButton btndownload;
         private System.Windows.Forms.ListBox lbcustom;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
         private Guna.UI2.WinForms.Guna2HtmlToolTip Helpforbutton;
     }
 }

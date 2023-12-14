@@ -28,7 +28,7 @@ namespace SMARTLEARN.FrontEnd
         private void FEProfile_Load(object sender, EventArgs e)
         {
             Database.DBStudentProfile stuprofile = new Database.DBStudentProfile();
-            stuprofile.searchbalance(lblname, lblrole, lblemail, lblstudentid, lblmobile, txtfirstmisc, txtfirstpta, txtfirstother, txtfirstsem, txtsecondmisc, txtsecondpta, txtsecondother, txtsecondsem, MessageDialog1);
+            stuprofile.searchbalance(lblname, lblrole, lblemail, lblstudentid, lblmobile, txtfirstmisc, txtfirstpta, txtfirstother, txtfirstsem, txtsecondmisc, txtsecondpta, txtsecondother, txtsecondsem);
         }
 
         private void timerclose_Tick(object sender, EventArgs e)

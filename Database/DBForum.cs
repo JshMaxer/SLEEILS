@@ -17,7 +17,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void forum(Guna2DataGridView forum, Guna2MessageDialog messageDialog)
+        public void forum(Guna2DataGridView forum)
         {
             using (MySqlConnection connection = Host.connection)
             {
@@ -61,7 +61,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
                 finally
                 {

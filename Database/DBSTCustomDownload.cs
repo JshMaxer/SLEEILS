@@ -11,7 +11,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void DownloadSelectedHandout(System.Windows.Forms.ListBox listBoxHandout, Guna2MessageDialog messageDialog)
+        public void DownloadSelectedHandout(System.Windows.Forms.ListBox listBoxHandout)
         {
             if (listBoxHandout.SelectedItem != null)
             {

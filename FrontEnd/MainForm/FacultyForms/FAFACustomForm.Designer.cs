@@ -33,7 +33,6 @@
             this.lbcustom = new System.Windows.Forms.ListBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btndelete = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.SuspendLayout();
             // 
             // btnuploadhandout
@@ -92,15 +91,6 @@
             this.btndelete.Text = "DELETE";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // FAFACustomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +116,5 @@
         private System.Windows.Forms.ListBox lbcustom;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2GradientButton btndelete;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

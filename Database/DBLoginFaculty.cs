@@ -12,7 +12,7 @@ public class DBLoginFaculty
 {
     MySqlConnection connection = Host.connection;
 
-    public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err, Guna2MessageDialog messageDialog)
+    public void logad(Guna2TextBox userid, Guna2TextBox password, ErrorProvider err)
     {
         try
         {
@@ -72,7 +72,7 @@ public class DBLoginFaculty
         }
         catch (Exception ex)
         {
-            messageDialog.Show("Error: " + ex.Message);
+            MessageBox.Show("Error: " + ex.Message);
         }
         finally
         {

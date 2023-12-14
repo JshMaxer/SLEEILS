@@ -23,12 +23,12 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
 
         private void FEGrading_Load(object sender, EventArgs e)
         {
-            grading.DisplayStudents(DGVStudentlist, cbsemester, cbsection, MessageDialog1);
+            grading.DisplayStudents(DGVStudentlist, cbsemester, cbsection);
         }
 
         private void btnsave_Click(object sender, EventArgs e)
         {
-            grading.insertGrade(DGVStudentlist, txtstudentfirst, txtstudentsecond, cbsemester, cbsection, txtstudentaverage, cbsection, MessageDialog1);
+            grading.insertGrade(DGVStudentlist, txtstudentfirst, txtstudentsecond, cbsemester, cbsection, txtstudentaverage, cbsection);
         }
 
         private void CalculateAverage()
@@ -79,7 +79,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
         private void cbsemester_SelectedIndexChanged(object sender, EventArgs e)
         {
             DGVStudentlist.ClearSelection();
-            grading.DisplayStudents(DGVStudentlist, cbsemester, cbsection, MessageDialog1);
+            grading.DisplayStudents(DGVStudentlist, cbsemester, cbsection);
 
             if (cbsemester.SelectedIndex == 0)
             {

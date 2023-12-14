@@ -11,7 +11,7 @@ namespace SMARTLEARN.Database
     {
         private MySqlConnection connection = Host.connection;
 
-        public void ShowCustom(System.Windows.Forms.ListBox listBoxCustom, Guna2MessageDialog messageDialog)
+        public void ShowCustom(System.Windows.Forms.ListBox listBoxCustom)
         {
             listBoxCustom.Items.Clear(); // Clear previous items
 
@@ -48,7 +48,7 @@ namespace SMARTLEARN.Database
             }
         }
 
-        public void InsertCustom(System.Windows.Forms.ListBox listBoxCustom, Guna2MessageDialog messageDialog)
+        public void InsertCustom(System.Windows.Forms.ListBox listBoxCustom)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "PDF Files|*.pdf|Word Documents|*.doc;*.docx"; // Filter for PDF and DOC files
@@ -85,7 +85,7 @@ namespace SMARTLEARN.Database
                         {
                             MessageBox.Show("File uploaded!");
                             connection.Close();
-                            ShowCustom(listBoxCustom, messageDialog);
+                            ShowCustom(listBoxCustom);
                         }
                         else
                         {
@@ -108,7 +108,7 @@ namespace SMARTLEARN.Database
             }
         }
 
-        public void DeleteSelectedCustom(System.Windows.Forms.ListBox listBoxCustom, Guna2MessageDialog messageDialog)
+        public void DeleteSelectedCustom(System.Windows.Forms.ListBox listBoxCustom)
         {
             if (listBoxCustom.SelectedItem != null)
             {
@@ -126,7 +126,7 @@ namespace SMARTLEARN.Database
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("File deleted!");
-                        ShowCustom(listBoxCustom, messageDialog); // Refresh the ListBox after deletion
+                        ShowCustom(listBoxCustom); // Refresh the ListBox after deletion
                     }
                     else
                     {

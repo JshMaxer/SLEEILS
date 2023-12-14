@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtusertid = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -151,15 +150,6 @@
             this.guna2Panel3.Size = new System.Drawing.Size(529, 10);
             this.guna2Panel3.TabIndex = 41;
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.TargetForm = this;
@@ -197,7 +187,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtusertid;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

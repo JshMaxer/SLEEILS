@@ -162,7 +162,7 @@ namespace SMARTLEARN.Database
         }
 
         //INSERT PFB SCHED
-        public void InsertPFB(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox pfbmonday1, Guna2TextBox pfbmonday2, Guna2TextBox pfbtuesday1, Guna2TextBox pfbtuesday2, Guna2TextBox pfbwednesday1, Guna2TextBox pfbwednesday2, Guna2TextBox pfbthursday1, Guna2TextBox pfbthursday2, Guna2TextBox pfbfriday1, Guna2TextBox pfbfriday2, Guna2MessageDialog messageDialog)
+        public void InsertPFB(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox pfbmonday1, Guna2TextBox pfbmonday2, Guna2TextBox pfbtuesday1, Guna2TextBox pfbtuesday2, Guna2TextBox pfbwednesday1, Guna2TextBox pfbwednesday2, Guna2TextBox pfbthursday1, Guna2TextBox pfbthursday2, Guna2TextBox pfbfriday1, Guna2TextBox pfbfriday2)
         {
             if (section.SelectedIndex == 0)
             {
@@ -176,16 +176,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("PFB Updated");
+                        MessageBox.Show("PFB Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if(section.SelectedIndex == 1)
@@ -200,16 +200,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("PFB Updated");
+                        MessageBox.Show("PFB Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if (section.SelectedIndex == 2)
@@ -224,16 +224,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("PFB Updated");
+                        MessageBox.Show("PFB Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             connection.Close();
@@ -241,7 +241,7 @@ namespace SMARTLEARN.Database
 
 
         //INSERT WDD SCHED
-        public void InsertWDD(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox wddmonday1, Guna2TextBox wddmonday2, Guna2TextBox wddtuesday1, Guna2TextBox wddtuesday2, Guna2TextBox wddwednesday1, Guna2TextBox wddwednesday2, Guna2TextBox wddthursday1, Guna2TextBox wddthursday2, Guna2TextBox wddfriday1, Guna2TextBox wddfriday2, Guna2MessageDialog messageDialog)
+        public void InsertWDD(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox wddmonday1, Guna2TextBox wddmonday2, Guna2TextBox wddtuesday1, Guna2TextBox wddtuesday2, Guna2TextBox wddwednesday1, Guna2TextBox wddwednesday2, Guna2TextBox wddthursday1, Guna2TextBox wddthursday2, Guna2TextBox wddfriday1, Guna2TextBox wddfriday2)
         {
             if (section.SelectedIndex == 0)
             {
@@ -255,16 +255,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("WDD Updated");
+                        MessageBox.Show("WDD Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if (section.SelectedIndex == 1)
@@ -279,16 +279,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("WDD Updated");
+                        MessageBox.Show("WDD Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if (section.SelectedIndex == 2)
@@ -303,23 +303,23 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("WDD Updated");
+                        MessageBox.Show("WDD Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             connection.Close();
         }
 
         //INSERT ITE SCHED
-        public void InsertITE(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox itemonday1, Guna2TextBox itemonday2, Guna2TextBox itetuesday1, Guna2TextBox itetuesday2, Guna2TextBox itewednesday1, Guna2TextBox itewednesday2, Guna2TextBox itethursday1, Guna2TextBox itethursday2, Guna2TextBox itefriday1, Guna2TextBox itefriday2, Guna2MessageDialog messageDialog)
+        public void InsertITE(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox itemonday1, Guna2TextBox itemonday2, Guna2TextBox itetuesday1, Guna2TextBox itetuesday2, Guna2TextBox itewednesday1, Guna2TextBox itewednesday2, Guna2TextBox itethursday1, Guna2TextBox itethursday2, Guna2TextBox itefriday1, Guna2TextBox itefriday2)
         {
             if (section.SelectedIndex == 0)
             {
@@ -333,16 +333,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("ITE Updated");
+                        MessageBox.Show("ITE Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if (section.SelectedIndex == 1)
@@ -357,16 +357,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("ITE Updated");
+                        MessageBox.Show("ITE Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if (section.SelectedIndex == 2)
@@ -381,23 +381,23 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("ITE Updated");
+                        MessageBox.Show("ITE Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             connection.Close();
         }
 
         //INSERT CHS SCHED
-        public void InsertCHS(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox chsmonday1, Guna2TextBox chsmonday2, Guna2TextBox chstuesday1, Guna2TextBox chstuesday2, Guna2TextBox chswednesday1, Guna2TextBox chswednesday2, Guna2TextBox chsthursday1, Guna2TextBox chsthursday2, Guna2TextBox chsfriday1, Guna2TextBox chsfriday2, Guna2MessageDialog messageDialog)
+        public void InsertCHS(Guna2ComboBox section, Guna2ComboBox IDS, Guna2TextBox chsmonday1, Guna2TextBox chsmonday2, Guna2TextBox chstuesday1, Guna2TextBox chstuesday2, Guna2TextBox chswednesday1, Guna2TextBox chswednesday2, Guna2TextBox chsthursday1, Guna2TextBox chsthursday2, Guna2TextBox chsfriday1, Guna2TextBox chsfriday2)
         {
             if (section.SelectedIndex == 0)
             {
@@ -411,16 +411,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("CHS Updated");
+                        MessageBox.Show("CHS Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if (section.SelectedIndex == 1)
@@ -435,16 +435,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("CHS Updated");
+                        MessageBox.Show("CHS Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             else if (section.SelectedIndex == 2)
@@ -459,16 +459,16 @@ namespace SMARTLEARN.Database
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        messageDialog.Show("CHS Updated");
+                        MessageBox.Show("CHS Updated");
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
             connection.Close();

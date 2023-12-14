@@ -28,7 +28,7 @@ namespace SMARTLEARN.FrontEnd.MainForm.FacultyForms
         private void btndownload_Click(object sender, EventArgs e)
         {
             DBFASTGHandoutDownload dl = new DBFASTGHandoutDownload();
-            dl.downloadSelectedHandout(lbhandouts, MessageDialog1);
+            dl.downloadSelectedHandout(lbhandouts);
         }
 
         private void lbhandouts_DoubleClick(object sender, EventArgs e)

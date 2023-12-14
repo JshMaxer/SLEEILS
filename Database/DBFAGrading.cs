@@ -15,7 +15,7 @@ namespace SMARTLEARN.Database
 
         public static string IDs;
 
-        public void DisplayStudents(Guna2DataGridView dgvstudent, Guna2ComboBox semester, Guna2ComboBox section, Guna2MessageDialog messageDialog)
+        public void DisplayStudents(Guna2DataGridView dgvstudent, Guna2ComboBox semester, Guna2ComboBox section)
         {
             if (sub == "Programming for Beginners")
             {
@@ -43,7 +43,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if(semester.SelectedIndex == 0 && section.SelectedIndex == 1)
@@ -64,7 +64,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 0 && section.SelectedIndex == 2)
@@ -85,7 +85,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 //-------------------------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 1)
@@ -129,7 +129,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 2)
@@ -150,7 +150,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
 
@@ -184,7 +184,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 0 && section.SelectedIndex == 1)
@@ -205,7 +205,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 0 && section.SelectedIndex == 2)
@@ -226,7 +226,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 //-------------------------------------------------------------------------------------------------
@@ -249,7 +249,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 1)
@@ -270,7 +270,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 2)
@@ -291,7 +291,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
 
@@ -325,7 +325,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 0 && section.SelectedIndex == 1)
@@ -346,7 +346,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 0 && section.SelectedIndex == 3)
@@ -367,7 +367,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
 
@@ -391,7 +391,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 1)
@@ -412,7 +412,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 2)
@@ -433,7 +433,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
 
@@ -467,7 +467,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 0 && section.SelectedIndex == 1)
@@ -488,7 +488,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 0 && section.SelectedIndex == 2)
@@ -509,7 +509,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
 
@@ -533,7 +533,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 1)
@@ -554,7 +554,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
                 else if (semester.SelectedIndex == 1 && section.SelectedIndex == 2)
@@ -575,7 +575,7 @@ namespace SMARTLEARN.Database
                     }
                     catch (MySqlException ex)
                     {
-                        messageDialog.Show("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
 
@@ -586,7 +586,7 @@ namespace SMARTLEARN.Database
 
 
         //Programming For Beginners
-        public void insertGrade(Guna2DataGridView dgvstudent, Guna2TextBox firstquarter, Guna2TextBox secondquarter, Guna2ComboBox semester, Guna2ComboBox schoolyear, Guna2TextBox avg, Guna2ComboBox section, Guna2MessageDialog messageDialog)
+        public void insertGrade(Guna2DataGridView dgvstudent, Guna2TextBox firstquarter, Guna2TextBox secondquarter, Guna2ComboBox semester, Guna2ComboBox schoolyear, Guna2TextBox avg, Guna2ComboBox section)
         {
             if (sub == "Programming for Beginners")
             {
@@ -637,19 +637,19 @@ namespace SMARTLEARN.Database
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
                         {
-                            messageDialog.Show("Data updated successfully!");
-                            DisplayStudents(dgvstudent, semester, section, messageDialog); // Reload data to refresh the DataGridView after update
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester, section); // Reload data to refresh the DataGridView after update
                         }
                         else
                         {
-                            messageDialog.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
                         }
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
 
                 connection.Close();
@@ -704,19 +704,19 @@ namespace SMARTLEARN.Database
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
                         {
-                            messageDialog.Show("Data updated successfully!");
-                            DisplayStudents(dgvstudent, semester, section, messageDialog); // Reload data to refresh the DataGridView after update
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester, section); // Reload data to refresh the DataGridView after update
                         }
                         else
                         {
-                            messageDialog.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
                         }
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
 
                 connection.Close();
@@ -770,19 +770,19 @@ namespace SMARTLEARN.Database
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
                         {
-                            messageDialog.Show("Data updated successfully!");
-                            DisplayStudents(dgvstudent, semester, section, messageDialog); // Reload data to refresh the DataGridView after update
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester, section); // Reload data to refresh the DataGridView after update
                         }
                         else
                         {
-                            messageDialog.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
                         }
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
 
                 connection.Close();
@@ -836,19 +836,19 @@ namespace SMARTLEARN.Database
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
                         {
-                            messageDialog.Show("Data updated successfully!");
-                            DisplayStudents(dgvstudent, semester, section, messageDialog); // Reload data to refresh the DataGridView after update
+                            MessageBox.Show("Data updated successfully!");
+                            DisplayStudents(dgvstudent, semester, section); // Reload data to refresh the DataGridView after update
                         }
                         else
                         {
-                            messageDialog.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
+                            MessageBox.Show("No rows affected. Update failed. The provided ID may not match any rows in the table.");
                         }
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
 
                 connection.Close();

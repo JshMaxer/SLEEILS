@@ -13,7 +13,7 @@ namespace SMARTLEARN.Database
 
         public static string StudentID;
 
-        public void loaddgv(Guna2DataGridView Studentlist, Guna2MessageDialog messageDialog)
+        public void loaddgv(Guna2DataGridView Studentlist)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace SMARTLEARN.Database
             }
             catch (MySqlException ex)
             {
-                messageDialog.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -49,7 +49,7 @@ namespace SMARTLEARN.Database
             }
         }
 
-        public void save(Guna2DataGridView studentlist,Guna2TextBox firstMisc, Guna2TextBox firstPTA, Guna2TextBox firstother ,Guna2TextBox firstsem, Guna2TextBox secondMisc, Guna2TextBox secondPTA, Guna2TextBox secondother, Guna2TextBox secondsem, Guna2MessageDialog messageDialog)
+        public void save(Guna2DataGridView studentlist,Guna2TextBox firstMisc, Guna2TextBox firstPTA, Guna2TextBox firstother ,Guna2TextBox firstsem, Guna2TextBox secondMisc, Guna2TextBox secondPTA, Guna2TextBox secondother, Guna2TextBox secondsem)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace SMARTLEARN.Database
                     mess.ShowDialog();
 
                     connection.Close();
-                    loaddgv(studentlist, messageDialog);
+                    loaddgv(studentlist);
 
                     firstMisc.Text = null;
                     firstPTA.Text = null;
@@ -83,14 +83,14 @@ namespace SMARTLEARN.Database
                 }
                 else
                 {
-                    messageDialog.Show("No rows affected. Update failed.");
+                    MessageBox.Show("No rows affected. Update failed.");
                 }
 
                 connection.Close();
             }
             catch (MySqlException ex)
             {
-                messageDialog.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 

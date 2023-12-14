@@ -14,7 +14,7 @@ namespace SMARTLEARN.Database
         public static string fname;
         public static string lname;
 
-        public void message(RichTextBox messagebox, Guna2MessageDialog messageDialog)
+        public void message(RichTextBox messagebox)
         {
             if (Accounts.role == "STUDENT")
             {
@@ -38,12 +38,12 @@ namespace SMARTLEARN.Database
                     string query = $"INSERT INTO forum VALUES ('{ID}', '{fname + " " + lname}', '{messagebox.Text}', NOW())";
                     MySqlCommand insertCommand = new MySqlCommand(query, connection);
                     insertCommand.ExecuteNonQuery();
-                    messageDialog.Show("Posted");
+                    MessageBox.Show("Message Posted");
 
                 }
                 catch (Exception ex)
                 {
-                    messageDialog.Show(ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
                 finally
                 {
@@ -72,12 +72,12 @@ namespace SMARTLEARN.Database
                     string query = $"INSERT INTO forum VALUES ('{ID}', '{fname + " " + lname}', '{messagebox.Text}', NOW())";
                     MySqlCommand insertCommand = new MySqlCommand(query, connection);
                     insertCommand.ExecuteNonQuery();
-                    messageDialog.Show("Posted");
+                    MessageBox.Show("Message Posted");
 
                 }
                 catch (Exception ex)
                 {
-                    messageDialog.Show(ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
 
                 finally
@@ -91,7 +91,7 @@ namespace SMARTLEARN.Database
                 connection.Open();
                 MySqlCommand insertCommand = new MySqlCommand(query, connection);
                 insertCommand.ExecuteNonQuery();
-                messageDialog.Show("Posted");
+                MessageBox.Show("Message Posted");
                 connection.Close();
             }
 

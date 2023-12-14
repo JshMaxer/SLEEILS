@@ -10,7 +10,7 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void showsched(Guna2DataGridView schedlist, Guna2MessageDialog messageDialog)
+        public void showsched(Guna2DataGridView schedlist)
         {
             if (Accounts.role == "STUDENT" && Accounts.section == "Section 1")
             {
@@ -32,7 +32,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
 
                 connection.Close();
@@ -58,7 +58,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
 
                 connection.Close();
@@ -84,7 +84,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
 
                 connection.Close();
@@ -111,7 +111,7 @@ namespace SMARTLEARN.Database
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
                 connection.Close();
 

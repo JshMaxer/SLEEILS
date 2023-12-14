@@ -46,7 +46,6 @@
             this.lblname = new System.Windows.Forms.Label();
             this.TimerDisable = new System.Windows.Forms.Timer(this.components);
             this.DGVStudentlist = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.txtfirstmisc = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtfirstpta = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtfirstother = new Guna.UI2.WinForms.Guna2TextBox();
@@ -292,15 +291,6 @@
             this.DGVStudentlist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DGVStudentlist.SelectionChanged += new System.EventHandler(this.DGVStudentlist_SelectionChanged);
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // txtfirstmisc
             // 
             this.txtfirstmisc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -499,7 +489,6 @@
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Timer TimerDisable;
         private Guna.UI2.WinForms.Guna2DataGridView DGVStudentlist;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
         private Guna.UI2.WinForms.Guna2TextBox txtfirstother;
         private Guna.UI2.WinForms.Guna2TextBox txtfirstpta;
         private Guna.UI2.WinForms.Guna2TextBox txtfirstmisc;

@@ -113,7 +113,6 @@
             this.btnsubmit = new Guna.UI2.WinForms.Guna2Button();
             this.txtfname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtlname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -2153,15 +2152,6 @@
             this.txtlname.TabIndex = 29;
             this.txtlname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // FEADSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2346,6 +2336,5 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtfname;
         private Guna.UI2.WinForms.Guna2TextBox txtlname;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }

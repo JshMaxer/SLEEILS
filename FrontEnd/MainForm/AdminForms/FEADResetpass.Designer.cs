@@ -43,7 +43,6 @@
             this.btnreset = new Guna.UI2.WinForms.Guna2Button();
             this.btncancel = new Guna.UI2.WinForms.Guna2Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGVlist)).BeginInit();
             this.SuspendLayout();
@@ -257,15 +256,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.TargetForm = this;
@@ -304,7 +294,6 @@
         public Guna.UI2.WinForms.Guna2Button btnreset;
         public Guna.UI2.WinForms.Guna2Button btncancel;
         private System.Windows.Forms.Timer timer1;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

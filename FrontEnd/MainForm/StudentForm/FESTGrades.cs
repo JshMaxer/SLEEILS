@@ -20,13 +20,13 @@ namespace SMARTLEARN.FrontEnd.MainForm.StudentForm
         private void FESTGrades_Load(object sender, EventArgs e)
         {
             Database.DBStudentGrade grade = new Database.DBStudentGrade();
-            grade.Display(DGVStudentlist, cbsemester, MessageDialog1);
+            grade.Display(DGVStudentlist, cbsemester);
         }
 
         private void cbsemester_SelectedIndexChanged(object sender, EventArgs e)
         {
             Database.DBStudentGrade grade = new Database.DBStudentGrade();
-            grade.Display(DGVStudentlist, cbsemester, MessageDialog1);
+            grade.Display(DGVStudentlist, cbsemester);
         }
     }
 }

@@ -33,7 +33,6 @@
             this.btnuploadhandout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btndelete = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.Helpforbutton = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.SuspendLayout();
             // 
@@ -93,15 +92,6 @@
             this.btndelete.Text = "DELETE";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = this;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // Helpforbutton
             // 
             this.Helpforbutton.AllowLinksHandling = true;
@@ -136,7 +126,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnuploadhandout;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2GradientButton btndelete;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
         private Guna.UI2.WinForms.Guna2HtmlToolTip Helpforbutton;
     }
 }

@@ -28,7 +28,7 @@ namespace SMARTLEARN.Database
                 while (row.Read())
                 {
                     string originalFilename = row["filename"].ToString();
-                    listhandouts.Items.Add($"{whatweek}: {originalFilename}");
+                    listhandouts.Items.Add(originalFilename);
                 }
             }
             else
@@ -39,7 +39,7 @@ namespace SMARTLEARN.Database
             connection.Close();
         }
 
-        public void inserthandout(System.Windows.Forms.ListBox listboxhandout, Guna2MessageDialog messageDialog)
+        public void inserthandout(System.Windows.Forms.ListBox listboxhandout)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "PDF Files|*.pdf|Word Documents|*.doc;*.docx"; // Filter for PDF and DOC files
@@ -102,14 +102,14 @@ namespace SMARTLEARN.Database
             if (listboxhandout.SelectedItem != null)
             {
                 string selectedHandout = listboxhandout.SelectedItem.ToString(); // Get the selected item from the ListBox
-                string filenameToRemove = selectedHandout.Substring(selectedHandout.IndexOf(":") + 2); // Extract filename
+                //string filenameToRemove = selectedHandout.Substring(selectedHandout.IndexOf(":") + 2); // Extract filename
 
                 string deleteQuery = $"DELETE FROM handout_{whatweek} WHERE Filename = @selectedFileName"; // Adjust to your table structure
 
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
 
-                cmd.Parameters.Add("@selectedFileName", MySqlDbType.VarChar).Value = filenameToRemove; // Pass the extracted filename
+                cmd.Parameters.Add("@selectedFileName", MySqlDbType.VarChar).Value = selectedHandout; // Pass the extracted filename
 
                 try
                 {
@@ -147,10 +147,10 @@ namespace SMARTLEARN.Database
                 {
                     connection.Open();
                     string selectedItem = listboxhandout.SelectedItem.ToString();
-                    string filenameFromListBox = selectedItem.Substring(selectedItem.IndexOf(":") + 2).Trim(); // Extract filename
+                    //string filenameFromListBox = selectedItem.Substring(selectedItem.IndexOf(":") + 2).Trim(); // Extract filename
                     string query = $"SELECT Files FROM handout_{whatweek} WHERE Filename = @filenameFromListBox"; // Adjust table name and column names
                     MySqlCommand cmd = new MySqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@filenameFromListBox", filenameFromListBox);
+                    cmd.Parameters.AddWithValue("@filenameFromListBox", selectedItem);
 
                     object fileDataObj = cmd.ExecuteScalar();
 
@@ -167,7 +167,7 @@ namespace SMARTLEARN.Database
                     }
                     else
                     {
-                        MessageBox.Show("File data is null or empty for the selected item: " + filenameFromListBox);
+                        MessageBox.Show("File data is null or empty for the selected item: " + selectedItem);
                     }
                 }
                 catch (Exception ex)

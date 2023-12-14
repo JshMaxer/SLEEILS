@@ -26,9 +26,9 @@ namespace SMARTLEARN.Database
                     if (result != null)  // Current password matches
                     {
                         // Update the password
-                        string changepass = $"UPDATE studentaccount_section1 SET password = '1234' WHERE ID = {confirmpass.Text};" +
-                                            $"UPDATE studentaccount_section2 SET password = '1234' WHERE ID = {confirmpass.Text};" +
-                                            $"UPDATE studentaccount_section3 SET password = '1234' WHERE ID = {confirmpass.Text};";
+                        string changepass = $"UPDATE studentaccount_section1 SET password = '{confirmpass.Text}' WHERE ID = {Accounts.UserID};" +
+                                            $"UPDATE studentaccount_section2 SET password = '{confirmpass.Text}' WHERE ID = {Accounts.UserID};" +
+                                            $"UPDATE studentaccount_section3 SET password = '{confirmpass.Text}' WHERE ID = {Accounts.UserID};";
 
                         MySqlCommand cmd1 = new MySqlCommand(changepass, connection);
                         cmd1.ExecuteNonQuery();

@@ -68,7 +68,7 @@ namespace SMARTLEARN
             else
             {
                 DBLoginFaculty Logadmin = new DBLoginFaculty();
-                Logadmin.logad(txtuserid, txtpassword, errorProvider1, MessageDialog1);
+                Logadmin.logad(txtuserid, txtpassword, errorProvider1);
             }
         }
 
@@ -99,7 +99,7 @@ namespace SMARTLEARN
                 else
                 {
                     DBLoginFaculty Logadmin = new DBLoginFaculty();
-                    Logadmin.logad(txtuserid, txtpassword, errorProvider1, MessageDialog1);
+                    Logadmin.logad(txtuserid, txtpassword, errorProvider1);
                 }
 
                 // Optionally, prevent further handling of the Enter key

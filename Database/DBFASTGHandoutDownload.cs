@@ -15,19 +15,19 @@ namespace SMARTLEARN.Database
     {
         MySqlConnection connection = Host.connection;
 
-        public void downloadSelectedHandout(System.Windows.Forms.ListBox listboxhandout, Guna2MessageDialog messageDialog)
+        public void downloadSelectedHandout(System.Windows.Forms.ListBox listboxhandout)
         {
             if (listboxhandout.SelectedItem != null)
             {
                 string selectedHandout = listboxhandout.SelectedItem.ToString(); // Get the selected item from the ListBox
-                string filenameToDownload = selectedHandout.Substring(selectedHandout.IndexOf(":") + 2); // Extract filename
+                //string filenameToDownload = selectedHandout.Substring(selectedHandout.IndexOf(":") + 2); // Extract filename
 
                 // Query to retrieve file data based on the filename
                 string selectQuery = $"SELECT Files FROM handout_{DBHandouts.whatweek} WHERE Filename = @selectedFileName"; // Adjust to your table structure
 
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand(selectQuery, connection);
-                cmd.Parameters.Add("@selectedFileName", MySqlDbType.VarChar).Value = filenameToDownload; // Pass the extracted filename
+                cmd.Parameters.Add("@selectedFileName", MySqlDbType.VarChar).Value = selectedHandout; // Pass the extracted filename
 
                 try
                 {
@@ -40,7 +40,7 @@ namespace SMARTLEARN.Database
 
                             // Ask user for download location
                             SaveFileDialog saveFileDialog = new SaveFileDialog();
-                            saveFileDialog.FileName = filenameToDownload; // Set the default filename for download
+                            saveFileDialog.FileName = selectedHandout; // Set the default filename for download
                             if (saveFileDialog.ShowDialog() == DialogResult.OK)
                             {
                                 string filePath = saveFileDialog.FileName;

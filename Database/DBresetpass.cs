@@ -13,7 +13,7 @@ namespace SMARTLEARN.Database
 
         public static string role;
 
-        public void searchAccount(Guna2DataGridView list, Guna2MessageDialog messageDialog)
+        public void searchAccount(Guna2DataGridView list)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace SMARTLEARN.Database
             }
             catch (MySqlException ex)
             {
-                messageDialog.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             connection.Close();
         }
@@ -52,7 +52,7 @@ namespace SMARTLEARN.Database
 
         }
 
-        public void updatePass(Guna2DataGridView list, Guna2TextBox ID, Guna2TextBox fname, Guna2TextBox lname, Guna2MessageDialog messageDialog)
+        public void updatePass(Guna2DataGridView list, Guna2TextBox ID, Guna2TextBox fname, Guna2TextBox lname)
         {
             if (role == "STUDENT")
             {
@@ -84,17 +84,17 @@ namespace SMARTLEARN.Database
                         pm.Show();
 
                         connection.Close();
-                        searchAccount(list, messageDialog);
+                        searchAccount(list);
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
                 connection.Close();
             }
@@ -125,17 +125,17 @@ namespace SMARTLEARN.Database
                         pm.Show();
 
                         connection.Close();
-                        searchAccount(list, messageDialog);
+                        searchAccount(list);
                     }
                     else
                     {
-                        messageDialog.Show("No rows affected. Update failed.");
+                        MessageBox.Show("No rows affected. Update failed.");
                     }
 
                 }
                 catch (MySqlException ex)
                 {
-                    messageDialog.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
                 connection.Close();
             }

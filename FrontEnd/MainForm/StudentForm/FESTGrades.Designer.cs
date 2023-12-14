@@ -40,7 +40,6 @@
             this.cbsemester = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.DGVStudentlist = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudentlist)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,15 +179,6 @@
             this.DGVStudentlist.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(197)))), ((int)(((byte)(247)))));
             this.DGVStudentlist.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // MessageDialog1
-            // 
-            this.MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.MessageDialog1.Caption = "Smart Learn";
-            this.MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.MessageDialog1.Parent = null;
-            this.MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.MessageDialog1.Text = null;
-            // 
             // FESTGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +211,5 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbsemester;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2DataGridView DGVStudentlist;
-        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog1;
     }
 }
