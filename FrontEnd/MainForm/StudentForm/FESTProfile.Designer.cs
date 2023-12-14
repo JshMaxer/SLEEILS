@@ -281,11 +281,11 @@
             this.lblsecondsem.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblsecondsem.AutoSize = true;
             this.lblsecondsem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsecondsem.Location = new System.Drawing.Point(665, 695);
+            this.lblsecondsem.Location = new System.Drawing.Point(683, 695);
             this.lblsecondsem.Name = "lblsecondsem";
-            this.lblsecondsem.Size = new System.Drawing.Size(80, 19);
+            this.lblsecondsem.Size = new System.Drawing.Size(44, 19);
             this.lblsecondsem.TabIndex = 29;
-            this.lblsecondsem.Text = "Semester";
+            this.lblsecondsem.Text = "Total";
             this.lblsecondsem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblsecondmisc
@@ -534,7 +534,7 @@
             this.txtsecondsem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsecondsem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsecondsem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtsecondsem.Location = new System.Drawing.Point(575, 658);
+            this.txtsecondsem.Location = new System.Drawing.Point(575, 660);
             this.txtsecondsem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtsecondsem.Name = "txtsecondsem";
             this.txtsecondsem.PasswordChar = '\0';
