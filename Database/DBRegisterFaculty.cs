@@ -10,10 +10,10 @@ namespace SMARTLEARN.Database
     public class DBRegisterFaculty
     {
         MySqlConnection connection = Host.connection;
-
-        public void sched(Guna2TextBox firstid, Guna2TextBox secondid)
+                                                                                                                              //PFB                                  WDD                                         ITE                                                   CHS
+        public void sched(Guna2TextBox firstid, Guna2TextBox secondid)                                  //---------------------------------------//----------------------------------------//-----------------------------------------------------//-------------------------------------------
         {
-            string InsertTime1 = $"INSERT INTO schedule_faculty VALUES ('{firstid.Text + secondid.Text}', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-')";
+            string InsertTime1 = $"INSERT INTO schedule_faculty VALUES ('{firstid.Text + secondid.Text}', '7 - 8', '7 - 8', '-', '7 - 8', '8 - 9', '8 - 9', '8 - 9', '-', '8 - 9', '9 - 10', '10 - 11', '10 - 11', '-', '10 - 11', '11 - 12', '11 - 12', '11 - 12', '-', '11 - 12', '12 - 1')";
             MySqlCommand cmd1 = new MySqlCommand(InsertTime1, connection);
             cmd1.ExecuteNonQuery();
         }
