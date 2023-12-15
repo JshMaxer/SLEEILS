@@ -86,4 +86,4 @@ improvements.
 
 # DATABASE FILE
 
-[12/9/2023 - Gzipped Copy](https://github.com/JshMaxer/SLEEILS/files/13619269/smartlearn.sql.gz)
+[12/15/2023](https://github.com/JshMaxer/SLEEILS/files/13680859/smartlearn.sql.gz)
