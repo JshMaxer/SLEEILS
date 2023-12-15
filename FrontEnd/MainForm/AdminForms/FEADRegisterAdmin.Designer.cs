@@ -87,7 +87,7 @@
             this.requiredfields.Name = "requiredfields";
             this.requiredfields.Size = new System.Drawing.Size(914, 216);
             this.requiredfields.TabIndex = 18;
-            this.requiredfields.Text = "Role";
+            this.requiredfields.Text = "Account Details";
             // 
             // txtfirstid
             // 

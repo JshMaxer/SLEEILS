@@ -380,7 +380,7 @@
             this.requiredfields.Name = "requiredfields";
             this.requiredfields.Size = new System.Drawing.Size(921, 239);
             this.requiredfields.TabIndex = 28;
-            this.requiredfields.Text = "ID\'s";
+            this.requiredfields.Text = "Account Details";
             // 
             // txtfirstid
             // 
